@@ -4,15 +4,15 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
-<!-- 
+<!--
   In /views/layout.html you can:
-    - change the header and footer 
+    - change the header and footer
     - add custom CSS and JavaScript
 -->
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+  MYS Optometry
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -23,53 +23,34 @@
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-full">
 
       <!-- Change the page title here -->
       <h1>
-        NHS.UK prototype kit
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
+        Manage your service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Optometry</span>
       </h1>
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
       <p class="nhsuk-lede-text">
-        This kit lets you rapidly create HTML prototypes of NHS services.
+        MYS dashboard for Optometrists.
       </p>
 
       <hr>
 
-      <h2>
-        About this page
-      </h2>
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="optometry/index">Optometry  dashboard</a></h2>
+                    <p class="nhsuk-card__description">Find Appliance Use Reviews in this dashboard.</p>
+                  </div>
+                </div>
+              </li>
 
-      <p>
-        Use this page as the index for your project.
-      </p>
-      
-      <p>
-        You'll find the code for this page at <strong>/app/views/index.html</strong>.
-      </p>
-
-      <p>
-        There is also an <a href="/page-example">example page</a>, which contains a selection of NHS.UK frontend styles and components.
-      </p>
-
-      <hr>
-
-      <h2>
-        Documentation
-      </h2>
-
-      <ul>
-        <li>
-          Get started with <a href="/docs">how to guides and page templates</a>
-        </li>
-        <li>
-          Copy and paste styles and components from the <a href="https://service-manual.nhs.uk/design-system">NHS digital service manual</a>
-        </li>
-      </ul>
+            </ul>
 
       <!-- End of content -->
 

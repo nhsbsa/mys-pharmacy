@@ -5,7 +5,7 @@
 @import 'components/related-nav';
 
 ///////////////////////////////////////////
-// Add your custom CSS/Sass styles below... 
+// Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
 
 
@@ -21,7 +21,7 @@
             padding-right: nhsuk-spacing(0);
         }
     }
-    
+
 }
 
 //NHS BSA Full Width Footer
@@ -31,5 +31,158 @@
     .nhsuk-width-container {
         @include nhsuk-width-container-fluid
     }
-    
+
 }
+
+.nhsabsa-sidebar-container {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  min-height: calc(100vh - 99px);
+  margin: 0;
+  padding: 0; }
+  .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper {
+    flex: 1 0 auto;
+    display: flex; }
+    .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper .nhsabsa-sidebar-content {
+      flex: 1 0;
+      background-color: #f0f4f5;
+      padding: 32px;
+      margin: 0px; }
+    .nhsabsa-sidebar-container .nhsabsa-sidebar-wrapper .nhsabsa-sidebar-nav {
+      width: 360px;
+      order: -1;
+      background-color: #d8dde0;
+      margin: 0; }
+
+.side-nav h3 {
+  padding: 16px;
+  margin: 0; }
+
+.side-nav p {
+  padding: 0px 16px; }
+
+.side-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px; }
+
+.side-nav li a {
+  display: block;
+  color: #005EB8;
+  font-size: 18px;
+  text-decoration: none;
+  border-top: #ccc 1px solid;
+  border-bottom: #ccc 1px solid;
+  padding: 16px; }
+  .side-nav li a.active {
+    background-color: #005EB8;
+    color: white;
+    font-weight: 600;
+    border-top: #005eb8 1px solid;
+    border-bottom: #005eb8 1px solid; }
+
+.side-nav li a:hover:not(.active) {
+  background-color: #005eb8;
+  color: white; }
+
+@media (min-width: 48.0525em) {
+  .nhsabsa-sidebar-container {
+    min-height: calc(100vh - 80px); }
+  .side-nav h3 {
+    padding: 32px; }
+  .side-nav p {
+    padding: 0px 32px; }
+  .side-nav li a {
+    padding: 16px 32px; } }
+
+    .nhsBSA-sidebar-container {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 99px);
+      margin: 0;
+      padding: 0; }
+      @media (min-width: 48.0525em) {
+        .nhsBSA-sidebar-container {
+          min-height: calc(100vh - 80px); } }
+      .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper {
+        flex: 1 0 auto;
+        display: flex; }
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content {
+          flex: 1 0 auto;
+          background-color: #f0f4f5;
+          padding: 0px;
+          margin: 0px; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            display: block; }
+            @media (min-width: 40.0625em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+                padding-top: 32px; } }
+            @media (min-width: 40.0625em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
+                padding-bottom: 32px; } }
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav {
+          width: 300px;
+          order: -1;
+          background-color: #d8dde0;
+          margin: 0; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav .nhsuk-back-link {
+            padding: 16px;
+            margin: 0; }
+            @media (min-width: 48.0525em) {
+              .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav .nhsuk-back-link {
+                padding: 32px;
+                margin: 0; } }
+      @media (max-width: 48.0525em) {
+        .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper {
+          flex-direction: column; }
+          .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-nav {
+            width: 100%; } }
+
+    .side-nav h3 {
+      padding: 16px;
+      margin: 0; }
+      @media (min-width: 48.0525em) {
+        .side-nav h3 {
+          padding: 32px; } }
+
+    .side-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0px; }
+
+    .side-nav li {
+      margin: 0px; }
+
+    .side-nav li a {
+      display: block;
+      color: #005EB8;
+      font-size: 18px;
+      text-decoration: none;
+      border-top: #ccc 1px solid;
+      border-bottom: #ccc 1px solid;
+      padding: 16px; }
+      @media (min-width: 48.0525em) {
+        .side-nav li a {
+          padding: 16px 32px; } }
+
+    .side-nav li a.active {
+      background-color: #005EB8;
+      color: white;
+      font-weight: 600;
+      border-top: #005EB8 1px solid;
+      border-bottom: #005EB8 1px solid; }
+
+    .side-nav li a:hover:not(.active) {
+      background-color: #005EB8;
+      color: white; }
+
+    .side-nav .action-buttons {
+      padding: 16px; }
+      @media (min-width: 48.0525em) {
+        .side-nav .action-buttons {
+          padding: 32px; } }
+
+        
