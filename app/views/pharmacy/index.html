@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout-full-width.html' %}
+{% extends 'layout.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -22,60 +22,58 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsBSA-sidebar-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
 
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
+      <!-- Change the page title here -->
+      <h1>
+        Manage your service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Community Pharmacy</span>
+      </h1>
 
-      <div class="nhsuk-width-container-fluid">
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-        <div class="nhsuk-main-wrapper" id="maincontent">
+      <p class="nhsuk-lede-text">
+        MYS dashboard for Pharmacists.
+      </p>
 
+      <hr>
 
-
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-              <h1 class="nhsuk-heading-xl">
-                Summary
-              </h1>
-            </div>
-
-          </div>
-
-
-
-        </div>
-
-      </div>
-
-    </div>
-    <div class="nhsBSA-sidebar-nav">
-
-      <div class="side-nav">
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="pharmacy/index">Prescriptions</a></h2>
+                    <p class="nhsuk-card__description">All the prescriptiony things.</p>
+                  </div>
+                </div>
+              </li>
 
 
+                    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                      <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="#">Advanced services</a></h2>
+                          <p class="nhsuk-card__description">All the services that are advanced.</p>
+                        </div>
+                      </div>
+                    </li>
 
-        <ul>
-          <div id="options" class="options">
-            <li>
-              <a class="active" href="index-opth">Summary</a>
-            </li>
-            <li>
-              <a href="#">A thing</a>
-            </li>
-            <li>
-              <a href="#">Another thing</a>
-            </li>
-          </div>
-        </ul>
 
-        <!-- <div class="action-buttons">
-              <button class="nhsuk-button nhsuk-button--secondary" type="submit">Add note</button>
-          </div> -->
-      </div>
+                          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                            <div class="nhsuk-card nhsuk-card--clickable">
+                              <div class="nhsuk-card__content">
+                                <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="#">COVID-19 services</a></h2>
+                                <p class="nhsuk-card__description">All the services that are related to COVID-19.</p>
+                              </div>
+                            </div>
+                          </li>
+
+                        </ul>
+
+      <!-- End of content -->
 
     </div>
   </div>
-
-</div>
 {% endblock %}

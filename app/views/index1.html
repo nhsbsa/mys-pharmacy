@@ -1,0 +1,118 @@
+<!-- This layout is setup for NHS.UK pages -->
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends "layouts/layout.html" %}
+<!-- Set the page title inside this block -->
+{% block pageTitle %}
+  NHS.UK page layout - NHS.UK prototype kit
+{% endblock %}
+<!-- Header goes inside this block -->
+{% block header %}
+  {{ header({
+      "showNav": "true",
+      "showSearch": "true",
+      "primaryLinks": [
+        {
+          "url"  : "http://192.168.1.145:3000/practice-run/V3/homepage-V3",
+          "label" : "Home"
+        },
+        {
+          'url' : 'http://192.168.1.145:3000/practice-run/V3/about-us',
+          'label' : 'Our people'
+        },
+        {
+          'url'  : 'http://192.168.1.145:3000/practice-run/V3/projects-2',
+          'label' : 'Projects'
+        },
+        {
+          'url'  : 'http://192.168.1.145:3000/practice-run/V3/service-design',
+          'label' : 'Service Design'
+        },
+        {
+          'url' : 'http://192.168.1.145:3000/practice-run/V3/knowledge-base',
+          'label' : 'Knowledge Base'
+        }
+      ]
+    })
+  }}
+{% endblock %}
+{% block main %}
+<div class="nhsuk-width-container">
+<main class="nhsuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+{% block content %}
+<div class="center">
+  <h1>Welcome to NHSBSA Digital</h1>
+  <p>We aim to be an organisation that delivers by focusing on users, introducing new ways of working and using technology & insight as an enabler for change.</p>
+  <div class="nhsuk-grid-column-one-third">
+    <a class="box-wrapper" href="new-starters">
+        <span class="boxes">
+            <span class="box-text">New starters</span>
+        </span>
+    </a>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <a class="box-wrapper" href="our-tools">
+        <span class="boxes">
+            <span class="box-text">Our tools</span>
+        </span>
+    </a>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <a class="box-wrapper" href="communities-of-practice">
+        <span class="boxes">
+            <span class="box-text">Communities of practice</span>
+        </span>
+    </a>
+     </div>
+     <div class="nhsuk-grid-column-one-third">
+      <a class="box-wrapper" href="our-values">
+          <span class="boxes">
+              <span class="box-text">Our values</span>
+          </span>
+      </a>
+       </div>
+       <div class="nhsuk-grid-column-one-third">
+         <a class="box-wrapper" href="growing-our-talent">
+             <span class="boxes">
+                 <span class="box-text">Growing our talent</span>
+             </span>
+         </a>
+          </div>
+          <div class="nhsuk-grid-column-one-third">
+           <a class="box-wrapper" href="http://192.168.1.145:3000/practice-run/accessibility">
+               <span class="boxes">
+                   <span class="box-text">Accessibility</span>
+               </span>
+           </a>
+            </div>
+</div>
+{% endblock %}
+</main>
+</div>
+{% endblock %}
+<!-- Footer goes inside this block -->
+{% block afterfooter %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "#",
+        "label": "NHS sites"
+      },
+      {
+        "URL": "#",
+        "label": "About us"
+      },
+      {
+        "URL": "#",
+        "label": "Contact us"
+      },
+      {
+        "URL": "#",
+        "label": "Sitemap"
+      },
+      {
+        "URL": "#",
+        "label": "Our policies"
+      }
+    ]
+  })}}
+{% endblock %}
