@@ -185,4 +185,51 @@
         .side-nav .action-buttons {
           padding: 32px; } }
 
-        
+
+// MYS DECLARATION //
+
+
+.declaration {
+  border: 3px solid #bfc1c3;
+  margin-top: 15px;
+  overflow: hidden;
+  padding: 15px;
+  position: relative; }
+  .declaration:before {
+    content: 'DECLARATION';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 5px;
+    background-color: #bfc1c3;
+    color: white; }
+  .declaration p {
+    margin-bottom: 0;
+    margin-top: 25px; }
+  .declaration + fieldset {
+    display: block;
+    margin-inline-start: 0;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 0;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial; }
+    .declaration + fieldset legend {
+      visibility: hidden; }
+    .declaration + fieldset .nhsuk-form-group + .nhsuk-form-group {
+      margin-top: 1rem; }
+
+
+// DONE PANEL //@at-root
+
+.nhsuk-card.nhsuk-card--confirmation {
+  background-color: #005EB8;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 30px 0; }
