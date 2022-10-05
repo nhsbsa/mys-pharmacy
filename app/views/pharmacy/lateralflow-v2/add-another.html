@@ -1,0 +1,145 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Lateral Flow Test {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-back-link">
+                  <a class="nhsuk-back-link__link"
+                        href="javascript:history.back()"><svg aria-hidden="true"
+                        class="nhsuk-icon nhsuk-icon__chevron-left"
+                        viewbox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path></svg> Go back</a>
+                </div>
+                <header class="page-header">
+                  <span class="heading-secondary">Lateral Flow Test</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Summary</h1>
+                </header><br>
+                <h3 class="nhsuk-heading-m">These are the kits collected on 8 July 2021</h3>
+                <table class="nhsuk-table">
+                  <thead class="nhsuk-table__head"
+                          role="rowgroup">
+                    <tr role="row">
+                      <th class=""
+                          role="columnheader"
+                          scope="col">Collect code</th>
+                      <th>Lot number(s)</th>
+                      <th>Number of kits</th>
+                      <th>Anonymous collection</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">1234-5678-5555-2765</td> 
+                      <td class="nhsuk-table__cell">1234-3333</td>
+                      <td class="nhsuk-table__cell">7</td>
+                      <td class="nhsuk-table__cell">N</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">View details</a> or <a href="">Delete</a></td>
+                    
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">9876-1111-3579-6565</td> 
+                      <td class="nhsuk-table__cell">8008</td>
+                      <td class="nhsuk-table__cell">2</td>
+                      <td class="nhsuk-table__cell">N</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">View details</a> or <a href="">Delete</a></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">2319-0033-2318-9112</td> 
+                      <td class="nhsuk-table__cell">65</td>
+                      <td class="nhsuk-table__cell">5</td>
+                      <td class="nhsuk-table__cell">N</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">View details</a> or <a href="">Delete</a></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                </table>
+                <form action="addAnotherOne"
+                      class="form"
+                      method="get">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Do you want to add details of another collection?</legend></h1>
+                      <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                                id="add-1"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                                id="add-2"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-2">No</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <br>
+                    <br>
+                      <button class="nhsuk-button"
+                          type="submit">Next</button>
+                  </div>
+
+                </form>
+                      
+                      <form action="lft-start-day" method="post" novalidate>
+                          <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                                Save and continue later
+                          </button>
+                      </form>
+                      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>

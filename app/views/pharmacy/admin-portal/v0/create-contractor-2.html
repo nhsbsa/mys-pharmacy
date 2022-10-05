@@ -1,0 +1,102 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} PA Admin Portal {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-column-two-thirds">
+              
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                <header class="page-header">
+                  <span class="heading-secondary">PA Admin Portal</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Create contractor banking details</h1>
+                </header>
+
+                <form action="create-contractor-cya" method="get" class="form">
+
+                  <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="bank-name">
+                          Name of bank/building society
+                      </label>
+                    <input class="nhsuk-input nhsuk-input--width-20" id="bank-name" name="bank-name" type="text">
+                  </div>          
+
+                  <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="account-number">
+                          Bank account Number
+                      </label>
+                        
+                    <input class="nhsuk-input nhsuk-input--width-10" id="account-number" name="account-number" type="text">
+                  </div>           
+
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                        <label class="nhsuk-label" for="sort-code">
+                          Sort code
+                        </label>
+                      <div class="nhsuk-hint" id="example-hint">
+                        For example, 40 46 08
+                      </div>
+
+                      <div class="nhsuk-date-input" id="sort-code">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sort-code-f2" name="sort-code-f2" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sort-code-s2" name="sort-code-s2" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="sort-code-l2" name="sort-code-l2" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+<br>
+                      <button class="nhsuk-button" type="submit">
+                                Continue
+                      </button>
+                    </form>       
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

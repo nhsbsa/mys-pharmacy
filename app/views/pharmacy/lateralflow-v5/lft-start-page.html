@@ -1,0 +1,93 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Lateral Flow Test {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper" id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                <header>
+                  <h1>Covid-19 Lateral Flow Device Distribution Service</h1>
+                </header>
+                <p>
+                  Use this service to manage your LFD Distribution Service.
+                </p>
+                <p>
+                  From this page you can:
+                </p>
+                  <ul>
+                    <li> enter your weekly submission for LFD test kit transactions</li>
+                    <li> enter essential details about the cartons of LFD test kits you have received</li>
+                  </ul>
+
+                  <h2>Submissions</h2>
+                  <h3>Current submissions</h3>
+                  <p>
+                    There are no outstanding submissions at this stage. Please try again next week.
+                  </p>
+                  <br>
+                   <p>
+                    <a href="">View previous submissions</a>
+                  </p>
+
+
+                  <h2>Tell us about the cartons of LFD test kits you have</h2>
+                  <p>
+                    We need you to enter information about the cartons of LFD test kit lots you have received.
+                    A carton consists of multiple boxes of test kits.
+                  </p>
+                  <p>
+                    This is so any faulty test kits can be identified and recalled by the Medicines and Healthcare products
+                    Regulatory Agency (MHRA).
+                  </p>
+                  <p>
+                    For each delivery of cartons of test kits you receive, you'll need to record:
+                  </p>
+                  <ul>
+                    <li> the date you received the lot</li>
+                    <li> the wholesaler who supplied the lot</li>
+                    <li> the lot number</li>
+                    <li> the number of cartons of test kits delivered</li>
+                  </ul>
+              </div>
+            </div>
+                  <br>
+                  <form action="lft-start-day" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Enter lot information
+                      </button>
+                  </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>

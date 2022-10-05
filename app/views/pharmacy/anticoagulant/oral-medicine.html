@@ -1,0 +1,210 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Oral Anticoagulant
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                  </svg>
+                  Go back</a>
+              </div>
+
+
+              <header>
+                <h1>
+                  Anticoagulant
+                </h1>
+              </header>
+              
+              <header class="page-header">
+                <span class="heading-secondary">Anti-coagulant Audit</span>
+                <h1 class="nhsuk-heading-l govuk-heading-l">Patient details</h1>
+              </header>
+              <form action="consultation-findings-page3" method="post">
+
+                  <div class="nhsuk-form-group">
+
+                    <fieldset class="nhsuk-fieldset">
+                      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                        <h1 class="nhsuk-fieldset__heading">
+                            Select all anticoagulant medicines currently prescribed to the patient:
+                        </h1>
+                      </legend>
+
+                      <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+                        <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="apixaban" name="apixaban" type="checkbox" value="apixaban" aria-controls="conditional-apixaban">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="apixaban">
+                              Apixaban
+                            </label>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__item">
+                            <input class="nhsuk-checkboxes__input" id="acenocoumarol" name="acenocoumarol" type="checkbox" value="acenocoumarol" aria-controls="conditional-acenocoumarol">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="acenocoumarol">
+                              Acenocoumarol
+                            </label>
+                        </div>
+
+                      
+
+<!-- START OF ACENOCOUMAROL -->
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-acenocoumarol">
+                            <div class="nhsuk-form-group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                      Is Acenocoumarol supplied in a monitored dosage system/compliance aid?
+                                  </h2>
+                                </legend>
+
+                                <div class="nhsuk-radios nhsuk-radios--conditional">
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="monitored-dosage-1" name="monitored-dosage" type="radio" value="nomond" aria-controls="conditional-monitored-dosage">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="monitored-dosage-1">
+                                        No
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="monitored-dosage-2" name="monitored-dosage" type="radio" value="yesone">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="monitored-dosage-2">
+                                        Yes - one drug per blister
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="monitored-dosage-3" name="monitored-dosage" type="radio" value="yesmuls">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="monitored-dosage-3">
+                                        Yes - multiple drugs per blister
+                                      </label>
+                                    </div>
+
+                                </div> 
+                            </div>
+
+
+                            <div class="nhsuk-form-group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                      Did you check this combunation with the prescriber?
+                                  </h2>
+                                </legend>
+
+                                <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="combined-dosage-1" name="combined-dosage" type="radio" value="yesdis" aria-controls="conditional-combined-dosage">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="combined-dosage-1">
+                                        Yes - prescriber discontinued one or both anticoagulants
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="combined-dosage-2" name="combined-dosage" type="radio" value="yescon">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="combined-dosage-2">
+                                        Yes - prescriber confirmed two anticoagulants required
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="combined-dosage-3" name="combined-dosage" type="radio" value="yesoth">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="combined-dosage-3">
+                                        Yes - other action by prescriber
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="combined-dosage-4" name="combined-dosage" type="radio" value="noboth">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="combined-dosage-4">
+                                        No - patient/representative reported reason for bot agents being required
+                                      </label>
+                                    </div>
+
+                                    <div class="nhsuk-radios__item">
+                                      <input class="nhsuk-radios__input" id="combined-dosage-4" name="combined-dosage" type="radio" value="nooth">
+                                      <label class="nhsuk-label nhsuk-radios__label" for="combined-dosage-4">
+                                        No - other reason
+                                      </label>
+                                    </div>
+
+                                </div> 
+                            </div>
+
+
+
+                        </div>
+
+
+                            
+
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      </div> 
+
+                    </fieldset>
+                  </div>
+
+
+
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit"
+                  }) }}
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

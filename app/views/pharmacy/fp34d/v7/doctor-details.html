@@ -1,0 +1,129 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-fluid">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Dispensing Doctors</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">FP34D Submission</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+        </div>
+      </nav>
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                                <header class="page-header">
+                                  <span class="heading-secondary">December 2020 submission</span>
+                                  <h1 class="nhsuk-heading-l govuk-heading-l">Doctor details</h1>
+                                </header>
+
+                          <form action="table-dropdown-no-records" method="post">
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="doctor-name">
+                                  Name of doctor
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="doctor-name" name="doctor-name" type="text">
+                            </div>
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="doctor-number">
+                                  Doctor index number
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="doctor-number" name="doctor-number" type="text">
+                            </div>
+
+
+
+                            <div class="nhsuk-form-group">
+                                <fieldset class="nhsuk-fieldset">
+                                  <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                      <h2 class="nhsuk-fieldset__heading">
+                                          Is this a doctor or practice payment?
+                                      </h2>
+                                  </legend>
+
+
+
+
+                                  <div class="nhsuk-radios nhsuk-radios--inline">
+
+                                    <div class="nhsuk-radios__item">
+                                        <input class="nhsuk-radios__input" id="payment-type-1" name="payment-type" type="radio" value="Doctor payment">
+                                        <label class="nhsuk-label nhsuk-radios__label" for="payment-type-1">
+                                          Doctor payment
+                                        </label>
+                                    </div>
+
+
+
+                                    <div class="nhsuk-radios__item">
+                                        <input class="nhsuk-radios__input" id="payment-type-2" name="payment-type" type="radio" value="Practice payment">
+                                        <label class="nhsuk-label nhsuk-radios__label" for="payment-type-2">
+                                            Practice payment
+                                        </label>
+                                    </div>
+
+
+
+                                  </div>
+                                </fieldset>
+                            </div>
+
+
+            <button class="nhsuk-button" type="submit">
+              Continue
+            </button>
+
+
+
+
+                          </form>
+                        </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

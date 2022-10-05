@@ -1,0 +1,133 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <header>
+                <h1>
+                  High volume vaccinations
+                </h1>
+              </header>
+
+                <h2 class="nhsuk-heading-m">
+                  Current and previous submissions for Meadowfield Surgery (ODS code ODS1234)
+                </h2>
+<br>
+              <h3 class="nhsuk-heading-m">
+                Current submissions
+              </h3>
+              <p>You have not submitted any data for these months yet.</p>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th></th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">July 2021</td>
+                    <td class="nhsuk-table__cell "></td>
+                    <td class="nhsuk-table__cell--align-right"><a href="doctor-details">Start submission</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>You can add more data for these months, or submit without adding anything.</p>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Number of vaccine doses
+                    </th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">June 2021</td>
+                    <td class="nhsuk-table__cell ">34</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="#">Continue</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="nhsuk-heading-m">
+                Previous submissions
+              </h3>
+              <p>Select <b>View</b> to see details of a particular month's submission. These submissions can no longer be amended.</p>
+              
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Number of vaccine doses
+                    </th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">May 2021</td>
+                    <td class="nhsuk-table__cell ">99</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="view-previous">View</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,325 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Anti-coagulant
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                  </svg>
+                  Go back</a>
+              </div>
+              <header class="page-header">
+                <span class="heading-secondary">Anti-coagulant audit</span>
+                <br>
+              <h1 class="nhsuk-heading-l govuk-heading-l">Patient details</h1>
+              </header>
+
+              <form action="patient-history" method="get" class="form">
+
+                <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="date-identified-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                        <h2 class="nhsuk-fieldset__heading">
+                        Date identified
+                        </h2>
+                    </legend>
+                    <span class="nhsuk-hint" id="date-identified-hint">
+                      For example, 15 3 1984
+                    </span>
+
+                    <div class="nhsuk-date-input" id="date-identified">
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="date-identified-day">
+                            Day
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-identified-day" name="date-identified-day" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="date-identified-month">
+                            Month
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-identified-month" name="date-identified-month" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="date-identified-year">
+                            Year
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="date-identified-year" name="date-identified-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                
+                <div class="nhsuk-form-group">
+                  <h1 class="nhsuk-label-wrapper">
+                    <label class="nhsuk-label nhsuk-label--m" for="age-of-patient">
+                      Age of patient
+                    </label>
+                  </h1>
+                  <div class="nhsuk-hint nhsuk-u-margin-bottom-2">
+                      Enter the patients age
+                  </div>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="age-of-patient" name="age-of-patient" type="number">
+                </div>
+                <br>
+
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                      Patient gender
+                    </h2>
+                  </legend>
+
+                  <div class="nhsuk-form-group">
+
+                    <div class="nhsuk-radios">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                          Male
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                          Female
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                          Unknown
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </fieldset>
+                <br>
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                      Is the patient a care home resident?
+                    </h2>
+                  </legend>
+
+                  <div class="nhsuk-form-group">
+
+                    <div class="nhsuk-radios">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                          Yes
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                          No
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                          Unknown
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </fieldset>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+                <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset">
+                        <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                            <h2 class="nhsuk-fieldset__heading">
+                                Appointment status
+                            </h2>
+                        </legend>
+
+                        <div class="nhsuk-hint" id="contact-hint">
+                            Select one option
+                        </div>
+                        <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="appointment-status-1" name="appointment-status" type="radio" value="First appointment">
+                                <label class="nhsuk-label nhsuk-radios__label" for="appointment-status-1">
+                                    First appointment
+                                </label>
+                            </div>
+
+                            <div class="nhsuk-radios__item">
+                                <input class="nhsuk-radios__input" id="appointment-status-2" name="appointment-status" type="radio" value="Follow-up appointment" aria-controls="conditional-appointment-status-2">
+                                <label class="nhsuk-label nhsuk-radios__label" for="appointment-status-2">
+                                    Follow-up appointment
+                                </label>
+                            </div>
+                            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-appointment-status-2" aria-hidden="true">
+                                <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label" for="select-1">
+                                      Year last seen
+                                    </label>
+                                    <select class="nhsuk-select" id="select-1" name="conditional-appointment-status-year">
+                                      <option value="Before 2017">2017 or earlier</option>
+                                      <option value="2018">2018</option>
+                                      <option value="2019">2019</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2020">2021</option>
+                                      <option value="Not known">Not known</option>
+                                    </select>
+                                  </div>
+
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                </div>
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                      <h2 class="nhsuk-fieldset__heading">
+                          General Health (GH) Diagnosis
+                      </h2>
+                    </legend>
+
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-1" name="gh-diagnosis" type="checkbox" value="Autistic Spectrum Disorder (ASD)">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-1">
+                          Autistic Spectrum Disorder (ASD)
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-2" name="gh-diagnosis" type="checkbox" value="Cerebral Palsy (CP)">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-2">
+                          Cerebral Palsy (CP)
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-3" name="gh-diagnosis" type="checkbox" value="Trisomy 21">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-3">
+                          Trisomy 21
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-4" name="gh-diagnosis" type="checkbox" value="Global Developmental Delay (GDD)">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-4">
+                          Global Developmental Delay (GDD)
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-5" name="gh-diagnosis" type="checkbox" value="Microcéphaly">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-5">
+                          Microcephaly
+                        </label>
+                      </div>
+
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-5" name="gh-diagnosis" type="checkbox" value="Other genetic syndrome">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-5">
+                          Other genetic syndrome
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item nhsuk-checkboxes--conditional"">
+                        <input class="nhsuk-checkboxes__input" id="gh-diagnosis-6" name="gh-diagnosis" type="checkbox" value="Other" aria-controls="conditional-gh-diagnosis">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="gh-diagnosis-6">
+                          Other
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-form-group nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-gh-diagnosis">
+                          <label class="nhsuk-label" for="other-gh-finding-text">
+                           Provide other general health diagnosis
+                          </label>
+                          <textarea class="nhsuk-textarea" id="other-gh-finding-text" name="other-gh-finding-text" rows="3"></textarea>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                </div>
+
+
+                <button class="nhsuk-button" type="submit">
+                  Continue
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

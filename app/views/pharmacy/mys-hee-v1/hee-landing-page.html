@@ -1,0 +1,82 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HEE
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        2022 - 2023 Foundation Training for Trainee Pharmacists: Allocation of Funding
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <h2>Purpose of this declaration form is to define:</h2>
+        <ul>
+          <li>The Expense Head for this Transaction: “Training Support Allowance: Pre-Registration Pharmacy Technicians.”</li>
+          <li>Services provided by the above-named Community Pharmacy (“Supplier”) with respect to the Pre-registration Trainee Pharmacy Technician Training Programme (“the Programme”) in England. <p style="color:red">Reference to APFinance?</p></li>
+          <li>Health Education England (“HEE”) payments to the Supplier for Services pertaining to the Programme – in this case totalling £46,009 per trainee, per programme period.<p style="color:red">Reference to APFinance?</p></li>
+          <li>The training programme period is 12 calendar months.</li>
+        </ul> 
+
+        <h2>Context</h2>
+        <ul>
+          <li>HEE is undertaking management of the Pre-registration Trainee Pharmacy Technician training programme (PTPT) in England. This is part of a wider national Pharmacy Education Reform Programme, which includes the quality management of and investment in Pharmacist and Pharmacy Technician training pathways at undergraduate (pharmacist) and pre-registration / foundation training (Pharmacy Technicians and Pharmacist) levels.</li>
+          <li>The HEE investment strategy requires payments to be made across community pharmacies in England, to support the provision of training posts. The purpose of this is to secure the capacity and quality management of designated supervision.</li>
+        </ul> 
+
+        <p>After payment, we can send the certificate details to your customer by email or post. You can also give them the details to use yourself.</p>
+        <p>Your customer needs to show their certificate details when they collect their HRT prescription. They can use it once they have finished their application straight away once they have if they start it from today.</p>
+        
+        <h2>Payment</h2>
+        <ul>
+          <li>Upon completion of this declaration and receipt of an invoice, HEE shall pay the Supplier as described below:</li>
+          <li>REPORTING: As a condition of Funding, HEE require a quarterly report from the Supplier. Reports will detail:</li>
+          <ul>
+              <li>the number of pre-registration trainee pharmacy technicians employed,</li>
+              <li>any attrition up to and upon the date of report writing and</li>
+              <li>trainee progress update and any concerns</li>
+              <li>a summary of lessons learned from the perspective of trainee/s, supervisor/s and at an organisational level.</li>
+          </ul>
+          <li>HEE will provide reporting templates upon receipt of this signed declaration.</li>
+          <li>Contact details for enquiries and support will be provided.</li>
+        </ul> 
+
+        <p>Should you wish to discuss this further, please contect <a href="#">pharmacyteam@hee.nhs.uk</a></p>
+<br>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="hee-select-trainee-type">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Start</span>
+          </a>
+        </div>
+
+<!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,174 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} MYS Dispensing Doctors {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              <nav aria-label="Breadcrumb"
+                    class="nhsuk-breadcrumb">
+                  
+                <div class="nhsuk-width-container-fluid">
+                  <ol class="nhsuk-breadcrumb__list">
+                    <li class="nhsuk-breadcrumb__item">
+                      <a class="nhsuk-breadcrumb__link"
+                          href="/index">Dispensing Doctors</a>
+                    </li>
+                    <li class="nhsuk-breadcrumb__item">
+                      <a class="nhsuk-breadcrumb__link"
+                          href="/level-one/level-two">FP34PD Submission</a>
+                    </li>
+                  </ol>
+                </div>
+              </nav>
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <header class="page-header">
+                  <span class="heading-secondary">July 2021 submission</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Submission details</h1>
+                </header>
+                 <h3>Vaccine entries administered by Doctor Strangelove, index number 123</h3>
+                <form class="form" action="addanotherDoctor" method="GET">
+                
+                  <table class="table-form">
+
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                    
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Details
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Total
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd)</td>
+                        <td class="nhsuk-table__cell--align-right ">7</td>
+                      </tr>
+                    </tbody>
+                    
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline)</td>
+                        <td class="nhsuk-table__cell--align-right ">4</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluenz Tetra/Fluenz vaccine nasal suspension 0.2ml unit dose (Quadrivalent)
+                                                                                        (AstraZeneca UK Ltd)</td>
+                        <td class="nhsuk-table__cell--align-right ">11</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhoid vaccine (live, oral, strain ty21a) gastro-resistant capsules</td>
+                        <td class="nhsuk-table__cell--align-right ">2</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhim Vi 25mcg/0.5ml Vaccine Soln for Inj PF Syringes</td>
+                        <td class="nhsuk-table__cell--align-right ">5</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis A</td>
+                        <td class="nhsuk-table__cell ">Vaqta Adult/Vaqta Vaccine Susp for Inj 1ml PF Syringe</td>
+                        <td class="nhsuk-table__cell--align-right ">8</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Pneumococcal</td>
+                        <td class="nhsuk-table__cell ">Pneumococcal polysaccharide vaccine soln for Inj 0.5ml pre-filled syringes </td>
+                        <td class="nhsuk-table__cell--align-right ">6</td>
+                      </tr>
+                    </tbody>
+
+                  </table>  
+
+
+
+
+                            <div class="nhsuk-form-group">
+
+                              <fieldset class="nhsuk-fieldset">
+                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                                  <h1 class="nhsuk-fieldset__heading">
+                                    Do you want to add another doctor?
+                                  </h1>
+                                </legend>
+
+                                <div class="nhsuk-radios nhsuk-radios--inline">
+
+                                  <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="influenza-1" name="radioInlineGroup" type="radio" value="Yes">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="add-another-1">
+                                      Yes
+                                    </label>
+                                  </div>
+
+                                  <div class="nhsuk-radios__item">
+                                    <input class="nhsuk-radios__input" id="influenza-2" name="radioInlineGroup" type="radio" value="no">
+                                    <label class="nhsuk-label nhsuk-radios__label" for="add-another-2">
+                                      No
+                                    </label>
+                                  </div>
+
+                                </div>
+                              </fieldset>
+                              <br>
+                              <br>
+                                  <button class="nhsuk-button" type="submit">
+                                    Next
+                                  </button>
+                            </div>        
+        
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

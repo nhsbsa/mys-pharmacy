@@ -1,0 +1,140 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+
+            <div class="nhsuk-main-wrapper" id="maincontent">
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                          <header class="page-header">
+                            <span class="heading-secondary">PA Admin Portal</span>
+                            <h1 class="nhsuk-heading-l govuk-heading-l">Performer assigned to contractor</h1>
+                          </header>
+                         <h2 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">The following performer have been assigned to contractors:</legend></h2>
+                    
+                        <dl class="nhsuk-summary-list">
+                            <div class="nhsuk-summary-list__row">
+                              <dt class="nhsuk-summary-list__key">
+                                Name of performer
+                              </dt>
+                                <dt class="nhsuk-summary-list__key">
+                                Name of contractor
+                              </dt>
+                                <dt class="nhsuk-summary-list__key">
+                                Associated ODS Code
+                              </dt>
+                            </div>
+
+                              <div class="nhsuk-summary-list__row">
+                                <dd class="nhsuk-summary-list__value">
+                                  Gary Smith
+                                </dd>
+                                <dd class="nhsuk-summary-list__value">
+                                  Optical Illusion
+                                </dd>
+                                <dd class="nhsuk-summary-list__value">ODS1234
+                                </dd>
+                              </div>
+                          </dl>
+
+                          <dl class="nhsuk-summary-list">
+                            <div class="nhsuk-summary-list__row">
+                              <dt class="nhsuk-summary-list__key">
+                                Name of performer
+                              </dt>
+                              <dt class="nhsuk-summary-list__key">
+                                Name of contractor
+                              </dt>
+                                <dt class="nhsuk-summary-list__key">
+                                Associated ODS Code
+                              </dt>
+                            </div>
+
+                              <div class="nhsuk-summary-list__row">
+                                <dd class="nhsuk-summary-list__value">
+                                  Douglas Caven
+                                </dd>
+                                <dd class="nhsuk-summary-list__value">
+                                  Specsavers Newcastle North
+                                </dd>
+                                <dd class="nhsuk-summary-list__value">ODS5678
+                                </dd>
+                              </div>
+                          </dl>
+<br>
+                  <div class="nhsuk-form-group">
+                  <form action="assignMorePerformer"
+                      class="form"
+                      method="get">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">Do you want to assign any more performer to contractors?</legend></h1>
+                        
+                        <br>
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-1"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-2"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-2">No</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <br>
+                    
+                  </div>
+                  
+                      <button class="nhsuk-button"
+                        type="submit">Continue</button>
+      
+                </form>
+
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

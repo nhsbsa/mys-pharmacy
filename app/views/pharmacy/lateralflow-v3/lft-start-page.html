@@ -1,0 +1,101 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Lateral Flow Test {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper" id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                <header>
+                  <h1>Covid-19 Lateral Flow Device Distribution Service</h1>
+                </header>
+                <p>
+                  Use this service from 4 October 2021 to record your LFD delivery and collection information. 
+                </p>
+                <p>
+                  From this page you can:
+                </p>
+                  <ul>
+                    
+                    <li> enter essential details about the cartons of LFD test kits you have received</li>
+                    <li> submit a claim for your daily LFD test kit collections</li>
+                  </ul>
+
+                  <h2>LFD deliveries - tell us about the cartons of LFD test kits you  received</h2>
+                  <p>
+                    We need you to enter information about the cartons of LFD test kit lots you have had delivered to your premises. 
+                  </p>
+                  <p>
+                    This is so any faulty test kits can be identified and recalled by the Medicines and Healthcare products Regulatory Agency (MHRA). 
+                  </p>
+                  <p>
+                    For each delivery of cartons of test kits you receive, you'll need to record:
+                  </p>
+                  <ul>
+                    <li> the date you received the lot</li>
+                    <li> the wholesaler who supplied the lot</li>
+                    <li> the lot number</li>
+                    <li> the number of cartons of test kits delivered</li>
+                  </ul>
+                
+              </div>
+            </div>
+          
+                  <form action="" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Enter lot information
+                      </button>
+                  </form>
+                    <br>
+                     <h2>LFD collections - make a daily claim for each time a patient or customer collects <br>
+                     LFD test packs from your premises</h2>
+                
+                  <p>
+                    For each collection, you'll need to record:
+                  </p>
+                  <ul>
+                    <li> if the collection was made anonymously or not</li>
+                    <li> the 16 digit collection code</li>
+                    <li> the lot number of test packes given out</li>
+                    <li> the number of test packs given out</li>
+                  </ul>
+        
+                  <form action="lft-start-month" method="post" novalidate>
+                      <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                                Enter collection information
+                      </button>
+                  </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>

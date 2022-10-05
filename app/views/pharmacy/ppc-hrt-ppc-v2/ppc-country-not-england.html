@@ -1,0 +1,97 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+   {% block pageTitle %} PPC {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+   {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+   <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+   {% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link"
+            href="javascript:history.back()"><svg aria-hidden="true"
+            class="nhsuk-icon nhsuk-icon__chevron-left"
+            viewbox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path></svg> Go back</a>
+      </div><!-- Change the page title here -->
+      <header class="page-header">
+        <span class="heading-secondary">Sell a PPC or an HRT PPC</span>
+      </header>
+    
+
+          <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+              <span role="text">
+                <span class="nhsuk-u-visually-hidden">Important: </span>
+                Important information:
+              </span>
+            </h3>
+                  <ul>
+                    <li>The postcode you provided might be outside of England. If you live outside of England, you may be entitled to free prescriptions.</li>
+                    <li>Before buying an HRT PPC, check if you're entitled to free NHS prescriptions and other help with health costs using our <a href="#">eligibility checker.</a></li>  
+                  </ul> 
+          </div>
+
+      <header class="page-header">
+        <h1 class="nhsuk-heading-l govuk-heading-l">Do you want to continue?</h1>
+      </header>
+    
+
+<fieldset class="nhsuk-fieldset">
+
+  <div class="nhsuk-form-group">
+
+    <div class="nhsuk-radios">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+          Yes
+        </label>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          No
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+</fieldset>
+
+
+
+
+ <br>
+      <form action="#"
+            class="form"
+            method="get">
+        <button class="nhsuk-button"
+              type="submit">Next</button>
+      </form>
+            
+      <a href="#">Cancel</a>
+
+    </div>
+
+  </div>
+  
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Optometry
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-fluid">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Optometry</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">Special Schools Eyecare Service</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+        </div>
+      </nav>
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <header class="page-header">
+                <span class="heading-secondary">Special service eye care service</span>
+                <h1 class="nhsuk-heading-l govuk-heading-l">November 2020 submissions</h1>
+              </header>
+              <br>
+              <h3 class="nhsuk-heading-m">
+                These are the patients you have added so far.
+              </h3>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Patient
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Details provided?
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Findings provided?
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Further details provided?
+                    </th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>John Smith<br>Date of birth: 02/03/2007<br>11 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>Cary Grant<br>Date of birth: 21/06/2007<br>08 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>Beatrice Upton<br>Date of birth: 02/03/2007<br>01 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>Jane Smith<br>Date of birth: 20/08/2010<br>01 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>Akbar Hussain<br>Date of birth: 20/08/2010<br>01 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"><strong>Hiro Arikawa<br>Date of birth: 20/08/2010<br>01 November 2020<br>Applefields School, York</strong></td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell ">Yes</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="form/consolidated-form/summary-completed">View details</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h1 class="nhsuk-fieldset__heading">
+                      Do you want to add another patient?
+                    </h1>
+                  </legend>
+
+                  <div class="nhsuk-radios">
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-divider-1" name="example-divider" type="radio" value="nhsuk-login">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-divider-1">
+                        Yes
+                      </label>
+                    </div>
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-divider-2" name="example-divider" type="radio" value="government-verify">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-divider-2">
+                        No, complete submissions for this month
+                      </label>
+                    </div>
+
+                    <div class="nhsuk-radios__divider">or</div>
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-divider-4" name="example-divider" type="radio" value="create-account">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-divider-4">
+                        No, return to home screen
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+
+              </div>
+
+<!--
+  IF NO - Declaration
+  ELSE YES - opto-referral-details
+-->
+              <a href="declaration-november" class="nhsuk-button nhsuk-u-margin-bottom-8">
+                Next
+              </a>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

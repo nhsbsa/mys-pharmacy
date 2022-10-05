@@ -1,0 +1,47 @@
+
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Document Upload
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        MYS Document Upload
+      </h1>
+
+<form class="form" action="upload" method="post">
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-labenhsuk-label--l" for="file-upload-1">
+          <h1 class="nhsuk-heading-l">MYS document upload</h1>
+          </label>
+          
+          <span id="file-upload-1-hint" class="nhsuk-hint">
+            <p>Documents upload content...</p>
+
+            <p>You can upload your Documents as a scanned copy or photo of the original. </p>
+
+          <p>Your uploaded file must be:</p>
+          <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>a jpg, jpeg, bmp, png or pdf</li>
+              <li>a file size no larger than 10MB</li>
+              <li>show [your name] and [the date]</li>
+            </ul>
+          </span>
+          
+          
+<br>
+          <button class="nhsuk-button" data-module="nhsuk-button">Start</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

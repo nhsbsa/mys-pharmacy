@@ -1,0 +1,93 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-fluid">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Dispensing Doctors</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">FP34D Submission</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+        </div>
+      </nav>
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+                                            <h2 class="nhsuk-heading-m">Version 6</h2>
+
+                                            <p class="nhsuk-body">Name of doctor/index entered first. Check boxes for each of the 8 vaccines/combo and for each checked then only those vaccines can be entered via loop.</p>
+                                            <p class="nhsuk-body">Option to 'add another' vaccine and final summary of all vaccines administed for that doctor. No option to add another doctor.</p>
+
+                                            <a href="v4/start-page" class="nhsuk-link">Version 6 start page</a>
+
+                                            <br><br>
+                                            <h2 class="nhsuk-heading-m">Version 7</h2>
+
+                                            <p class="nhsuk-body">Vaccines may not necessarily be entered in order so there are no vaccine checkboxes. Vaccine and vaccine details are selected from drop-down and the total is entered via text box.</p>
+                                            <p class="nhsuk-body">The new entry appears on a 'Doctor/index summary page' with a radio button option to add another. Prototype build so each new selection is added to summary list (up to 3 entries).</p>
+                                            <p class="nhsuk-body">When all vaccines have been entered there is a summary page for that doctor with a radio button option to enter another doctor and that takes the user round the same loop.</p>
+                                            <p class="nhsuk-body">When all doctors/vaccine details have been entered then a summary page is displayed for all doctors and vaccines administered. Submit, Declation and Done.</p>
+                                            <a href="v7/start-page" class="nhsuk-link">Version 6 start page</a>
+
+                                            <br><br>
+                                            <h2 class="nhsuk-heading-m">Version 8</h2>
+
+                                            <p class="nhsuk-body">No vaccine checkboxes.</p>
+                                            <p class="nhsuk-body">When a vaccine is selected it appears below selection dropdown with a question to add another vaccine.</p>
+                                            <p class="nhsuk-body">When all vaccines have been entered there is a summary page for that surgery with a question to add another doctor.</p>
+                                            <p class="nhsuk-body">Pagination for more than 10 entries.</p>
+                                            <p class="nhsuk-body">Submit, Declation and Done.</p>
+                                            <a href="v8/landing-page" class="nhsuk-link">Version 8 start page</a>
+
+                                            <br><br>
+                                            <h2 class="nhsuk-heading-m">Version 9</h2>
+                                            <p class="nhsuk-body">Submit, Declation and Done.</p>
+                                            <a href="v9/landing-page" class="nhsuk-link">Version 9 start page</a>
+                                            
+                                            <br><br>
+                                            <h2 class="nhsuk-heading-m">Version 10</h2>
+                                            <p class="nhsuk-body">Change to the user journey. Clicking 'Continue' for 'Undeclared submissions' on the 'Months' page takes the user to the 'Full submission details' screen. From here they can 'Add additional vaccines' or 'Continue' to the Declaration page.</p>
+                                            <a href="v10/landing-page" class="nhsuk-link">Version 10 start page</a>
+
+                                        </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

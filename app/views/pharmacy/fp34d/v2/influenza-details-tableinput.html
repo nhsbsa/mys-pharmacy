@@ -1,0 +1,199 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-fluid">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Dispensing Doctors</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">FP34D Submission</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+        </div>
+      </nav>
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                                <header class="page-header">
+                                  <span class="heading-secondary">December 2020 submission</span>
+                                  <h1 class="nhsuk-heading-l govuk-heading-l">Influenza vaccine details</h1>
+                                </header>
+
+                          <form action="vaccine-add-another" method="post">
+
+                            <table class="table-form">
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Dosage</th>
+                                <th scope="col">Pack</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                (Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>1</td>
+                              <td class="numeric last">
+                                <input class="form-control" name="fluarix" type="text" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                (Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influvac" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>1</td>
+                              <td class="numeric last">
+                                <input class="form-control" name="imuvac" type="text" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluad Tetra vaccine suspension for injection 0.5ml pre-filled syringes (Quadrivalent)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>1</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluad Tetra vaccine suspension for injection 0.5ml pre-filled syringes (Quadrivalent)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+(GlaxoSmithKline)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>1</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+(GlaxoSmithKline)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>1</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+(Seqirus Vaccines Ltd)</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>10</td>
+                              <td class="numeric last">
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+
+
+
+
+
+
+
+
+
+            <button class="nhsuk-button" type="submit">
+              Continue
+            </button>
+
+
+
+
+                          </form>
+                        </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

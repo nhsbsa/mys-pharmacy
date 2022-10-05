@@ -1,0 +1,130 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+        <div class="nhsuk-width-container-fluid">
+          <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Dispensing Doctors</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">FP34D Submission</a></li>
+          </ol>
+          <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+        </div>
+      </nav>
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                                <header class="page-header">
+                                  <span class="heading-secondary">December 2020 submission</span>
+                                  <h1 class="nhsuk-heading-l govuk-heading-l">Vaccine details</h1>
+                                </header>
+
+                          <form action="vaccine-add-another" method="post">
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="vaccine-order">
+                                  Prescribed vaccine order
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="vaccine-order" name="vaccine-order" type="text">
+                            </div>
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="manu-brand">
+                                  Endorsement manufacturer/brand
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="manu-brand" name="manu-brand" type="text">
+                            </div>
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="pres-pack">
+                                  Endorsement of presentation/pack
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="pres-pack" name="pres-pack" type="text">
+                            </div>
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="patient-dose">
+                                  Patient dosage
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="patient-dose" name="patient-dose" type="text">
+                            </div>
+
+                            <div class="nhsuk-form-group">
+                              <h1 class="nhsuk-label-wrapper">
+                                <label class="nhsuk-label nhsuk-label--m" for="dose-number">
+                                  Number of doses
+                                </label>
+                              </h1>
+                              <input class="nhsuk-input nhsuk-input--width-20" id="dose-number" name="dose-number" type="number">
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <button class="nhsuk-button" type="submit">
+              Continue
+            </button>
+
+
+
+
+                          </form>
+                        </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

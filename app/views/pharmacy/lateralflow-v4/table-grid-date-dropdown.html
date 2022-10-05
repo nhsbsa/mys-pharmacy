@@ -1,0 +1,249 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} MYS Dispensing Doctors {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+            
+                <header class="page-header">
+                  <span class="heading-secondary">July 2021 submission</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Collection details</h1>
+                </header>
+                <h2>Collection date: 8 July 2021</h2>
+                <form action="summary"
+                      class="form"
+                      method="get">
+
+                        <td  class="test-case" style="overflow: visible">
+                          <div>
+
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Collection date
+                                  </h2>
+                              </legend>
+                              <span class="nhsuk-hint" id="date-of-birth-hint">
+                                Select the collection date
+                              </span>
+
+                              <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="vaccines" aria-required="true">
+                                  <option value="8 July 2021">8 July 2021</option>
+                                  <option value="9 July 2021">9 July 2021</option>
+                                  <option value="10 July 2021">10 July 2021</option>
+                                  <option value="11 July 2021">11 July 2021</option>
+                                  <option value="12 July 2021">12 July 2021</option>
+                                  <option value="13 July 2021">13 July 2021</option>
+                                  <option value="14 July 2021">14 July 2021</option>
+                                  <option value="15 July 2021">15 July 2021</option>
+                              </select>
+                          </div>
+                        </td>
+                        <br>
+
+                  <table class="table-form">
+                    <thead>
+                      <tr>
+                        <th scope="col">Anonymous?</th>
+                        <th scope="col">Collect code</th>
+                        <th scope="col">Lot number</th>
+                        <th scope="col">Number of kits distributed</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+
+                      
+
+                        <td  class="test-case" style="overflow: visible">
+                          <div>
+
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Anonymous?
+                                  </h2>
+                              </legend>
+                              <span class="nhsuk-hint" id="date-of-birth-hint">
+                                Select Yes or No 
+                              </span>
+
+                              <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="vaccines" aria-required="true">
+                                  <option value="No">No</option>
+                                  <option value="Yes">Yes</option>
+                              </select>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Collect code
+                                  </h2>
+                              </legend>
+                              <span class="nhsuk-hint" id="date-of-birth-hint">
+                                Enter the 16 digit code or zeros for an anonymous collection
+                              </span>
+
+                              <div class="nhsuk-date-input" id="collection-code">
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1" name="collection-code-1" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+                              
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <p>-</p>
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2" name="collection-code-2" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <p>-</p>
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3" name="collection-code-3" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <p>-</p>
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4" name="collection-code-4" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+
+                              </div>
+                            </fieldset>
+                          </div>
+                        </td>
+
+
+
+
+                        <td>
+                          <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Lot number
+                                  </h2>
+                              </legend>
+                              <span class="nhsuk-hint" id="date-of-birth-hint">
+                                If there are two lot numbers please enter both
+                              </span>
+
+                              <div class="nhsuk-date-input" id="collection-code">
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1" name="collection-code-1" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+                              
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <p>-</p>
+                                  </div>
+                                </div>
+
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2" name="collection-code-2" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+
+                              </div>
+                            </fieldset>
+                          </div>
+                        </td>
+
+
+                        <td>
+                          <div class="nhsuk-form-group">
+                            <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Number of kits distributed
+                                  </h2>
+                              </legend>
+                              <span class="nhsuk-hint" id="date-of-birth-hint">
+                                Enter number of kits
+                              </span>
+
+                              <div class="nhsuk-date-input" id="collection-code">
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1" name="collection-code-1" type="number" pattern="[0-9]*">
+                                  </div>
+                                </div>
+                              
+                               
+                              </div>
+                            </fieldset>
+                          </div>
+                        </td>
+
+
+
+
+                       
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                
+                  
+                    <br>
+                    <button class="nhsuk-button"
+                        type="submit">Continue</button>
+                  </div>
+
+      
+                </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

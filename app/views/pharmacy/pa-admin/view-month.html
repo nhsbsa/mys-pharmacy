@@ -1,0 +1,105 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Lateral Flow Test
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+
+        <div class="nhsuk-width-container-fluid">
+
+            <div class="nhsuk-main-wrapper" id="maincontent">
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                          <header class="page-header">
+                            <span class="heading-secondary">Lateral Flow Test</span>
+                            <h1 class="nhsuk-heading-l govuk-heading-l">Submissions for May 2021</h1>
+                          </header>
+
+                        <table class="table-form">
+
+                          <thead>
+                            <tr role="row">
+                              <th>Date</th>
+                              <th>Number of transactions</th>
+                            </tr>
+                          </thead>
+
+                            <tbody class="nhsuk-table__body"><tr><td>1 May 2021</td><td>7</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>2 May 2021</td><td>22</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>3 May 2021</td><td>5</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>4 May 2021</td><td>3</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>5 May 2021</td><td>12</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>6 May 2021</td><td>4</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>7 May 2021</td><td>78</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>8 May 2021</td><td>1</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>9 May 2021</td><td>6</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>10 May 2021</td><td>0</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>11 May 2021</td><td>0</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>12 May 2021</td><td>16</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>13 May 2021</td><td>5</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>14 May 2021</td><td>7</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>15 May 2021</td><td>8</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>16 May 2021</td><td>11</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>17 May 2021</td><td>0</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>18 May 2021</td><td>0</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>19 May 2021</td><td>1</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>20 May 2021</td><td>3</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>21 May 2021</td><td>7</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>22 May 2021</td><td>22</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>23 May 2021</td><td>5</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>24 May 2021</td><td>3</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>25 May 2021</td><td>12</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>26 May 2021</td><td>4</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>27 May 2021</td><td>78</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>28 May 2021</td><td>1</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>29 May 2021</td><td>6</td></tr></tbody>
+                            <tbody class="nhsuk-table__body"><tr><td>30 May 2021</td><td>0</td></tr></tbody>
+                            
+
+                        </table>
+
+
+                  <form action="lft-start-month" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Go back
+                      </button>
+                  </form>
+              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                                <header class="page-header">
+                                  <span class="heading-secondary">July 2021 submission</span>
+                                  <h1 class="nhsuk-heading-l govuk-heading-l">GP or nurse details</h1>
+                                </header>
+
+                          <form action="vaccine-type-dropdown" method="post">
+
+                            <div class="nhsuk-form-group">
+                              <p>Select a GP or nurse to record the vaccines they have administered for your practice.</p>                        
+                            </div>
+
+                        <td  class="test-case" style="overflow: visible">
+                          <div>
+                              <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="vaccines" aria-required="true">
+                                  <option value="x">Choose a GP or nurse</option>
+                                  <option value="x">Dr Strangelove</option>
+                                  <option value="x">Dr No</option>
+                                  <option value="x">Dr Schivago</option>
+                                  <option value="x">Nurse Ratched</option>
+                              </select>
+                          </div>
+                        </td>
+<br>
+<br>
+            <button class="nhsuk-button" type="submit">
+              Continue
+            </button>
+
+                          </form>
+                        </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

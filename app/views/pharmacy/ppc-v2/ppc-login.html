@@ -1,0 +1,107 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  PPC
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        NHS Prescription Services
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <hr>
+        <p>NHS Prescription Services calculates the remuneration and reimbursement due to dispensing contractors across England.</p>
+        <p>Visit our NHS prescription charges section for information on prescription prepayment certificates, who gets free prescriptions and penalty charges.</p>
+      
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">Pharmacies, GP practices and appliance contractors</a>
+        </h2>
+        <p class="nhsuk-card__description">Prescribing, dispensing and payment information for dispensing contractors</p>
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">CCGs, STPs and other providers</a>
+        </h2>
+        <p class="nhsuk-card__description">Guidance and information for Local Authorities and Providers</p>
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">Manufacturers and suppliers</a>
+        </h2>
+        <p class="nhsuk-card__description">Guidance for manufacturers and suppliers of medicines, oxygen and appliances</p>
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="ppc-start-page">Sell a Prescription Prepayment Certificate (PPC)</a>
+        </h2>
+        <p class="nhsuk-card__description">Content required</p>
+      </div>
+    </div>
+
+  </li>
+  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+          <a class="nhsuk-card__link" href="#">Contact NHS Prescription Services</a>
+        </h2>
+        <p class="nhsuk-card__description">You can contact us online, or by phone or post. We are open Monday to Friday from 8am to 6pm.</p>
+      </div>
+    </div>
+
+  </li>
+</ul>
+
+<!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

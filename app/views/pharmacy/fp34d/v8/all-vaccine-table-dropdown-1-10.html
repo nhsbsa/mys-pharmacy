@@ -1,0 +1,321 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} MYS Dispensing Doctors {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+
+                <header class="page-header">
+                  <span class="heading-secondary">July 2021 submission</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Enter vaccine details</h1>
+                </header>
+                  
+                <span class="nhsuk-hint">
+                    Enter the details of vaccines administered by (name of GP or nurse from practice list) for (submission month), then select <b>Add vaccine</b> to add it to your submission.
+                </span>
+                <span class="nhsuk-hint">
+                    Make sure you select the correct pack size for the vaccine.  
+                </span>
+                <span class="nhsuk-hint">
+                    Once entered, each vaccine will appear under ‘Vaccines you have entered for (GP or nurse from practice list)’.
+                </span>
+                <span class="nhsuk-hint">
+                    You will be able to add another vaccine administered by (GP or nurse from practice list) after each entry.
+                </span>
+                  <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                          <span class="govuk-warning-text__assistive"></span>
+                          Do not enter doses that were centrally supplied 
+                        </strong>
+                  </div>
+                  <br>
+
+
+                  <table class="table-form">
+                    <thead>
+                      <tr>
+                        <th scope="col">Vaccine type</th>
+                        <th scope="col">Vaccine</th>
+                        <th scope="col">Total vaccine doses</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+
+                        <td class="nhsuk-table__cell ">Influenza<br>
+                        <form action="vaccine-type-dropdown" method="post" novalidate>
+                        <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                                  Change vaccine type
+                        </button>
+                        </form>       
+                        </td>
+
+                        <td  class="test-case" style="overflow: visible">
+                          <div class="test-case" style="overflow: visible">
+                              <div>
+                                  <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true">
+                                      <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">Choose vaccine</option>
+                                      <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 1</option>
+                                      <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 10</option>
+                                      <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 1</option>
+                                      <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 10</option>                                            
+                                      <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">Fluad Tetra vaccine suspension for injection 0.5ml pre-filled syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 1</option>
+                                      <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">Fluad Tetra vaccine suspension for injection 0.5ml pre-filled syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 10</option>      
+                                      <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline), Pack Size: 1</option>
+                                      <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline), Pack Size: 10D</option>
+                                      <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 1</option>
+                                      <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 10</option>
+                                      <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">Fluenz Tetra/Fluenz vaccine nasal suspension 0.2ml unit dose (Quadrivalent)
+                                                                                        (AstraZeneca UK Ltd), Pack Size: 10</option>
+                                      <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">Imuvac vaccine susp for Inj 0.5ml PF Syringes (Trivalent)(Mylan), Pack Size: 1</option>
+                                      <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Influenza Tetra MYL vaccine suspension for injection 0.5ml PF Syringes (Quadrivalent)(Mylan), Pack Size: 1</option>
+                                      <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Influenza Tetra MYL vaccine suspension for injection 0.5ml PF Syringes (Quadrivalent)(Mylan), Pack Size: 10</option>
+                                      <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Influenza Vaccine Split virion, Inact Susp for Inj 0.5ml PF Syringes (Trivalent)(PFizer Ltd), Pack Size: 10</option>
+                                      <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Influvac sub-unit Tetra vaccine suspension for injection PF Syringes (Quadrivalent)(Mylan), Pack Size: 1</option>
+                                      <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Influvac sub-unit Tetra vaccine suspension for injection PF Syringes (Quadrivalent)(Mylan), Pack Size: 10</option>
+                                    </select>
+                              </div>
+                          </div>
+                        </td>
+                        
+                        <td class="numeric last"><input class="form-control"
+                                id="land-area-1"
+                                name="total"
+                                size="5"
+                                type="numeric"
+                                value="">
+                        </td>
+                        
+                        <td>
+                          <form action="all-vaccine-table-dropdown-one-rec-new-page" method="post" novalidate>
+                                <button class="nhsuk-button" type="submit">
+                                      Add vaccine
+                                </button>
+                          </form>
+                         </td> 
+                      </tr>
+                    </tbody>
+ 
+                  </table>
+
+                  <h3>Vaccines you have entered for (GP or nurse from practice list)</h3>
+
+                  <table class="table-form">
+
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine type
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Total vaccine doses
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 1</td>
+                        <td class="nhsuk-table__cell--align-right ">8</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                        <td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body"> 
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd), Pack Size: 10</td>
+                        <td class="nhsuk-table__cell--align-right ">9</td>
+                       <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">   
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhoid polysaccharide 25micrograms/0.5ml vaccine soln for inj PF syringes, Pack Size: 1</td>
+                        <td class="nhsuk-table__cell--align-right ">2</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                        
+                    </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline), Pack Size: 10</td>
+                        <td class="nhsuk-table__cell--align-right ">4</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                        
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluenz Tetra/Fluenz vaccine nasal suspension 0.2ml unit dose (Quadrivalent)
+                                                                                        (AstraZeneca UK Ltd), Pack Size: 1</td>
+                        <td class="nhsuk-table__cell--align-right ">11</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhoid vaccine (live, oral, strain ty21a) gastro-resistant capsules, Pack Size: 10</td>
+                        <td class="nhsuk-table__cell--align-right ">2</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhim Vi 25mcg/0.5ml Vaccine Soln for Inj PF Syringes, Pack Size: 1</td>
+                        <td class="nhsuk-table__cell--align-right ">5</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis A</td>
+                        <td class="nhsuk-table__cell ">Vaqta Adult/Vaqta Vaccine Susp for Inj 1ml PF Syringe, Pack Size: 10</td>
+                        <td class="nhsuk-table__cell--align-right ">8</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Pneumococcal</td>
+                        <td class="nhsuk-table__cell ">Pneumococcal polysaccharide vaccine soln for Inj 0.5ml pre-filled syringes, Pack Size: 1</td>
+                        <td class="nhsuk-table__cell--align-right ">6</td>
+                        <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis B</td>
+                        <td class="nhsuk-table__cell ">Engerix B 10mcg/0.5ml Vaccine Susp for Inj PF Syringe/Vials, Pack Size: 10</td>
+                        <td class="nhsuk-table__cell--align-right ">6</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="all-vaccine-table-dropdown-one-rec-amend">Amend doses</a> or <a href="delete">Delete vaccine</a></td>
+                      </tr>
+                    </tbody>
+                                
+                  </table>
+
+                <div class="nhsuk-warning-text">
+                        <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="nhsuk-warning-text__text">
+                          <span class="nhsuk-warning-text__assistive"></span>
+                          Any vaccine information you add, amend or delete will only be saved if you select Continue when you close the page 
+                        </strong>
+                </div>
+                <br>
+
+                  <div class="nhsuk-form-group">
+                  <form action="addEnterVaccine1111"
+                      class="form"
+                      method="get">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Have you finished entering all of the (month of submission) (year of submission) vaccines for (GP or nurse)?</legend></h1>
+                        <span class="nhsuk-hint">
+                            Only answer this question when you want to leave this screen.
+                        </span>
+                        <br>
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-1"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-2"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-2">No (this will save your information to complete later)</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <br>
+                    <br>
+                    
+                  </div>
+   
+                      <button class="nhsuk-button"
+                        type="submit">Continue</button>
+      
+                </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

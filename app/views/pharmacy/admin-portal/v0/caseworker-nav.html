@@ -1,0 +1,85 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  PA Admin Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">PA Admin Portal</span>
+          Caseworker navigation
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">
+        Use the links on this page to create, amend and view details for contractors, performers and schools. You can also review any contractors awaiting ODS codes and any rejections.
+      </p>
+      <hr>
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="contractor-nav">Contractors</a></h2>
+                    <p class="nhsuk-card__description">Create and amend personal and banking details, deactivate contractors, and view contractor payment details</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="performer-nav">Performers</a></h2>
+                    <p class="nhsuk-card__description">Create and amend performer details, deactivate a performer and assign a performer to a contractor</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="schools-nav">Schools</a></h2>
+                    <p class="nhsuk-card__description">Create and amend school details, deactivate a school and assign a school to a contractor</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="review-rejections">Review Rejections</a></h2>
+                    <p class="nhsuk-card__description">Review contractors awaiting ODS codes and any rejections</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

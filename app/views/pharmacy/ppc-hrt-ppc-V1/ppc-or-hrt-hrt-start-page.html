@@ -1,0 +1,76 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HRT
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="javascript:history.back()">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+      <!-- Change the page title here -->
+      <h1>
+        Sell a Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+                  <div class="nhsuk-warning-callout">
+                    <h3 class="nhsuk-warning-callout__label">
+                      <span role="text">
+                        <span class="nhsuk-u-visually-hidden">Important: </span>
+                        Important information:
+                      </span>
+                    </h3>
+                    <p>This is an HRT PPC which only covers <a href="#">certain HRT drugs.</a> If you require drugs outside of HRT then a <a href="#">standard PPC</a> may be more beneficial for you.</p>
+                  </div>
+
+        <p>You can help your customer save money on NHS HRT prescriptions by prepaying for them.</p>
+        <p>They can pay a set price for prescriptions for 12 months, no matter how many they need.</p>
+        <p>A prescription costs £9.35 per item, but prepaying for an unlimited number of HRT prescriptions is:</p>
+        <ul>
+          <li>one time payment of £18.70 for 12 months (the cost of two prescriptions)</li>
+        </ul>  
+        <br>
+        <p>After payment, we can send the certificate details to your customer by email or post. You can also give them the details to use yourself.</p>
+        <p>Your customer needs to show their certificate details when they collect their HRT prescription. They can use it once they have finished their application straight away once they have if they start it from today.</p>
+        
+        <p>For more information visit <a href="https://www.nhsbsa.nhs.uk/help-nhs-prescription-costs/prescription-prepayment-certificates-ppcs/pharmacy-sales-nhs-prescription-prepayment-certificate-ppc">Pharmacy sales - NHS Hormone Replacement Therapy Prescription Prepayment Certificate (PPC)</a></p>
+<br>
+                  <form action="ppc-or-hrt-hrt-sold-date" method="post" novalidate>
+                      <button class="nhsuk-button" type="submit">
+                                Continue
+                      </button>
+                  </form>
+<!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

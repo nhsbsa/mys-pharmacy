@@ -1,0 +1,158 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+              <header>
+                <h1>
+                  High volume vaccination submissions
+                </h1>
+              </header>
+
+                <h2>
+                  Meadowfield Surgery (ODS code: ODS1234)
+                </h2>
+<br>
+              <h3>Start a new submission</h3>
+              <p>Select a month to begin submission.</p>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th></th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">April 2022</td>
+                    <td class="nhsuk-table__cell "></td>
+                    <td class="nhsuk-table__cell--align-right"><a href="doctor-details">Start submission</a></td>
+                  </tr>
+                </tbody>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">May 2022</td>
+                    <td class="nhsuk-table__cell "></td>
+                    <td class="nhsuk-table__cell--align-right"><a href="doctor-details">Start submission</a></td>
+                  </tr>
+                </tbody>
+              
+              </table>
+
+            <h3>Undeclared submissions</h3>
+            <p>You have already added data for these months but not finished the declaration. Select Continue to either add more data for a month or declare it as complete.</p>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Number of vaccine doses
+                    </th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">March 2021</td>
+                    <td class="nhsuk-table__cell ">34</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="summary-all-doctors">Continue</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="nhsuk-heading-m">
+                Previous submissions
+              </h3>
+              <p>Select View to see details of a particular month's submission. These submissions can no longer be amended.</p>
+              <table class="nhsuk-table">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th>Number of vaccine doses</th>
+                    <td role="columnheader" class="nhsuk-table__cell--align-right" scope="col">
+                      <b>Action<b>
+                    </td>
+                  </tr>
+                </thead>
+              
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">February 2022</td>
+                    <td class="nhsuk-table__cell ">33</td>
+                    <td class="nhsuk-table__cell--align-right"><a href="view-previous">View</a></td>
+                  </tr>
+                </tbody>
+                
+              </table>
+
+<br>
+              <p>
+                If you need to add more vaccines to these declared submissions, or to any other previous months not listed, contact the MYS support team:
+              </p3>
+              <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p><a href="#" title="External website">Email the MYS support team</a></p>
+<p>Call us on: 0300 330 1368</p>
+  
+</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

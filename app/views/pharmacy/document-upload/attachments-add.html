@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/document-upload/upload" method="post">
+        <h1 class="nhsuk-heading-l">Add documents</h1>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            <h2 class="nhsuk-heading-m">Documents added</h2>
+            
+            <dl class="nhsuk-summary-list">
+            
+              <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  File 1
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <a download href="/">document1.jpg</a>, 7MB
+                </dd>
+            
+                <dd class="nhsuk-summary-list__actions">
+            
+                  <a class="nhsuk-link" href="/v7/attachments2-130">
+                    Delete<span class="nhsuk-visually-hidden"> file 1</span>
+                  </a>
+            
+                </dd>
+            
+              </div>
+            
+              <!--<div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                  File 2
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                  <a download href="/">receipt2.jpg</a>, 5MB
+                </dd>
+            
+                <dd class="nhsuk-summary-list__actions">
+            
+                  <a class="nhsuk-link" href="#">
+                    Delete<span class="nhsuk-visually-hidden"> file 2</span>
+                  </a>
+            
+                </dd>
+              </div> -->
+            </dl>
+          </div>
+        </div>
+
+        <div class="nhsuk-form-group">
+          
+          <fieldset class="nhsuk-fieldset" aria-describedby="doug-conditional-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+
+                Do you want to upload more documents?
+
+            </legend>            
+           <!-- <span id="attachments-add-conditional-hint" class="nhsuk-hint">
+            hint text goes here.
+            </span>-->
+
+            <div class="nhsuk-radios nhsuk-radios--conditional" data-module="radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="doug-conditional" name="doug" type="radio" value="yes" data-aria-controls="conditional-doug-conditional">
+                <label class="nhsuk-label nhsuk-radios__label" for="doug-conditional">
+                  Yes
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="doug-conditional-2" name="doug" type="radio" value="no" data-aria-controls="conditional-doug-conditional-2">
+                <label class="nhsuk-label nhsuk-radios__label" for="doug-conditional-2">
+                  No
+                </label>
+              </div>
+              
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="nhsuk-button" data-module="nhsuk-button">Continue</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

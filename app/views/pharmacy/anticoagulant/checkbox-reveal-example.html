@@ -1,0 +1,255 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Oral Medicine
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                  </svg>
+                  Go back</a>
+              </div>
+               <header>
+                <h1>
+                  Anticoagulant
+                </h1>
+              </header>
+              <header class="page-header">
+                <span class="heading-secondary">Anticoagulant Audit</span>
+                <h1 class="nhsuk-heading-l govuk-heading-l">Oral anticoagulant medicine</h1>
+              </header>
+              <br>
+              <form action="consultation-findings-page3" method="post">
+
+                  <div class="nhsuk-form-group">
+
+                    <fieldset class="nhsuk-fieldset">
+                      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h1 class="nhsuk-fieldset__heading">
+                           Select all anticoagulent medicines currently prescribed to the patient:
+                        </h1>
+                      </legend>
+
+                      <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="visual-acuity-1" name="visual-acuity" type="checkbox" value="Habitual distance right visual acuity (HDRVA)" aria-controls="conditional-hdrva">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="visual-acuity-1">
+                            Habitual distance right visual acuity
+                          </label>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-hdrva">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="hdrva-text">
+                              Value for habitual distance right visual acuity
+                              <div class="nhsuk-hint" id="bino-hint-text-hint">
+                                Record this using the LogMAR format
+                              </div>
+                            </label>
+                            <input class="nhsuk-input nhsuk-input--width-10" id="hdrva-text" name="hdrva-text" type="text">
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__item nhsuk-checkboxes--conditional">
+                          <input class="nhsuk-checkboxes__input" id="visual-acuity-2" name="visual-acuity" type="checkbox" value="Habitual distance right visual acuity (HDLVA)" aria-controls="conditional-hdlva">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="visual-acuity-2">
+                            Habitual distance left visual acuity
+                          </label>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-hdlva">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="hdlva-text">
+                              Value for habitual distance left visual acuity
+                              <div class="nhsuk-hint" id="bino-hint-text-hint">
+                                Record this using the LogMAR format
+                              </div>
+                            </label>
+                            <input class="nhsuk-input nhsuk-input--width-10" id="hdlva-text" name="hdlva-text" type="text">
+                          </div>
+                        </div>
+
+
+
+
+                        <div class="nhsuk-checkboxes__item nhsuk-checkboxes--conditional">
+                          <div class="nhsuk-form-group">
+                            <input class="nhsuk-checkboxes__input" id="visual-acuity-4" name="visual-acuity" type="checkbox" value="No monocular vision" aria-controls="conditional-no-monocular">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="visual-acuity-4">
+                              No monocular vision
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-no-monocular">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="no-monocular-text">
+                              Details of no monocular vision:
+                            </label>
+                            <textarea class="nhsuk-textarea" id="no-monocular-text" name="no-monocular-text" type="text" rows="3"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__item nhsuk-checkboxes--conditional">
+                          <div class="nhsuk-form-group">
+                            <input class="nhsuk-checkboxes__input" id="visual-acuity-4" name="visual-acuity" type="checkbox" value="No binocular vision" aria-controls="conditional-no-binocular">
+                            <label class="nhsuk-label nhsuk-checkboxes__label" for="visual-acuity-4">
+                              No binocular vision
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-no-binocular">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="no-binocular-text">
+                              Details of no binocular vision:
+                            </label>
+                            <textarea class="nhsuk-textarea" id="no-binocular-text" name="no-binocular-text" type="text" rows="3"></textarea>
+                          </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="nhsuk-checkboxes__item nhsuk-checkboxes--conditional">
+                          <input class="nhsuk-checkboxes__input" id="visual-acuity-3" name="visual-acuity" type="checkbox" value="No acuity" aria-controls="conditional-no-va">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="visual-acuity-3">
+                            Acuity not recorded
+                          </label>
+                        </div>
+
+                        <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-no-va">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label" for="hdlva-text">
+                            Reason no visual acuity was recorded:
+                            </label>
+                            <input class="nhsuk-input nhsuk-input--width-10" id="no-va-text" name="no-va-text" type="text">
+                          </div>
+                        </div>
+
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h2 class="nhsuk-fieldset__heading">
+                          Were you able to measure the patient's binocular near vision?
+                      </h2>
+                    </legend>
+                    <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="orthoptic-anomoly-1" name="orthoptic-anomoly" type="radio" value="yes" aria-controls="conditional-orthoptic-anomoly">
+                        <label class="nhsuk-label nhsuk-radios__label" for="orthoptic-anomoly-1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-orthoptic-anomoly">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="hdlva-text">
+                          What was the measurement?
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-10" id="no-va-text" name="no-va-text" type="text">
+                        </div>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="orthoptic-anomoly-2" name="orthoptic-anomoly" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="orthoptic-anomoly-2">
+                          No
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+                      <h2 class="nhsuk-fieldset__heading">
+                          Were you able to measure the patient's contrast sensitivity?
+                      </h2>
+                    </legend>
+                    <div class="nhsuk-radios nhsuk-radios--conditional">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="contrast-sensitivity-1" name="contrast-sensitivity" type="radio" value="yes" aria-controls="conditional-contrast-sensitivity">
+                        <label class="nhsuk-label nhsuk-radios__label" for="orthoptic-anomoly-1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contrast-sensitivity">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="hdlva-text">
+                          What was the measurement?
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-10" id="no-va-text" name="no-va-text" type="text">
+                        </div>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="contrast-sensitivity-2" name="contrast-sensitivity" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="orthoptic-anomoly-2">
+                          No
+                        </label>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {{ button({
+                    "text": "Continue",
+                    "id": "btn_submit"
+                  }) }}
+
+                </form>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

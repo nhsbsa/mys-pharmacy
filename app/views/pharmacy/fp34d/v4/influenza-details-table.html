@@ -1,0 +1,73 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MYS Dispensing Doctors
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+            <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+              <div class="nhsuk-width-container-fluid">
+                <ol class="nhsuk-breadcrumb__list">
+                  <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Dispensing Doctors</a></li>
+                  <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two">FP34D Submission</a></li>
+                </ol>
+                <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">Back to Level three</a></p>
+              </div>
+            </nav>
+      <div class="nhsuk-width-container-fluid">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                                <header class="page-header">
+                                  <span class="heading-secondary">December 2020 submission</span>
+                                  <h1 class="nhsuk-heading-l">Influenza vaccine details</h1>
+                                </header>
+                                
+                                                            <div class="test-case" style="overflow: visible">
+                                                              <div>
+                                                                <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true">
+                                                                    <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">Adjuvanted trivalent influenza vaccine (surface antigen,Inact) Susp for Inj 0.5ml PF Syringes
+                                                                                        (Seqirus Vaccines Ltd)</option>
+                                                                    <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd)</option>
+                                                                    <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">Fluad Tetra vaccine suspension for injection 0.5ml pre-filled syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd)</option>
+                                                                    <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline)</option>
+                                                                    <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">Flucelvax Tetra vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (Seqirus Vaccines Ltd)</option>
+                                                                    <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">Fluenz Tetra/Fluenz vaccine nasal suspension 0.2ml unit dose (Quadrivalent)
+                                                                                        (AstraZeneca UK Ltd)</option>
+                                                                    <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">Imuvac vaccine susp for Inj 0.5ml PF Syringes (Trivalent)(Mylan)</option>
+                                                                </select>
+                                                              </div>
+                                                            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

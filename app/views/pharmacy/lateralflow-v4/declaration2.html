@@ -1,0 +1,111 @@
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+In /views/layout.html you can:
+- change the header and footer
+- add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Lateral Flow Test
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+<div class="nhsBSA-sidebar-wrapper">
+<div class="nhsBSA-sidebar-content">
+<div class="nhsuk-width-container-fluid">
+
+<div class="nhsuk-main-wrapper" id="maincontent">
+    <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                </svg>
+                Go back</a>
+            </div>
+
+        <header class="page-header">
+        <span class="heading-secondary">Covid-19 Lateral Flow Device Distribution Service</span>
+        <br>
+        <h1 class="nhsuk-heading-l">Declaration</h1>
+        </header>
+
+        <p>Read the following declaration statements and, if you agree, tick the declaration box, <br>complete the details required, and select ‘Submit’ to complete your declaration.</p>
+        <p>If you choose not to accept the declaration statements, your payment will not be progressed.</p>
+
+    <div class="nhsuk-grid-column-three-quarters">
+        <div class="declaration">
+            <fieldset>
+                <legend class="visually-hidden"></legend>
+                <p>I declare that:</p>
+                <br>
+                <ul>
+                <li> I am providing this information for payment for the supply of Lateral Flow Devices in accordance with the service specification
+                        for this service</li>
+                <br>  
+                <li> I understand that NHSBSA may share information I provide in relation to this 
+                        claim with others, for example NHS Counter Fraud Authority (NHSCFA) and NHS Test and Trace Counter Fraud Team, for the 
+                        prevention and detection of unlawful activity affecting the NHS</li>
+                </ul>
+                <br>
+                <div class="nhsuk-checkboxes">
+
+                    <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    I agree and accept this declaration
+                    </label>
+                    </div>
+                </div>
+            </fieldset>  
+        </div>
+
+            <br>
+            <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-20">
+                First Name
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+            <br>
+            <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-20">
+                Surname
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+
+        <br>
+        <p>A confirmation email will be sent to FAAAA@nhs.net. If you would like a copy sent to another email address, please enter it below.</p>
+            <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-20">
+                Email address (optional)
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+            </div>
+        <br>
+        <a href="done" class="nhsuk-button">
+        Submit
+        </a>
+        <br>
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

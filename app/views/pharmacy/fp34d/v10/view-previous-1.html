@@ -1,0 +1,236 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+  <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} MYS Dispensing Doctors {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+              
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+
+                <header class="page-header">
+                  <span class="heading-secondary">April 2022 submission</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Previous submission summary</h1>
+                </header>
+          
+                <div class="nhsuk-form-group">
+                  <p>These tables summarise the vaccine details that were submitted for each individual GP or nurse for (month of previous submission selected) (year of submission).
+                </div>
+                <hr>
+                      
+                <form action="declaration"
+                      method="post">
+                  <table class="table-form">
+                    <h3>Vaccine submission summary for (GP or nurse on the practice list)</h3>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine type
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Total vaccine doses
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluad vaccine suspension for injection 0.5ml PF syringes (Trivalent)(Disc 08/20)
+                                                                                        (Seqirus Vaccines Ltd)</td>
+                        <td class="nhsuk-table__cell--align-right ">25</td>
+                      </tr>
+                    </tbody>
+                    
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluarix Tetra/Fluarix vaccine susp for Inj 0.5ml PF Syringes (Quadrivalent)
+                                                                                        (GlaxoSmithKline)</td>
+                        <td class="nhsuk-table__cell--align-right ">33</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Influenza</td>
+                        <td class="nhsuk-table__cell ">Fluenz Tetra/Fluenz vaccine nasal suspension 0.2ml unit dose (Quadrivalent)
+                                                                                        (AstraZeneca UK Ltd)</td>
+                        <td class="nhsuk-table__cell--align-right ">41</td>
+                      </tr>
+                    </tbody>
+
+             
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhoid vaccine (live, oral, strain ty21a) gastro-resistant capsules</td>
+                        <td class="nhsuk-table__cell--align-right ">29</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhim Vi 25mcg/0.5ml Vaccine Soln for Inj PF Syringes</td>
+                        <td class="nhsuk-table__cell--align-right ">15</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis A</td>
+                        <td class="nhsuk-table__cell ">Vaqta Adult/Vaqta Vaccine Susp for Inj 1ml PF Syringe</td>
+                        <td class="nhsuk-table__cell--align-right ">18</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Pneumococcal</td>
+                        <td class="nhsuk-table__cell ">Pneumococcal polysaccharide vaccine soln for Inj 0.5ml pre-filled syringes </td>
+                        <td class="nhsuk-table__cell--align-right ">16</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Pneumococcal</td>
+                        <td class="nhsuk-table__cell ">Pneumococcal polysaccharide vaccine soln for Inj 0.5ml pre-filled syringes </td>
+                        <td class="nhsuk-table__cell--align-right ">3</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis B</td>
+                        <td class="nhsuk-table__cell ">Engerix B 10mcg/0.5ml Vaccine Susp for Inj PF Syringe/Vials </td>
+                        <td class="nhsuk-table__cell--align-right ">5</td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+
+                  
+<br>
+                  <table>
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                      <h3>Vaccine submission summary for (GP or nurse on the practice list)</h3>
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine type
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Vaccine
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Total vaccine doses
+                        </th>
+                      </tr>
+                    </thead>          
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Typhoid</td>
+                        <td class="nhsuk-table__cell ">Typhim Vi 25mcg/0.5ml Vaccine Soln for Inj PF Syringes</td>
+                        <td class="nhsuk-table__cell--align-right ">52</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Hepatitis A</td>
+                        <td class="nhsuk-table__cell ">Vaqta Adult/Vaqta Vaccine Susp for Inj 1ml PF Syringe</td>
+                        <td class="nhsuk-table__cell--align-right ">24</td>
+                      </tr>
+                    </tbody>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell ">Pneumococcal</td>
+                        <td class="nhsuk-table__cell ">Pneumococcal polysaccharide vaccine soln for Inj 0.5ml pre-filled syringes </td>
+                        <td class="nhsuk-table__cell--align-right ">16</td>
+                      </tr>
+                    </tbody>
+
+                  </table> 
+            
+                </form>
+                <br>
+
+
+                  <div class="nhsuk-form-group">
+                  <form action="addRetrospective"
+                      class="form"
+                      method="get">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">Do you want to add to this submission?</legend></h1>
+                        
+                        <br>
+                        <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-1"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                              id="add-2"
+                              name="radioInlineGroup"
+                              type="radio"
+                              value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                              for="add-another-2">No</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <br>
+                    
+                  </div>
+                  
+                      <button class="nhsuk-button"
+                        type="submit">Continue</button>
+      
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

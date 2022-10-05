@@ -1,0 +1,208 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HEE
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container-fluid">
+
+            <div class="nhsuk-main-wrapper" id="maincontent">
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                      <div class="nhsuk-back-link">
+                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                          </svg>
+                          Go back</a>
+                      </div>
+                          
+                          <header class="page-header">
+                              <span class="heading-secondary">2022 - 2023 Foundation Training for Trainee Pharmacists: Allocation of Funding</span>
+                          </header>
+<br>
+                          <h3>Newcastle Central Pharmacy<br>ODS Code: FAAAA<br>Address: 1 High Street, Newcastle, NE1 1XX</h3>
+<br>
+                          <h3>Payment details for Douglas Caven, ID AB6789</h3>
+
+                          <p>Select the months you want to claim for.
+
+                      <table class="nhsuk-table">
+                        <thead class="nhsuk-table__head">
+                          <tr class="nhsuk-table__row">
+                            <th class="nhsuk-table__header" scope="col"> Month </th>
+                            <th class="nhsuk-table__header" scope="col"> Status </th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody class="nhsuk-table__body">
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              October 2021
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--red">Claimed</strong>
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              November 2021
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--red">Claimed</strong>
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              December 2021
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--red">Claimed</strong>
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              January 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--red">Claimed</strong>
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              February 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--red">Claimed</strong>
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              March 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <button class="nhsuk-tag nhsuk-tag--green" id="btn4">You can claim</button>
+                              <script>
+                                  const btn4 = document.getElementById('btn4');
+
+                                      btn4.addEventListener('click', function onClick() {
+                                        btn4.style.backgroundColor = 'yellow';
+                                        btn4.style.color = 'black';
+                              });
+                              </script>    
+                            </td>
+                          </tr>                   
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              April 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <button class="nhsuk-tag nhsuk-tag--green" id="btn5">You can claim</button>
+                              <script>
+                                  const btn5 = document.getElementById('btn5');
+
+                                      btn5.addEventListener('click', function onClick() {
+                                        btn5.style.backgroundColor = 'yellow';
+                                        btn5.style.color = 'black';
+                              });
+                              </script>    
+                            </td>
+                          </tr>
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              May 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <button class="nhsuk-tag nhsuk-tag--green" id="btn1">You can claim</button>
+                              <script>
+                                  const btn1 = document.getElementById('btn1');
+
+                                      btn1.addEventListener('click', function onClick() {
+                                        btn1.style.backgroundColor = 'yellow';
+                                        btn1.style.color = 'black';
+                              });
+                              </script>    
+                            </td>
+                          </tr>
+
+                          <tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              June 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <button class="nhsuk-tag nhsuk-tag--green" id="btn2">You can claim</button>
+                              <script>
+                                  const btn2 = document.getElementById('btn2');
+
+                                      btn2.addEventListener('click', function onClick() {
+                                        btn2.style.backgroundColor = 'yellow';
+                                        btn2.style.color = 'black';
+                              });
+                              </script>    
+                            </td>
+                          </tr><tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              July 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <button class="nhsuk-tag nhsuk-tag--green" id="btn3">You can claim</button>
+                              <script>
+                                  const btn3 = document.getElementById('btn3');
+
+                                      btn3.addEventListener('click', function onClick() {
+                                        btn3.style.backgroundColor = 'yellow';
+                                        btn3.style.color = 'black';
+                              });
+                              </script>    
+                            </td>
+                          </tr><tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              August 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--blue">Outside period</strong>
+                            </td>
+                          </tr><tr class="nhsuk-table__row">
+                            <td class="nhsuk-table__cell">
+                              September 2022
+                            </td>
+                            <td class="nhsuk-table__cell">
+                              <strong class="nhsuk-tag nhsuk-tag--blue">Outside period</strong>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                        <a href="hee-select-trainee-type" class="nhsuk-button">
+                            Continue
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

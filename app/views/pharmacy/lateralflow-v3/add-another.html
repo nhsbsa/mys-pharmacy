@@ -1,0 +1,149 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Lateral Flow Test {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+
+          <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+            <div class="nhsuk-width-container-fluid">
+              <ol class="nhsuk-breadcrumb__list">
+                <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/index">Index</a></li>
+                <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="lft-start-month">Month</a></li>
+                <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="lft-start-day">Day</a></li>
+                <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="patient-details">Patient details</a></li>
+              </ol>
+            </div>
+          </nav>
+
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+                id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                
+                <header class="page-header">
+                  <span class="heading-secondary">Lateral Flow Test</span>
+                  <h1 class="nhsuk-heading-l govuk-heading-l">Summary</h1>
+                </header>
+                
+                <table class="nhsuk-table">
+                  <thead class="nhsuk-table__head"
+                          role="rowgroup">
+                    <tr role="row">
+                      <th class=""
+                          role="columnheader"
+                          scope="col">Collection date</th>
+                      <th>Collection code</th>
+                      <th>Lot number(s)</th>
+                      <th>Number of packs</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">8 July 2021</td> 
+                      <td class="nhsuk-table__cell">1234-5678-5555-2765</td> 
+                      <td class="nhsuk-table__cell">1234-3333</td>
+                      <td class="nhsuk-table__cell">7</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">Change details</a> or <a href="">Delete</a></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">8 July 2021</td> 
+                      <td class="nhsuk-table__cell">9876-1111-3579-6565</td> 
+                      <td class="nhsuk-table__cell">8008</td>
+                      <td class="nhsuk-table__cell">2</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">Change details</a> or <a href="">Delete</a></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">8 July 2021</td> 
+                      <td class="nhsuk-table__cell">2319-0033-2318-9112</td> 
+                      <td class="nhsuk-table__cell">65</td>
+                      <td class="nhsuk-table__cell">5</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="summary">Change details</a> or <a href="">Delete</a></td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+
+                </table>
+                <form action="addAnotherOne"
+                      class="form"
+                      method="get">
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset">
+                      <h1 class="nhsuk-fieldset__heading"><legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">Do you want to add another collection for the 21 July 2021?</legend></h1>
+                      <div class="nhsuk-radios nhsuk-radios--inline">
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                                id="add-1"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="Yes"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-1">Yes</label>
+                        </div>
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input"
+                                id="add-2"
+                                name="radioInlineGroup"
+                                type="radio"
+                                value="no"> <label class="nhsuk-label nhsuk-radios__label"
+                                for="add-another-2">No</label>
+                        </div>
+                      </div>
+                    </fieldset><br>
+                    <br>
+                    <button class="nhsuk-button"
+                          type="submit">Next</button>
+                  </div>
+                </form>
+
+
+                      <form action="lft-start-day" method="post" novalidate>
+                          <button class="nhsuk-button nhsuk-button--secondary" type="submit">
+                                Save and continue later
+                          </button>
+                      </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>

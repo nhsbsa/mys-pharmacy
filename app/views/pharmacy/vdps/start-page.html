@@ -1,0 +1,120 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Vaccine Damage Payment Scheme
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">VDPS</span>
+          Vaccine Damage Payment Scheme
+      </h1>
+
+      <h3>Your claim form for a Vaccine Damage Payment</h3>
+      
+      <p>Complete this claim form if you believe you, or the person you are representing, are severely disabled as a result of vaccination. See Part 3 for a list of vaccinations against the diseases covered by the scheme.</p>
+      
+      <p>If you need help with completing this form, please contact the Vaccine Damage Payments Team, at <b>nhsbsa.vdps@nhs.net</b> where someone will be able to help you.</p>
+      
+      <p>You must send the completed claim form to the Vaccine Damage Payments Team to arrive no later than:
+        <ul>
+          <li>the end of the 6 year period, which started on the date of the vaccination to which the claim relates; or</li>
+          <li>the date the disabled person reaches the age of 21; or</li>
+          <li>if the disabled person has died, the date they would have reached the age of 21, whichever is the latest date.</li>
+        </ul>
+      </p>
+
+      <p>Someone should fill in the form on behalf of the disabled person if they are:
+        <ul>
+          <li>a child under the age of 16, or</li>
+          <li>the date the disabled person reaches the age of 21; or</li>
+          <li>aged 16 or over and unable to manage their affairs due to a mental health problem or learning disability.</li>
+        </ul>
+      </p>
+      
+      <form>
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Please tick one box
+              </h1>
+            </legend>
+
+            <div class="nhsuk-checkboxes">
+
+            
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                  I am filling in this form on behalf of the disabled person because they are under 16 years old.
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Please tell us about yourself in <b>Part 1</b>. Then tell us about the disabled person in the rest of the form.
+                </div>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                  I am filling in this form on behalf of the disabled person who is aged 16 or over because they are unable to manage their affairs due to a mental health problem or learning disability.
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Please tell us about yourself in <b>Part 1</b>. Then tell us about the disabled person in the rest of the form.
+                </div>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                  I am the disabled person.
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Please go to <b>Part 2</b>.
+                </div>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" aria-describedby="nationality-1-item-hint">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                  I am filling in this form on behalf of the disabled person because they have died.
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Please tell us about yourself in <b>Part 1</b>. Then tell us about the disabled person in the rest of the form.
+                </div>
+              </div>
+
+            </div>
+          </fieldset>
+
+        </div>
+
+      </form>
+
+      <hr>
+
+    </div>
+  </div>
+{% endblock %}

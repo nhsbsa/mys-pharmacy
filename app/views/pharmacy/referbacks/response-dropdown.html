@@ -1,0 +1,78 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Referback
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        Transfer Items to CIP
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+                        <td  class="test-case" style="overflow: visible">
+                          <div>
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                                  <h2 class="nhsuk-fieldset__heading">
+                                  Digital Referred Back Responses
+                                  </h2>
+                              </legend>
+
+                              <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="vaccines" aria-required="true">
+                                  <option value="0">Select a response</option>
+                                  <option value="1">Please submit the supplier name, the pack size used and the price for that pack size.</option>
+                                  <option value="2">The price submitted must be the price for the pack size</option>
+                                  <option value="3">What is the price for the pack size?</option>
+                                  <option value="4">Please submit the pack size used and the price for that pack size</option>
+                                  <option value="5">The information must include the pack size the item was dispensed from. What was the pack size used?</option>
+                                  <option value="6">The information must include the size/type/maker/brand of the appliance</option>
+                                  <option value="7">What size/type/maker/brand was dispensed?</option>
+                                  <option value="8">What size was dispensed?</option>
+                                  <option value="9">What maker/brand was dispensed?</option>
+                                  <option value="10">What type was dispensed? example i.e. sharps container ordered question would include e.g. Sharpsguard, Sharpsafe etc.</option>
+                                  <option value="11">The information must include the presentation of the item dispensed. Was the item hydrochloride or teoclate 25mg tabs?</option>
+                                  <option value="12">Was the item 500mg stearate or ethyl succinate tabs? Please submit the salt eg. Ethyl Succinate or Stearate</option>
+                                  <option value="13">The information must include the presentation of the item dispensed. Was the item pump or aerosol?</option>
+                                  <option value="14">The information must include the presentation of the item dispensed. Was the item 31% isotonic or 75% hypertonic spray?</option>
+                                  <option value="15">The information must include the presentation, strength, and quantity of the drug</option>
+                                  <option value="16">The information must include the quantity of the item dispensed. Please submit the quantity dispensed</option>
+                                  <option value="17">The information must include the presentation of the item dispensed</option>
+                                  <option value="18">The information must include the strength of the item dispensed</option>
+
+                              </select>
+                          </div>
+                        </td>
+                        <br>
+                        <br>
+                    <button class="nhsuk-button"
+                          type="submit">Submit</button>
+
+<!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}

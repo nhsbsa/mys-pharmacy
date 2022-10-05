@@ -1,0 +1,127 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  {% extends 'layout-full-width.html' %} <!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+   <!-- Set the page title inside the pageTitle block -->
+  {% block pageTitle %} Lateral Flow Test {% endblock %} <!-- Breadcrumb goes inside the beforeContent block -->
+  {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
+  <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+  {% block content %}
+  <div class="nhsBSA-sidebar-container">
+    <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+        <nav aria-label="Breadcrumb"
+             class="nhsuk-breadcrumb">
+          <div class="nhsuk-width-container-fluid">
+            <ol class="nhsuk-breadcrumb__list">
+              <li class="nhsuk-breadcrumb__item">
+                <a class="nhsuk-breadcrumb__link"
+                    href="/index">Lateral Flow Test</a>
+              </li>
+              <li class="nhsuk-breadcrumb__item">
+                <a class="nhsuk-breadcrumb__link"
+                    href="/level-one/level-two"></a>
+              </li>
+            </ol>
+            <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink"
+               href="/level-one/level-two/level-three">Back to Level three</a></p>
+          </div>
+        </nav>
+        <div class="nhsuk-width-container-fluid">
+          <div class="nhsuk-main-wrapper"
+               id="maincontent">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+                <header>
+                  <h2 class="nhsuk-heading-l">Lateral Flow Test</h2>
+                </header>
+                <div class="nhsuk-hint">
+                  You can see the uncompleted months to here.
+                </div><br>
+                <h3 class="nhsuk-heading-m">Months for 2021</h3>
+                <table class="nhsuk-table">
+                  <thead class="nhsuk-table__head"
+                         role="rowgroup">
+                    <tr role="row">
+                      <th class=""
+                          role="columnheader"
+                          scope="col">Month</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">July 2021</td>
+                      <td></td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="lft-start-day">Select</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">August 2021</td>
+                      <td></td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="lft-start-day">Select</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 class="nhsuk-heading-m">Previous submissions</h3>
+                <table class="nhsuk-table">
+                  <thead class="nhsuk-table__head"
+                         role="rowgroup">
+                    <tr role="row">
+                      <th class=""
+                          role="columnheader"
+                          scope="col">Period</th>
+                      <th class=""
+                          role="columnheader"
+                          scope="col">Patients</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">June 2021</td>
+                      <td class="nhsuk-table__cell">23</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="#">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody class="nhsuk-table__body">
+                    <tr class="nhsuk-table__row"
+                        role="row">
+                      <td class="nhsuk-table__cell">May 2021</td>
+                      <td class="nhsuk-table__cell">37</td>
+                      <td class="nhsuk-table__cell--align-right">
+                        <a href="#">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>{% endblock %}
+</body>
+</html>
