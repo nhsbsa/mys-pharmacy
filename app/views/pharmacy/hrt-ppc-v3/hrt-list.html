@@ -1,0 +1,224 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title -->
+{% block pageTitle %}
+Medication covered by the HRT PPC
+{% endblock %}
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+   background-color: #007f3b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  </style>
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="javascript:history.back()">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+  <div class="nhsuk-grid-row">
+  
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- Change the page heading -->
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Medication which will be covered by the HRT PPC 
+        </h1>
+      </legend>
+      
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <p>
+      <p> Not all medication will be covered by the HRT PPC. It's important to check that the medication they require will be eligible before purchasing this certificate.</p>
+      <p>If the medication they need is not listed here they are unable to purchase an HRT PPC, but will be able to purchase a PPC.</p>
+      <p>As other medication becomes licensed for the treatment of HRT, it may be added to this list.</p>
+    <h2>List of medication</h2>
+    
+      <div class="nhsuk-grid-column-full">
+    <p><a href="#a">A</a> - <a href="#b">B</a> - <a href="#c">C</a> - <a href="#d">D</a> - <a href="#e">E</a> - <a href="#f">F</a> - <a href="#g">G</a> - <a href="#h">H</a> - <a href="#i">I</a> - <a href="#j">J</a> - <a href="#k">K</a> - <a href="#l">L</a> - <a href="#m">M</a> - <a href="#n">N</a> - <a href="#o">O</a> - <a href="#p">P</a> - <a href="#q">Q</a> - <a href="#r">R</a> - <a href="#s">S</a> - <a href="#t">T</a> - <a href="#u">U</a> - <a href="#v">V</a> - <a href="#w">W</a> - <a href="#x">X</a> - <a href="#y">Y</a> - <a href="#z">Z</a></p>
+    <hr></div>
+    
+    <p>
+      <h4 class="a" id="a" name="a">A</h4>
+      <h4 class="b" id="b" name="b">B</h4>
+      Bedol<br>
+Bijuve  <br>
+Blissel  <br><br>
+<hr>
+<h4 class="c" id="c" name="c">C</h4>
+Climen <br>
+Clinorette <br>
+Conjugated oestrogen  <br>
+Conjugated oestrogen / medroxyprogesterone (low dose)<br>
+Conjugated oestrogens with medroxyprogesterone<br><br>
+<hr>
+<h4 class="e" id="e" name="e">E</h4>
+Elleste Duet   <br>
+Elleste Duet Conti  <br>
+Elleste Solo<br>
+Estraderm  <br>
+Estradiol  <br>
+Estradiol and estriol with progestogen<br>
+Estradiol hemihydrate  <br>
+Estradiol hemihydrate / dydrogesterone   <br>
+Estradiol hemihydrate / levonorgestrel  <br>
+Estradiol hemihydrate / norethisterone acetate <br>
+Estradiol hemihydrate / progesterone <br>
+Estradiol vaginal tablets (generic) <br>
+Estradiol valerate  <br>
+Estradiol valerate / medroxyprogesterone  <br> 
+Estradiol valerate / medroxyprogesterone acetate  <br>
+Estradiol with cyproterone acetate<br>
+Estradiol with dydrogesterone<br>
+Estradiol with levonorgestrel<br>
+Estradiol with medroxyprogesterone<br>
+Estradiol with norethisterone<br>
+Estradiol with progesterone<br>
+Estradiol with progestogen<br>
+Estradot  <br>
+E-string vaginal delivery system  <br>
+Estriol  <br>
+Estriol cream (generic)<br>  
+Ethinylestradiol<br>
+Evorel   <br>
+Evorel Conti <br>  
+Evorel Sequi  <br><BR>
+  <hr>
+  <h4 class="f" id="f" name="f">F</h4>
+Femoston  <br>
+Femoston Conti<br>   
+FemSeven Mono  <br>
+FemSeven Sequi <br>
+FemSeven Conti<br><br>
+<hr>
+<h4 class="i" id="i" name="i">I</h4>
+Imvaggis pessary <br>
+Indivina  <br><br>
+<hr>
+<h4 class="k" id="k" name="k">K</h4>
+Kliofem  <br>
+Kliovance  <br><br>
+<hr>
+<h4 class="l" id="l" name="l">L</h4>
+Lenzetto transdermal spray <br>
+Levonorgestrel   <br>
+Livial  <br><br>
+<hr>
+<h4 class="m" id="m" name="m">M</h4>
+Mirena Intrauterine device  <br><br>
+<hr>
+<h4 class="n" id="n" name="n">N</h4>
+Novofem   <br>
+Nuvelle TS patches<br><br>
+<hr>
+<h4 class="o" id="o" name="o">O</h4>
+Oestrogel   <br>
+Oestrogens conjugated with progestogen<br>
+Ovestin cream  <br><BR>
+  <hr>
+  <h4 class="p" id="p" name="p">P</h4>
+Premarin   <br>
+Premique Low Dose  <br>
+Progesterone  <br> 
+Progynova  <br> 
+Progynova TS<br>  <br>
+<hr>
+<h4 class="s" id="s" name="s">S</h4>
+Sandrena   <br><br>
+<hr>
+<h4 class="t" id="t" name="t">T</h4>
+Tibolone <br>
+Tibolone (generic) <br>
+Tridestra  <br>
+Trisequens  <br><br>
+<hr>
+<h4 class="u" id="u" name="u">U</h4>
+Utrogestan  <br><BR>
+  <hr>
+  <h4 class="v" id="v" name="v">V</h4>
+Vagifem vaginal tablets <br>
+Vagirux vaginal tablets <br><br>
+<hr>
+<h4 id="z" >Z</h4>
+Zumenon<br>
+    </p>
+    <!-- End of content -->
+    </div>  
+  </div>
+  <button  onclick="topFunction()" id="myBtn" title="Go to top">Return to the top</button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+  <p class="nhsuk-body-s nhsuk-u-margin-top-7 nhsuk-u-secondary-text-color">
+    Page last reviewed: 17 July 2022<br>
+    Next review due: 17 July 2025
+  </p>
+{% endblock %}
