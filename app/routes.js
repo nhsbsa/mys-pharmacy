@@ -30,7 +30,7 @@ router.get(/ppcEmail/, function (req, res) {
   
   router.get(/ppcHrtQuestion/, function (req, res) {
     if (req.query.radioInlineGroup === "Yes" ) {
-      res.redirect('ppc-hrt-ppc-start-page');
+      res.redirect('ppc-or-hrt-ppc-start-page');
       } else {
       res.redirect('ppc-or-hrt-hrt-start-page');
     }
