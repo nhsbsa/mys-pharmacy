@@ -2,6 +2,16 @@
 const express = require('express');
 const router = express.Router();
 
+// PPC Routes //
+
+router.get(/ppcEmail/, function (req, res) {
+  if (req.query.radioInlineGroup === "Email" ) {
+    res.redirect('ppc-customer-email1');
+    } else {
+    res.redirect('ppc-cya');
+  }
+});
+
 // HRT PPC Routes //
 
 router.get(/ppcEmail/, function (req, res) {

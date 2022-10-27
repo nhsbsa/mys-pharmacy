@@ -35,18 +35,21 @@
       <!-- Change the page title here -->
       
       <header class="page-header">
-          <span class="heading-secondary">Sell a Prescription Prepayment Certificate (PPC)</span>
-          <h1 class="nhsuk-heading-l govuk-heading-l">What is the customer's date of birth?</h1>
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Prescription Prepayment Certificate (PPC)</span>
+          <h1 class="nhsuk-heading-xl">When does the customer want the PPC to start?</h1>
       </header>
+          <form action="certificate-option" method="get" class="form">
 
-          <form action="ppc-hrt-ppc-customer-address-lookup" method="get" class="form">
-              <p>We collect this information to check if your customer qualifies for free prescriptions.</p>
 
                   <div class="nhsuk-form-group">
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                       
                       <div class="nhsuk-hint" id="example-hint">
-                        For example, 15 3 1984
+                        You can backdate this for up to a month before today's date. You can also sell a PPC up to a month in advance.
+                      </div>
+
+                      <div class="nhsuk-hint" id="example-hint">
+                        Enter the date in the format Day Month Year. For example, 15 3 2022.
                       </div>
 
                       <div class="nhsuk-date-input" id="example">
@@ -76,9 +79,10 @@
                         </div>
                       </div>
                     </fieldset>
-
+<br>
                   </div><br>
 
+            
                   <br>
                       <button class="nhsuk-button" type="submit">
                                 Continue

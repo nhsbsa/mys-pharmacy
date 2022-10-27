@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  HRT
+  PPC
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,27 +35,34 @@
       <!-- Change the page title here -->
       
       <header class="page-header">
-          <span class="heading-secondary">Sell a Hormone Repacement Therapy Prescription Prepayment Certificate (HRT PPC)</span>
-          <h1 class="nhsuk-heading-l govuk-heading-l">What is the customer's email address?</h1>
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Prescription Prepayment Certificate (PPC)</span>
+          <h1 class="nhsuk-heading-xl">What is the customer's address?</h1>
       </header>
-
-          <form action="ppc-or-hrt-hrt-cya" method="get" class="form">
-
-                  <label class="nhsuk-label" for="part1-other-surname">
-                      Email address
-                  </label>
-                  <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-input--width-20" id="surname" name="surname" type="text">
-                  </div><br>
-
-                  <br>
-                      <button class="nhsuk-button" type="submit">
-                                Continue
-                      </button>
-          </form>       
       
+      <div class="nhsuk-hint" id="example-hint">The address given should match what is printed on their prescriptions.</div>
 
+              <form action="customer-address-lookup-select" method="get" class="form">
+                  <fieldset class="nhsuk-fieldset">
 
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="address-postcode">
+                        Postcode
+                      </label>
+                      <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+                    </div>
+
+                  </fieldset>
+                    <p class="nhsuk-body"><a class="nhsuk-link" href="ppc-hrt-ppc-customer-address">Enter address manually</a></p>
+                    <br>
+                  
+                  <br>           
+                      <button class="nhsuk-button" type="submit">
+                                Find address
+                      </button>
+                      
+              </form> 
+            
     </div>
+    
   </div>
 {% endblock %}
