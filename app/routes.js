@@ -45,6 +45,17 @@ router.get(/ppcEmail/, function (req, res) {
       res.redirect('ppc-or-hrt-hrt-start-page');
     }
   });
+
+  // PUC routes //
+
+  router.get(/plannedAddDate/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('planned-details');
+      } else  {
+      res.redirect('planned-declaration');
+    }
+  });
+ 
   
 
 module.exports = router;
