@@ -50,12 +50,20 @@ router.get(/ppcEmail/, function (req, res) {
 
   router.get(/plannedAddDate/, function (req, res) {
     if (req.query.radioInlineGroup === "Yes" ) {
-      res.redirect('planned-details');
+      res.redirect('planned-date');
       } else  {
       res.redirect('planned-declaration');
     }
   });
- 
+
+  router.get(/unPlannedAddDate/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('unplanned-date');
+      } else  {
+      res.redirect('unplanned-actions');
+    }
+  });
+
   
 
 module.exports = router;
