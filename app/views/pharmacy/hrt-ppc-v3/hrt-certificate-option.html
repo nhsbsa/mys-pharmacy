@@ -35,68 +35,63 @@
 
       <!-- Change the page title here -->
       <header class="page-header">
-          <span class="heading-secondary">Sell a Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)</span>
-          <h1 class="nhsuk-heading-l govuk-heading-l">Certificate receipt option</h1>
+<span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)</span>
+          <h1 class="nhsuk-heading-xl">How would the customer like to receive their HRT PPC?</h1>
       </header>
 
-          <h3>How would the customer like to receive their HRT PPC?</h3> 
-          <p>We can send HRT PPC details immediately by email. We can also send details by post, but these will take longer to arrive.</p>
+          <p class="nhsuk-body">We can send HRT PPC details immediately by email. We can also send details by post, but these will take longer to arrive.</p>
 
-<!-- blocked out
-                  <div class="nhsuk-warning-text">
-                        <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
-                        <strong class="nhsuk-warning-text__text">
-                          <span class="nhsuk-warning-text__assistive"></span>
-                          We do not send out plastic cards any more. They take time to reach people, and are costly to the NHS and the environment 
-                        </strong>
-                  </div>
--->
                 
-                  <div class="nhsuk-form-group">
-                    <form action="hrtHrtEmail"
+                    <form action="hrt-cya"
                       class="form"
                       method="get">
-                      <fieldset class="nhsuk-fieldset">
-                  
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input"
-                                id="add-1"
-                                name="radioInlineGroup"
-                                type="radio"
-                                value="Email"> <label class="nhsuk-label nhsuk-radios__label"
-                                for="add-another-1">Email</label>
-                          </div><br>
 
-                          <div class="nhsuk-radios__item">
-                            <input class="nhsuk-radios__input"
-                                id="add-2"
-                                name="radioInlineGroup"
-                                type="radio"
-                                value="Address"> <label class="nhsuk-label nhsuk-radios__label"
-                                for="add-another-2">Post</label>
-                          </div><br>
+<div class="nhsuk-radios nhsuk-radios--conditional">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Email
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+      
+              <div class="nhsuk-form-group">
+               <div class="nhsuk-hint" id="nhs-number-hint">We'll email the certificate to the customer within 10 hours.</div> 
+               <div class="nhsuk-hint" id="nhs-number-hint">We'll also send them an email reminder 1 month before it's due to end.</div>
+                <label class="nhsuk-label" for="email">
+                  Email address
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+              
+              </div>
 
-                      </fieldset>
+              
+      
+            </div>
+      
+            
+      
+            
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="email" name="contact" type="radio" value="no" aria-controls="conditional-contact-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                Post
+              </label>
+            </div>
+      
+          
+      
+          </div> <br><br>                 
+          
 
-                  <p>You can also write down the details for your customer. These will be shown at the end of the application.</p>
-
-                  <div class="nhsuk-warning-callout">
-                    <h3 class="nhsuk-warning-callout__label">
-                      <span role="text">
-                        <span class="nhsuk-u-visually-hidden">Important: </span>
-                        Plastic cards
-                      </span>
-                    </h3>
-                    <p>We no longer send out plastic cards for HRT PPCs. They take longer to reach people and are costly to both the NHS and the environment.</p>
-                  </div>
                       
                       <button class="nhsuk-button"
                         type="submit">Continue</button>
 
-      
                     </form>
-                  </div>
-
     </div>
   </div>
 {% endblock %}

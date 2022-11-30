@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  HRT
+  PPC
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,12 +35,12 @@
       <!-- Change the page title here -->
       
       <header class="page-header">
-<span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)</span>
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Prescription Prepayment Certificate (PPC)</span>
           <h1 class="nhsuk-heading-xl">What is the customer's address?</h1>
       </header>
-      <div class="nhsuk-hint" id="example-hint">The address you give should match what is printed on your prescriptions.</div>
+      <p>The address given should match what is printed on their prescriptions.</p>
 
-<form action="hrt-customer-nhs-no" method="get" class="form">
+              <form action="customer-nhs-no" method="get" class="form">
 <label class="nhsuk-label" for="select-1">
         Postcode
       </label>
@@ -67,11 +67,12 @@
 
       <p><a href="manual-address">My address is not listed</a></p>
 
-        
+        <form action="nhs-number">
         <button class="nhsuk-button" type="submit">
           Continue
         </button>
-      </form>                  
+      </form>              </form>  
+
     </div>
   </div>
 {% endblock %}

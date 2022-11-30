@@ -36,24 +36,50 @@
       
       <header class="page-header">
           <span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Prescription Prepayment Certificate (PPC)</span>
-          <h1 class="nhsuk-heading-xl">What is the customer's name?</h1>
+          <h1 class="nhsuk-heading-xl">Do they know their NHS number?</h1>
       </header>
 
-          <form action="ppc-hrt-ppc-customer-dob" method="get" class="form">
+<p>An NHS number can help us match the customer's details correctly.</p>
+          <form action="ppc-duration" method="get" class="form">
 
-                  <label class="nhsuk-label" for="part1-other-surname">
-                      First name
-                  </label>
+                  <div class="nhsuk-hint" id="contact-hint">
+                      Their NHS number is a 10 digit number. For example, 485 777 3456.
+                  </div>
                   <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-input--width-20" id="surname" name="surname" type="text">
-                  </div><br>
-
-                  <label class="nhsuk-label" for="part1-other-surname">
-                      Surname
-                  </label>
-                  <div class="nhsuk-form-group">
-                    <input class="nhsuk-input nhsuk-input--width-20" id="surname" name="surname" type="text">
-                  </div><br>
+<div class="nhsuk-radios nhsuk-radios--conditional">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Yes, they know their NHS number
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+      
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="email">
+                  NHS number
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+              </div>
+      
+            </div>
+      
+            
+      
+            
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                No, they do not know their NHS number
+              </label>
+            </div>
+      
+          
+      
+          </div>                  </div><br>
 
                   <br>
                       <button class="nhsuk-button" type="submit">
