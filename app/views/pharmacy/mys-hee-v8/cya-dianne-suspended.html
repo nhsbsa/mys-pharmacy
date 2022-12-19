@@ -32,11 +32,11 @@
                     <div class="nhsuk-grid-column-full">
 
                       <div class="nhsuk-back-link">
-                        <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                        <a class="nhsuk-back-link__link" href="hee-manage-trainees3">
                           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
                           </svg>
-                          Back</a>
+                          Back to trainee list</a>
                       </div>
 
               <header>
@@ -45,7 +45,11 @@
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">View or edit a trainee</span>
       </h1>
               </header>
-              
+
+              <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>This trainee is suspended since [date]. Reason for suspension is [reason]</p>
+</div>
 
                           <dl class="nhsuk-summary-list">
 
@@ -92,7 +96,7 @@
 
                             <div class="nhsuk-summary-list__row">
                               <dt class="nhsuk-summary-list__key">
-                                Trainee Type
+                                Trainee type
                               </dt>
                               <dd class="nhsuk-summary-list__value">
                                 Pre-registration Trainee Pharmacy Technician (PTPT)
@@ -120,10 +124,10 @@
                             
                             <div class="nhsuk-summary-list__row">
                               <dt class="nhsuk-summary-list__key">
-                                Training Start Date
+                                Training start date
                               </dt>
                               <dd class="nhsuk-summary-list__value">
-                                01 Oct 2021
+                                01 October 2021
                               </dd>
                               <dd class="nhsuk-summary-list__actions">
                                 <a href="edit-trainee-dn">
@@ -134,10 +138,37 @@
 
                             <div class="nhsuk-summary-list__row">
                               <dt class="nhsuk-summary-list__key">
-                                Training End Date
+                                Training end date
                               </dt>
                               <dd class="nhsuk-summary-list__value">
-                                01 Oct 2022
+                                01 October 2022
+                              </dd>
+                              <dd class="nhsuk-summary-list__actions">
+                                <a href="edit-trainee-dn">
+                                  Change<span class="nhsuk-u-visually-hidden"></span>
+                                </a>
+                              </dd>
+                            </div>
+
+                                                        <div class="nhsuk-summary-list__row">
+                              <dt class="nhsuk-summary-list__key">
+                                Training suspension date
+                              </dt>
+                              <dd class="nhsuk-summary-list__value">
+                                20 December 2021
+                              </dd>
+                              <dd class="nhsuk-summary-list__actions">
+                                <a href="edit-trainee-dn">
+                                  Change<span class="nhsuk-u-visually-hidden"></span>
+                                </a>
+                              </dd>
+                            </div>
+                            <div class="nhsuk-summary-list__row">
+                              <dt class="nhsuk-summary-list__key">
+                                Training suspension reason
+                              </dt>
+                              <dd class="nhsuk-summary-list__value">
+                                Long term absence
                               </dd>
                               <dd class="nhsuk-summary-list__actions">
                                 <a href="edit-trainee-dn">
@@ -147,9 +178,10 @@
                             </div>
 
 
+
                           </dl> 
-<a class="nhsuk-button" href="suspend-dianne">
-  Suspend trainee
+<a class="nhsuk-button" href="reactivate-dianne">
+  Reactivate trainee
 </a>
 
 <a class="nhsuk-button nhsuk-button--secondary" href="withdraw-dianne">
