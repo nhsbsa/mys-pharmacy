@@ -36,7 +36,7 @@
               <header>
                 <h1>
         Foundation Training for Trainee Pharmacists
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Suspend Dianne Nguyen</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Withdraw Dianne Nguyen</span>
       </h1>
               </header>
 
@@ -44,7 +44,7 @@
                   <div class="nhsuk-form-group">
                     <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                       <label class="nhsuk-label" for="input-width-20">
-                          Date of reactivation
+                          Date of withdrawal
                       </label>
                       <div class="nhsuk-hint" id="example-hint">
                         For example, 15 3 2021
@@ -80,10 +80,22 @@
 
                   </div><br>
 
+        <p>Reason for withdrawal</p>
 
-              <form action="cya-dianne" method="get" class="form">
+              <form action="cya-dianne-withdrawn" method="get" class="form">
                   <fieldset class="nhsuk-fieldset">
 
+                    <div class="nhsuk-form-group">       
+                      <td  class="test-case" style="overflow: visible">
+                          <div>
+                              <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="vaccines" aria-required="true">
+                                  <option value="#">Select a reason</option>
+                                  <option value="#">Trainee left</option>
+                                  <option value="#">Other reason</option>
+                              </select>
+                          </div>
+                        </td>                       
+                    </div>
 
                   </fieldset>
 <br>
