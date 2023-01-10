@@ -233,3 +233,87 @@
   color: white;
   padding: 20px;
   margin: 30px 0; }
+
+  /* ==========================================================================
+   SECONDARY NAV
+  ========================================================================== */
+// Secondary nav component
+.nhsuk-secondary-navigation {
+  background-color: $color_nhsuk-white;
+}
+
+.nhsuk-secondary-navigation__container {
+  text-align: justify; // Trick to remove the need for floats
+  margin: 0 30px;
+}
+
+.nhsuk-secondary-navigation__nav {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nhsuk-secondary-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nhsuk-secondary-navigation__item {
+  @include nhsuk-font($size: 19);
+  display: inline-block;
+  margin-right: nhsuk-spacing(4);
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nhsuk-secondary-navigation__link {
+  display: block;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:link,
+  &:visited {
+    color: $color_nhsuk-blue;
+  }
+
+  &:focus {
+    color: black; // Focus colour on yellow should really be black.
+    position: relative; // Ensure focus sits above everything else.
+    z-index: 1;
+    box-shadow: none;
+  }
+
+  &[aria-current] {
+    color: $color_nhsuk-blue;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    &:before {
+      background-color: $color_nhsuk-blue;
+      content: "";
+      display: block;
+      height: 5px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    &:focus {
+      color: black; // Focus colour on yellow should really be black.
+      position: relative; // Ensure focus sits above everything else.
+      border: none;
+
+      &:before {
+        background-color: black;
+      }
+    }
+  }
+}
