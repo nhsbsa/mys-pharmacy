@@ -1,0 +1,101 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <h3 class="heading-small">Dashboard</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="/pharmacy/old-pharmacy-versions">View summary</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Prescriptions</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="fp34c-v2">Prescription submissions (FP34C)</a></li>
+            <li><a href="unpaid">Unpaid items</a></li>
+            <li><a href="disallowed">Disallowed items</a></li>
+            <li><a href="pir">Prescription image request</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Advanced services</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="cpcs">Community Pharmacist Consultation Service
+              </a></li>
+            <li><a href="flu">Flu submission</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Surveys</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a class="active" href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>
+            <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+            <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit
+                questionnaire</a></li>
+          </div>
+        </ul>
+      </div>
+
+    </div>
+    <div class="main-content">
+
+
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+        </p>
+      </div>
+
+      <a href="javascript:history.back()" class="link-back">Back</a>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+
+          <header class="page-header" style="clear: none; display: block;">
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Old Pharmacy Dashboard</h1>
+            <hr>
+          </header>
+
+          <h2 class="heading-large">Version 1</h2>
+
+          <P>First version of the old pharmacy prototype.</P>
+
+          <a href="index">Version 1</a>
+
+          <h2 class="heading-large">Version 2</h2>
+
+          <P>04 Jan 2023. Updated version of the old pharmacy prototype. Added functionality to address ticket BP275-5184. Users can now edit submissions themselves rather than having to call MYS admin. And a warning message lets the user know they have a window to edit their claim in order to recieve payment on time.</P>
+
+          <a href="index-v2">Version 2</a>
+
+        </div>
+
+
+      </div>
+    </div>
+
+</main>
+
+{% endblock %}
