@@ -1,0 +1,361 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back</a>
+              </div>
+
+              <header>
+                <h1>
+                  September Submission
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Summary</Summary></span>
+                </h1>
+              </header>
+              <hr>
+
+              <div class="column-two-thirds">
+
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Paper prescriptions</h2>
+                  </div>
+                  <div class="column-two-thirds">
+                    <table>
+                      <thead>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;"><strong>Are you sending any paper
+                              prescriptions?</strong></td>
+                          <td style="border-bottom:0px !important;">Yes</td>
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="paper">Edit</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div style="margin-top:30px;">
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col" width="50%">Category</th>
+                            <th scope="col">Forms</th>
+                            <th scope="col">Items</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td width="50%">Exempt</td>
+                            <td></td>
+                            <td></td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Paid</td>
+                            <td></td>
+                            <td></td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%" style="border-bottom:0px !important;">Old rate</td>
+                            <td style="border-bottom:0px !important;"></td>
+                            <td style="border-bottom:0px !important;"></td>
+                            <td class="numeric" style="border-bottom:0px !important;"><a href="eps">Edit</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">EPS prescriptions</h2>
+                  </div>
+                  <div class="column-two-thirds">
+                    <table>
+                      <thead>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;"><strong>Are you sending any eps message
+                              claims?</strong></td>
+                          <td style="border-bottom:0px !important;">Yes</td>
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="eps">Edit</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div style="margin-top:30px;">
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col" width="50%">Category</th>
+                            <th scope="col">Forms</th>
+                            <th scope="col">Items</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td width="50%">Exempt</td>
+                            <td></td>
+                            <td></td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Paid</td>
+                            <td></td>
+                            <td></td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%" style="border-bottom:0px !important;">Old rate</td>
+                            <td style="border-bottom:0px !important;"></td>
+                            <td style="border-bottom:0px !important;"></td>
+                            <td class="numeric" style="border-bottom:0px !important;"><a href="eps">Edit</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Other activities</h2>
+                  </div>
+                  <div id="hideme" class="column-two-thirds">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col" width="50%">Category</th>
+                          <th scope="col">Yes/no</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%">New Medicine Service</td>
+                          <td>Yes</td>
+                          <td></td>
+                          <td>-</td>
+                          <td class="numeric"><a href="other">Edit</a></td>
+                        </tr>
+
+                        <tr>
+                          <td width="50%">Medicine Use Reviews</td>
+                          <td></td>
+                          <td></td>
+                          <td>-</td>
+                          <td class="numeric"><a href="other">Edit</a></td>
+                        </tr>
+
+                        <tr>
+                          <td width="50%">Appliance Use Reviews <br>(At premises)</td>
+                          <td>Yes</td>
+                          <td>14</td>
+                          <td>-</td>
+                          <td class="numeric"><a href="other">Edit</a></td>
+                        </tr>
+
+                        <tr>
+                          <td width="50%">Appliance Use Reviews <br>(At home)</td>
+                          <td>Yes</td>
+                          <td>12</td>
+                          <td>-</td>
+                          <td class="numeric"><a href="other">Edit</a></td>
+                        </tr>
+
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;">Prescription Charge Refunds (FP57)</td>
+                          <td style="border-bottom:0px !important;">Yes</td>
+                          <td style="border-bottom:0px !important;">12</td>
+                          <td style="border-bottom:0px !important;">£120.11</td>
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="other">Edit</a></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                  </div>
+                  <div class="column-two-thirds">
+                    <div class="declaration">
+                      <ol>
+                        <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have reviewed the summary
+                          above
+                          and that the information provided within this submission is correct and accurate. </li>
+
+                        <li style="margin-left:40px; padding-bottom:10px;">I certify that the drugs and scheduled
+                          appliances
+                          ordered on the forms (and electronic prescriptions) submitted as part of this submission were
+                          supplied by <strong>Teds Pharmacy</strong> and carried out on our premises.</li>
+
+                        <li style="margin-left:40px; padding-bottom:10px;">I confirm that my acceptance of the
+                          declaration
+                          below shall act as my electronic signature.</li>
+
+                        <h3 class="heading-medium" style="margin-bottom:20px; margin-top:0px;">Prescriptions</h3>
+
+                        <li style="margin-left:40px; padding-bottom:10px;">I certify that I am entitled to claim payment
+                          in
+                          accordance with the relevant provisions of my Terms of Service contained in the NHS
+                          (Pharmaceutical Services) Regulations 2013 and the Drug Tariff and that the information I have
+                          given on this form is correct and complete and I understand that if it is not, appropriate
+                          criminal, civil and disciplinary sanctions may be imposed.</li>
+
+                        <li style="margin-left:40px; padding-bottom:10px;">I consent to the disclosure of information
+                          from
+                          this form to and by the NHS Prescription Services and the NHS Counter Fraud for the purpose of
+                          verification of this claim and the investigation, prevention, detection and prosecution of
+                          fraud
+                          or other unlawful activity against or affecting the NHS.</li>
+
+                        <!--
+                                    <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+                      </ol>
+                    </div>
+
+                    <!--
+                              <div class="form-group">
+                                 <label class="form-label" for="telephone-number">Full name</label>
+                                 <input class="form-control form-control-1-2" id="telephone-number" name="telephone-number" type="text" value="Tom Smith" readonly>
+                              </div>
+                        -->
+
+
+                    <div class="multiple-choice multiple-radio">
+                      <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+                      <label for="benefits">I confirm that I am Smartcard user <strong>Tom Smith</strong>,
+                        and that I agree and accept the declaration above.</label>
+                    </div>
+
+
+
+                    <div class="panel panel-border-wide">
+                      <p>
+                        You will be prompted for your Smartcard pin to validate your identity and complete your
+                        electronic
+                        signature.
+                      </p>
+                    </div>
+
+                    <!--
+                               <hr>
+                               
+                               <div class="multiple-choice" style="margin-bottom:20px;">
+                                 <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+                                 <label for="checkbox-telephone-number">As user <strong>Tom Smith</strong>, I agree to the declaration above.</label>
+                              </div>
+                               
+                               <div class="panel panel-border-wide">
+                          <p>
+                           You will be prompted for your password to validate your identity and complete your submission.
+                          </p>
+                        </div>
+                        
+                        -->
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+              <a href="submitted" class="nhsuk-button">Send submission</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,183 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back</a>
+              </div>
+
+              <header>
+                <h1>
+                  Paper prescriptions submission
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">June 2022</span>
+                </h1>
+              </header>
+              <hr>
+              <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+                <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="nhsuk-error-summary__body">
+                  <ul class="nhsuk-list nhsuk-error-summary__list">
+                    <li>
+                      <a href="">The second set of figures you entered were different to your first set.
+                        If the second set of figures are correct, select Yes to confirm.
+                        If the second set of figures are not correct, change these numbers and select Yes to confirm.</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="nhsuk-inset-text">
+
+
+                <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Tell us how many paper prescriptions items are exempt, paid and paid at the old rate.</h1>
+                      <br>
+                      <h1 class="nhsuk-fieldset__heading">Items</h1>
+                      <br>
+                      <div class="nhsuk-hint" id="example-hint">
+                        Second set of figures entered - change these numbers if required.
+                      </div>
+
+                      <div class="nhsuk-date-input" id="example">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                              Exempt
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
+                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                              Paid
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
+                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                              Old rate
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
+                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+
+
+                      <div class="nhsuk-form-group">
+
+                        <fieldset class="nhsuk-fieldset">
+                          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                            <h1 class="nhsuk-fieldset__heading">
+                              Confirm the number of paper prescription items is correct.
+                            </h1>
+                            <br>
+                            <span class="nhsuk-error-message" id="name-error">
+                              <span class="nhsuk-u-visually-hidden">Error:</span>The second set of figures you entered were different to your first set.
+                              If the second set of figures are correct, select Yes to confirm.
+                              If the second set of figures are not correct, change these numbers and select Yes to confirm.
+                            </span>
+                          </legend>
+                      
+                          <div class="nhsuk-radios nhsuk-radios--inline">
+                      
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                                Yes
+                              </label>
+                            </div>
+                      
+                            <div class="nhsuk-radios__item">
+                              <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                                No
+                              </label>
+                            </div>
+                      
+                          </div>
+                        </fieldset>
+                      
+                      </div>
+
+
+
+                </div>
+                </fieldset>
+
+              </div>
+              </legend>
+              </fieldset>
+
+            </div>
+
+
+          </div>
+
+
+          <a href="eps-warning" class="nhsuk-button">Next</a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+{% endblock %}
