@@ -48,6 +48,30 @@ router.get(/ppcEmail/, function (req, res) {
 
   // PUC routes //
 
+  router.get(/plannedLength/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('planned-date');
+      } else  {
+      res.redirect('planned-multiples');
+    }
+  });
+
+  router.get(/unPlannedLength/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('unplanned-date');
+      } else  {
+      res.redirect('unplanned-multiples');
+    }
+  });
+
+  router.get(/plannedMultiple/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('planned-start-date');
+      } else  {
+      res.redirect('planned-date');
+    }
+  });
+
   router.get(/plannedAddDate/, function (req, res) {
     if (req.query.radioInlineGroup === "Yes" ) {
       res.redirect('planned-date');
