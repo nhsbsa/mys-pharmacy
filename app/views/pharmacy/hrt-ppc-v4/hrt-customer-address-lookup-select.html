@@ -1,0 +1,77 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HRT
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="javascript:history.back()">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+      <!-- Change the page title here -->
+      
+      <header class="page-header">
+<span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a Hormone Replacement Therapy Prescription Prepayment Certificate (HRT PPC)</span>
+          <h1 class="nhsuk-heading-xl">What is the customer's address?</h1>
+      </header>
+      <div class="nhsuk-hint" id="example-hint">The address they give should match what is printed on their prescriptions.</div>
+
+<form action="hrt-customer-nhs-no" method="get" class="form">
+<label class="nhsuk-label" for="select-1">
+        Postcode
+      </label>
+      <p>NE1 OLD &nbsp; <a href="postcode">Change</a></p>
+      
+
+      <label class="nhsuk-label" for="select-1">
+        Your address
+      </label>
+      <div class="nhsuk-form-group">
+        
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="0">Select your address</option>
+          <option value="1">1 Test Road, Town, NE1 OLD</option>
+          <option value="2">2 Test Road, Town, NE1 OLD</option>
+          <option value="3">3 Test Road, Town, NE1 OLD</option>
+          <option value="4">4 Test Road, Town, NE1 OLD</option>
+          <option value="5">5 Test Road, Town, NE1 OLD</option>
+          <option value="6">6 Test Road, Town, NE1 OLD</option>
+          <option value="7">7 Test Road, Town, Test, Test, Test, Test, Test, Test, Test, Test, Test, Test, Test, NE1 OLD</option>
+        </select>
+      </div>
+      
+
+      <p><a href="manual-address">My address is not listed</a></p>
+
+        
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+      </form>                  
+    </div>
+  </div>
+{% endblock %}
