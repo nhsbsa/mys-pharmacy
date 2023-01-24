@@ -82,12 +82,68 @@ router.get(/ppcEmail/, function (req, res) {
 
   router.get(/unPlannedAddDate/, function (req, res) {
     if (req.query.radioInlineGroup === "Yes" ) {
-      res.redirect('unplanned-date');
+      res.redirect('');
+      } else  {
+      res.redirect('unplanned-details');
+    }
+  });
+
+  router.get(/unPlannedCYA/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('');
       } else  {
       res.redirect('unplanned-actions');
     }
   });
 
+
+  router.get(/unPlannedMultiple/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('unplanned-day');
+      } else  {
+      res.redirect('unplanned-day');
+    }
+  });
+
   
+  router.get(/unPlannedDay/, function (req, res) {
+    if (req.query.radioInlineGroup === "Yes" ) {
+      res.redirect('unplanned-reopen');
+      } else  {
+      res.redirect('unplanned-reopen');
+    }
+  });
+
+
+
+  router.post(/unPlannedReopen/, function (req, res) {
+
+    const pharmacyReOpenDate = req.session.data['pharmacyReOpenDate']
+
+    if (pharmacyReOpenDate === "Yes" ) {
+      res.redirect('unplanned-day');
+      } else  {
+      res.redirect('unplanned-details');
+    }
+  });
+
+
+  router.post(/unPlannedCYAv4/, function (req, res) {
+
+    const addanotherdate = req.session.data['addanotherdate']
+
+    if (addanotherdate === "Yes" ) {
+      res.redirect('unplanned-day');
+      } else  {
+      res.redirect('unplanned-actions');
+    }
+  });
+
+
+
+  router.post(/unPlannedReopenDay/, function (req, res) {
+      res.redirect('unplanned-reason');
+  });
+
 
 module.exports = router;
