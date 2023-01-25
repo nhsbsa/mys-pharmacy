@@ -120,7 +120,7 @@ router.get(/ppcEmail/, function (req, res) {
 
     const pharmacyReOpenDate = req.session.data['pharmacyReOpenDate']
 
-    if (pharmacyReOpenDate === "Yes" ) {
+    if (pharmacyReOpenDate === "yes" ) {
       res.redirect('unplanned-day');
       } else  {
       res.redirect('unplanned-details');
