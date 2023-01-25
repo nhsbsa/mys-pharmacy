@@ -121,9 +121,9 @@ router.get(/ppcEmail/, function (req, res) {
     const pharmacyReOpenDate = req.session.data['pharmacyReOpenDate']
 
     if (pharmacyReOpenDate === "yes" ) {
-      res.redirect('unplanned-day');
+      res.redirect('unplanned-reopen-day');
       } else  {
-      res.redirect('unplanned-details');
+      res.redirect('unplanned-details-more');
     }
   });
 
@@ -133,7 +133,7 @@ router.get(/ppcEmail/, function (req, res) {
     const addanotherdate = req.session.data['addanotherdate']
 
     if (addanotherdate === "Yes" ) {
-      res.redirect('unplanned-day');
+      res.redirect('unplanned-reopen-date');
       } else  {
       res.redirect('unplanned-actions');
     }
@@ -141,9 +141,16 @@ router.get(/ppcEmail/, function (req, res) {
 
 
 
-  router.post(/unPlannedReopenDay/, function (req, res) {
-      res.redirect('unplanned-reason');
-  });
+
+  router.post(/unplanneddetailsmore/, function (req, res) {
+    res.redirect('unplanned-cya-more');
+});
+
+
+
+  router.post(/testing-name/, function (req, res) {
+     res.redirect('unplanned-details-more');
+  })
 
 
 module.exports = router;
