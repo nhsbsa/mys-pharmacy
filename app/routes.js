@@ -153,4 +153,27 @@ router.get(/ppcEmail/, function (req, res) {
   })
 
 
+  // Registration Services //
+
+  router.post(/opt-in/, function (req, res) {
+    res.redirect('declaration');
+ })
+
+ router.post(/declarationpage/, function (req, res) {
+  res.redirect('done');
+})
+
+router.post(/opt-out/, function (req, res) {
+  res.redirect('reason');
+})
+
+router.post(/selectreason/, function (req, res) {
+  res.redirect('declaration2');
+})
+
+router.post(/dereg-declaration/, function (req, res) {
+  res.redirect('done2');
+})
+
+
 module.exports = router;
