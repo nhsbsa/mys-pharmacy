@@ -42,58 +42,70 @@ Planned/unplanned closures
     </h1>
 
     <form action="NoDate" method="post">
-      
-      <table class="nhsuk-table">
-        <tbody class="nhsuk-table__body">
-          <tr class="nhsuk-table__row" role="row">
-            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Date of planned closure
-            </td>
-            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Time of planned closure
-            </td>
-            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Reason for planned closure
-            </td>
-            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;"></td>
-          </tr>
-          <tr class="nhsuk-table__row" role="row">
-            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">28/08/2022</td>
-            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">08:00 - 18:00</td>
-            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">Staff training day</td>
-            <td class="nhsuk-table__cell" style="text-align: right; padding: 8px 24px 8px 0px;">
-              <a class="nhsuk-link" href="unplanned-date">Change</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
 
       <div class="nhsuk-form-group">
+        <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Enter the reason for the closure on [date]
+          </h1>
+        </legend>
+        <div class="nhsuk-radios nhsuk-radios--conditional">
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Do you want to add another date?
-            </h1>
-          </legend>
-
-          <div class="nhsuk-radios">
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="radioInlineGroup1" name="nodate" type="radio" value="Yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                Yes
-              </label>
-            </div>
-
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="radioInlineGroup2" name="nodate" type="radio" value="No">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                No
-              </label>
-            </div>
-
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+              Short notice staff sickness
+            </label>
           </div>
-        </fieldset>
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+              Locum could not be found
+            </label>
+          </div>
+        </div>
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Late arrival due to traffic
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            Other issue with the building (power cut, water supply issue, bomb scare etc)
+          </label>
+        </div>
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            Adverse weather (including snow, flood, flooded building)
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text"
+            aria-controls="conditional-contact-3" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+            Other
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="mobile">
+              Enter details
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+          </div>
+
+        </div>
 
       </div>
+      
       <button class="nhsuk-button" type="submit">
         Continue
       </button>
