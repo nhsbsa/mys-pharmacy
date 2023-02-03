@@ -185,6 +185,10 @@ router.post(/testing-name/, function (req, res) {
   res.redirect('reason2');
 })
 
+router.post(/unplanned-cya-two/, function (req, res) {
+  res.redirect('unplanned-check-your-answers-new');
+})
+
 
 // Registration Services //
 
@@ -208,9 +212,13 @@ router.post(/dereg-declaration/, function (req, res) {
   res.redirect('done2');
 })
 
-router.post(/unplanned-cya-two/, function (req, res) {
-  res.redirect('unplanned-check-your-answers-new');
-})
+
+
+
+
+
+
+
 
 
 
