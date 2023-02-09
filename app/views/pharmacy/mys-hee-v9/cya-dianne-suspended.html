@@ -1,0 +1,202 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+HEE
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="hee-manage-trainees3">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back to trainee list</a>
+              </div>
+
+              <header>
+                <h1>
+                  Pre-Registration Trainee Pharmacy Technicians (PTPTs) and Pharmacist Foundation Training Programme
+                  (Yr.5)
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">View or edit a trainee</span>
+                </h1>
+              </header>
+
+              <div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                <p>This trainee is suspended since [date]. Reason for suspension is [reason]</p>
+              </div>
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Dianne
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Nguyen
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    01 March 1998
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Trainee type
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Pre-registration Trainee Pharmacy Technician (PTPT)
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <!-- <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    GPhC Number
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    2574852
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div> -->
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Training start date
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    01 October 2021
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Training end date
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    01 October 2022
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Training suspension date
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    20 December 2021
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Training suspension reason
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Long term absence
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="edit-trainee-dn">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+
+
+              </dl>
+              <a class="nhsuk-button" href="reactivate-dianne">
+                Reactivate trainee
+              </a>
+
+              <a class="nhsuk-button nhsuk-button--secondary" href="withdraw-dianne">
+                Withdraw trainee
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
