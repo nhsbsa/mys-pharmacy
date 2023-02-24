@@ -37,19 +37,19 @@ Planned/unplanned closures
     </div>
 
     <h1>
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Notify us about an unplanned closure</span>
-      Unplanned temporary suspension of services
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Unplanned temporary suspension of services</span>
+      Reason for suspension of services
     </h1>
 
     
-    <form action="unplanned-actions" method="get">
+    <form action="unplanned-actions" method="post">
 
 
 
       <div class="nhsuk-form-group">
         <legend class="nhsuk-fieldset__legend nhsuk-label--l">
           <h1 class="nhsuk-fieldset__heading">
-            Enter the reason for the closure on [date]
+            Enter the reason for the suspension of services on <dynamic date from previous page>
           </h1>
         </legend>
 
@@ -83,14 +83,14 @@ Planned/unplanned closures
         <div class="nhsuk-radios__item">
           <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
           <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-            Other issue with the building (power cut, water supply issue, bomb scare etc)
+            Other issue with the building (For example, a power cut, a water supply issue, a bomb scare)
           </label>
         </div>
 
         <div class="nhsuk-radios__item">
           <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
           <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-            Adverse weather (including snow, flood, flooded building)
+            Adverse weather, such as snow or flood
           </label>
         </div>
 
@@ -118,7 +118,7 @@ Planned/unplanned closures
       <br>
 
       <button class="nhsuk-button" type="submit">
-        Continue
+        Save and Continue
       </button>
     </form>
 
