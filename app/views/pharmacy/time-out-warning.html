@@ -1,0 +1,162 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+MYS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+
+  <div class="nhsuk-grid-column-two-thirds">
+    <style>
+      media (min-width: 40.0625em) .hmrc-timeout-dialog {
+        width: 435px;
+      }
+
+      div {
+        display: block;
+      }
+
+      .hmrc-timeout-dialog {
+        background-color: #fff;
+        border: 5px solid #0b0c0c;
+        left: 50%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 30px;
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        z-index: 1002;
+      }
+
+      .hmrc-timeout-overlay {
+        background-color: #0b0c0c;
+        filter: alpha(opacity=80);
+        height: 100%;
+        left: 0;
+        opacity: .8;
+        -moz-opacity: .8;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1001;
+      }
+    </style>
+
+    <div id="hmrc-timeout-dialog" tabindex="-1" role="dialog" aria-modal="true" class="hmrc-timeout-dialog"
+      aria-labelledby="hmrc-timeout-heading hmrc-timeout-message">
+      <div>
+        <h1 id="hmrc-timeout-heading" class="nhsuk-heading-xl">Your application will time out soon
+        </h1>
+        <p class="nhsuk-body hmrc-timeout-dialog__message" aria-hidden="true">We will reset your
+          application if you do not respond in <span id="hmrc-timeout-countdown"
+            class="hmrc-timeout-dialog__countdown"><strong>4 minutes 59 seconds</strong></span>. We do
+          this to keep your information secure. </p>
+        <form action="summary-new"><button id="hmrc-timeout-keep-signin-btn" class="nhsuk-button"
+            href="summary-new">Continue</button></form>
+        <div class="hmrc-timeout-dialog__link-wrapper"></div>
+      </div>
+    </div>
+
+
+
+    <div class="nhsBSA-sidebar-container">
+      <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+          <div class="nhsuk-width-container" style="margin: 0; padding-left: 32px;">
+            <div class="nhsuk-main-wrapper" id="maincontent">
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                  <ul class="nhsuk-grid-row nhsuk-card-group">
+                    <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+
+
+
+                      <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                          <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">0 <span
+                              class="nhsuk-u-visually-hidden">Unpaid items</span></p><a href="Unpaid-items/unpaid-items"
+                            class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Unpaid
+                            items</a>
+                        </div>
+                      </div>
+
+                  </ul>
+
+                  <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption"> </caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Skin symptoms
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">
+                            0
+                          </strong></td>
+                        <td class="nhsuk-table__cell ">EPS items</td>
+                      </tr>
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">
+                            0
+                          </strong></td>
+                        </td>
+                        <td class="nhsuk-table__cell ">Paper perscription items</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nhsBSA-sidebar-nav">
+          <div class="side-nav">
+            <ul>
+              <div class="options" id="options">
+                <ul>
+                  <div class="options" id="options"></div>
+                  <li><a class="active" href="summary-new">Summary</a></li>
+                  <li><a href="index3">Prescription Submissions</a></li>
+                  <li><a href="services">Services</a></li>
+                  <li><a href="pqs">PQS</a></li>
+                  <li><a href="audits">Audits</a></li>
+                  <li><a href="admin">Admin</a></li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
