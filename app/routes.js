@@ -82,9 +82,9 @@ router.get(/plannedAddDate/, function (req, res) {
 
 router.get(/unPlannedAddDate/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes") {
-    res.redirect('time');
+    res.redirect('service-suspension-time');
   } else {
-    res.redirect('time');
+    res.redirect('service-suspension-time');
   }
 });
 
@@ -92,7 +92,7 @@ router.get(/unPlannedAddDate/, function (req, res) {
 
 
 router.post(/Time/, function (req, res) {
-  res.redirect('reason');
+  res.redirect('closure-reason');
 });
 
 router.get(/unplanned-cya/, function (req, res) {
@@ -140,9 +140,9 @@ router.post(/UnplannedCheckYourAnswersNew/, function (req, res) {
   const addanotherdate = req.session.data['addanotherdate']
 
   if (addanotherdate === "Yes") {
-    res.redirect('unplanned-date');
+    res.redirect('suspension-date');
   } else {
-    res.redirect('unplanned-declaration');
+    res.redirect('declaration');
   }
 });
 
