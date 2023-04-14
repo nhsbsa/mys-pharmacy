@@ -147,6 +147,23 @@ router.post(/UnplannedCheckYourAnswersNew/, function (req, res) {
 });
 
 
+router.post(/temp-check-your-answers/, function (req, res) {
+  res.redirect('check-suspension-details');
+})
+
+
+router.post(/DeleteConfirmationPage/, function (req, res) {
+
+  const deleteconfirmation = req.session.data['deleteconfirmation']
+
+  if (deleteconfirmation === "yes") {
+    res.redirect('suspension-date');
+  } else {
+    res.redirect('check-suspension-details');
+  }
+});
+
+
 router.post(/ReasonMore/, function (req, res) {
 
   const reason = req.session.data['reason']
