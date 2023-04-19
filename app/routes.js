@@ -236,7 +236,19 @@ router.post(/dereg-declaration/, function (req, res) {
 
 
 
+// Covid Vaccination //
 
+
+router.post(/CovidVaccination/, function (req, res) {
+
+  const covid = req.session.data['covid']
+
+  if (covid === "yes") {
+    res.redirect('covid-vaccination');
+  } else {
+    res.redirect('cya');
+  }
+});
 
 
 
