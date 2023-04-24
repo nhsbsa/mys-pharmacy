@@ -304,6 +304,42 @@ router.post(/TermsPFTP/, function (req, res) {
 });
 
 
+router.post(/DeleteTrainee/, function (req, res) {
+
+  const deletetrainee = req.session.data['deletetrainee']
+
+  if (deletetrainee === "yes") {
+    res.redirect('hee-cya-deleted');
+  } else {
+    res.redirect('hee-cya');
+  }
+});
+
+
+router.post(/PTPTS/, function (req, res) {
+
+  const deletetraineeptpts = req.session.data['deletetraineeptpts']
+
+  if (deletetraineeptpts === "yes") {
+    res.redirect('hee-cya-deleted-ptpts');
+  } else {
+    res.redirect('hee-cya-ptpts');
+  }
+});
+
+
+router.post(/PFTP/, function (req, res) {
+
+  const deletetraineepftp = req.session.data['deletetraineepftp']
+
+  if (deletetraineepftp === "yes") {
+    res.redirect('hee-cya-deleted-pftp');
+  } else {
+    res.redirect('hee-cya-pftp');
+  }
+});
+
+
 
 
 module.exports = router;
