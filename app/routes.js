@@ -251,6 +251,59 @@ router.post(/CovidVaccination/, function (req, res) {
 });
 
 
+// HEE //
+
+
+router.post(/HEETerms/, function (req, res) {
+
+  const heeterms = req.session.data['heeterms']
+
+  if (heeterms === "yes") {
+    res.redirect('hee-months');
+  } else {
+    res.redirect('hee-terms-declined');
+  }
+});
+
+
+router.post(/HEECourse/, function (req, res) {
+
+  const heecourse = req.session.data['heecourse']
+
+  if (heecourse === "yes") {
+    res.redirect('hee-terms-ptpts');
+  } else {
+    res.redirect('hee-terms-pftp');
+  }
+});
+
+
+
+router.post(/TermsPTPTS/, function (req, res) {
+
+  const termsptpts = req.session.data['termsptpts']
+
+  if (termsptpts === "yes") {
+    res.redirect('hee-months-ptpts');
+  } else {
+    res.redirect('hee-terms-declined');
+  }
+});
+
+
+
+router.post(/TermsPFTP/, function (req, res) {
+
+  const termspftp = req.session.data['termspftp']
+
+  if (termspftp === "yes") {
+    res.redirect('hee-months-pftp');
+  } else {
+    res.redirect('hee-terms-declined');
+  }
+});
+
+
 
 
 module.exports = router;
