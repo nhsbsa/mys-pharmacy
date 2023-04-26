@@ -266,14 +266,18 @@ router.post(/HEETerms/, function (req, res) {
 });
 
 
+
+
 router.post(/HEECourse/, function (req, res) {
 
   const heecourse = req.session.data['heecourse']
 
   if (heecourse === "yes") {
     res.redirect('hee-terms-ptpts');
-  } else {
+  } else if (heecourse === "no") {
     res.redirect('hee-terms-pftp');
+  } else {
+    res.redirect('hee-terms');
   }
 });
 
