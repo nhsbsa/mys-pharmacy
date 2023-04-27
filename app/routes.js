@@ -344,6 +344,18 @@ router.post(/PFTP/, function (req, res) {
 });
 
 
+// LFT //
+
+router.post(/Select/, function (req, res) {
+
+  const select = req.session.data['select']
+
+  if (select === "yes") {
+    res.redirect('patient');
+  } else {
+    res.redirect('patient-representative');
+  }
+});
 
 
 module.exports = router;

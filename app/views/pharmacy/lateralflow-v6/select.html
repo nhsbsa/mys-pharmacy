@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Planned/unplanned closures
+HEE
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -25,46 +25,57 @@ Planned/unplanned closures
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <div class="nhsuk-back-link">
-      <a class="nhsuk-back-link__link" href="javascript:history.back()">
-        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-          aria-hidden="true">
-          <path
-            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-          </path>
-        </svg>
-        Go back</a>
-    </div>
 
-    <h1>
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Unplanned temporary suspension of services</span>
-      Check the details about your suspension of services
-    </h1>
 
-    <form action="DeleteConfirmationPage" method="post">
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        Covid-19 Lateral Flow Device Distribution Service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <p class="nhsuk-body">Content goes here.</p>
+
+
+    <br>
+
+    <form action="Select" method="post">
 
       <div class="nhsuk-form-group">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Are you sure you want to delete your claim?
+              Who is applying for the LFT?
             </h1>
           </legend>
+
+          <div class="nhsuk-hint" id="contact-hint">Select one option.</div>
 
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-1" name="deleteconfirmation" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="example-1" name="select" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                Yes
+                Patient
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-2" name="deleteconfirmation" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="example-2" name="select" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                No
+                Patient Representative
               </label>
             </div>
 
@@ -75,11 +86,10 @@ Planned/unplanned closures
 
       <br>
 
-      <button class="nhsuk-button" type="submit">
-        Continue
-      </button>
-    </form>
 
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button>
+
+    </form>
     <!-- End of content -->
 
   </div>
