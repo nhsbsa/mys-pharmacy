@@ -152,7 +152,7 @@ router.post(/temp-check-your-answers/, function (req, res) {
 })
 
 
-router.post(/DeleteConfirmationPage/, function (req, res) {
+router.post(/DeleteConfirmation/, function (req, res) {
 
   const deleteconfirmation = req.session.data['deleteconfirmation']
 
@@ -351,9 +351,9 @@ router.post(/Select/, function (req, res) {
   const select = req.session.data['select']
 
   if (select === "yes") {
-    res.redirect('pharmacy-patient');
+    res.redirect('patient-details-new');
   } else {
-    res.redirect('pharmacy-rep');
+    res.redirect('patient-details-new-rep');
   }
 });
 

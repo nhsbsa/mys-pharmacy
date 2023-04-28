@@ -38,7 +38,7 @@ HEE
     <header>
       <h1>
         Covid-19 Lateral Flow Device Distribution Service
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Patient details</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Patient Representative</span>
       </h1>
     </header>
 
@@ -49,16 +49,23 @@ HEE
 
     <form action="Select" method="post">
 
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Patient representative name
+        </label>
+        <input class="nhsuk-input" id="example" name="example" type="text">
+      </div>
+
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-fieldset__heading">
-            What is your address?
+            Patient representative address
           </h1>
         </legend>
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="address-line-1">
-            Building and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
+            Building number and street <span class="nhsuk-u-visually-hidden">line 1 of 2</span>
           </label>
           <input class="nhsuk-input" id="address-line-1" name="address-line-1" type="text">
         </div>
@@ -92,6 +99,20 @@ HEE
         </div>
 
       </fieldset>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Patient representative email address
+        </label>
+        <input class="nhsuk-input" id="example" name="example" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example">
+          Patient representative contact number
+        </label>
+        <input class="nhsuk-input" id="example" name="example" type="text">
+      </div>
 
 
     </form>
