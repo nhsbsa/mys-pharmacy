@@ -351,9 +351,21 @@ router.post(/Select/, function (req, res) {
   const select = req.session.data['select']
 
   if (select === "yes") {
-    res.redirect('patient');
+    res.redirect('pharmacy-patient');
   } else {
-    res.redirect('patient-representative');
+    res.redirect('pharmacy-rep');
+  }
+});
+
+
+router.post(/EvidencePatient/, function (req, res) {
+
+  const evidencepatient = req.session.data['evidencepatient']
+
+  if (evidencepatient === "yes") {
+    res.redirect('lft-details-patient');
+  } else {
+    res.redirect('lft-start-page-new');
   }
 });
 
