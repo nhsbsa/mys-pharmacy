@@ -1,0 +1,73 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HEE
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        Manage your service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">HEE</span>
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <hr>
+
+            <ul class="nhsuk-grid-row nhsuk-card-group">
+              
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mys-hee-v4/hee-navpage">MYS CI V4</a></h2>
+                    <p class="nhsuk-card__description">PowerPoint process flow.</p>
+                  </div>
+                </div>
+              </li> 
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mys-hee-v5/hee-navpage">MYS CI V5</a></h2>
+                    <p class="nhsuk-card__description">Driving page is trainees, replaced coloured buttons with check-boxes. Expand payment options for PTPT.</p>
+                  </div>
+                </div>
+              </li> 
+
+              <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable">
+                  <div class="nhsuk-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m"><a href="mys-hee-v7/hee-navpage">MYS CI V7</a></h2>
+                    <p class="nhsuk-card__description">Same as V6 but Create Trainee button is arranged next to its heading on start page.</p>
+                  </div>
+                </div>
+              </li> 
+            <ul> 
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  HEE
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+              <header>
+                <h1>
+ <span class="nhsuk-caption-xl nhsuk-caption--bottom">Monthly submission</span>
+Submit a training allowance claim for trainee pharmacists             </h1>
+              </header>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <p class="nhsuk-body">Use this service to submit or view a claim for the funded training of pharmacy technicians and pre-registration trainee pharmacy technicians (PTPT). </p>
+
+        <p class="nhsuk-body">This service will let you submit monthly declarations to claim funding for each trainee. The trainee must be due to start or have started the pharmacy technicians or PTPT training. </p>
+
+        <p class="nhsuk-body">You can use this service to:</p>
+        <ul>
+          <li>start a new submission</li>
+          <li>view your current and previous monthly submissions</li>
+          <li>submit your declaration for funding</li>
+          <li>manage trainee details</li>
+          <li>add new trainees</li>
+        </ul> 
+
+        <a class="nhsuk-button" href="hee-months">
+  Start now
+</a>
+
+        <details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      More information about funding
+    </span>
+  </summary>
+  <div class="nhsuk-details__text"><h2>Context</h2>
+        <p class="nhsuk-body">This funding is being made available through Health Education England (HEE). After you have submitted your declaration, the HEE will provide you with a reporting template.</p> 
+        
+        <p class="nhsuk-body">This template will need to be completed quarterly and show:</p>
+        
+        <h2>Payment</h2>
+          <p class="nhsuk-body">Upon completion of this declaration and receipt of an invoice, HEE shall pay the Supplier as described below:</p>
+          <p class="nhsuk-body">As a condition of Funding, HEE require a quarterly report from the Supplier. Reports will detail:</p>
+          <ul>
+              <li>the number of trainee pharmacists employed</li>
+              <li>trainees who have left your pharmacy</li>
+              <li>trainee progress </li>
+              <li>a summary of the lessons learned</li>
+          </ul>
+
+        <p>For any queries, contact  <a href="#">pharmacyteam@hee.nhs.uk</a></p>
+<br>
+</div>
+</details>
+
+<!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -369,5 +369,18 @@ router.post(/EvidencePatient/, function (req, res) {
   }
 });
 
+// HEE REG/DE-REG //
+
+router.post(/DERegistration/, function (req, res) {
+
+  const dereg = req.session.data['dereg']
+
+  if (dereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('hee-months');
+  }
+});
+
 
 module.exports = router;
