@@ -383,4 +383,18 @@ router.post(/DERegistration/, function (req, res) {
 });
 
 
+// Flu //
+
+router.post(/ViewAndSubmit/, function (req, res) {
+
+  const ViewAndSubmit = req.session.data['ViewAndSubmit']
+
+  if (ViewAndSubmit === "yes") {
+    res.redirect('cya');
+  } else {
+    res.redirect('manual');
+  }
+});
+
+
 module.exports = router;
