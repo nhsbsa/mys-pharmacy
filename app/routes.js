@@ -397,4 +397,28 @@ router.post(/ViewAndSubmit/, function (req, res) {
 });
 
 
+router.post(/FLUCHECKYOURANSWERS/, function (req, res) {
+
+  const FLUCHECKYOURANSWERS = req.session.data['FLUCHECKYOURANSWERS']
+
+  if (FLUCHECKYOURANSWERS === "yes") {
+    res.redirect('flu-dashboard');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
+router.post(/CYATWO/, function (req, res) {
+
+  const CYATWO = req.session.data['CYATWO']
+
+  if (CYATWO === "yes") {
+    res.redirect('flu-dashboard');
+  } else {
+    res.redirect('declaration2');
+  }
+});
+
+
 module.exports = router;
