@@ -48,7 +48,11 @@ Coronavirus (COVID-19) Vaccination Service
                 </h1>
               </header>
 
-              <p>These are the months you have chosen to add to your submission</p>
+
+              <p>Check your answers and read the submission declaration</p>
+
+
+              <h2 class="nhsuk-heading-l">March 2023</h2>
 
               <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption"></caption>
@@ -74,7 +78,7 @@ Coronavirus (COVID-19) Vaccination Service
                       <span class="nhsuk-table-responsive__heading">Total</span>1
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading"></span><a href="march-details">View</a>
+                      <span class="nhsuk-table-responsive__heading">Change</span><a href="manual">Change</a>
                     </td>
                   </tr>
 
@@ -84,43 +88,116 @@ Coronavirus (COVID-19) Vaccination Service
               <br>
               <br>
 
-              <div class="nhsuk-form-group">
-
-                <fieldset class="nhsuk-fieldset">
-                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                    <h1 class="nhsuk-fieldset__heading">
-                      Do you want to add another month?
-                    </h1>
-                  </legend>
-
-                  <div class="nhsuk-radios nhsuk-radios--inline">
-
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio"
-                        value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                        Yes
-                      </label>
-                    </div>
-
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio"
-                        value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                        No
-                      </label>
-                    </div>
-
-                  </div>
-                </fieldset>
-
+              <div class="nhsuk-grid-column-one-third">
+                <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
               </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="declaration">
 
-              <br>
+                  <p>I declare that I have accessed COVID-19 vaccination stock and that:</p>
+                  <br>
+                  <ol>
+                    <li style="margin-left:40px; padding-bottom:10px;">I have only used COVID-19 vaccination stock to
+                      vaccinate those patients eligible for a NHS COVID-19 vaccination and who fall into the groups
+                      included in the national COVID-19 vaccination programme, as set out on the <a target="_blank"
+                        href="https://www.gov.uk/government/groups/joint-committee-on-vaccination-and-immunisation">Joint
+                        Committee on
+                        Vaccination and Immunisation webpage</a>.
+                    </li>
 
-              <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                Continue
-              </button>
+                    <li style="margin-left:40px; padding-bottom:10px;">The item of service fee(s) is only claimed for
+                      patients vaccinated as set out in the COVID-19 vaccination programme 2020/21 Enhanced Service
+                      Specification.</li>
+
+                    <li style="margin-left:40px; padding-bottom:10px;">My declaration may be subject to my review of the
+                      data provided by the Commissioner (NHSE or NHSBSA acting on NHSE behalf) to me and I agree that I
+                      shall review and report on this data to the Commissioner (NHSE or NHSBSA acting on NHSE behalf) if
+                      required within their specified timescales. I understand that payment will be made based on the
+                      data available to the Commissioner (NHSE or NHSBSA acting on NHSE behalf). I agree that I shall
+                      refund any item of service fee paid to me by the Commissioner (NHSE) where false or multiple
+                      claims have been made in respect of any patient.</li>
+
+                    <li style="margin-left:40px; padding-bottom:10px;">COVID-19 vaccinations supplied to me have not
+                      been used to vaccinate private patients and have not been passed to any third party in exchange
+                      for payment.</li>
+
+
+                    <p>I agree that the pharmacy will provide any and all evidence to support claims if required as part
+                      of the pre and post payment verification processes, including evidence of vaccination uptake
+                      rates, details of what vaccine was used and on what date, to NHS England/Improvement (NHSEI) (and
+                      NHSBSA or NHSCFA acting on behalf of NHSEI) as part of the verification processes, investigation,
+                      or measurement exercise as required.</p>
+
+                    <p>I agree that NHSEI may require an appropriate portion of claims to be repaid (without prejudice)
+                      if use of the vaccines was outside the terms of this guidance or it is considered by NHSEI that
+                      there were inaccuracies or inconsistencies in the claim.</p>
+
+                    <p>I declare that the information given on this form is accurate and complete. I understand that if
+                      I withhold information or provide false or misleading information, disciplinary action may be
+                      taken against me and I may be liable to prosecution and or civil proceedings.</p>
+
+                    <!--
+                                       <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+                  </ol>
+                </div>
+                <fieldset>
+                  <legend class="visually-hidden">New Submission</legend>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      First name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      Surname
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                  </div>
+                  <div class="nhsuk-inset-text">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
+                    <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                      address, please enter it below.</p>
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="email-with-hint-text">
+                      Email address (optional)
+                    </label>
+                    <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
+                      <span id="emailHint" class="panel panel-border-narrow">
+                        A confirmation email will be sent to <contractor email address>
+                          <br>
+                          If you would like a copy sent to another email address, enter it below.
+                      </span>
+                    </div> -->
+                    <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+                      aria-describedby="email-with-hint-text-hint">
+                  </div>
+
+
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                            value="agree-check" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                            I agree and accept this declaration
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="form-group">
+                    <a href="confirmation" class="nhsuk-button">
+                      Submit
+                    </a>
+                  </div>
+
+                </fieldset>
+              </div>
 
 
             </div>

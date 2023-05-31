@@ -421,4 +421,20 @@ router.post(/CYATWO/, function (req, res) {
 });
 
 
+// Covid //
+
+
+router.post(/ADDANOTHERMONTH/, function (req, res) {
+
+  const ADDANOTHERMONTH = req.session.data['ADDANOTHERMONTH']
+
+  if (ADDANOTHERMONTH === "yes") {
+    res.redirect('covid-dashboard');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
+
 module.exports = router;
