@@ -344,6 +344,32 @@ router.post(/PFTP/, function (req, res) {
 });
 
 
+
+router.post(/TraineeDelete/, function (req, res) {
+
+  const TraineeDelete = req.session.data['TraineeDelete']
+
+  if (TraineeDelete === "yes") {
+    res.redirect('');
+  } else {
+    res.redirect('multi-cya');
+  }
+});
+
+
+
+router.post(/AddAnotherTrainee/, function (req, res) {
+
+  const AddAnotherTrainee = req.session.data['AddAnotherTrainee']
+
+  if (AddAnotherTrainee === "yes") {
+    res.redirect('create-trainee');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
 // LFT //
 
 router.post(/Select/, function (req, res) {

@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-HEE
+WT&E
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -45,80 +45,71 @@ HEE
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
-    <div class="nhsuk-grid-column-one-third">
-      <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
-    </div>
-    <div class="nhsuk-grid-column-two-thirds">
-      <div class="declaration">
 
-        <p>I confirm that:</p>
-        <br>
-        <ol>
-          <li style="margin-left:40px; padding-bottom:10px;">the information provided in this submission is correct
-          </li>
+    <form action="AddAnotherTrainee" method="post">
 
-          <li style="margin-left:40px; padding-bottom:10px;">my acceptance of this declaration will act as my electronic
-            signature</li>
-
-          <!--
-                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
-        </ol>
-      </div>
-      <fieldset>
-        <legend class="visually-hidden">New Submission</legend>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            First name
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
-        </div>
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            Surname
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="email-with-hint-text">
-            Email address (optional)
-          </label>
-          <div class="nhsuk-hint" id="email-with-hint-text-hint">
-            <span id="emailHint" class="panel panel-border-narrow">
-              A confirmation email will be sent to <contractor email address>
-                <br>
-                If you would like a copy sent to another email address, enter it below.
-            </span>
-          </div>
-          <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
-            aria-describedby="email-with-hint-text-hint">
-        </div>
+      <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row" role="row">
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Trainee name</td>
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Course type</td>
+            <!-- <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Reason for unplanned
+              suspension</td> -->
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;"></td>
+          </tr>
+          <tr class="nhsuk-table__row" role="row">
+            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">Martin Crane</td>
+            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">Pre-registration Trainee Pharmacy Technician (PTPT)</td>
+            <!-- <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">	Adverse weather, such as snow or flood</td> -->
+            <td class="nhsuk-table__cell" style="text-align: right; padding: 8px 24px 8px 0px;">
+              <a class="nhsuk-link" href="hee-create-trainee-cya">View</a>
+            </td>
+            <td class="nhsuk-table__cell" style="text-align: right; padding: 8px 24px 8px 0px;">
+              <a class="nhsuk-link" href="delete-confirmation">Delete</a>
+            </td>
 
 
-        <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-            <div class="nhsuk-checkboxes">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
-                  value="agree-check" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
-                  I agree and accept this declaration
-                </label>
-              </div>
+
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you want to add another trainee?
+            </h1>
+          </legend>
+      
+          <div class="nhsuk-radios nhsuk-radios--inline">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="AddAnotherTrainee" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
             </div>
-          </fieldset>
-        </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="AddAnotherTrainee" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
+      </div>
 
-        <div class="form-group">
-          <a href="reg-confirmation" class="nhsuk-button">
-            Submit
-          </a>
-        </div>
+      <br>
 
-      </fieldset>
-    </div>
-
-    <br>
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
 
 
     <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> 
