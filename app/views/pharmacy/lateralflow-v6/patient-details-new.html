@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'full-width-layout.html' %}
+{% extends 'layout.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-HEE
+LFT
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -49,18 +49,20 @@ HEE
 
     <form action="Select" method="post">
 
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
-          Patient NHS number
-        </label>
-        <input class="nhsuk-input" id="example" name="example" type="text">
-      </div>
 
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="example">
+        <label class="nhsuk-label" for="input-width-20">
+          Patient NHS number
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+      </div>
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
           Patient name
         </label>
-        <input class="nhsuk-input" id="example" name="example" type="text">
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
       </div>
 
       <div class="nhsuk-form-group">
