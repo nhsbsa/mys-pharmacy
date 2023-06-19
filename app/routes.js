@@ -455,9 +455,33 @@ router.post(/ADDANOTHERMONTH/, function (req, res) {
   const ADDANOTHERMONTH = req.session.data['ADDANOTHERMONTH']
 
   if (ADDANOTHERMONTH === "yes") {
-    res.redirect('covid-dashboard');
+    res.redirect('covid-select-month');
   } else {
-    res.redirect('declaration');
+    res.redirect('declaration-V2');
+  }
+});
+
+
+router.post(/PICKMONTH/, function (req, res) {
+
+  const PICKMONTH = req.session.data['PICKMONTH']
+
+  if (PICKMONTH === "march") {
+    res.redirect('march-V2');
+  } else {
+    res.redirect('');
+  }
+});
+
+
+router.post(/COVIDDELETE/, function (req, res) {
+
+  const COVIDDELETE = req.session.data['COVIDDELETE']
+
+  if (COVIDDELETE === "yes") {
+    res.redirect('covid-select-month');
+  } else {
+    res.redirect('add-another-month-V2');
   }
 });
 
