@@ -1,0 +1,697 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+LFT
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        Covid-19 Lateral Flow Device Distribution Service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">LFT details</span>
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content goes here.</p> -->
+
+
+    <form action="Select" method="post">
+
+      <!-- <h1 class="nhsuk-heading-l govuk-heading-l">Collection details</h1>
+    </header>
+    <h2>Collection date: 8 July 2021</h2> -->
+      <span class="nhsuk-hint">
+        Key the details of up to 5 kit collections on this page.
+      </span>
+      <form action="add-another" class="form" method="get">
+
+        <table class="table-form">
+
+          <tr>
+            <!-- <td class="test-case" style="overflow: visible">
+              <div>
+
+                <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                  <h2 class="nhsuk-fieldset__heading">
+                    Anonymous?
+                  </h2>
+                </legend>
+                <span class="nhsuk-hint" id="anonymous-collection">
+                  <p>Select Yes or No</p>
+                </span>
+
+                <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="anonymous-collection"
+                  aria-required="true">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </td> -->
+
+            <br>
+
+           
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                      Collect code
+                    </h2>
+                  </legend>
+                  <span class="nhsuk-hint" id="collection-code">
+                    <p style="color:red">Enter the 16 digit code or zeros for an anonymous collection
+                  </span>
+
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1"
+                          name="collection-code-1" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2"
+                          name="collection-code-2" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3"
+                          name="collection-code-3" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4"
+                          name="collection-code-4" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+
+
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="lot-number" role="group">
+                  <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                      Lot number
+                    </h2>
+                  </legend>
+                  <span class="nhsuk-hint" id="lot-number">
+                    <p>Enter lot numbers</p>
+                  </span>
+
+                  <div class="nhsuk-date-input" id="lot-number">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-1" name="lot-number-1"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-2" name="lot-number-2"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <legend class="nhsuk-fieldset__legend nhsuk-label--m">
+                    <h2 class="nhsuk-fieldset__heading">
+                      Packs distributed
+                    </h2>
+                  </legend>
+                  <span class="nhsuk-hint" id="date-of-birth-hint">
+                    <p>Enter number of packs</p>
+                  </span>
+
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="number-of-kits"
+                          name="number-of-kits" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+          </tr>
+
+          <!-- START OF MULTIPLE ENTRY GRID 2-->
+          <tr>
+            <!-- <td class="test-case" style="overflow: visible">
+              <div>
+                <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="anonymous-collection"
+                  aria-required="true">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </td> -->
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1"
+                          name="collection-code-1" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2"
+                          name="collection-code-2" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3"
+                          name="collection-code-3" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4"
+                          name="collection-code-4" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="lot-number" role="group">
+                  <div class="nhsuk-date-input" id="lot-number">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-1" name="lot-number-1"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-2" name="lot-number-2"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="number-of-kits"
+                          name="number-of-kits" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+          </tr>
+          <!-- END OF MULTIPLE ENTRY GRID 2-->
+          <!-- START OF MULTIPLE ENTRY GRID 3-->
+          <tr>
+            <!-- <td class="test-case" style="overflow: visible">
+              <div>
+                <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="anonymous-collection"
+                  aria-required="true">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </td> -->
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1"
+                          name="collection-code-1" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2"
+                          name="collection-code-2" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3"
+                          name="collection-code-3" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4"
+                          name="collection-code-4" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="lot-number" role="group">
+                  <div class="nhsuk-date-input" id="lot-number">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-1" name="lot-number-1"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-2" name="lot-number-2"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="number-of-kits"
+                          name="number-of-kits" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+          </tr>
+          <!-- END OF MULTIPLE ENTRY GRID 3-->
+          <!-- START OF MULTIPLE ENTRY GRID 4-->
+          <tr>
+            <!-- <td class="test-case" style="overflow: visible">
+              <div>
+                <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="anonymous-collection"
+                  aria-required="true">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </td> -->
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1"
+                          name="collection-code-1" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2"
+                          name="collection-code-2" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3"
+                          name="collection-code-3" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4"
+                          name="collection-code-4" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="lot-number" role="group">
+                  <div class="nhsuk-date-input" id="lot-number">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-1" name="lot-number-1"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-2" name="lot-number-2"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="number-of-kits"
+                          name="number-of-kits" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+          </tr>
+          <!-- END OF MULTIPLE ENTRY GRID 4-->
+          <!-- START OF MULTIPLE ENTRY GRID 5-->
+          <tr>
+            <!-- <td class="test-case" style="overflow: visible">
+              <div>
+                <select id="vaccines" class="typeahead js-hidden nhsuk-select" name="anonymous-collection"
+                  aria-required="true">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </td> -->
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-1"
+                          name="collection-code-1" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-2"
+                          name="collection-code-2" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-3"
+                          name="collection-code-3" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="collection-code-4"
+                          name="collection-code-4" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="lot-number" role="group">
+                  <div class="nhsuk-date-input" id="lot-number">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-1" name="lot-number-1"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <p>-</p>
+                      </div>
+                    </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-input--width-5" id="lot-number-2" name="lot-number-2"
+                          type="text" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+            <td>
+              <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="date-of-birth-hint" role="group">
+                  <div class="nhsuk-date-input" id="collection-code">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="number-of-kits"
+                          name="number-of-kits" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                  </div>
+                </fieldset>
+              </div>
+            </td>
+
+          </tr>
+          <!-- END OF MULTIPLE ENTRY GRID 5-->
+
+        </table>
+
+
+      </form>
+
+
+      <br>
+
+      <a class="nhsuk-button" href="cya">Continue</a>
+
+
+      <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
