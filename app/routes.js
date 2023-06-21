@@ -481,7 +481,7 @@ router.post(/COVIDDELETE/, function (req, res) {
   if (COVIDDELETE === "yes") {
     res.redirect('covid-select-month');
   } else {
-    res.redirect('add-another-month-V2');
+    res.redirect('declaration-V2');
   }
 });
 
