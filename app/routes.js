@@ -396,49 +396,28 @@ router.post(/EvidencePatient/, function (req, res) {
 });
 
 
-router.post(/NewKit/, function (req, res) {
+router.post(/NewPatient/, function (req, res) {
 
-  const NewKit = req.session.data['NewKit']
+  const NewPatient = req.session.data['NewPatient']
 
-  if (NewKit === "yes") {
-    res.redirect('kit2');
+  if (NewPatient === "yes") {
+    res.redirect('patient-details-new');
   } else {
     res.redirect('cya');
   }
 });
 
-router.post(/TWO/, function (req, res) {
+router.post(/LFDConfirm/, function (req, res) {
 
-  const TWO = req.session.data['TWO']
+  const LFDConfirm = req.session.data['LFDConfirm']
 
-  if (TWO === "yes") {
-    res.redirect('kit3');
+  if (LFDConfirm === "yes") {
+    res.redirect('cya');
   } else {
     res.redirect('cya');
   }
 });
 
-router.post(/THREE/, function (req, res) {
-
-  const THREE = req.session.data['THREE']
-
-  if (THREE === "yes") {
-    res.redirect('kit4');
-  } else {
-    res.redirect('cya');
-  }
-});
-
-router.post(/FOUR/, function (req, res) {
-
-  const FOUR = req.session.data['FOUR']
-
-  if (FOUR === "yes") {
-    res.redirect('kit5');
-  } else {
-    res.redirect('cya');
-  }
-});
 
 // HEE REG/DE-REG //
 
