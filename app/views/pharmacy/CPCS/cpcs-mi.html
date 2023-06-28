@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Flu Claim
+CPCS
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -49,9 +49,99 @@ Flu Claim
               </header>
               <hr>
 
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                  Showing report for
+                </label>
+                <select class="nhsuk-select" id="select-1" name="select-1">
+                  <option value="1">Select one</option>
+                  <option value="2" selected>May 2023</option>
+                  <option value="3">April 2023</option>
+                  <option value="3">March 2023</option>
+                  <option value="3">February 2023</option>
+                  <option value="3">January 2023</option>
+                  <option value="3">December 2022</option>
+                </select>
+              </div>
 
               <br>
-              <br>
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption"> </caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Staff member
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Quantity processed
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Staff member</span>Ellen Ripley
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Quantity processed</span>80
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2023
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Staff member</span>Dwayne Hicks
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Quantity processed</span>74
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2023
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Staff member</span>William Hudson
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Quantity processed</span>60
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2023
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Staff member</span>Rebecca Jorden
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Quantity processed</span>97
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2023
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Staff member</span>Jenette Vasquez
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Quantity processed</span>35
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2023
+                    </td>
+                  </tr>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
 
             </div>
 
