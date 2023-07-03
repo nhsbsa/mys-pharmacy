@@ -490,10 +490,12 @@ router.post(/PICKMONTH/, function (req, res) {
 
   const PICKMONTH = req.session.data['PICKMONTH']
 
-  if (PICKMONTH === "march") {
-    res.redirect('march-V2');
+  if (PICKMONTH === "april") {
+    res.redirect('month');
+  } else if (PICKMONTH === "march") {
+    res.redirect('month');
   } else {
-    res.redirect('');
+    res.redirect('month');
   }
 });
 
