@@ -1,0 +1,132 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+LFT
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">April 2023 submissions</span>
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+
+    <table role="table" class="nhsuk-table-responsive">
+      <caption class="nhsuk-table__caption">Previous monthly submission summary<div class="nhsuk-hint">
+          <br>
+          <p>You submitted the following data for April 2023</p>
+          <p>Total number of packs 5</p>
+        </div>
+      </caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Date collected
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Lot number(s)
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Number of packs
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date collected</span>27 April 2023
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Lot number(s)</span>	0000-0000
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Number of packs</span>1
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date collected</span>27 April 2023
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Lot number(s)</span>	0000-0000
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Number of packs</span>1
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date collected</span>27 April 2023
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Lot number(s)</span>	0000-0000
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Number of packs</span>1
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date collected</span>27 April 2023
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Lot number(s)</span>	0000-0000
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Number of packs</span>1
+          </td>
+        </tr>
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Date collected</span>27 April 2023
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Lot number(s)</span>	0000-0000
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Number of packs</span>1
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

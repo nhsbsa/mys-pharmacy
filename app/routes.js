@@ -384,6 +384,18 @@ router.post(/Select/, function (req, res) {
 });
 
 
+router.post(/JULY/, function (req, res) {
+
+  const JULY = req.session.data['JULY']
+
+  if (JULY === "yes") {
+    res.redirect('patient-details-new-July');
+  } else {
+    res.redirect('patient-details-new-rep-July');
+  }
+});
+
+
 router.post(/EvidencePatient/, function (req, res) {
 
   const evidencepatient = req.session.data['evidencepatient']
@@ -406,6 +418,19 @@ router.post(/NewPatient/, function (req, res) {
     res.redirect('cya');
   }
 });
+
+
+router.post(/JulyMore/, function (req, res) {
+
+  const JulyMore = req.session.data['JulyMore']
+
+  if (JulyMore === "yes") {
+    res.redirect('patient-details-new-July');
+  } else {
+    res.redirect('cya-July');
+  }
+});
+
 
 router.post(/LFDConfirm/, function (req, res) {
 
