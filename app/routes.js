@@ -551,4 +551,18 @@ router.post(/CPCSReg/, function (req, res) {
 });
 
 
+// Templates //
+
+router.post(/TemplateDeReg/, function (req, res) {
+
+  const TemplateDeReg = req.session.data['TemplateDeReg']
+
+  if (TemplateDeReg === "yes") {
+    res.redirect('months-dereg');
+  } else {
+    res.redirect('months');
+  }
+});
+
+
 module.exports = router;
