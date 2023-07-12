@@ -1,0 +1,237 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Back</a>
+                            </div>
+
+                            <header>
+                                <h1>
+                                    November
+                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">Pharmacy activity summary
+                                        </summary>
+                                        </Summary></span>
+                                </h1>
+                            </header>
+                            <hr>
+
+                            <div class="column-two-thirds">
+
+
+
+
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">EPS prescriptions</h3>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <p class="lede">We received <strong>121</strong> EPS prescriptions.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">Paper prescriptions</h3>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <p class="lede">You told us you were sending <strong>144</strong> paper
+                                            prescription forms, but we only
+                                            received <strong>112</strong>.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">Prescription items</h3>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <table class="data-table assets-summary check-your-answers">
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td width="20%"><strong>Paid</strong></td>
+                                                    <td width="20%"><strong>Unpaid</strong>
+                                                    </td>
+                                                    <td width="20%"><strong>Disallowed</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>EPS items</td>
+                                                    <td>1444</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paper items</td>
+                                                    <td>1211</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--
+                         <div class="more-info">
+                         <p style="margin-top:25px;">Some of your items were switched:</p>
+                         
+                         <ul>
+                                <li>8 items switched from <strong>paid to exempt</strong>. </li>
+                                <li>2 items switched from <strong>exempt to paid</strong>. </li>
+                         </ul>
+                             
+                             </div>
+                         
+                         <p>Some text to explain why switching occurs. </p>
+                         
+                         -->
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">Prescription Charge Refund
+                                        </h3>
+                                        <span style="color:#6F777B;">(FP57 forms)</span>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <table class="data-table assets-summary check-your-answers">
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td width="20%"><strong>Paid</strong></td>
+                                                    <td width="20%"><strong></strong>
+                                                    </td>
+                                                    <td width="20%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FP57 forms</td>
+                                                    <td>1211</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">Flu vaccinations</h3>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <table class="data-table assets-summary check-your-answers">
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td width="20%"><strong>Paid</strong></td>
+                                                    <td width="20%"><strong></strong>
+                                                    </td>
+                                                    <td width="20%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FluarixTM Tetra Split virion</td>
+                                                    <td>31</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Influvac® Surface antigen</td>
+                                                    <td>42</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <div style="margin-top: 0px;" class="grid-row">
+                                    <div class="column-third">
+                                        <h3 class="heading-small">Advanced Services and other activities</h3>
+                                    </div>
+                                    <div class="column-two-thirds">
+                                        <table class="data-table assets-summary check-your-answers">
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td width="20%"><strong>Paid</strong></td>
+                                                    <td width="20%"><strong></strong>
+                                                    </td>
+                                                    <td width="20%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Medicine Use Reviews</td>
+                                                    <td>3</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Remote Delivery Payment</td>
+                                                    <td>3</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        <a href="V2" class="nhsuk-button">Home</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+{% endblock %}
