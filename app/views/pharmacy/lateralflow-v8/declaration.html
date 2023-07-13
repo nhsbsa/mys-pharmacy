@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-LFT
+LFD
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -37,8 +37,8 @@ LFT
     <!-- Change the page title here -->
     <header>
       <h1>
-        COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Declaration</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service</span>
+        Declaration
       </h1>
     </header>
 
@@ -51,21 +51,21 @@ LFT
 
       <div class="nhsuk-grid-column-two-thirds">
         <div class="declaration">
+
+          <p>I declare that:</p>
           <br>
-          <ol>
-            <li style="margin-left:40px; padding-bottom:10px;">I confirm that the information provided within
-              this submission is correct and accurate. </li>
-
-            <li style="margin-left:40px; padding-bottom:10px;">I confirm that my acceptance of the declaration
-              shall act as my electronic signature.</li>
-
-            <h3 class="heading-medium" style="margin-bottom:20px; margin-top:0px;">COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service</h3>
-            <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment in accordance with the
-              terms of this service.
+          <ul>
+            <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment in accordance with the terms and conditions of the COVID-19 Lateral Flow Device (LFD) – Highest Risk Patient Access service
             </li>
+  
+            <li style="margin-left:40px; padding-bottom:10px;">The information contained within this submission is correct and accurate</li>
+
+
+            <li style="margin-left:40px; padding-bottom:10px;">My acceptance of the declaration shall act as my electronic signature</li>
+  
             <!--
-                     <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
-          </ol>
+                               <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+          </ul>
         </div>
         <fieldset>
           <legend class="visually-hidden">New Submission</legend>
@@ -83,15 +83,15 @@ LFT
             <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
           </div>
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="email-with-hint-text">
-              Email address (optional)
-            </label>
             <div class="nhsuk-hint" id="email-with-hint-text-hint">
               <span id="emailHint" class="panel panel-border-narrow">
                 A confirmation email will be sent to <span class="strong">joe.bloggs@nhs.net</span>.
                 If you would like a copy sent to another email address, please enter it below.
               </span>
             </div>
+            <label class="nhsuk-label" for="email-with-hint-text">
+              Email address (optional)
+            </label>
             <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
               aria-describedby="email-with-hint-text-hint">
           </div>
