@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Coronavirus (COVID-19) Vaccination Service
+Prototype Templates - API Prototype
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -31,26 +31,34 @@ Coronavirus (COVID-19) Vaccination Service
             <div class="nhsuk-grid-column-full">
 
               {{ backLink({
-                "href": "javascript:history.go(-1)",
-                "text": "Go back"
-                }) }}
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
 
               <header>
                 <h1>
-                  Coronavirus (COVID-19) Vaccination Service
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Section title</span>
+                  Header (H1)
                 </h1>
               </header>
 
-              <h3><a href="covid-dashboard" class="nhsuk-link">Version 1 - May 2023</a></h3>
-              <ul style="list-style: disc; margin-left: 30px;">
-                <li>Based on requirements from BP364-42</li>
-              </ul>
+              <p>Content</p>
 
-              <h3><a href="covid-dashboard-V2" class="nhsuk-link">Version 2 - 15 June 2023</a></h3>
-              <ul style="list-style: disc; margin-left: 30px;">
-                <li>Based on requirements from BP275-6473</li>
-              </ul>
+              <br>
+
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link"
+                  href="reg-declaration">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+                    </path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Register now</span>
+                </a>
+              </div>
 
 
             </div>

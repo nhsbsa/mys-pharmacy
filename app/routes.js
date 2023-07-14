@@ -565,4 +565,16 @@ router.post(/TemplateDeReg/, function (req, res) {
 });
 
 
+router.post(/TemplateDelete/, function (req, res) {
+
+  const TemplateDelete = req.session.data['TemplateDelete']
+
+  if (TemplateDelete === "yes") {
+    res.redirect('declaration-june');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
 module.exports = router;
