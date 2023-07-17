@@ -577,4 +577,16 @@ router.post(/TemplateDelete/, function (req, res) {
 });
 
 
+router.post(/ManualAPI/, function (req, res) {
+
+  const ManualAPI = req.session.data['ManualAPI']
+
+  if (ManualAPI === "yes") {
+    res.redirect('confirm-path-api');
+  } else {
+    res.redirect('../manual/months');
+  }
+});
+
+
 module.exports = router;
