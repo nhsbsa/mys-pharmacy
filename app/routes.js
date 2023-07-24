@@ -584,7 +584,19 @@ router.post(/ManualAPI/, function (req, res) {
   if (ManualAPI === "yes") {
     res.redirect('confirm-path-api');
   } else {
-    res.redirect('../manual/months');
+    res.redirect('months');
+  }
+});
+
+
+router.post(/Choice/, function (req, res) {
+
+  const Choice = req.session.data['Choice']
+
+  if (Choice === "yes") {
+    res.redirect('../api/months');
+  } else {
+    res.redirect('select-path');
   }
 });
 
