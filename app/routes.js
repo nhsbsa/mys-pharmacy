@@ -584,7 +584,7 @@ router.post(/ManualAPI/, function (req, res) {
   if (ManualAPI === "yes") {
     res.redirect('confirm-path-api');
   } else {
-    res.redirect('months');
+    res.redirect('../manual/months');
   }
 });
 
@@ -594,7 +594,7 @@ router.post(/Choice/, function (req, res) {
   const Choice = req.session.data['Choice']
 
   if (Choice === "yes") {
-    res.redirect('../api/months');
+    res.redirect('../both/months');
   } else {
     res.redirect('select-path');
   }
