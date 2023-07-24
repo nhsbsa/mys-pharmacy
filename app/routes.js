@@ -553,14 +553,25 @@ router.post(/CPCSReg/, function (req, res) {
 
 // Templates //
 
-router.post(/TemplateDeReg/, function (req, res) {
+router.post(/TemplateManualDeReg/, function (req, res) {
 
-  const TemplateDeReg = req.session.data['TemplateDeReg']
+  const TemplateManualDeReg = req.session.data['TemplateManualDeReg']
 
-  if (TemplateDeReg === "yes") {
-    res.redirect('months-dereg');
+  if (TemplateManualDeReg === "yes") {
+    res.redirect('../manual/de-registration-declaration');
   } else {
-    res.redirect('months');
+    res.redirect('../manual/months');
+  }
+});
+
+router.post(/TemplateAPIDeReg/, function (req, res) {
+
+  const TemplateAPIDeReg = req.session.data['TemplateAPIDeReg']
+
+  if (TemplateAPIDeReg === "yes") {
+    res.redirect('../api/de-registration-declaration');
+  } else {
+    res.redirect('../api/months');
   }
 });
 
@@ -584,7 +595,7 @@ router.post(/ManualAPI/, function (req, res) {
   if (ManualAPI === "yes") {
     res.redirect('confirm-path-api');
   } else {
-    res.redirect('../manual/months');
+    res.redirect('../manual/months-manual');
   }
 });
 
