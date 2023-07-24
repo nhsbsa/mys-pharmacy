@@ -31,10 +31,19 @@ WT&E
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 
-              {{ backLink({
+              <!-- {{ backLink({
               "href": "javascript:history.go(-1)",
               "text": "Go back"
-              }) }}
+              }) }} -->
+
+              <div class="nhsuk-back-link">
+
+                <a class="nhsuk-back-link__link" href="hee-manage-trainees">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+                    <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+                  </svg>
+                  Go back</a>
+              </div>
 
               <header>
                 <h1>
@@ -61,7 +70,7 @@ WT&E
                   </dd>
                   <dd class="nhsuk-summary-list__actions">
                     <a href="edit-trainee-dn">
-                      Change<span class="nhsuk-u-visually-hidden"></span>
+                      <span class="nhsuk-u-visually-hidden"></span>
                     </a>
                   </dd>
                 </div>
@@ -116,7 +125,7 @@ WT&E
                   </dd>
                   <dd class="nhsuk-summary-list__actions">
                     <a href="edit-trainee-mc">
-                      Change<span class="nhsuk-u-visually-hidden"><a href="hee-create-trainee"></a></span>
+                      <span class="nhsuk-u-visually-hidden"><a href="hee-create-trainee"></a></span>
                     </a>
                   </dd>
                 </div>
@@ -130,7 +139,7 @@ WT&E
                   </dd>
                   <dd class="nhsuk-summary-list__actions">
                     <a href="edit-trainee-mc">
-                      Change<span class="nhsuk-u-visually-hidden"><a href="hee-create-trainee"></a></span>
+                      <span class="nhsuk-u-visually-hidden"><a href="hee-create-trainee"></a></span>
                     </a>
                   </dd>
                 </div>
@@ -165,7 +174,7 @@ WT&E
 
                 <div class="nhsuk-summary-list__row">
                   <dt class="nhsuk-summary-list__key">
-                    Training suspension date
+                    Training withdrawal date
                   </dt>
                   <dd class="nhsuk-summary-list__value">
                     20 December 2021
@@ -178,7 +187,7 @@ WT&E
                 </div>
                 <div class="nhsuk-summary-list__row">
                   <dt class="nhsuk-summary-list__key">
-                    Training suspension reason
+                    Training withdrawal reason
                   </dt>
                   <dd class="nhsuk-summary-list__value">
                     Long term absence
