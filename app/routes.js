@@ -588,6 +588,18 @@ router.post(/TemplateDelete/, function (req, res) {
 });
 
 
+router.post(/Remove/, function (req, res) {
+
+  const Remove = req.session.data['Remove']
+
+  if (Remove === "yes") {
+    res.redirect('declaration-june');
+  } else {
+    res.redirect('../api/cya');
+  }
+});
+
+
 router.post(/ManualAPI/, function (req, res) {
 
   const ManualAPI = req.session.data['ManualAPI']
