@@ -59,7 +59,7 @@ Prototype Templates - Manual Prototype
                         Title
                       </th>
                       <th role="columnheader" class="" scope="col">
-                        
+
                       </th>
                     </tr>
                   </thead>
@@ -75,7 +75,8 @@ Prototype Templates - Manual Prototype
                         <span class="nhsuk-table-responsive__heading">Title</span>Text
                       </td>
                       <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Delete</span><a href="delete-confirmation">Delete</a>
+                        <span class="nhsuk-table-responsive__heading">Delete</span><a href="radio">Edit</a> | <a
+                          href="delete-confirmation">Delete</a>
                       </td>
                     </tr>
                   </tbody>
@@ -90,7 +91,49 @@ Prototype Templates - Manual Prototype
               <br>
               <br>
 
-              <a href="declaration" class="nhsuk-button">Continue</a>
+              <form action="AddAnotherMonth" method="post">
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Do you want to add another?
+                      </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-inline-1" name="AddAnotherMonth" type="radio"
+                          value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                          Yes
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-inline-2" name="AddAnotherMonth" type="radio"
+                          value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                          No
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                </div>
+
+                <br>
+
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue</button>
+
+                <!-- <a href="declaration" class="nhsuk-button">Continue</a> -->
+
+                <a href="months-come-back" class="nhsuk-button nhsuk-button--secondary">Save and come back later</a>
+
+              </form>
 
 
             </div>

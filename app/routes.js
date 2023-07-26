@@ -624,4 +624,16 @@ router.post(/Choice/, function (req, res) {
 });
 
 
+router.post(/AddAnotherMonth/, function (req, res) {
+
+  const AddAnotherMonth = req.session.data['AddAnotherMonth']
+
+  if (AddAnotherMonth === "yes") {
+    res.redirect('../manual/months');
+  } else {
+    res.redirect('../manual/declaration');
+  }
+});
+
+
 module.exports = router;
