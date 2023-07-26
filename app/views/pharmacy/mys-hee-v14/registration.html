@@ -1,0 +1,91 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+WT&E
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1><span class="nhsuk-caption-xl nhsuk-caption--bottom">Foundation Trainee Pharmacist Grant Payments</span>
+        Register for this service
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <p>Use this service to make claims for education and training contributions for Foundation Trainee Pharmacists
+      (FTPs).</p>
+
+    <p>To use this service, you only need to register your pharmacy once and declare that you are claiming the training
+      grant in accordance with Part XIII of the Drug Tariff.</p>
+
+    <p>Once you have registered for the service, you will need to register each FTP you wish to make a claim for. This
+      will only need to be done once when they begin their training, and you will be able to make amendments to their
+      record during their training.</p>
+
+    <p>For each FTP, you will need to tell us:</p>
+    <ul style="list-style: disc; margin-left: 30px;">
+      <li>their name</li>
+      <li>their date of birth</li>
+      <li>their GPhC registration number</li>
+      <li>their training start date</li>
+      <li>their Designated Supervisor's name</li>
+      <li>their Designated Supervisor's GPhC registration number</li>
+    </ul>
+
+    <p>You will receive your training grant payment monthly in arrears.</p>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-declaration">Register</a> -->
+
+    <div class="nhsuk-action-link">
+      <a class="nhsuk-action-link__link" href="reg-declaration">
+        <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true" width="36" height="36">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+          </path>
+        </svg>
+        <span class="nhsuk-action-link__text">Register</span>
+      </a>
+    </div>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
