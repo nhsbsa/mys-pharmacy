@@ -425,7 +425,7 @@ router.post(/JulyMore/, function (req, res) {
   const JulyMore = req.session.data['JulyMore']
 
   if (JulyMore === "yes") {
-    res.redirect('patient-details-new-July');
+    res.redirect('select-July');
   } else {
     res.redirect('cya-July');
   }
@@ -437,9 +437,9 @@ router.post(/LFDConfirm/, function (req, res) {
   const LFDConfirm = req.session.data['LFDConfirm']
 
   if (LFDConfirm === "yes") {
-    res.redirect('cya');
+    res.redirect('cya-July');
   } else {
-    res.redirect('cya');
+    res.redirect('cya-July');
   }
 });
 
