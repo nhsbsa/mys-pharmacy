@@ -142,9 +142,14 @@ router.post(/UnplannedCheckYourAnswersNew/, function (req, res) {
   if (addanotherdate === "Yes") {
     res.redirect('suspension-date');
   } else {
-    res.redirect('declaration');
+    res.redirect('check-suspension-contact-details');
   }
 });
+
+
+router.post(/ConfirmContacts/, function (req, res) {
+  res.redirect('declaration');
+})
 
 
 router.post(/temp-check-your-answers/, function (req, res) {
