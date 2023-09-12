@@ -555,6 +555,39 @@ router.post(/CPCSReg/, function (req, res) {
   }
 });
 
+router.post(/earlyopin/, function (req, res) {
+
+  const earlyopin = req.session.data['CPCSReg']
+
+  if (earlyopin === "yes") {
+    res.redirect('CCS-early-declaration');
+  } else {
+    res.redirect('cpcs-main');
+  }
+});
+
+router.post(/earlyoptinstandalone/, function (req, res) {
+
+  const earlyoptinstandalone = req.session.data['CPCSReg']
+
+  if (earlyoptinstandalone === "yes") {
+    res.redirect('CCS-early-declaration-standalone');
+  } else {
+    res.redirect('../services');
+  }
+});
+
+router.post(/RemoveClaim/, function (req, res) {
+
+  const RemoveClaim = req.session.data['Remove']
+
+  if (RemoveClaim === "yes") {
+    res.redirect('cpcs-ccs-main');
+  } else {
+    res.redirect('cpcs-ccs-main');
+  }
+});
+
 
 // Templates //
 

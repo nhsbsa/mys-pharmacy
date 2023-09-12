@@ -1,0 +1,443 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+CPCS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back</a>
+              </div>
+
+              <header>
+                <h1>
+                  NHS Community Pharmacist Consultation Service (CPCS)
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Urgent medicines supply and minor illness
+                    referrals</span>
+                </h1>
+              </header>
+              <hr>
+<h2>Current submissions</h2>
+<br>
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">CPCS submissions</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Urgent
+                      <br>
+                      medicines
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Items
+                      <br>
+                      supplied
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      GP Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC Urgent
+                      <br>
+                      medicines
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC
+                      <br>
+                      Items
+                      <br>
+                      supplied
+                    </th>
+                  
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <!-- <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>June 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Action</span><a href="june">Submit</a>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+
+              <br>
+
+              <p>There are no claims to submit.</p>
+
+
+              <br>
+             
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">CCS submissions</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      CCS consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      CCS items
+                    </th>
+                  
+                  </tr>
+                  
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <!-- <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>June 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Action</span><a href="june">Submit</a>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+
+              <br>
+
+              <p>There are no claims to submit.</p>
+
+
+              <br>
+              <br>
+              
+              <h2>Previous submissions</h2>
+              <br>
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">CPCS submissions</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Urgent
+                      <br>
+                      medicines
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Items
+                      <br>
+                      supplied
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      GP Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC Minor
+                      <br>
+                      illness
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC Urgent
+                      <br>
+                      medicines
+                      <br>
+                      consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      UEC
+                      <br>
+                      Items
+                      <br>
+                      supplied
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>August 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>July 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>June 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+              <br>
+              <br>
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">CCS submissions</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      CCS consultations
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      CCS items
+                    </th>
+                  
+                  </tr>
+
+
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>August 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS items</span>1
+                    </td>
+                    
+                </tbody>
+
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>July 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS consultations</span>1
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS items</span>3
+                    </td>
+                    
+                </tbody>
+
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>June 2023
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS consultations</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">CCS items</span>2
+                    </td>
+                </tbody>
+              </table>
+              
+              <br>
+              <br>
+              <br>
+              
+              <h3>Missed a submission?</h3>
+              <p>Contact the helpdesk on 0300 330 1368 or via email at <a href="">nhssa.mys@nhs.net</a> for help.</p>
+
+
+              <br>
+              <br>
+
+              <p class="nhsuk-body"><a href="de-registration" class="nhsuk-link">Deregister from this service</a></p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
