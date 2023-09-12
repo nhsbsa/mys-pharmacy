@@ -579,15 +579,25 @@ router.post(/earlyoptinstandalone/, function (req, res) {
 
 router.post(/RemoveClaim/, function (req, res) {
 
-  const RemoveClaim = req.session.data['Remove']
+  const RemoveClaim = req.session.data['RemoveClaim']
 
   if (RemoveClaim === "yes") {
-    res.redirect('cpcs-ccs-main');
+    res.redirect('cpcs-CCS-main');
   } else {
-    res.redirect('cpcs-ccs-main');
+    res.redirect('cpcs-CCS-cya');
   }
 });
 
+router.post(/Removeccs/, function (req, res) {
+
+  const Removeccs = req.session.data['Removeccs']
+
+  if (Removeccs === "yes") {
+    res.redirect('main');
+  } else {
+    res.redirect('cya');
+  }
+});
 
 // Templates //
 
