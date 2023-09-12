@@ -549,6 +549,17 @@ router.post(/CPCSReg/, function (req, res) {
   const CPCSReg = req.session.data['CPCSReg']
 
   if (CPCSReg === "yes") {
+    res.redirect('cpcs-CCS-early-optin');
+  } else {
+    res.redirect('../services');
+  }
+});
+
+router.post(/cpcsearlyoptin/, function (req, res) {
+
+  const cpcsearlyoptin = req.session.data['cpcsearlyoptin']
+
+  if (cpcsearlyoptin === "yes") {
     res.redirect('reg-declaration');
   } else {
     res.redirect('../services');
