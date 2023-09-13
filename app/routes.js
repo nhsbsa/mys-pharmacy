@@ -543,6 +543,16 @@ router.post(/COVIDDELETE/, function (req, res) {
 
 // CPCS //
 
+router.post(/CPCSRegr/, function (req, res) {
+
+  const CPCSRegr = req.session.data['CPCSRegr']
+
+  if (CPCSRegr === "yes") {
+    res.redirect('reg-declaration');
+  } else {
+    res.redirect('../services');
+  }
+});
 
 router.post(/CPCSReg/, function (req, res) {
 
