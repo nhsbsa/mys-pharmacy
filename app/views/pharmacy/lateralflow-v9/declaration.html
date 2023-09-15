@@ -1,0 +1,141 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+LFD
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service</span>
+        Declaration
+      </h1>
+    </header>
+
+    <div class="nhsuk-grid-column-one-third">
+      <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+    </div>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content goes here.</p> -->
+
+    <form action="Select" method="post">
+
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="declaration">
+
+          <p>I declare that:</p>
+          <br>
+          <ul>
+            <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment in accordance with the terms and conditions of the COVID-19 Lateral Flow Device (LFD) – Highest Risk Patient Access service
+            </li>
+  
+            <li style="margin-left:40px; padding-bottom:10px;">The information contained within this submission is correct and accurate</li>
+
+
+            <li style="margin-left:40px; padding-bottom:10px;">My acceptance of the declaration shall act as my electronic signature</li>
+  
+            <!--
+                               <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+          </ul>
+        </div>
+        <fieldset>
+          <legend class="visually-hidden">New Submission</legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-10">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-10">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <div class="nhsuk-hint" id="email-with-hint-text-hint">
+              <span id="emailHint" class="panel panel-border-narrow">
+                A confirmation email will be sent to <span class="strong">joe.bloggs@nhs.net</span>.
+                If you would like a copy sent to another email address, please enter it below.
+              </span>
+            </div>
+            <label class="nhsuk-label" for="email-with-hint-text">
+              Email address (optional)
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+              aria-describedby="email-with-hint-text-hint">
+          </div>
+
+
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                    value="agree-check" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                    I agree and accept this declaration
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <a href="confirmation" class="nhsuk-button">
+              Continue
+            </a>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+    </form>
+
+
+      <!-- <a class="nhsuk-button" href="patient-details-new">Continue</a> -->
+
+
+      <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

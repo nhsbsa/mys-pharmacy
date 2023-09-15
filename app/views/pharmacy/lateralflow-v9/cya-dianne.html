@@ -1,0 +1,211 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-full-width.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+LFD
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service</span>
+        Check your answers
+      </h1>
+    </header>
+
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Dianne
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="patient-details-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Nguyen
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="patient-details-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Patient NHS number
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    123 456 7890
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="patient-details-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+               
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Date of birth
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    01 March 1998
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="patient-details-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Address
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    1 Test Road, Something Town, NE1 OLD
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="patient-address-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Patient's eligibility
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Clinical decision of pharmacist
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="evidence-patient-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"><a href="edit-trainee-dn-cya"></a></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Date collected
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    6 July 2023
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="lft-details-patient-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"><a href="edit-trainee-dn-cya"></a></span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Lot number
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    9876-5432
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="lft-details-patient-dianne">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+
+               <br>
+
+              <form action="NewPatientv9" method="post">
+
+
+                <div class="nhsuk-form-group">
+          
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Do you want to add another patient?
+                      </h1>
+                    </legend>
+          
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+          
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-inline-1" name="NewPatient" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                          Yes
+                        </label>
+                      </div>
+          
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-inline-2" name="NewPatient" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                          No
+                        </label>
+                      </div>
+          
+                    </div>
+                  </fieldset>
+          
+                </div>
+          
+          
+                <br>
+          
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Continue
+                </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+LFD
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 Lateral Flow Device (LFD) - Highest Risk Patient Access Service</span>
+        Submission attempted too early
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+
+    <p>You cannot submit for (Month Year) yet.</p>
+
+    <p>You can add patients that you have seen during (Month Year), but you cannot complete the declaration until 1 (Following month Year).</p>
+
+    <p>We’ve saved the information you entered. You can continue your submission later.</p>
+
+    <p><a href="LFD-dashboard-July">Back to select a month</a></p>
+
+    <p><a href="../lateral-flow-index">Back to MYS dashboard</a></p>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

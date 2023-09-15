@@ -400,6 +400,16 @@ router.post(/JULY/, function (req, res) {
   }
 });
 
+router.post(/testmorepatient/, function (req, res) {
+
+  const testmorepatient = req.session.data['testmorepatient']
+
+  if (testmorepatient === "yes") {
+    res.redirect('select-June');
+  } else {
+    res.redirect('declaration');
+  }
+});
 
 router.post(/EvidencePatient/, function (req, res) {
 
@@ -418,9 +428,21 @@ router.post(/NewPatient/, function (req, res) {
   const NewPatient = req.session.data['NewPatient']
 
   if (NewPatient === "yes") {
-    res.redirect('patient-details-new');
+    res.redirect('select-June');
   } else {
     res.redirect('cya');
+  }
+});
+
+
+router.post(/BacktoselectJuly/, function (req, res) {
+
+  const BacktoselectJuly = req.session.data['BacktoselectJuly']
+
+  if (BacktoselectJuly === "yes") {
+    res.redirect('select-July');
+  } else {
+    res.redirect('cya-July');
   }
 });
 
@@ -437,6 +459,18 @@ router.post(/JulyMore/, function (req, res) {
 });
 
 
+router.post(/JulyEarlySubmit/, function (req, res) {
+
+  const JulyEarlySubmit = req.session.data['JulyEarlySubmit']
+
+  if (JulyEarlySubmit === "yes") {
+    res.redirect('select-July');
+  } else {
+    res.redirect('LFD-early-submission');
+  }
+});
+
+
 router.post(/LFDConfirm/, function (req, res) {
 
   const LFDConfirm = req.session.data['LFDConfirm']
@@ -447,6 +481,19 @@ router.post(/LFDConfirm/, function (req, res) {
     res.redirect('cya-July');
   }
 });
+
+router.post(/testaction/, function (req, res) {
+
+  const JuneLFDConfirm = req.session.data['JuneLFDConfirm']
+
+  if (JuneLFDConfirm === "yes") {
+    res.redirect('cya');
+  } else {
+    res.redirect('cya');
+  }
+});
+
+
 
 
 // HEE REG/DE-REG //
@@ -484,7 +531,7 @@ router.post(/FLUCHECKYOURANSWERS/, function (req, res) {
   if (FLUCHECKYOURANSWERS === "yes") {
     res.redirect('flu-dashboard');
   } else {
-    res.redirect('declaration');
+    res.redirect('cya-cya');
   }
 });
 
@@ -496,7 +543,7 @@ router.post(/CYATWO/, function (req, res) {
   if (CYATWO === "yes") {
     res.redirect('flu-dashboard');
   } else {
-    res.redirect('declaration2');
+    res.redirect('cya2-cya');
   }
 });
 
