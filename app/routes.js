@@ -656,6 +656,17 @@ router.post(/RemoveClaim/, function (req, res) {
   }
 });
 
+router.post(/RemoveCPCS/, function (req, res) {
+
+  const RemoveCPCS = req.session.data['RemoveCPCS']
+
+  if (RemoveCPCS === "yes") {
+    res.redirect('cpcs-main');
+  } else {
+    res.redirect('cya');
+  }
+});
+
 router.post(/Removeccs/, function (req, res) {
 
   const Removeccs = req.session.data['Removeccs']
