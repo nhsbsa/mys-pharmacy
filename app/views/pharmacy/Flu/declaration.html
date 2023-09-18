@@ -9,6 +9,7 @@
     - change the header and footer
     - add custom CSS and JavaScript
 -->
+
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
 Community Seasonal Influenza Vaccination Advanced Service
@@ -21,177 +22,124 @@ Community Seasonal Influenza Vaccination Advanced Service
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsBSA-sidebar-container">
-
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-      <div class="nhsuk-width-container">
-        <div class="nhsuk-main-wrapper" id="maincontent">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
-
-              <div class="nhsuk-back-link">
-                <a class="nhsuk-back-link__link" href="javascript:history.back()">
-                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-                    </path>
-                  </svg>
-                  Back</a>
-              </div>
-
-              <header>
-                <h1>
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Community Seasonal Influenza Vaccination Advanced Service</span>
-                  Declaration
-                </h1>
-              </header>
-
-              <p>Check your answers and read the submission declaration</p>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
 
 
-              <h2 class="nhsuk-heading-l">February</h2>
 
-              <table role="table" class="nhsuk-table-responsive">
-                <caption class="nhsuk-table__caption"></caption>
-                <thead role="rowgroup" class="nhsuk-table__head">
-                  <tr role="row">
-                    <th role="columnheader" class="" scope="col">
-                      Category
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Quantity
-                    </th>
-                    <td role="columnheader" class="" scope="col">
-                      
-                    </td>
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Category</span>Influvac sub-unit Tetra vaccine suspension for injection
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Quantity</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Change</span><a href="manual">Change</a>
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Category</span>Adjuvanted quadrivalent influenza vaccine (surface antigen, inactivated) suspension for injection
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Quantity</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Change</span><a href="manual">Change</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <br>
-              <br>
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
 
 
-              <div class="nhsuk-grid-column-two-thirds">
-                <div class="declaration">
 
-                  <p>By submitting this electronic form, and by inserting my name in the signature box and selecting
-                    that I agree below:</p>
-                  <br>
-                  <ol>
-                    <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment for provision of the
-                      Community Pharmacy Seasonal Influenza Vaccination Advanced Service, which has been provided in
-                      accordance with the requirements set out in the Pharmaceutical Services (Advanced and Enhanced
-                      Services) (England) Directions 2013, as amended.
-                    </li>
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Community Seasonal Influenza Vaccination Advanced Service</span>
+        Declaration
+      </h1>
+    </header>
 
-                    <li style="margin-left:40px; padding-bottom:10px;">I declare that the information on this form is
-                      correct and complete and I understand that if it is not, further action may be taken.</li>
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <div class="nhsuk-grid-column-one-third">
+      <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+    </div>
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="declaration">
 
-                    <li style="margin-left:40px; padding-bottom:10px;">I agree that I shall refund any item of service
-                      fee paid to me by the Commissioner (NHSE) where multiple or false claims have been made in respect
-                      of any patient.</li>
+        <p>I confirm that:</p>
+        <br>
+        <ul>
+          <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment for provision of the
+            Community Pharmacy Seasonal Influenza Vaccination Advanced Service, which has been provided in
+            accordance with the requirements set out in the Pharmaceutical Services (Advanced and Enhanced
+            Services) (England) Directions 2013, as amended.
+          </li>
 
-                    <!--
-                                       <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
-                  </ol>
-                </div>
-                <fieldset>
-                  <legend class="visually-hidden">New Submission</legend>
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="input-width-10">
-                      First name
-                    </label>
-                    <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
-                  </div>
+          <li style="margin-left:40px; padding-bottom:10px;">I declare that the information on this form is
+            correct and complete and I understand that if it is not, further action may be taken.</li>
 
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="input-width-10">
-                      Surname
-                    </label>
-                    <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
-                  </div>
-                  <div class="nhsuk-inset-text">
-                    <span class="nhsuk-u-visually-hidden">Information: </span>
-                    <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
-                      address, please enter it below.</p>
-                  </div>
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label" for="email-with-hint-text">
-                      Email address (optional)
-                    </label>
-                    <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
-                      <span id="emailHint" class="panel panel-border-narrow">
-                        A confirmation email will be sent to <contractor email address>
-                          <br>
-                          If you would like a copy sent to another email address, enter it below.
-                      </span>
-                    </div> -->
-                    <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
-                      aria-describedby="email-with-hint-text-hint">
-                  </div>
+          <li style="margin-left:40px; padding-bottom:10px;">I agree that I shall refund any item of service
+            fee paid to me by the Commissioner (NHSE) where multiple or false claims have been made in respect
+            of any patient.</li>
 
-
-                  <div class="nhsuk-form-group">
-                    <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-                      <div class="nhsuk-checkboxes">
-                        <div class="nhsuk-checkboxes__item">
-                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
-                            value="agree-check" aria-expanded="false">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
-                            I agree and accept this declaration
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-
-                  <div class="form-group">
-                    <a href="confirmation" class="nhsuk-button">
-                      Submit
-                    </a>
-                  </div>
-
-                </fieldset>
-              </div>
-
-            </div>
-
-          </div>
-
+          <!--
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+        </ul>
+      </div>
+      <fieldset>
+        <legend class="visually-hidden">New Submission</legend>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
         </div>
 
-      </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Last name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+        </div>
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+            address, please enter it below.</p>
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email-with-hint-text">
+            Email address (optional)
+          </label>
+          <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
+            <span id="emailHint" class="panel panel-border-narrow">
+              A confirmation email will be sent to <contractor email address>
+                <br>
+                If you would like a copy sent to another email address, enter it below.
+            </span>
+          </div> -->
+          <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+            aria-describedby="email-with-hint-text-hint">
+        </div>
 
+
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                  value="agree-check" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                  I agree and accept this declaration
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <a href="confirmation" class="nhsuk-button">
+            Submit
+          </a>
+        </div>
+
+      </fieldset>
     </div>
 
-  </div>
+    <br>
 
+
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> 
+
+    <!-- End of content -->
+
+  </div>
 </div>
 {% endblock %}
