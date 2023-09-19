@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-FP34C
+MYS Service De-registration
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -47,44 +47,20 @@ FP34C
                                     <span class="nhsuk-caption-xl nhsuk-caption--bottom">De-register for services</span>
                                 </h1>
                             </header>
-                            <hr>
+                            
 
                             <form action="dereg-declaration" method="post">
 
-                                <div class="column-third">
-                                    <h2 class="heading-small" style="margin-top:10px;">Services selected</h2>
-                                </div>
-
-                                <dl class="nhsuk-summary-list">
-
-                                    <div class="nhsuk-summary-list__row">
-                                        <dt class="nhsuk-summary-list__key">
-                                            Service
-                                        </dt>
-                                        <dd class="nhsuk-summary-list__value">
-                                            Service 1
-                                        </dd>
-
-                                        <dd class="nhsuk-summary-list__actions">
-
-                                            <a href="service-opt-out">
-                                                Change<span class="nhsuk-u-visually-hidden">Change</span>
-                                            </a>
-
-                                        </dd>
-
-                                    </div>
-
-
-                                </dl>
-
+                                
 
                                 <div class="grid-row">
-                                    <div class="column-third">
+                                    <div class="nhsuk-grid-column-one-third">
                                         <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
-                                    </div>
-                                    <div class="column-two-thirds">
+                                      </div>
+                                      <div class="nhsuk-grid-column-two-thirds">
                                         <div class="declaration">
+
+                                    
                                             <ol>
                                                 <br>
                                                 <li style="margin-left:40px; padding-bottom:10px;">1. I confirm that I
@@ -99,17 +75,21 @@ FP34C
                                                 </li>
 
                                             </ol>
-                                        </div>
 
+                                            
+                                        </div>
+                                        <br>
+                                        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                                            Accept
+                                        </button>
+                                        
                                     </div>
 
                                 </div>
 
                                 <br>
 
-                                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                                    Accept
-                                </button>
+                            
                                 
                             </form>
 

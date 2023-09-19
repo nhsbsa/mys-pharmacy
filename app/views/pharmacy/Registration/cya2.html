@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-MYS Service Registration
+MYS Service De-registration
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -43,47 +43,49 @@ MYS Service Registration
 
                             <header>
                                 <h1>
-                                    MYS Service Registration
-                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">Register for services</span>
+                                    MYS Service de-registration
+                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">De-register for services</span>
                                 </h1>
                             </header>
-                           
+                            <hr>
 
-                        
+                            <form action="dereg-declaration" method="post">
 
-
-                            <div class="grid-row">
-                                <div class="nhsuk-grid-column-one-third">
-                                    <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
-                                  </div>
-                                  <div class="nhsuk-grid-column-two-thirds">
-                                    <div class="declaration">
-                                            <ol>
-                                                <br>
-                                                <li style="margin-left:40px; padding-bottom:10px;">1. I confirm that I
-                                                    have
-                                                    reviewed the summary above and that the information provided within
-                                                    this
-                                                    submission is correct and accurate. </li>
-
-                                                <li style="margin-left:40px; padding-bottom:10px;">2. I confirm that my
-                                                    acceptance of the declaration below shall act as my electronic
-                                                    signature.
-                                                </li>
-
-                                            </ol>
-                                        </div>
-                                        <br>
-                                        <a class="nhsuk-button" data-module="nhsuk-button" href="done">
-                                            Confirm
-                                        </a>
-                                    </div>
-
+                                <div class="column-third">
+                                    <h2 class="heading-small" style="margin-top:10px;">Services selected</h2>
                                 </div>
 
-                                <br>
+                                <dl class="nhsuk-summary-list">
 
+                                    <div class="nhsuk-summary-list__row">
+                                        <dt class="nhsuk-summary-list__key">
+                                            Service
+                                        </dt>
+                                        <dd class="nhsuk-summary-list__value">
+                                            Service 1
+                                        </dd>
+
+                                        <dd class="nhsuk-summary-list__actions">
+
+                                            <a href="service-opt-out">
+                                                Change<span class="nhsuk-u-visually-hidden">Change</span>
+                                            </a>
+
+                                        </dd>
+
+                                    </div>
+
+                                    
+
+
+                                </dl>
                                 
+
+                              
+
+                                <a class="nhsuk-button" data-module="nhsuk-button" href="declaration2">
+                                    Confirm
+                                </a>
                                 
                             </form>
 
