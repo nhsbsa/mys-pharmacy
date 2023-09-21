@@ -168,6 +168,16 @@ router.post(/DeleteConfirmation/, function (req, res) {
   }
 });
 
+router.post(/DeleteYesNo/, function (req, res) {
+
+  const DeleteYesNo = req.session.data['DeleteYesNo']
+
+  if (DeleteYesNo === "yes") {
+    res.redirect('summary');
+  } else {
+    res.redirect('summary');
+  }
+});
 
 router.post(/ReasonMore/, function (req, res) {
 

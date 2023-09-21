@@ -1,0 +1,165 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Planned/unplanned closures
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="javascript:history.back()">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
+        </svg>
+        Go back</a>
+    </div>
+
+    <h1>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Unplanned temporary suspension of services</span>
+      Confirm deletion
+    </h1>
+
+    <form action="DeleteYesNo" method="post">
+
+      <div class="nhsuk-form-group">
+
+        
+
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Date of suspension
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                22 September 2023
+              </dd>
+
+              <!-- <dd class="nhsuk-summary-list__actions">
+
+                <a href="suspension-date">
+                  Change<span class="nhsuk-u-visually-hidden"> name</span>
+                </a>
+
+              </dd> -->
+
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Time of suspension
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                08:00 - 18:00
+              </dd>
+
+              <!-- <dd class="nhsuk-summary-list__actions">
+
+                <a href="service-suspension-time">
+                  Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+                </a>
+
+              </dd> -->
+
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Reason for suspension
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                Adverse weather, such as snow or flood
+              </dd>
+
+              <!-- <dd class="nhsuk-summary-list__actions">
+
+                <a href="closure-reason">
+                  Change<span class="nhsuk-u-visually-hidden"> contact information</span>
+                </a>
+
+              </dd> -->
+
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+                Mitigating actions
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                <p>Put up flood defence barrier</p>
+              </dd>
+
+              <!-- <dd class="nhsuk-summary-list__actions">
+
+                <a href="mitigating-actions">
+                  Change<span class="nhsuk-u-visually-hidden"> contact details</span>
+                </a>
+
+              </dd> -->
+
+            </div>
+
+          </dl>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Are you sure you want to delete this temporary suspension of services?
+              </h1>
+            </legend>
+            
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-1" name="deleteconfirmation" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-2" name="deleteconfirmation" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+
+      <br>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
