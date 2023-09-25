@@ -1,0 +1,79 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+WT&E
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Payments</span>
+          Are you sure you want to delete this trainee?
+      </h1>
+    </header>
+
+    <form action="TraineeDelete" method="post">
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+
+
+          <div class="nhsuk-radios nhsuk-radios--inline">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="TraineeDelete" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="TraineeDelete" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+
+      <br>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

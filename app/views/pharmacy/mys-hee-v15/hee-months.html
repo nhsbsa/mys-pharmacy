@@ -1,0 +1,171 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+WT&E
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Foundation Trainee Pharmacist Grant Payments</span>
+                  Allocation of Funding
+                </h1>
+              </header>
+              <hr>
+
+
+              <a class="nhsuk-button" href="hee-manage-trainees">Manage trainees</a>
+
+
+              <h2 class="nhsuk-heading-l">Current submissions</h2>
+
+
+
+              <dl class="nhsuk-summary-list">
+
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Month
+                    </dd>
+
+                  <dt class="nhsuk-summary-list__actions">
+
+                    </dd>
+
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__value">
+                    September 2022
+                  </dt>
+                  <dd class="nhsuk-summary-list__actions">
+
+                    <a href="hee-claim-september">
+                      start submission</span>
+                    </a>
+
+                  </dd>
+
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__value">
+                    August 2022
+                  </dt>
+                  <dd class="nhsuk-summary-list__actions">
+
+                    <a href="#">
+                      start submission</span>
+                    </a>
+
+                  </dd>
+
+                </div>
+
+              </dl>
+
+
+              <h2 class="nhsuk-heading-l">
+                Previous submissions
+              </h2>
+              <dl class="nhsuk-summary-list">
+
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Month
+                    </dd>
+
+                  <dt class="nhsuk-summary-list__actions">
+
+                    </dd>
+
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__value">
+                    July 2022
+                  </dt>
+                  <dd class="nhsuk-summary-list__actions">
+
+                    <a href="view-july">
+                      view
+                    </a>
+
+                  </dd>
+
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__value">
+                    June 2022
+                  </dt>
+                  <dd class="nhsuk-summary-list__actions">
+
+                    <a href="">
+                      view
+                    </a>
+
+                  </dd>
+
+                </div>
+
+              </dl>
+
+              <br>
+
+              <h3 class="nhsuk-heading-m">Missed a submission?</h3>
+              <p class="nhsuk-body">Contact the helpdesk on 0300 330 1368 or email <a class="nhsuk-link"
+                  href="mailto:nhsbsa.mys@nhs.net">nhsbsa.mys@nhs.net</a> for help</p>
+
+              <br>
+
+              <p class="nhsuk-body"><a href="de-registration" class="nhsuk-link">Deregister from this service</a></p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
