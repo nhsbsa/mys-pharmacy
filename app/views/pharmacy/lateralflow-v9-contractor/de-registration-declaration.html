@@ -38,7 +38,7 @@ LFD
     <header>
       <h1>
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">NHS Lateral Flow Device (LFD) tests service for patients potentially eligible for COVID-19 treatments</span>
-        Register for this service
+        Deregister for this service
       </h1>
     </header>
 
@@ -53,7 +53,7 @@ LFD
 
         <p>I confirm that:</p>
         <br>
-        <ul>
+        <ol>
           <li style="margin-left:40px; padding-bottom:10px;">the information provided in this submission is correct
           </li>
 
@@ -62,7 +62,7 @@ LFD
 
           <!--
                              <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
-        </ul>
+        </ol>
       </div>
       <fieldset>
         <legend class="visually-hidden">New Submission</legend>
@@ -75,20 +75,21 @@ LFD
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-width-10">
-            Last name
+            Surname
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
-        </div>
-        <div class="nhsuk-inset-text">
-          <span class="nhsuk-u-visually-hidden">Information: </span>
-          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
-            address, please enter it below.</p>
         </div>
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email-with-hint-text">
             Email address (optional)
           </label>
-          
+          <div class="nhsuk-hint" id="email-with-hint-text-hint">
+            <span id="emailHint" class="panel panel-border-narrow">
+              A confirmation email will be sent to <contractor email address>
+                <br>
+                If you would like a copy sent to another email address, enter it below.
+            </span>
+          </div>
           <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
             aria-describedby="email-with-hint-text-hint">
         </div>
@@ -109,7 +110,7 @@ LFD
         </div>
 
         <div class="form-group">
-          <a href="reg-confirmation" class="nhsuk-button">
+          <a href="de-registration-confirmation" class="nhsuk-button">
             Submit
           </a>
         </div>
@@ -120,7 +121,7 @@ LFD
     <br>
 
 
-    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> 
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> -->
 
     <!-- End of content -->
 

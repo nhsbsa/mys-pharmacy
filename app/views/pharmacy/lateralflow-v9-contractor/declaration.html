@@ -87,15 +87,15 @@ LFD
             <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
           </div>
           <div class="nhsuk-form-group">
-            <div class="nhsuk-inset-text">
-              <span class="nhsuk-u-visually-hidden">Information: </span>
-              <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
-                address, please enter it below.</p>
+            <div class="nhsuk-hint" id="email-with-hint-text-hint">
+              <span id="emailHint" class="panel panel-border-narrow">
+                A confirmation email will be sent to <span class="strong">joe.bloggs@nhs.net</span>.
+                If you would like a copy sent to another email address, please enter it below.
+              </span>
             </div>
             <label class="nhsuk-label" for="email-with-hint-text">
               Email address (optional)
             </label>
-          
             <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
               aria-describedby="email-with-hint-text-hint">
           </div>
