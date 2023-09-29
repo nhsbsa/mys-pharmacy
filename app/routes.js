@@ -618,7 +618,7 @@ router.post(/CPCSReg/, function (req, res) {
   if (CPCSReg === "yes") {
     res.redirect('cpcs-CCS-early-optin');
   } else {
-    res.redirect('../services');
+    res.redirect('../services-test');
   }
 });
 
