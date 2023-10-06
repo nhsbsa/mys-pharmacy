@@ -528,7 +528,7 @@ router.post(/ActivitiesClaim/, function (req, res) {
   if (ActivitiesClaim === "yes") {
     res.redirect('Summaryv3');
   } else {
-    res.redirect('../FP34C/V3');
+    res.redirect('../FP34C/advanced-servicesv3');
   }
 });
 
