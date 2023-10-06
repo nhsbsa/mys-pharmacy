@@ -519,6 +519,18 @@ router.post(/DERegistration/, function (req, res) {
   }
 });
 
+// FP34C//
+
+router.post(/ActivitiesClaim/, function (req, res) {
+
+  const ActivitiesClaim = req.session.data['ActivitiesClaim']
+
+  if (ActivitiesClaim === "yes") {
+    res.redirect('Summaryv3');
+  } else {
+    res.redirect('../FP34C/v3');
+  }
+});
 
 // Flu //
 
