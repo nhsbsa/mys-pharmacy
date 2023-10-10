@@ -1,0 +1,156 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        Check your answers
+      </h1>
+    </header>
+<hr>
+    <h3 class="nhsuk-heading-m">About your ability to meet the Minimum Requirements</h3>
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Have you read, and are confident that you can meet the requirements in
+the ES as currently published (noting in particular the requirement to
+commence vaccinating within (a) 4 weeks of notification of contract
+award; or (b) by the start date of the vaccination programme covered
+by the ES (whichever is latest)) and to deliver the Community
+Pharmacy Seasonal Influenza Vaccination Advanced Service?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Are you able to offer (and then deliver if accepted) at least 100 Covid-19
+vaccinations per week when/if required through a combination of
+published walk-in clinics and through the National Booking Service? 
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-3-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Are there any ongoing investigations (for example by any NHS, System
+or GPhC bodies) or restrictions on practice imposed after an
+investigation, in relation to your pharmacy superintendent or the
+pharmacy?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-4-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Did the most recent GPhC inspection of the pharmacy (if one has taken
+place) result in ‘Standards Met’ for all five principles?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-5-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Have you previously held a Covid-19 vaccination contract that was
+terminated early?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    No
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-6-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                
+
+               
+
+                </dl>
+
+
+                
+
+              </div>
+
+              
+           
+          </div>
+          <br>
+          
+                
+          
+                <a href="tasklist" class="nhsuk-button">Continue</a>
+
+                <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+              
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}
