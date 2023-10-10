@@ -1,0 +1,101 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        About your proposed service
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+   <hr>
+
+   <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Do the team at your proposed vaccination site have experience in
+delivering Covid-19 vaccinations?
+        </h1>
+      </legend>
+  
+      <div class="nhsuk-hint" id="example-hint">
+        This will help the Regional Teams plan the resource needed in setting up
+new sites. 
+      </div>
+
+      <div class="nhsuk-radios">
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes" value="" checked>
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Yes
+          </label>
+        </div>
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            No
+          </label>
+        </div>
+  
+       
+
+      </div>
+    </fieldset>
+  
+  </div>
+    
+   <br>
+   <a class="nhsuk-button" href="cya-proposed">Confirm</a>
+
+    
+
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
