@@ -700,6 +700,32 @@ router.post(/Removeccs/, function (req, res) {
   }
 });
 
+// cprp //
+
+router.post(/OtherMonth/, function (req, res) {
+
+  const OtherMonth = req.session.data['OtherMonth']
+
+  if (OtherMonth === "yes") {
+    res.redirect('summary');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
+router.post(/AreYouSure/, function (req, res) {
+
+  const AreYouSure = req.session.data['AreYouSure']
+
+  if (AreYouSure === "yes") {
+    res.redirect('summary');
+  } else {
+    res.redirect('summary');
+  }
+});
+
+
 // Templates //
 
 router.post(/TemplateManualDeReg/, function (req, res) {

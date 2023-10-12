@@ -1,0 +1,111 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid premises and refrigeration payments
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="javascript:history.back()">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
+        </svg>
+        Go back</a>
+    </div>
+
+    <h1>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid premises and refrigeration payments</span>
+      How much are you claiming?
+    </h1>
+
+    <label class="nhsuk-label" for="example-with-hint-text">
+      How much are you claiming for?
+    </label>
+    <div class="nhsuk-hint">
+      If you are claiming for refrigeration cost (1 claim only per contractor) include it here.
+      <br>
+      For example, 123 00
+    </div>
+  
+    <div class="nhsuk-date-input" id="example">
+      <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="pounds">
+            Pounds (£)
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-20" id="pounds" name="pounds"
+            type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+        <div class="nhsuk-form-group">
+          <p>.</p>
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="pence">
+            Pence
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="pence" name="pence"
+            type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+        </div>
+      </div>
+    </div>
+    </div>
+   </fieldset>
+   </div>
+
+   <br>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Reference number(s)
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+         Input any reference numbers provided by your regional team in relation to your claim.
+         <br>
+         Separate each reference number with a comma.
+         <br>
+         For example, Y01FA00001, Y01FA00002, Y01FA00003
+        </div>
+        <input class="nhsuk-input nhsuk-u-width-three-quarters" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric" value="Y01FA00063">
+      </div>
+
+      <br>
+
+      <a href="cya-july" class="nhsuk-button">Confirm</a>
+      <br>
+      <br>
+  </div>
+
+  </form>
+
+  <!-- End of content -->
+
+</div>
+</div>
+{% endblock %}
