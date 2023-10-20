@@ -226,6 +226,20 @@ router.post(/unplanned-cya-two/, function (req, res) {
   res.redirect('unplanned-check-your-answers-new');
 })
 
+// Contraception Service //
+
+
+router.post(/pcsoptin/, function (req, res) {
+
+  const pcsoptin = req.session.data['pcsoptin']
+
+  if (pcsoptin === "yes") {
+    res.redirect('declaration-yes');
+  } else {
+    res.redirect('declaration-no');
+  }
+});
+
 
 // Registration Services //
 
