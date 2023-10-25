@@ -1,0 +1,286 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back</a>
+              </div>
+
+              <header>
+                <h1>
+                  Add item information
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Item 1 of 14</Summary></span>
+                </h1>
+              </header>
+             
+              <h2>Paper prescription</h2>
+             <h3>Timestamp: 14 October 2023 09:24</h3>
+               <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Processing period
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Account type
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Account
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Fragment
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Form
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      EPS/Prescription UUID
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Processing period </span>202207
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"> Account type</span>EPHM
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Account</span>FLG31
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"> Fragment </span>N
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Form</span>25
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">EPS/Prescription UUID</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>
+              <br>
+
+              <h3>Prescription information</h3>
+
+              <details class="nhsuk-details">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Show prescription information
+                  </span>
+                </summary>
+                <br>
+                <br>
+                <h3>Patient</h3>
+                <img alt="paper-prescription-patient" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="0" src="https://i.ibb.co/qpgbgpf/paper-prescription-patient.png" loading="eager" >
+              <br>
+              <br>
+                <h3>Dispenser</h3>
+                <img alt="paper-prescription-dispenser" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="0" src="https://i.ibb.co/sVTNSqR/paper-prescription-dispenser.png" loading="eager" >
+             </details>
+              <br>
+              <h3>Item information</h3>
+              <img alt="paper-prescription-information" class="gallery-item-visible gallery-item gallery-item-preloaded" data-hook="gallery-item-image-img" data-idx="0" src="https://i.ibb.co/377s8Zr/paper-prescription-information.png" loading="eager" >
+            
+              <br>
+              <br>
+              
+              <h3>Current prescription form</h3>
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Prescriber code
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Paper type
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Prescribing type
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Exemption category
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Charge status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Prescriber code </span>RDERH
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"> Paper type</span>FP10NC
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Prescribing type</span>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"> Exemption category </span>M
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Charge status</span>E
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <br>
+              <br>
+
+              <table class="nhsuk-table">
+                <caption class="nhsuk-table__caption"></caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                     <h3>Conversation history </h3>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"> 
+                      <b><i>Contractor added the following on 09 Sep 2023 13:52:43</i></b>
+                    <br>
+                      <b>Supplier: </b> Apex  <b>Pack size: </b> 3  <b>Pack price: </b> £23.33  <b>Quantity: </b> 56  <b>Vial/Amp/Cartridge size: </b> 2.5
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"> 
+                      <b> <i>Contractor added the following on 23 Jun 2023 11:11:12</i></b>
+                    <br>
+                      <b>Supplier: </b> Studio1  <b>Pack size: </b> 1 x 200 dose inhaler  <b>Pack price: </b> £3.58  <b>Quantity: </b> 23  
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"> 
+                      <b>  <i>Contractor added the following on 09 April 2023 09:54:13</i></b>
+                    <br>
+                      <b>Supplier: </b> Barbie  <b>Pack size: </b> 10  <b>Pack price: </b> £20.30  <b>Quantity: </b> 100  
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell"> 
+                      <b> <i>Previous message from CIP operator on 09 April 2023 09:54:13</i></b>
+                    <br>
+                    Eque porro quisquam est qui dolorem ipsum.
+                  </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+               <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Supplier
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Pack size
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+
+              
+              <div class="nhsuk-date-input" id="example">
+                <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="pounds">
+                    Pack price<br>
+                      Pounds (£)
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-20" id="pounds" name="pounds"
+                      type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+                  <div class="nhsuk-form-group">
+                    <p>.</p>
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="pence">
+                      Pence
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="pence" name="pence"
+                      type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+                  </div>
+                </div>
+
+                
+                <a href="unpaid-items" class="nhsuk-button">Submit</a>
+                
+          
+                
+                
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+   
+
+  
+
+
+{% endblock %}
