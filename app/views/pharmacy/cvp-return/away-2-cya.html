@@ -1,0 +1,76 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+    <header>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+      <h1>
+        About the location of your proposed site
+      </h1>
+    </header>
+    <hr>
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you know the address of the proposed site away from your pharmacy?
+            </h1>
+          </legend>
+         
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="yes"
+                aria-controls="conditional-contact-1" aria-expanded="false" value="" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="no"
+                aria-controls="conditional-contact-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+          </div>
+          </div>
+           
+           <br>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="if-yes">
+                If yes, non-registered site address(es) from which the service will be provided:
+              </label>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint">12 Bend Street, Greater, Old Trafford, Stretford, Manchester M12 3AB</textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <br>
+    <a href="cya-away" class="nhsuk-button">Confirm</a>
+  </div>
+</div>
+{% endblock %}

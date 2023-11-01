@@ -1,0 +1,104 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        Check your answers
+      </h1>
+    </header>
+<hr>
+    <h3 class="nhsuk-heading-m">Other supporting information</h3>
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Are there any additional files you would like to attach?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                   Files attached: 5
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="supporting-1-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+               
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Is there anything additional that you would like to add?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Vehicula ipsum a arcu cursus vitae congue mauris. Viverra accumsan in nisl nisi scelerisque eu. Quis vel eros donec ac.
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="supporting-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+               
+                
+
+               
+
+                </dl>
+
+
+                
+
+              </div>
+
+              
+           
+          </div>
+          <br>
+          
+                
+          
+                <a href="tasklist" class="nhsuk-button">Continue</a>
+
+                <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+              
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}

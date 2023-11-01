@@ -1,0 +1,94 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        Check your answers
+      </h1>
+    </header>
+
+    <h3 class="nhsuk-heading-m">Third parties</h3>
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    All or part of the details contained in my expression of interest
+submission are ‘Not for disclosure to third parties’ 
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="expression-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    If Yes, please detail which parts are not for disclosure to third
+parties and give valid reasons in support of the information being
+exempt from disclosure
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare rhoncus nisi eu aliquet. Nam volutpat mattis orci, at finibus lorem ornare a. Integer nec justo in leo rutrum imperdiet eget sed est. 
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="expression-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                
+          
+                    </div>
+                  </fieldset>
+          
+                </div>
+          
+          
+                
+          
+                <a href="tasklist" class="nhsuk-button">Continue</a>
+                <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
