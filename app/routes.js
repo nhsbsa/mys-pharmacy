@@ -677,7 +677,7 @@ router.post(/earlyoptinstandalone/, function (req, res) {
   if (earlyoptinstandalone === "yes") {
     res.redirect('CCS-early-declaration-standalone');
   } else {
-    res.redirect('../services');
+    res.redirect('CCS-early-no-declaration-standalone');
   }
 });
 
