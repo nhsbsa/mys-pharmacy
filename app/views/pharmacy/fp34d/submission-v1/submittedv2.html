@@ -1,0 +1,176 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Back</a>
+                            </div>
+
+                            <div class="main-content">
+
+
+
+
+                                <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+                                    <div class="nhsuk-card__content">
+
+                                        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                                            <span id="done-tick"></span>Submission sent
+                                        </h1>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="grid-row">
+                                    <div class="column-two-thirds">
+                                        <h2 class="heading-large">How to sort and send your paper prescriptions</h2>
+                                        <dl class="govuk-check-your-answers cya-questions-short">
+                                            <div>
+                                                <dt class="cya-question">
+                                                    <h2 class="heading-small">Get your label</h2>
+                                                </dt>
+                                                <dd class="cya-answer"><a href="">Print a postage label</a></dd>
+
+                                            </div>
+                                           <br>
+                                            <div>
+                                                <dt class="cya-question">
+                                                    <h2 class="heading-small">Separate batch into groups</h2>
+                                                </dt>
+                                                <dd class="cya-answer">
+
+
+                                                    <div class="guidance">
+                                                        <!--<h2>Complete one submission document only.</h2>-->
+
+
+                                                        <div class="nhsuk-inset-text">
+                                                            <span class="nhsuk-u-visually-hidden">Information: </span>
+                                                            <p>Remove any adhesive tape, pins or staples.</p>
+                                                        </div>
+
+                                                        <p style="
+                                  margin-top: 1.05263em;
+                              ">Use dividers to separate prescription forms into:</p>
+
+                                                        <ul class="list list-number">
+                                                            <li>Exempt</li>
+                                                            <li>Paid</li>
+                                                            <li>Old rate</li>
+                                                        </ul>
+
+
+                                                        <table class="forms-table">
+
+                                                        </table>
+                                                        <p><strong>FP57 - </strong>If you are submitting any FP57 forms,
+                                                            please place these at the top of your
+                                                            batch.
+                                                        </p>
+                                                    </div>
+
+
+                                                </dd>
+
+                                            </div>
+
+                                            <div>
+                                                <dt class="cya-question">
+                                                    <h2 class="heading-small">Order your groups</h2>
+                                                </dt>
+                                                <dd class="cya-answer">
+                                                    <p>Each group should be ordered like this:</p>
+                                                    <p><strong>Top to bottom</strong></p>
+
+                                                    <ul class="list list-number">
+                                                        <li>Nurse prescriber</li>
+                                                        <li>Supplementary prescriber</li>
+                                                        <li>Hospital prescriber</li>
+                                                        <li>Prescribing Doctor</li>
+                                                    </ul>
+
+                                                </dd>
+
+                                            </div>
+
+
+                                            <div>
+                                                <dt class="cya-question" style="border-bottom: 0 !important;">
+                                                    <h2 class="heading-small">Send us your batch</h2>
+                                                </dt>
+                                                <dd class="cya-answer" style="border-bottom: 0 !important;">
+                                                    <p>Send your batch by a postal method that is:</p>
+
+                                                    <ul class="list list-bullet">
+                                                        <li>secure</li>
+                                                        <li>prepaid</li>
+                                                        <li>track and trace </li>
+                                                    </ul>
+
+                                                    <p>Send your batch to us at:</p>
+
+                                                    <p>NHSBSA<br>
+                                                        Bridge House<br>
+                                                        Newcastle<br>
+                                                        NE1 2PF</p>
+
+
+
+                                                </dd>
+
+                                            </div>
+
+
+
+
+
+                                        </dl>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                           <br>
+                            <a href="V2" class="nhsuk-button">Continue</a>
+
+                            {% endblock %}

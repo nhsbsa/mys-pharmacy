@@ -1,0 +1,148 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "back"
+              }) }}
+
+              <header>
+                <h1>
+                  Declaration
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">December 2023 submission</span>
+                </h1>
+              </header>
+
+              
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="declaration">
+                 <br>
+                 <p>By submitting this electronice form, and by inserting my name in the signature box and selecting that I agree below.</p>
+                 <br> 
+                 <ul>
+                 <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have reviewed the submission summary 
+                    above and confirm that it is correct and accurate. </li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I certify that I am entitled to claim payment in accordance with the relevant 
+                    provisions of my Terms of Service contained in the NHS (Pharmaceutical Services) Regulations 2013 and the Drug Tariffand that the information I have 
+                    given on this form is correct and complete and I understand that if it is not, appropriate criminal, civil and disciplinary sanctions maybe
+                    by imposed.
+                  </li>
+                   
+                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have completed the relevant sections with details od the forms (and electronic prescriptions) I am submitting / declaring to NHS Prescription 
+                    for processing and payment.
+                  </li>
+                
+                    <br>
+
+                  <h3 class="heading-medium" style="margin-bottom:20px; margin-top:0px;">Prescriptions</h3>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I consent to the disclosure of information from this form to and by
+                  the NHS Prescription Services and the NHS Counter Fraud Authority for the purpose of verification of this claim
+                and the investigation, prevention, detection and prosecution of fraud or other unlawful activity against or affecting the NHS.</li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronice signature.</li>
+                      
+                </ul>
+                </div>
+                
+                <br>
+                <br>
+
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="input-width-10">
+                    First name
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                </div>
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="input-width-10">
+                    Last name
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                </div>
+        
+                <div class="nhsuk-inset-text">
+                  <span class="nhsuk-u-visually-hidden">Information: </span>
+                  <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                    address, please enter it below.</p>
+                </div>
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email-with-hint-text">
+                    Email address (optional)
+                  </label>
+                
+                  <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+                    aria-describedby="email-with-hint-text-hint">
+                </div>
+        
+        
+                <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <div class="nhsuk-checkboxes">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                          value="agree-check" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                          I agree and accept this declaration
+                        </label>
+                      </div>
+                 
+                  <br>
+
+                  <div class="form-group">
+                    <a href="submittedv3" class="nhsuk-button">
+                      Send submission
+                    </a>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

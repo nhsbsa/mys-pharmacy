@@ -1,0 +1,136 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "back"
+              }) }}
+
+              <header>
+                <h1>
+                  December Submission
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Declaration</span>
+                </h1>
+              </header>
+
+              <div class="nhsuk-grid-column-one-third">
+                <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="declaration">
+                 <br>
+                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have reviewed the summary
+                    above
+                    and that the information provided within this submission is correct and accurate. </li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I certify that the drugs and scheduled
+                    appliances
+                    ordered on the forms (and electronic prescriptions) submitted as part of this submission were
+                    supplied by <strong>Teds Pharmacy</strong> and carried out on our premises.</li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that my acceptance of the
+                    declaration
+                    below shall act as my electronic signature.</li>
+
+                    <br>
+
+                  <h3 class="heading-medium" style="margin-bottom:20px; margin-top:0px;">Prescriptions</h3>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I certify that I am entitled to claim payment
+                    in
+                    accordance with the relevant provisions of my Terms of Service contained in the NHS
+                    (Pharmaceutical Services) Regulations 2013 and the Drug Tariff and that the information I have
+                    given on this form is correct and complete and I understand that if it is not, appropriate
+                    criminal, civil and disciplinary sanctions may be imposed.</li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I consent to the disclosure of information
+                    from this form to and by the NHS Prescription Services and the NHS Counter Fraud for the purpose of
+                    verification of this claim and the investigation, prevention, detection and prosecution of
+                    fraud
+                    or other unlawful activity against or affecting the NHS.</li>
+                      
+                </div>
+                
+                <br>
+                <br>
+
+
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                            value="agree-check" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                            I confirm that I am Smartcard user <strong>Tom Smith</strong>,
+                        and that I agree and accept the declaration above.
+                          </label>
+                          
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="panel panel-border-wide">
+                    <p>
+                      You will be prompted for your Smartcard pin to validate your identity and complete your
+                      electronic
+                      signature.
+                    </p>
+                  </div>
+                 
+                  <br>
+
+                  <div class="form-group">
+                    <a href="submittedv2" class="nhsuk-button">
+                      Send submission
+                    </a>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
