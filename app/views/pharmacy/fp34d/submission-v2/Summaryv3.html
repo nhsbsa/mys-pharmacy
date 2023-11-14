@@ -1,0 +1,238 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34D
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <div class="nhsuk-back-link">
+                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                    </path>
+                  </svg>
+                  Back</a>
+              </div>
+
+              <header>
+                <h1>
+                  Check your answers
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">December 2023 submission</Summary></span>
+                </h1>
+              </header>
+              <hr>
+
+              <div class="column-two-thirds">
+
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Paper prescriptions</h2>
+                  </div>
+                  <div class="column-two-thirds">
+                    <table>
+                      <thead>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;"><strong>Are you sending any paper
+                              prescriptions?</strong></td>
+                          <td style="border-bottom:0px !important;">Yes</td>
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="paper">Edit</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div style="margin-top:30px;">
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col" width="50%">Category</th>
+                            <th scope="col">Prescriptions</th>
+                            <th scope="col">Items</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td width="50%">Exempt</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Paid</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td class="numeric"><a href="eps">Edit</a></td>
+                          </tr>
+                          <tr>
+                            <td width="50%" style="border-bottom:0px !important;">Old rate</td>
+                            <td style="border-bottom:0px !important;">4</td>
+                            <td style="border-bottom:0px !important;">1</td>
+                            <td class="numeric" style="border-bottom:0px !important;"><a href="eps">Edit</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Paper prescriptions total</h2>
+                  </div>
+                  <div class="column-two-thirds">
+                    
+                    <div style="margin-top:30px;">
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col" width="50%">Category</th>
+                            <th scope="col">Prescriptions</th>
+                            <th scope="col">Items</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td width="50%" style="border-bottom:0px !important;">TOTAL</td>
+                            <td style="border-bottom:0px !important;">8</td>
+                            <td style="border-bottom:0px !important;">1</td>
+                            <td class="numeric" style="border-bottom:0px !important;"><a href="eps"></a></td>
+                          </tr>
+                         
+                          
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Other activities</h2>
+                  </div>
+                  <div id="hideme" class="column-two-thirds">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col" width="50%">Category</th>
+                          <th scope="col">Yes/no</th>
+                          
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%">ETP token for non-payment</td>
+                          <td>Yes</td>
+                         
+                          <td class="numeric"><a href="other">Edit</a></td>
+                        </tr>
+
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;">EPS release 2 claim messages</td>
+                          <td style="border-bottom:0px !important;">No</td>
+                         
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="other">Edit</a></td>
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <hr>
+
+                <div class="grid-row">
+                  <div class="column-third">
+                    <h2 class="heading-small" style="margin-top:10px;">Remote delivery</h2>
+                  </div>
+                  <div id="hideme" class="column-two-thirds">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col" width="50%">Category</th>
+                          <th scope="col">Price</th>
+                          
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="50%" style="border-bottom:0px !important;">Remote delivery</td>
+                          <td style="border-bottom:0px !important;">£15.50</td>
+                         
+                          <td class="numeric" style="border-bottom:0px !important;"><a href="other">Edit</a></td>
+                        </tr>
+
+                        
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+               
+                <hr>
+
+                  </div>
+                </div>
+
+
+              </div>
+
+              <a href="declarationv3" class="nhsuk-button">Continue</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
