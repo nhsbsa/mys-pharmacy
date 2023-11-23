@@ -1,0 +1,181 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        Check your answers
+      </h1>
+    </header>
+<hr>
+    <h3 class="nhsuk-heading-m">Your ability to meet the Minimum Requirements</h3>
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you confirm that you have the authority of the Supplier and the Supplier Parties to answer questions on their behalf with regard to you and their ability to meet the minimum requirements of the service? 
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Have, or will have CQC or GPhC registration by the commencement date
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-3-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you confirm that you have read the contractual documents and that you:
+                    <ul>
+                   <li>are confident that the Supplier and the Supplier Parties can meet the requirements in the contractual agreement as currently published</li>
+                   <li>will enter into contractual relations on the basis of the contractual documents (supplied as part of this procurement opportunity) between the Supplier, 
+                    Supplier Parties and the commissioner and any reasonable variations required by the Commissioner (for example, to reflect JCVI guidance)?</li>
+                  </ul>
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-4-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Are you able to offer (and then deliver if accepted) at least 100 COVID-19 vaccinations per week if required by the Commissioner?
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-5-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you confirm that no current restrictions are imposed on any of the supplier parties (or the clinical leadership at the proposed designated sites) after an investigation, and that there are no ongoing regulatory or assurance investigations taking place (for example, by any NHS, System or regulatory bodies).
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-6-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you have have a CQC rating of 'outstanding' or 'good'; or
+                    <ul>
+                      <li>(for pharmacies) the GPhC inspection of the pharmacy resulted in ‘Standards Met’ for all five principles; or</li>
+                      <li>no inspection has taken place yet.</li>
+                    </ul>
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-7-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Can you confirm that you have not had a previously held COVID-19 vaccination contract terminated early due to performance issues.</dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Yes
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="requirements-8-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+               
+                
+
+               
+
+                </dl>
+
+
+                
+
+              </div>
+
+              
+           
+          </div>
+          <br>
+          
+                
+          
+                <a href="front-page" class="nhsuk-button">Continue</a>
+
+               
+              
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}

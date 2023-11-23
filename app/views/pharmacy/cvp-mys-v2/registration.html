@@ -1,0 +1,103 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1><span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+        Register 
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    
+      
+      <p>Please complete this form in full. The questions below will provide the Commissioner with the information needed 
+      to award contracts. Onboarding questions are being asked in order to speed up the process and will not be used for 
+      evaluation process. Please refer to the Procurement Process Guidance for all details of how responses will be handled 
+      by the Commissioner and the timescales for each stage.</p>
+
+      <h3>Definitions used in this document</h3>
+
+    <ul>
+
+      <li>The 'Supplier' is the lgeal entity that will enter into the contract unless it is a collaboration of multiple legal entities, 
+        in which case it is the name of the collaboration (for the avoidance of doubt GP practices should enter the name of the PCN Grouping)</li>
+
+        <li>Where the supplier is a collaboration, for example a PCN Grouping, please isnert the name fo the legal entities that make up the PCN Grouping, 
+          for the avoidnace of doubt, this will be the practice names. </li>
+    </ul>
+
+    <h3>Healthcare premises:</h3>
+
+    <ul>
+
+      <li>A place to which people are admitted for the purpose of receiving a regulated activity to meet healthcare needs (for example a hospital, day surgery unit, etc.) </li>
+      <li>A place in which people live as their main or sole place of residence or in which they are educated, and they receive care or treatment there (for example, a care home)</li>
+      <li>An urgent care facility (for example, a walk-in centre)</li>
+      <li>The premises where a primary care provider carries on regulated activity (for example a GP, out-of-hours, dental, community substance misuse service or sexual assault referral centre)</li>
+      <li>The premises from which a registered provider organises or manages care that is delivered to people in their homes (for example a domiciliary care (home care), supported living or shared lives service)</li>
+      <li>A place from where an ambulance or patient transport service is managed</li>
+      <li>A stand-alone permanent diagnostic or screening facility</li>
+      <li>A place from where urgent remote clinical advice and triage is managed (for example, an NHS 111 service)</li>
+
+
+    </ul>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-declaration">Register</a> -->
+
+    <div class="nhsuk-action-link">
+      <a class="nhsuk-action-link__link" href="requirements-2">
+        <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true" width="36" height="36">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z">
+          </path>
+        </svg>
+        <span class="nhsuk-action-link__text">Register</span>
+      </a>
+    </div>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
