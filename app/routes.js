@@ -624,6 +624,97 @@ router.post(/COVIDDELETE/, function (req, res) {
   }
 });
 
+
+// EOI //
+
+router.post(/coviddose/, function (req, res) {
+
+  const coviddose = req.session.data['coviddose']
+
+  if (coviddose === "yes") {
+    res.redirect('proposed-7');
+  } else {
+    res.redirect('proposed-8');
+  }
+});
+
+router.post(/covidlocation/, function (req, res) {
+
+  const covidlocation = req.session.data['covidlocation']
+
+  if (covidlocation === "yes") {
+    res.redirect('cya-site');
+  } else {
+    res.redirect('site-3');
+  }
+});
+
+router.post(/requirement2/, function (req, res) {
+
+  const requirement2 = req.session.data['requirement2']
+
+  if (requirement2 === "yes") {
+    res.redirect('requirements-3');
+  } else {
+    res.redirect('requirements-2-warning');
+  }
+});
+
+router.post(/requirement3/, function (req, res) {
+
+  const requirement3 = req.session.data['requirement3']
+
+  if (requirement3 === "yes") {
+    res.redirect('requirements-4');
+  } else {
+    res.redirect('requirements-3-warning');
+  }
+});
+
+router.post(/requirement4/, function (req, res) {
+
+  const requirement4 = req.session.data['requirement4']
+
+  if (requirement4 === "yes") {
+    res.redirect('requirements-5');
+  } else {
+    res.redirect('requirements-4-warning');
+  }
+});
+
+router.post(/requirement5/, function (req, res) {
+
+  const requirement5 = req.session.data['requirement5']
+
+  if (requirement5 === "yes") {
+    res.redirect('requirements-6');
+  } else {
+    res.redirect('requirements-5-warning');
+  }
+});
+
+router.post(/locationoff/, function (req, res) {
+
+  const locationoff = req.session.data['locationoff']
+
+  if (locationoff === "yes") {
+    res.redirect('site-3-off');
+  } else {
+    res.redirect('site-4-off');
+  }
+});
+
+router.post(/addsite/, function (req, res) {
+
+  const addsite = req.session.data['addsite']
+
+  if (addsite === "yes") {
+    res.redirect('site-2-off');
+  } else {
+    res.redirect('cya-site-off');
+  }
+});
+
 // CPCS //
 
 router.post(/CPCSRegr/, function (req, res) {

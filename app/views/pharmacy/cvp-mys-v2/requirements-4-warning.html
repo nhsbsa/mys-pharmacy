@@ -27,53 +27,71 @@ Covid-19 Expression of Interest
     <header>
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
       <h1>
-        Third parties disclosure
+        Your ability to meet Minimum Requirements
       </h1>
     </header>
+    <hr>
+
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+      <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+        Your have failed your minimum requirement.
+      </h2>
+      <div class="nhsuk-error-summary__body">
+        <p>
+          Answering 'No' will result in rejection.
+        </p>
+        <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+          <li>
+            <a href="#example-error-1"> Please redo the question and sort out your answers.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <form action="requirement4" method="post">
     <div class="nhsuk-form-group">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              All or part of the details contained in my expression of interest
-              submission are 'Not for disclosure to third parties'.
+              Do you confirm that you have read the contractual documents and that you:
             </h1>
           </legend>
-          <div class="nhsuk-hint" id="contact-hint">
-            Please see Data
-            Handling Statement in the Documents folder for further details.
-          </div>
+            <br>
+            
+              <ul>
+                <h3><li>are confident that the Supplier and the Supplier Parties can meet the requirements in the contractual agreement as currently published</li></h3>
+                <h3><li>will enter into contractual relations on the basis of the contractual documents (supplied as part of this procurement opportunity) between the Supplier, Supplier Parties and the commissioner and any reasonable variations required by the Commissioner (for example, to reflect JCVI guidance)?</li></h3>
+              </ul>
+            
+          
+          
           <div class="nhsuk-radios nhsuk-radios--conditional">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="yes"
-                aria-controls="conditional-contact-1" aria-expanded="false" valur="" checked>
+              <input class="nhsuk-radios__input" id="contact-1" name="requirement4" type="radio" value="yes"
+                aria-controls="conditional-contact-1" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
                 Yes
               </label>
             </div>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="no"
+              <input class="nhsuk-radios__input" id="contact-2" name="requirement4" type="radio" value="no"
                 aria-controls="conditional-contact-2" aria-expanded="false">
               <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
                 No
               </label>
             </div>
           </div>
-        </div>
          
-          <br>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="if-yes">
-                Enter details of which parts are not for disclosure and give valid reasons to support this
-              </label>
-              <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare rhoncus nisi eu aliquet. Nam volutpat mattis orci, at finibus lorem ornare a. Integer nec justo in leo rutrum imperdiet eget sed est.</textarea>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+        
     </div>
     <br>
-    <a href="cya-third-parties" class="nhsuk-button">Confirm</a>
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    Next
+  </button>
+    
+
+  </form>
     
   </div>
 </div>

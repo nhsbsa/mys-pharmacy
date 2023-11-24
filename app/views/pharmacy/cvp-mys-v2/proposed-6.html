@@ -48,29 +48,50 @@ Covid-19 Expression of Interest
     <!-- <p class="nhsuk-body">Content?</p> -->
    <hr>
 
+   <form action="coviddose" method="post">
+
    <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="example"><h2>How many COVID-19 vaccinations per week would you prefer to deliver from the site?</h2>
-      
-    </label>
-    <div class="nhsuk-hint" id="example-hint">
-      This preference will be considered by Regional Teams and the number of
-vaccinations allocated will be dependent on population need, demand and
-vaccine allocations. Allocations of vaccine will be made to providers in the
-network by the Commissioner in accordance with expected demand based
-on: modelling of the local population; patient invitation schedules; previous
-uptake rates in that locality; and characteristics (size, location, anticipated
-population) of the vaccination site network.
-    </div>
     <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="input-width-10">
+      <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Does your proposed Designated Site have any storage / capacity limitations with regards to storing COVID-19 vaccines? </h1>
+        </legend>
        
-      </label>
-      <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text" value="10">
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-1" name="coviddose" type="radio" value="yes"
+              aria-controls="conditional-contact-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="coviddose" type="radio" value="no"
+              aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              No
+            </label>
+          </div>
+        </div>
+        
+        </div>
+        
+      </fieldset>
+      
     </div>
-    
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Next
+    </button>
+    <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+  </form>
+  </div>
+
+  
+   <br>
    <br>
 
-    <a class="nhsuk-button" href="cya-proposed">Confirm</a>
+   
 
     
 

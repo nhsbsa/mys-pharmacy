@@ -1,0 +1,277 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid-19 Expression of Interest
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
+                  Summary
+                </h1>
+              </header>
+              
+
+              <p>The following questions / statements must be confirmed and submitted by
+                Pharmacy Contractors who wish to express an interest. </p>
+
+                <br>
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">About your proposed designated site</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                    </th>
+                  </tr>
+                </thead>
+
+
+                <tbody class="nhsuk-table__body">
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Age </span><a href="site-1">
+                      Location<span class="nhsuk-u-visually-hidden"> Actions</span>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                      Not started
+                    </strong>
+                  </td>
+                  
+                </tr>
+
+
+                <tr role="row" class="nhsuk-table__row">
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Age </span><a href="proposed-1">
+                      About your proposed service<span class="nhsuk-u-visually-hidden"> Actions</span>
+                  </td>
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                      Not started
+                    </strong>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+            <br>
+            <br>
+
+            <table role="table" class="nhsuk-table-responsive">
+              <caption class="nhsuk-table__caption">Declaration and third party disclosure</caption>
+              <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                  </th>
+                </tr>
+              </thead>
+
+
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      
+                      <span class="nhsuk-table-responsive__heading">Age </span><a href="expression">
+                        Third parties<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                  </tr>
+
+                  
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>About proposals for sites away from the pharmacy 
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="away-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Safety and Clinical Quality
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="safety-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Coverage / Access
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="coverage-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Addressing inequality
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="addressing-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Capacity
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="capacity-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Value for Money
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="value-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Workforce
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="workforce-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Age </span>Other supporting information
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Status </span><strong class="nhsuk-tag">
+                        Not started
+                      </strong>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading"><td style="text-align: right;"></span><a href="supporting-1">
+                        Start<span class="nhsuk-u-visually-hidden"> Actions</span>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+             <br>
+             <br>
+              <a class="nhsuk-button" href="declaration">Continue</a>
+
+              <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+          
+               
+<br>
+<br>
+<br>
+
+
+
+
+              <p class="nhsuk-body"><a href="de-registration" class="nhsuk-link"></a></p>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+{% endblock %}
