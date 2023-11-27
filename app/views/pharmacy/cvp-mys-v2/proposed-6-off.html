@@ -47,35 +47,53 @@ Covid-19 Expression of Interest
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
    <hr>
-   
+
+   <form action="proposedoff" method="post">
 
    <div class="nhsuk-form-group">
-
-    <fieldset class="nhsuk-fieldset">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-        <h1 class="nhsuk-fieldset__heading">
-          What is the maximum amount of COVID-19 vaccine doses your proposed Designated Site can safely store? Please provide response in number of doses.</h1>
-      </legend>
-  
-      <div class="nhsuk-hint" id="example-hint">
-        Please provide response in number of doses.
-      </div>
-
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="input-width-10">
-         
-        </label>
-        <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-      </div>
-    </fieldset>
-  
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Does your proposed Designated Site have any storage / capacity limitations with regards to storing COVID-19 vaccines? </h1>
+        </legend>
+       
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-1" name="proposedoff" type="radio" value="yes"
+              aria-controls="conditional-contact-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="proposedoff" type="radio" value="no"
+              aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              No
+            </label>
+          </div>
+        </div>
+        
+        </div>
+        
+      </fieldset>
+      
+    </div>
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Next
+    </button>
+    <a href="tasklist-offsite-met" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+  </form>
   </div>
-    
+
+  
+   <br>
    <br>
 
-    <a class="nhsuk-button" href="proposed-8">Next</a>
+   
 
-    <a href="tasklist-onsite-met" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+    
 
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 

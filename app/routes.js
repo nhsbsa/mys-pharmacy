@@ -638,6 +638,17 @@ router.post(/coviddose/, function (req, res) {
   }
 });
 
+router.post(/proposedoff/, function (req, res) {
+
+  const proposedoff = req.session.data['proposedoff']
+
+  if (proposedoff === "yes") {
+    res.redirect('proposed-7-off');
+  } else {
+    res.redirect('proposed-8-off');
+  }
+});
+
 router.post(/covidlocation/, function (req, res) {
 
   const covidlocation = req.session.data['covidlocation']

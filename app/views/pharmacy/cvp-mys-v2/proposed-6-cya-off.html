@@ -38,7 +38,7 @@ Covid-19 Expression of Interest
     <header>
       <h1>
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid-19 Expression of Interest Spring/Summer 2024</span>
-        Details about your off-site service - Coverage / access 
+        About your proposed service
       </h1>
     </header>
 
@@ -46,29 +46,47 @@ Covid-19 Expression of Interest
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
- 
-<hr>
-   
-<div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
+   <hr>
 
-  <div class="nhsuk-form-group">
-    <h1 class="nhsuk-label-wrapper">
-      <label class="nhsuk-label nhsuk-label--l" for="more-detail">
-        Please indicate the days and times your service will be available for patients
-      </label>
-    </h1>
-    <div class="nhsuk-hint" id="more-detail-hint">
-      For example, every Tuesday and Thursday 4-6pm, or every Saturday 1-3pm
-     </div>
-    <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Every Monday and Friday 1-6pm, or every Saturday 1-3pm</textarea>
-  </div>
+   <form action="coviddose" method="post">
+
+   <div class="nhsuk-form-group">
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Does your proposed Designated Site have any storage / capacity limitations with regards to storing COVID-19 vaccines? </h1>
+        </legend>
+       
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-1" name="coviddose" type="radio" value="yes"
+              aria-controls="conditional-contact-1" aria-expanded="false" value="" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="coviddose" type="radio" value="no"
+              aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              No
+            </label>
+          </div>
+        </div>
+        
+        </div>
+        
+      </fieldset>
+      
+    </div>
+    <a class="nhsuk-button" href="cya-proposed-off">Confirm</a>
 
   
+   <br>
+   <br>
 
-</div>
-  <br>
-
-    <a class="nhsuk-button" href="cya-coverage">Confirm</a>
+   
 
     
 
