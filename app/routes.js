@@ -649,14 +649,17 @@ router.post(/proposedoff/, function (req, res) {
   }
 });
 
+
 router.post(/covidlocation/, function (req, res) {
 
   const covidlocation = req.session.data['covidlocation']
 
   if (covidlocation === "yes") {
     res.redirect('cya-site');
-  } else {
+  } else if (covidlocation === "no") {
     res.redirect('site-3');
+  } else {
+    res.redirect('site-2-warning');
   }
 });
 

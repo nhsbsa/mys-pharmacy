@@ -48,32 +48,53 @@ Covid-19 Expression of Interest
     <!-- <p class="nhsuk-body">Content?</p> -->
    <hr>
 
-   <form action="addsite" method="post">
+   <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+    <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+      Site with more than 1 mile should submit an off site submission instead
+    </h2>
+    <div class="nhsuk-error-summary__body">
+      <p>
+        Your are currently in on site submission
+      </p>
+      <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+        <li>
+          <a href="front-page-2"> Please return to submission and submit an off site submisson instead.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+   <form action="covidlocation" method="post">
     
    <div class="nhsuk-form-group">
 
     <fieldset class="nhsuk-fieldset">
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
         <h1 class="nhsuk-fieldset__heading">
-          Would you like to add another site to your submission?
-          </h1>
+          Do you propose to deliver the COVID-19 vaccination service at your healthcare premises?
+         </h1>
       </legend>
 
-     
-  
       <div class="nhsuk-radios">
   
         <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-1" name="addsite" type="radio" value="yes">
+          <input class="nhsuk-radios__input" id="example-1" name="covidlocation" type="radio" value="yes">
           <label class="nhsuk-label nhsuk-radios__label" for="example-1">
             Yes
           </label>
         </div>
   
         <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-2" name="addsite" type="radio" value="no">
+          <input class="nhsuk-radios__input" id="example-2" name="covidlocation" type="radio" value="no">
           <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-            No
+            No, at another site within 1 mile of my premises
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-3" name="covidlocation" type="radio" >
+          <label class="nhsuk-label nhsuk-radios__label" for="example-3">
+            No, at another site more than 1 mile from my premises
           </label>
         </div>
   
@@ -88,8 +109,7 @@ Covid-19 Expression of Interest
     Save and continue
   </button>
 
-    
-
+   
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
     </form>
