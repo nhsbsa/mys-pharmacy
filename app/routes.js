@@ -657,7 +657,7 @@ router.post(/covidlocation/, function (req, res) {
   if (covidlocation === "yes") {
     res.redirect('cya-site');
   } else if (covidlocation === "no") {
-    res.redirect('site-3');
+    res.redirect('cya-site');
   } else {
     res.redirect('site-2-warning');
   }
@@ -712,7 +712,7 @@ router.post(/locationoff/, function (req, res) {
   const locationoff = req.session.data['locationoff']
 
   if (locationoff === "yes") {
-    res.redirect('site-3-off');
+    res.redirect('cya-site-off');
   } else {
     res.redirect('site-4-off');
   }
