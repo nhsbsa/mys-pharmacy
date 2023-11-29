@@ -656,8 +656,7 @@ router.post(/covidlocation/, function (req, res) {
 
   if (covidlocation === "yes") {
     res.redirect('cya-site');
-  } else if (covidlocation === "no") {
-    res.redirect('cya-site');
+ 
   } else {
     res.redirect('site-2-warning');
   }

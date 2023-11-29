@@ -50,39 +50,77 @@ Covid-19 Expression of Interest
 
    <form action="locationoff" method="post">
     
-   <div class="nhsuk-form-group">
-
-    <fieldset class="nhsuk-fieldset">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-        <h1 class="nhsuk-fieldset__heading">
-          Do you know the addresses of the proposed sites?
-         </h1>
-      </legend>
-
-     
-      <div class="nhsuk-radios">
-  
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-1" name="locationoff" type="radio" value="yes">
-          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-            Yes
-          </label>
-        </div>
-  
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-2" name="locationoff" type="radio" value="no">
-          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-            No
-          </label>
-        </div>
-  
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you know the addresses of the proposed sites?
+            </h1>
+          </legend>
+         
+         
+            
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-1" name="locationoff" type="radio" value="yes"
+                  aria-controls="conditional-contact-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                  Yes
+                </label>
+                </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-2" name="locationoff" type="radio" 
+                aria-controls="conditional-contact-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+          </div>
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1" style="margin: 0; border-left: none; padding-left: 0; margin-top: 50px;">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="if-yes">
+                Please provide the designated site name and address of your alternative site
+              </label>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Site name
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Address line 1
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Address line 2
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Town or city
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                 Postcode
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+            </fieldset>
+        </fieldset>
       </div>
-    </fieldset>
-  
-  </div>
-
-  
-   <br>
+    </div>
+  <br>
 
    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
     Save and continue
