@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-NHS Pharmacy First Service
+CPCS
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -30,25 +30,18 @@ NHS Pharmacy First Service
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 
-              <div class="nhsuk-back-link">
-                <a class="nhsuk-back-link__link" href="javascript:history.back()">
-                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
-                    </path>
-                  </svg>
-                  Back</a>
-              </div>
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
 
               <header>
                 <h1>
                   NHS Pharmacy First Service
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Urgent medicines supply, minor illness referrals and clinical pathway consultations
-                    </span>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Check your answers</span>
                 </h1>
               </header>
-
+              
               <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption">Current submissions</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -116,43 +109,14 @@ NHS Pharmacy First Service
                       <br>
                       items
                     </th>
+                    <th role="columnheader" class="" scope="col">
+                      Action
+                    </th>
                   </tr>
 
 
                 </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>September 2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Urgent medicines consultations</span>1
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Items supplied</span>1
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Minor illness consultations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">GP minor illness consultations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">UEC minor illness consultations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">UEC urgent medicines consultations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">UEC items supplied</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Clinical pathway consultations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Clinical pathway items</span>0
-                    </td>
-                </tbody>
+               
 
                 <tbody class="nhsuk-table__body">
                   <tr role="row" class="nhsuk-table__row">
@@ -185,6 +149,10 @@ NHS Pharmacy First Service
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Clinical pathway items</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Remove</span><a
+                        href="delete-confirmation">Remove</a>
                     </td>
                 </tbody>
 
@@ -220,66 +188,22 @@ NHS Pharmacy First Service
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Clinical pathway items</span>0
                     </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Remove</span><a
+                        href="delete-confirmation">Remove</a>
+                    </td>
                 </tbody>
 
               </table>
 
+               
               <br>
               <br>
 
-              <form>
+              <a href="declaration" class="nhsuk-button">Continue</a>
 
-                <div class="nhsuk-form-group">
-              
-                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                      <h1 class="nhsuk-fieldset__heading">
-                        Which months would you like to submit?
-                      </h1>
-                    </legend>
-              
-                    <div class="nhsuk-hint" id="example-hint">
-                      Select more than one if needed.
-                    </div>
-              
-                    <div class="nhsuk-checkboxes">
-              
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                          September 2023
-                        </label>
-                      </div>
-              
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                          August 2023
-                        </label>
-                      </div>
-              
-                      <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                          July 2023
-                        </label>
-                      </div>
-              
-                    </div>
-                  </fieldset>
-              
-                </div>
-              
-              </form>
 
-              <br>
-              <a href="cpcs-CCS-cya" class="nhsuk-button">Start submmission</a>
-              <br>
-              <br>
-
-              
             </div>
-
 
           </div>
 

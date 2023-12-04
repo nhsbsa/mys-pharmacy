@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-CPCS
+NHS Pharmacy First Service
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -37,7 +37,7 @@ CPCS
     <!-- Change the page title here -->
     <header>
       <h1>
-        NHS Community Pharmacist Consultation Service (CPCS)
+        NHS Pharmacy First Service
         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Deregister for this service</span>
       </h1>
     </header>
@@ -45,9 +45,9 @@ CPCS
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
-    <div class="nhsuk-grid-column-one-third">
-      <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
-    </div>
+    <p>Read the following summary of terms and conditions and, if you agree, complete the details required and tick the agreement box.</p>
+
+      <p>if you choose not to accept (sign this declaration) your de-registration will not be progressed.</p>
     <div class="nhsuk-grid-column-two-thirds">
       <div class="declaration">
 
@@ -75,21 +75,22 @@ CPCS
 
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-width-10">
-            Surname
+            Last name
           </label>
           <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
         </div>
+        
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+            address, please enter it below.</p>
+        </div>
+
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="email-with-hint-text">
             Email address (optional)
           </label>
-          <div class="nhsuk-hint" id="email-with-hint-text-hint">
-            <span id="emailHint" class="panel panel-border-narrow">
-              A confirmation email will be sent to <contractor email address>
-                <br>
-                If you would like a copy sent to another email address, enter it below.
-            </span>
-          </div>
+        
           <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
             aria-describedby="email-with-hint-text-hint">
         </div>
@@ -108,7 +109,7 @@ CPCS
             </div>
           </fieldset>
         </div>
-
+<br>
         <div class="form-group">
           <a href="de-registration-confirmation" class="nhsuk-button">
             Submit

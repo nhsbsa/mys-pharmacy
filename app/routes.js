@@ -656,7 +656,6 @@ router.post(/covidlocation/, function (req, res) {
 
   if (covidlocation === "yes") {
     res.redirect('cya-site');
- 
   } else {
     res.redirect('site-2-warning');
   }
@@ -746,7 +745,7 @@ router.post(/CPCSReg/, function (req, res) {
   const CPCSReg = req.session.data['CPCSReg']
 
   if (CPCSReg === "yes") {
-    res.redirect('cpcs-CCS-early-optin');
+    res.redirect('reg-declaration');
   } else {
     res.redirect('../services-test');
   }
@@ -817,6 +816,18 @@ router.post(/Removeccs/, function (req, res) {
     res.redirect('cya');
   }
 });
+
+router.post(/PFremove/, function (req, res) {
+
+  const PFremove = req.session.data['PFremove']
+
+  if (PFremove === "yes") {
+    res.redirect('cpcs-CCS-cya-2');
+  } else {
+    res.redirect('cya');
+  }
+});
+
 
 // cprp //
 
