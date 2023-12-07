@@ -25,15 +25,6 @@ COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection 
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-
-
-    {{ backLink({
-    "href": "javascript:history.go(-1)",
-    "text": "Go back"
-    }) }}
-
-
-
     <!-- Change the page title here -->
     <header>
       <h1>
@@ -48,42 +39,91 @@ COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection 
     <!-- <p class="nhsuk-body">Content?</p> -->
    <hr>
 
-  
+   <form action="covidlocation" method="post">
     
-   <div class="nhsuk-form-group">
-
-    <fieldset class="nhsuk-fieldset">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-        <h1 class="nhsuk-fieldset__heading">
-          Where do you propose to deliver the COVID-19 vaccination service?</h1>
-      </legend>
-  
-      <div class="nhsuk-radios">
-  
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-            At your pharmacy
-          </label>
-        </div>
-  
-        <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no"  value="" checked>
-          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-            At an alternative site within 1 mile radius of your pharmacy
-          </label>
-        </div>
-  
-      </div>
-    </fieldset>
-  
-  </div>
-   <br>
-
-    <a class="nhsuk-button" href="cya-site">Confirm</a>
-
+   
    
 
+   <div class="nhsuk-form-group">
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Do you propose to deliver the COVID-19 vaccination service at your healthcare premises?
+          </h1>
+        </legend>
+       
+       
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="covidlocation" type="radio" value="yes"
+              aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              Yes
+            </label>
+          </div>
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="covidlocation" type="radio" value="yes"
+                aria-controls="conditional-contact-1" aria-expanded="false" value="" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                No, at another site within 1 mile of my premises
+              </label>
+              </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-2" name="covidlocation" type="radio" 
+              aria-controls="conditional-contact-2" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+              No, at another site more than 1 mile from my premises
+            </label>
+          </div>
+        </div>
+       <br>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="if-yes">
+              What is the designated site name and address of your proposed alternative site?
+            </label>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Site name 
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Gerneral Care">
+            </div>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Address line 1
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="41">
+            </div>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Address line 2 (optional)
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Beaconsfield St">
+            </div>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+                Town or city
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Newcastle upon Tyne">
+            </div>
+      
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="input-width-20">
+               Postcode
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="NE4 9NP">
+            </div>
+          </fieldset>
+      </fieldset>
+    </div>
+  </div>
+<br>
+  
+<a href="cya-site" class="nhsuk-button">Confirm</a>
+   
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
     </form>
