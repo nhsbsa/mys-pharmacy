@@ -42,16 +42,26 @@ NHS Pharmacy First Service
               </div>
 
               <header>
+                
+                <style>
+                  .tableFixHead
+                   { height: full;  }
+
+               .tableFixHead 
+              thead th { position: sticky; top: 0; z-index: 1; background-color: #EFF4F5;}
+
+                </style>
                 <h1>
                   NHS Pharmacy First Service
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Urgent medicines supply, minor illness referrals and clinical pathway consultations
                     </span>
                 </h1>
               </header>
-
+              <div class="tableFixHead">
               <table role="table" class="nhsuk-table-responsive">
+                
                 <caption class="nhsuk-table__caption">Current submissions</caption>
-                <thead role="rowgroup" class="nhsuk-table__head">
+                <thead role="rowgroup" class="nhsuk-table__head" >
                   
                   <tr role="row">
                     <th role="columnheader" class="" scope="col">
@@ -263,6 +273,7 @@ NHS Pharmacy First Service
                     </td>
                 </tbody>
               </table>
+            </div>
 
               <br>
               <br>
@@ -270,6 +281,7 @@ NHS Pharmacy First Service
               <br>
               <br>
               <br>
+              <div class="tableFixHead">
 
               <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption">Previous submissions</caption>
@@ -485,7 +497,7 @@ NHS Pharmacy First Service
                     </td>
                 </tbody>
               </table>
-              
+            </div>
               <br>
               <br>
               <br>

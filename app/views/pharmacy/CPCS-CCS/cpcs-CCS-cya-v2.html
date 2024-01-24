@@ -36,12 +36,20 @@ NHS Pharmacy First Service
               }) }}
 
               <header>
+                <style>
+                .tableFixHead
+                { height: full;  }
+
+            .tableFixHead 
+           thead th { position: sticky; top: 0; z-index: 1; background-color: #EFF4F5;}
+
+             </style>
                 <h1>
                   NHS Pharmacy First Service
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Check your answers</span>
                 </h1>
               </header>
-              
+              <div class="tableFixHead">
               <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption">Current submissions</caption>
                 <thead role="rowgroup" class="nhsuk-table__head">
@@ -275,7 +283,7 @@ NHS Pharmacy First Service
                     </td>
                 </tbody>
               </table>
-
+</div>
                
               <br>
               <br>
