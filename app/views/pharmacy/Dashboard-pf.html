@@ -1,0 +1,127 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+NHS Pharmacy First Service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Back</a>
+                            </div>
+
+                            <header>
+                                <h1>
+                                    NHS Pharmacy First Service
+                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">CPCS + CCS </span>
+                                </h1>
+                            </header>
+                            <hr>
+
+                            <strong class="nhsuk-tag nhsuk-tag--red">
+                                8 Sep 2023
+                    </strong>
+                    
+                    <br>
+                    <br>
+
+                            <h1 class="nhsuk-heading-l">Version 1</h1>
+                                
+
+                            <h3>Common Condition Service (CCS)</h3>
+
+                            <p>First version of CCS on its own without register. <br><br><a href="CCS/main">Version 1</a></p>
+
+
+                            <br>
+
+                            <h3>Intergrated CCS with early opt in</h3>
+
+                          <p>Opt in with CCS user journey.</p> 
+                            
+                            <a href="CPCS-CCS/CCS-early-optin"><p>Opt in with CCS</p></a>
+
+                            <br>
+
+
+                            <h3>Opt in</h3>
+
+                           <p>Only opt in on its own.</p>
+                            
+                            <a href="CPCS-CCS/CCS-early-optin-standalone"><p>CCS Opt-in</p></a>
+                          
+                            
+                            <hr>
+
+                            <strong class="nhsuk-tag nhsuk-tag--red">
+                                22 Nov 2023
+                    </strong>
+                    
+                         
+                    <br>
+                    <br>
+
+                            <h1 class="nhsuk-heading-l">Version 2</h1>
+                           
+                        
+
+                            <h3>Renamed to Pharmacy First</h3>
+
+                            <ul>
+                                <li>
+                                    Intergrated CPCS and CCS with register
+                                </li>
+                                <li>
+                                   Changed the look of the table to fit all the columns in.
+                                 </li>
+                                
+                            </ul>
+                           
+                                
+                            <a href="CPCS-CCS/registration"><p>Pharmacy First</p></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
