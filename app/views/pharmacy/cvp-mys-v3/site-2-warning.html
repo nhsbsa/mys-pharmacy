@@ -1,0 +1,125 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers</span>
+        Location
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+   <hr>
+
+   <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+    <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+      You cannot continue as this form is only for those proposing to deliver the service on site or within 1 mile of their premises
+    </h2>
+    <div class="nhsuk-error-summary__body">
+      <p>
+        You have said you will deliver the service from a site more than 1 mile from your premises. If this is correct, you should exit this response document and complete an off site submission instead. </p>
+      <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+        <li>
+          <a href="">Otherwise, change your answer so you can continue.</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+  <form action="covidlocation" method="post">
+    
+   
+   
+
+    <div class="nhsuk-form-group">
+     <div class="nhsuk-form-group">
+       <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+           <h1 class="nhsuk-fieldset__heading">
+             Do you propose to deliver the COVID-19 vaccination service at your healthcare premises?
+           </h1>
+         </legend>
+        
+        
+           <div class="nhsuk-radios__item">
+             <input class="nhsuk-radios__input" id="contact-1" name="covidlocation" type="radio" value="yes"
+               aria-controls="conditional-contact-1" aria-expanded="false">
+             <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+               Yes
+             </label>
+           </div>
+           <div class="nhsuk-radios nhsuk-radios--conditional">
+             <div class="nhsuk-radios__item">
+               <input class="nhsuk-radios__input" id="contact-1" name="covidlocation" type="radio" value="yes"
+                 aria-controls="conditional-contact-1" aria-expanded="false">
+               <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                 No, at another site within 1 mile of my premises
+               </label>
+               </div>
+           <div class="nhsuk-radios__item">
+             <input class="nhsuk-radios__input" id="contact-2" name="covidlocation" type="radio" value="no"
+               aria-controls="conditional-contact-2" aria-expanded="false">
+             <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+               No, at another site more than 1 mile from my premises
+             </label>
+           </div>
+         </div>
+         
+           
+       </fieldset>
+     </div>
+   </div>
+
+   <br>
+
+   <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    Save and continue
+  </button>
+
+   
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

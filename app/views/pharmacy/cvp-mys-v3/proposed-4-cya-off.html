@@ -1,0 +1,130 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers</span>
+        About your proposed service - IT user 1
+      </h1>
+    </header>
+    <hr>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+    <p>New designated sites need to be set up on the IT systems that facilitate participation in the COVID-19 vaccination service as part of the necessary onboarding process. 
+      We need the contact information of two IT Users (with @nhs.net email addresses) to allow for vaccine supply and other accounts to be created. IT Users will be set up on systems such as:</p>
+
+      <ul>
+       <li>the Foundry system (accessed to review information held about the site, reporting and vaccine ordering)</li>
+       <li>the NHS Future Collaboration platform (accessed to review guidance and other relevant information about the COVID-19 vaccination programme)
+       <li>National Booking Service (NBS) administrators (accessed to set up other NBS users and schedule appointments)
+        <li>preferred point of care system and administrators if relevant (accessed to record vaccinations)
+        
+        </li>
+       </li>
+
+      </ul>
+    
+      <p>If you are a site with existing IT Users and want to change these, please follow the process set out in the Mobilisation guide.</p>
+      
+    
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          IT User 1 name
+        </label>
+        
+    
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" Value="Katy Peterson">
+      </div>
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          IT User 1 email
+        </label>
+        <div class="nhsuk-hint" id="example-hint">This must be an @nhs.net username of an individual (and not generic / shared email accounts).
+          For ‘Other Providers’, if you do not have an @nhs.net email address, please leave this blank and you will be assigned one during the onboarding process.</div>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" Value="katy.peterson@nhs.net">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="input-width-20">
+          IT user 1 telephone number
+        </label>
+        
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="07712345678">
+      </div>
+
+      
+          </div>
+        </fieldset>
+
+      </div>
+
+
+
+    
+
+
+
+    <!-- <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Patient representative details
+      </h1>
+    </legend> -->
+
+
+  
+
+
+    
+
+
+   <br>
+
+   <a class="nhsuk-button" href="cya-proposed-off">Confirm</a>
+
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

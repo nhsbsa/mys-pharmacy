@@ -1,0 +1,102 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers</span>
+        Off site location - check your answers
+      </h1>
+    </header>
+<hr>
+    
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you know the address of the proposed site?
+                   </dt>
+                  <dd class="nhsuk-summary-list__value">
+                  No
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya-off">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    ICBs within which you would be willing to provide vaccination site</dt>
+                  <dd class="nhsuk-summary-list__value">
+                    NHS Bedfordshire, Luton and Milton Keynes<br>
+                    NHS Cornwall and the Isles of Scilly <br>
+                    NHS Gloucestershire 
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya-off">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                
+
+               
+
+                </dl>
+
+
+                
+
+              </div>
+
+              
+           
+          </div>
+          <br>
+          
+                
+          
+                <a href="tasklist-offsite-met" class="nhsuk-button">Continue</a>
+
+                <a href="save-and-continue-off" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+              
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}

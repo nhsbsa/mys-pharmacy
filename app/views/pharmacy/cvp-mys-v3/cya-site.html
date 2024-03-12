@@ -1,0 +1,152 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers</span>
+        	
+Location - check your answers
+      </h1>
+    </header>
+<hr>
+   
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Do you propose to deliver the COVID-19 vaccination service at your healthcare premises?</dt>
+                  <dd class="nhsuk-summary-list__value">
+                    No, at another site within 1 mile of my premises
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Designated site name </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    General Care
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Address line 1 </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    41 
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Address line  2 (optional) </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Beaconsfield St
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Town or city </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Newcastle upon Tyne
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Postcode </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    NE4 9NP
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="site-2-cya">
+                      Change<span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+               
+
+               
+
+                </dl>
+
+
+                
+
+              </div>
+
+              
+           
+          </div>
+          <br>
+          
+                
+          
+                <a href="tasklist-onsite-met" class="nhsuk-button">Continue</a>
+
+                <a href="save-and-continue" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+              
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}

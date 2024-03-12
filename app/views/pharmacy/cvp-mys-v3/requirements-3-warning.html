@@ -1,0 +1,105 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: 1 April 2024 to 31 August 2025 - Site selection process for suppliers</span>
+        Your ability to meet Minimum Requirements - GPhC registration
+      </h1>
+    </header>
+    <hr>
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+    <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+    <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+      You cannot continue as you do not meet the minimum requirements of the service.
+    </h2>
+    <div class="nhsuk-error-summary__body">
+      <p>
+        By answering 'No' to this question, you have said that you cannot meet the minimum requirements. If this is correct, you should exit this response document.
+      </p>
+      <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+        <li>
+          <a href="#example-error-1"> Otherwise, change your answer so you can continue.</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <form action="requirement3" method="post">
+    <div class="nhsuk-form-group">
+ 
+     <fieldset class="nhsuk-fieldset">
+       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+         <h1 class="nhsuk-fieldset__heading">
+           Have, or will have CQC or GPhC registration by the commencement date
+         </h1>
+       </legend>
+   
+       <div class="nhsuk-hint" id="example-hint">Please be aware that answering ‘No’ to this requirement will result in the rejection of your submission and your submission will not be considered by the Commissioner. </div>
+ 
+       <div class="nhsuk-radios">
+   
+         <div class="nhsuk-radios__item">
+           <input class="nhsuk-radios__input" id="example-1" name="requirement3" type="radio" value="yes">
+           <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+             Yes
+           </label>
+         </div>
+   
+         <div class="nhsuk-radios__item">
+           <input class="nhsuk-radios__input" id="example-2" name="requirement3" type="radio" value="no">
+           <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+             No
+           </label>
+         </div>
+   
+       </div>
+     </fieldset>
+   
+   </div>
+   <br>
+   <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+    Save and continue
+   </button>
+   
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
