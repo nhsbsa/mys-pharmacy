@@ -22,15 +22,41 @@ NHS Pharmacy First Service
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
 
+    <div class="phase-banner" 
+    style="margin: -15px 0 15px 0;  
+    line-height: 1.25; 
+    border-bottom: 1px solid #bfc1c3;" >
+    
+    <p>
+        <strong class="phase-tag" 
+        style="padding-bottom: 3px; 
+        display: inline-block; 
+        font-size: 16px;
+        line-height: 1.25;
+        margin: 0 4px 0 0;
+        padding: 6px 8px 2px;
+        font-weight: 700;
+        text-transform: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #005ea5;"
+        >BETA</strong> Your <a href="../feedback" target="_blank">feedback (opens in a new tab)</a> will help us improve our service.
+      </p>
+    </div>
+
+
 
     {{ backLink({
-    "href": "javascript:history.go(-1)",
-    "text": "Go back"
-    }) }}
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
 
 
 

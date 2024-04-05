@@ -19,20 +19,65 @@ CPCS
 {% block beforeContent %}
 {% endblock %}
 
+<div class="nhsuk-width-container-fluid">
+  <div class="nhsuk-grid-row">
+  <!-- Feedback and Notification block -->      
+  <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 10px;">
+    <p style="color: #000;  
+      font-size: 16px;
+      line-height: 1.25;
+      margin: 0 4px 0 0;
+      padding: 10px 12px 10px;          
+      text-transform: capitalize;
+      letter-spacing: 1px;">         
+    <span style="font-size: 16px; margin: 20px;">
+    <span style="text-decoration: none;">
+    <strong>Your bespoke message :</strong>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </span>
+    </p>
+  </span>
+  </div>
+<!-- Feedback and Notification block ends here --> 
+</div>
+</div>
+
+
+
+
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+<div class="nhsuk-width-container-fluid">
+  <div class="nhsuk-grid-row">
+  <!-- Feedback and Notification block -->      
+  <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 10px;">
+    <p style="color: #000;  
+      font-size: 16px;
+      line-height: 1.25;
+      margin: 0 4px 0 0;
+      padding: 10px 12px 10px;          
+      text-transform: capitalize;
+      letter-spacing: 1px;">         
+    <span style="font-size: 16px; margin: 20px;">
+    <span style="text-decoration: none;">
+    <strong>Your bespoke message :</strong>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </span>
+    </p>
+  </span>
+  </div>
+<!-- Feedback and Notification block ends here --> 
+  
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
-
-
-
+    <div class="nhsuk-width-container-fluid">
+      <!-- Main content wrapper here -->
+      </div>
     {{ backLink({
     "href": "javascript:history.go(-1)",
     "text": "Go back"
     }) }}
-
-
 
     <!-- Change the page title here -->
     <header>
@@ -126,6 +171,7 @@ CPCS
 
     <!-- End of content -->
 
+    
   </div>
 </div>
 {% endblock %}
