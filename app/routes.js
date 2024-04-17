@@ -727,6 +727,20 @@ router.post(/addsite/, function (req, res) {
   }
 });
 
+router.post(/popupsites/, function (req, res) {
+
+  const popupsites = req.session.data['popupsites']
+
+  if (popupsites === "yes") {
+    res.redirect('popup-2');
+  } else {
+    res.redirect('cya-popup-no');
+  }
+});
+
+
+
+
 // CPCS //
 
 router.post(/CPCSRegr/, function (req, res) {
