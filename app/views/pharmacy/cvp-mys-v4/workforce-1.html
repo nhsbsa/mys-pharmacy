@@ -1,0 +1,83 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: Site Sign-up Process for Suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: Site Sign-up Process for Suppliers</span>
+        Workforce
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+ 
+<hr>
+   
+<div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
+
+  <div class="nhsuk-form-group">
+    <h1 class="nhsuk-label-wrapper">
+      <label class="nhsuk-label nhsuk-label--l" for="more-detail">
+        What is your workforce plan?
+      </label>
+    </h1>
+    <div class="nhsuk-hint" id="more-detail-hint">
+      
+    </div>
+    <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
+
+  
+
+</div>
+
+  <br>
+
+    <a class="nhsuk-button" href="workforce-2">Next</a>
+
+    <a href="tasklist" class="nhsuk-button nhsuk-button--secondary">Save and continue later</a>
+
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
