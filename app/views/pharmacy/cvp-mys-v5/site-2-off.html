@@ -1,0 +1,485 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: Site Sign-up Process for Suppliers
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: Site Sign-up Process for Suppliers</span>
+        Off site location
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+   <hr>
+
+   <form action="locationoff" method="post">
+    
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you know the address of the proposed site?
+            </h1>
+          </legend>
+         
+         
+            
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-1" name="locationoff" type="radio" value="yes"
+                  aria-controls="conditional-contact-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                  Yes
+                </label>
+                </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-2" name="locationoff" type="radio" 
+                aria-controls="conditional-contact-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+          </div>
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1" style="margin: 0; border-left: none; padding-left: 0; margin-top: 50px;">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="if-yes">
+                What is the designated site name and address of your proposed alternative site?
+              </label>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Site name
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Address line 1
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Address line 2 (optional)
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Town or city
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+        
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                 Postcode
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+           
+      </div>
+    </div>
+
+    <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2" style="margin: 0; border-left: none; padding-left: 0; margin-top: 50px;">
+      <div class="nhsuk-form-group">
+
+        <form>
+    
+          <div class="nhsuk-form-group">
+        
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <label class="nhsuk-label" for="if-no">
+                  Please provide the ICBs within which you would be willing to provide a vaccination site.
+                </label>
+              </legend>
+        
+              <div class="nhsuk-hint" id="example-hint">
+                Select all options that are relevant to you.
+              </div>
+        
+              <div class="nhsuk-checkboxes">
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Bath and North East Somerset, Swindon and Wiltshire
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Bedfordshire, Luton and Milton Keynes
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Birmingham and Solihull
+                    
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Black Country 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Buckinghamshire,
+                    Oxfordshire and Berkshire
+                    West
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Cambridgeshire and
+                    Peterborough 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Cheshire and Merseyside
+    
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Cornwall and the Isles of
+    Scilly
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Coventry and
+                    Warwickshire 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Derby and Derbyshire
+   
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Devon 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Dorset 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Frimley 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Gloucestershire
+                  
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Greater Manchester
+                   
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Hampshire and Isle of
+    Wight 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Herefordshire and
+    Worcestershire 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Hertfordshire and West
+    Essex
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Humber and North
+                    Yorkshire
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Kent and Medway
+   
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Lancashire and South
+                    Cumbria 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Leicester, Leicestershire
+    and Rutland 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Lincolnshire 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Mid and South Essex
+    
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Norfolk and Waveney
+    
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS North Central London
+   
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS North East and North
+                    Cumbria 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS North East London
+                  
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS North West London
+   
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Northamptonshire
+   
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Nottingham and
+    Nottinghamshire 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Shropshire, Telford and
+    Wrekin 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Somerset 
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS South East London
+    
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS South West London
+                   
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS South Yorkshire
+                   
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Staffordshire and Stokeon-Trent 
+  
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS Suffolk and North East
+                    Essex 
+                  </label>
+                </div>
+    
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    NHS Surrey Heartlands
+                    
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    NHS Sussex 
+    Board
+                  </label>
+                </div>
+        
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    NHS West Yorkshire
+    
+                  </label>
+                </div>
+        
+                
+              </div>
+            </fieldset>
+        
+          </div>
+        
+        </form>
+      </div>
+</div>
+  <br>
+
+  <a class="nhsuk-button" href="cya-site-off">Save and continue</a>
+
+    
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
