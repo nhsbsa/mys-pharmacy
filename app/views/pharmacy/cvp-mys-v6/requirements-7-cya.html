@@ -1,0 +1,80 @@
+<!-- Use this page as the index for your project -->
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+COVID-19 vaccination programme: Site Sign-up Process for Suppliers
+{% endblock %}
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+    <header>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">COVID-19 vaccination programme: Site Sign-up Process for Suppliers</span>
+      <h1>
+        Your ability to meet the Minimum Requirements - GPhC inspection
+      </h1>
+    </header>
+    <hr>
+    <div class="nhsuk-form-group">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do the Potential Supplier and Potential Supplier Parties have a CQC rating of 'outstanding', 'good' or ‘requires improvement’, or for pharmacies, has the GPhC inspection of the pharmacy resulted in ‘Standards Met’ for all 5 principles?  </h1>
+          </legend>
+            <br>
+            <div class="nhsuk-hint" id="example-hint">Select Yes if no inspection has taken place.</div>
+            
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="yes"
+                aria-controls="conditional-contact-1" aria-expanded="false" value="'"checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="no"
+                aria-controls="conditional-contact-2" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+          </div>
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2" style="margin: 0; border-left: none; padding-left: 0; margin-top: 50px;">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="if-no">
+                Provide further details.
+              </label>
+              <div class="nhsuk-hint" id="contact-hint">
+                You must include the Potential Supplier name and what remedial actions and measures have been taken to prevent such a termination recurring to allow the Commissioner to further consider your response.<br>
+                See the <a href="">Guidance</a> for further information.
+              </div>
+              <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <br>
+    <a class="nhsuk-button" href="cya-requirements">Confirm</a>
+
+    
+  </div>
+</div>
+{% endblock %}
