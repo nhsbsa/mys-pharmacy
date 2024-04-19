@@ -12,11 +12,33 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Anti-coagulant
+Anti-coagulant
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<div class="alert-banner" style="background-color: #FAE100; padding-bottom: 10px;">
+  <p style="color: #000;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0 4px 0 0;
+    padding: 10px 12px 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;">
+  <span style="font-size: 16px; margin: 20px;">
+  <span style="text-decoration: none; display: inline-block;">
+  <strong>Your bespoke message :</strong>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </span>
+</span>
+  </p>
+</div>
+
+<!-- Feedback and Notification block ends here -->
+
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -27,41 +49,22 @@
   <div class="nhsBSA-sidebar-wrapper">
     <div class="nhsBSA-sidebar-content">
 
-<!-- Feedback and Notification block starts here --> 
 
-      <!--div class="alert-banner" style="background-color: #FAE100; padding-bottom: 10px;">
-        <p style="color: #000;  
-          font-size: 16px;
-          line-height: 1.25;
-          margin: 0 4px 0 0;
-          padding: 10px 12px 10px;          
-          text-transform: capitalize;
-          letter-spacing: 1px;">         
-        <span style="font-size: 16px; margin: 20px;">
-        <span style="text-decoration: none;">
-        <strong>Your bespoke message :</strong>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </span>
-        </p>
-      </span>
-      </div-->
-
-<!-- Feedback and Notification block ends here -->
 
       <div class="nhsuk-width-container-fluid">
 
-<!-- Feedback and Notification block starts here -->
+        <!-- Feedback and Notification block starts here -->
 
-        <!--div class="phase-banner" 
-        style="margin: 5px ;  
-        line-height: 1.25; 
+        <div class="phase-banner"
+             style="margin: 5px ;
+        line-height: 1.25;
         padding: 10px 0 0 0;
         border-bottom: 1px solid #bfc1c3;" >
-        
-        <p></strong> Your <a href="feedback" target="_blank">feedback (opens in a new tab)</a> will help us improve our service.</p>
-        </div-->
 
-<!-- Feedback and Notification block ends here -->         
+          <p>Your <a href="feedback" target="_blank">feedback (opens in a new tab)</a> will help us improve our service.</p>
+        </div>
+
+        <!-- Feedback and Notification block ends here -->
         <div class="nhsuk-main-wrapper" id="maincontent">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
@@ -80,18 +83,18 @@
               </header>
               <header class="page-header">
                 <span class="heading-secondary">Anti-coagulant audit</span>
-                
-              <h3 class="nhsuk-heading-l govuk-heading-m">Patient details</h3>
+
+                <h3 class="nhsuk-heading-l govuk-heading-m">Patient details</h3>
               </header>
-                        <br>
+              <br>
               <form action="oral-medicine" method="get" class="form">
 
                 <div class="nhsuk-form-group">
                   <fieldset class="nhsuk-fieldset" aria-describedby="date-identified-hint" role="group">
                     <legend class="nhsuk-fieldset__legend nhsuk-label--m">
-                        <h2 class="nhsuk-fieldset__heading">
+                      <h2 class="nhsuk-fieldset__heading">
                         Date identified
-                        </h2>
+                      </h2>
                     </legend>
                     <span class="nhsuk-hint" id="date-identified-hint">
                       For example, 15 3 1984
@@ -125,7 +128,7 @@
                     </div>
                   </fieldset>
                 </div>
-                
+
                 <div class="nhsuk-form-group">
                   <h1 class="nhsuk-label-wrapper">
                     <label class="nhsuk-label nhsuk-label--m" for="age-of-patient">
@@ -133,7 +136,7 @@
                     </label>
                   </h1>
                   <div class="nhsuk-hint nhsuk-u-margin-bottom-2">
-                      Enter the patients age
+                    Enter the patients age
                   </div>
                   <input class="nhsuk-input nhsuk-input--width-10" id="age-of-patient" name="age-of-patient" type="number">
                 </div>
@@ -215,10 +218,10 @@
                 <br>
 
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--s">
-                    <h2 class="nhsuk-fieldset__heading">
-                      Check all your answers before continuing
-                    </h2>
-                  </legend>
+                  <h2 class="nhsuk-fieldset__heading">
+                    Check all your answers before continuing
+                  </h2>
+                </legend>
 
                 <button class="nhsuk-button" type="submit">
                   Next
@@ -227,8 +230,6 @@
               </form>
             </div>
           </div>
-
-
 
         </div>
 
