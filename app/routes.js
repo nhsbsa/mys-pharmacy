@@ -542,7 +542,7 @@ router.post(/ActivitiesClaim/, function (req, res) {
   if (ActivitiesClaim === "yes") {
     res.redirect('Summaryv3');
   } else {
-    res.redirect('advanced-servicesv3');
+    res.redirect('advanced-servicesv3-no');
   }
 });
 
@@ -868,6 +868,19 @@ router.post(/AreYouSure/, function (req, res) {
   }
 });
 
+// Reports //
+
+router.post(/reportmonthselect/, function (req, res) {
+
+  const AddAnotherMonth = req.session.data['reportmonthselect']
+
+  if (reportmonthselect === "yes") {
+    res.redirect('../manual/months');
+  } else {
+    res.redirect('../manual/declaration');
+  }
+});
+
 
 // Templates //
 
@@ -952,6 +965,9 @@ router.post(/AddAnotherMonth/, function (req, res) {
     res.redirect('../manual/declaration');
   }
 });
+
+
+
 
 
 module.exports = router;
