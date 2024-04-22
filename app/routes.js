@@ -868,16 +868,16 @@ router.post(/AreYouSure/, function (req, res) {
   }
 });
 
-// Reports //
+// reports //
 
 router.post(/reportmonthselect/, function (req, res) {
 
-  const AddAnotherMonth = req.session.data['reportmonthselect']
+  const reportmonthselect = req.session.data['reportmonthselect']
 
   if (reportmonthselect === "yes") {
-    res.redirect('../manual/months');
+    res.redirect('single-select');
   } else {
-    res.redirect('../manual/declaration');
+    res.redirect('month-select');
   }
 });
 
