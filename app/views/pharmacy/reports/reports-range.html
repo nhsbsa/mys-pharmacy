@@ -30,7 +30,8 @@ Pharmacy reports
       <div class="nhsuk-width-container-full">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
-          <li class="nhsuk-breadcrumb__item">Pharmacy reports</li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports-search">Pharmacy reports</a></li>
+          <li class="nhsuk-breadcrumb__item">Report range type</li>
          </ol>
       </div>
     </nav>
@@ -40,9 +41,9 @@ Pharmacy reports
     <!-- Change the page title here -->
     <header>
       <h1>
-         
+       
          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Pharmacy reports</span>
-         Use this service to download monthly reports for your pharmacies.
+         What report range would you like to download? 
       </h1>
     </header>
 
@@ -52,22 +53,43 @@ Pharmacy reports
     <!-- <p class="nhsuk-body">Content?</p> -->
   
 
-   
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Find a pharmacy
-            </h1>
-          </legend>
-        <div class="nhsuk-hint" id="example-hint">Enter F code, YP code or location</div>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-        </div>
+    
+    <form action="reportmonthselect" method="post">
 
+
+     
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+         
+      
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-1" name="reportmonthselect" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+               Single range
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-2" name="reportmonthselect" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                Month range
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
+      </div>
         <br>
        
        
-    <a class="nhsuk-button" href="reports-range">Next</a>
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+         Next
+      </button>
+        
 
     
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
