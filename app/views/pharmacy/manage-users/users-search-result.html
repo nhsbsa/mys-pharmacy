@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Pharmacy reports
+Manage users
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -30,7 +30,7 @@ Pharmacy reports
       <div class="nhsuk-width-container-full">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
-          <li class="nhsuk-breadcrumb__item">Pharmacy reports</li>
+          <li class="nhsuk-breadcrumb__item">Manage users</li>
          </ol>
       </div>
     </nav>
@@ -41,40 +41,80 @@ Pharmacy reports
     <header>
       <h1>
          
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Pharmacy reports</span>
-         Find a pharmacy
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Admin</span>
+         Manage users
       </h1>
     </header>
+
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
   
-    <p >Use this service to download monthly reports for your pharmacies.</p>
-   <br>
+
    
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Pharmacy
+              Find a user
             </h1>
           </legend>
-        <div class="nhsuk-hint" id="example-hint">Enter F code, YP code or location</div>
+          <div class="nhsuk-hint" id="example-hint">
+            Search by first name, email or pharmacy code
+          </div>
         <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
         </div>
 
        
        
        
-    <a class="nhsuk-button" href="reports-range">Next</a>
+    <a class="nhsuk-button" href="users-search-result">Search</a>
 
-    
+    <a href="create-users" class="nhsuk-button nhsuk-button--secondary">Create a new user</a>
+
+    <br>
+    <br>
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
-    </form>
-    <!-- End of content -->
+    <p>Searching users by term: <b>'aad'</b></p>
+    <div class="nhsuk-hint" id="example-hint">
+      You can sort this table by Name or by F Code by selecting the relevant column title.
+    </div>
+   
+
+   <table role="table" class="nhsuk-table-responsive">
+    <caption class="nhsuk-table__caption"></caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+          <a href="">Name</a>
+        </th>
+        <th role="columnheader" class="" scope="col">
+          Email address
+        </th>
+        <th role="columnheader" class="" scope="col">
+          <a href="">F code</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Age </span>  <a href="cya-user">AADUser2</a>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How much? </span>aaduser2@nhs.net
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">How often? </span>FAAAA
+        </td>
+      </tr>
+
+     
+    </tbody>
+  </table>
 
   </div>
 </div>

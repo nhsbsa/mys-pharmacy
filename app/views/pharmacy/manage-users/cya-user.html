@@ -1,0 +1,135 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Manage users
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container-full">
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-search-result">Manage users</a></li>
+          <li class="nhsuk-breadcrumb__item">User details</li>
+         </ol>
+      </div>
+    </nav>
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Manage users</span>
+        User details
+      </h1>
+    </header>
+
+   
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Name 
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    AADUser2
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="change-name">
+                      <span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    aaduser2@nhs.net
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="change-email">Change
+                      <span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                   FA code
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                   FAAAA
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="change-fa">Change
+                      <span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                  Permissions
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    PHARMACY
+                  </dd>
+                  <dd class="nhsuk-summary-list__actions">
+                    <a href="change-permission">Change
+                      <span class="nhsuk-u-visually-hidden"></span>
+                    </a>
+                  </dd>
+                </div>
+
+                </dl>
+
+                 
+  
+                  </dl>
+  
+                
+
+                </dl>
+
+              </div>
+
+              
+           
+          </div>
+          
+          
+                
+          
+                <a href="delete-user" class="nhsuk-button">Delete user</a>
+
+                
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}
