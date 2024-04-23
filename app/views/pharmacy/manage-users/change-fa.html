@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Pharmacy reports
+Manage users
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -30,51 +30,55 @@ Pharmacy reports
       <div class="nhsuk-width-container-full">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
-          <li class="nhsuk-breadcrumb__item">Pharmacy reports</li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-search-result">Manage users</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="cya-user">User details</a></li>
+          <li class="nhsuk-breadcrumb__item">Change FA code</li>
          </ol>
       </div>
     </nav>
-    
-   
 
     <!-- Change the page title here -->
     <header>
       <h1>
          
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Pharmacy reports</span>
-         Find a pharmacy
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Manage users</span>
+         Change FA code
       </h1>
     </header>
+
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
-  
-    <p >Use this service to download monthly reports for your pharmacies.</p>
-   <br>
+ 
+    <h2>Current FA code</h2>
+    <p class="nhsuk-body-l">	FAAAA</p>
+
+    <br>
    
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Pharmacy
+             New FA code
             </h1>
           </legend>
-        <div class="nhsuk-hint" id="example-hint">Enter F code, YP code or location</div>
+         
         <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
         </div>
 
        
        
        
-    <a class="nhsuk-button" href="reports-range">Next</a>
+    <a class="nhsuk-button" href="cya-user">Update</a>
 
-    
-    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+    <a href="cya-user" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
 
-    </form>
-    <!-- End of content -->
+   
+     
+    </tbody>
+  </table>
 
   </div>
 </div>
