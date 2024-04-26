@@ -1,0 +1,144 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Real Time Exemption Checking(RTEC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+  
+  
+  
+      {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+  
+  
+  
+      <!-- Change the page title here -->
+      <header>
+        <h1>
+          <span class="nhsuk-caption-xl nhsuk-caption--bottom">Real Time Exemption Checking (RTEC)</span>
+          End User Agreement
+        </h1>
+      </header>
+  
+      <!--div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" style="margin-top: auto;" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            Read the following summary of terms and conditions and, if you agree, complete the details required and tick the
+        agreement box.
+          </strong>
+        </div-->
+
+      <p>Read the following summary of terms and conditions and, if you agree, complete the details required and tick the
+        agreement box.</p>
+ 
+
+              
+        
+<p>
+  <br><strong>Last updated: 10-Jun-20</br></strong>
+  
+  <br>The NHS Business Services Authority (the “Authority”) and the supplier of your pharmacy system
+  (the “Supplier” and the “System”) makes the RTEC (real time exemption checking) service (the “Service") available to you 
+  (the “Pharmacy”) on the following conditions.</br>
+  
+  <br>1. The Pharmacy must use the Service for the sole purpose of genuine (not speculative) checks on patient entitlement to 
+  prescription exemptions.</br>
+  
+  <br>2. The Pharmacy will send the Authority the patient's date of birth, postcode, NHS number, forename and surname
+  (“Pharmacy Data”) via the System's API connection to the Authority's RTEC system (the “Exchange”).</br>
+  
+  <br>3. The Pharmacy must use the “Y” or “Unknown” response it receives from the Service (“Response Data”) for the sole 
+  purpose of ascertaining the patient's entitlement in real time.</br>
+  
+  <br>4. The Pharmacy must not use the Response Data for an incompatible purpose or disclose the Response Data further 
+  unless the law requires or permits the Pharmacy to do so.</br>
+  
+  <br>5. The Pharmacy must keep the Response Data confidential and secure. The Pharmacy must only share the Response 
+  Data with the patient unless the law requires or permits the Pharmacy to share the Response Data with a third party.</br>
+  
+  <br>6. The Pharmacy must not transfer the Response Data outside the UK.</br>
+  
+  <br>7. The Pharmacy must keep the System and its access to the Exchange secure from unauthorised access.</br>
+  
+  <br>8. The Pharmacy acknowledges that it is possible that it and/or the Authority also process other personal data in 
+  connection with the Service, for example in relation to requests, complaints or other issues (“Other Data”).</br>
+  
+  <br>9. If the Authority becomes aware of a personal data breach or security incident in relation to the Pharmacy Data,
+  Response Data, Other Data, Service or the System then it may shut down the Exchange without notice to the Pharmacy 
+  pending an investigation; if this happens, the Pharmacy should contact the Supplier for updates on restoration 
+  of the Service.</br>
+  
+  <br>10. If the Authority receives a data subject request or other communication that relates to the Pharmacy, the Authority 
+  will pass it to the Supplier to pass on to the Pharmacy. The Pharmacy should do the same if it receives communications 
+  for the Authority.</br>
+  
+  <br>11. The Authority and the Pharmacy are each independent controllers under data protection legislation. Each of them must 
+  ensure that its respective processing of the Pharmacy Data, Response Data and any Other Data (together, "Relevant Data") 
+  complies with all applicable data protection and privacy legislation and the Information Commissioner's data sharing 
+  code of practice. The Authority is not responsible for the Pharmacy's data protection compliance and the Pharmacy is 
+  not responsible for the Authority's data protection compliance. The Authority's NHS Prescription Services privacy notice at  
+  describes its processing. The Authority will supply the Pharmacy with a notice to display in its premises. 
+  The Pharmacy is responsible for providing its own privacy notice to patients. The Authority's legal basis for processing is 
+  the public task (Article 6(1)(e) GDPR), as evidenced in regulation 18A of the National Health Service (Charges for Drugs and Appliances) 
+  Regulations 2015. The Authority's condition for processing health data is the management of healthcare systems 
+  in Article 9(2)(i) GDPR (with the safeguards in Article 9(3)) and schedule 1 Part 1 paragraph 2 of 
+  the Data Protection Act 2018 (with the safeguards in section 11(1) of that Act). The Pharmacy is responsible for 
+  determining its own legal bases and conditions for processing Relevant Data. The Authority and the Pharmacy are each 
+  responsible for determining their own retention periods for categories of Relevant Data.</br>
+  
+  <br>12. The Authority may revise these conditions from time to time. The Supplier will communicate any revisions to the 
+  Pharmacy. The Pharmacy must accept the revisions in order to continue to use the Service.</br>
+  
+  <br>13. The Pharmacy may stop using the Service at any time by adjusting the settings in the System.</br>
+</p>
+
+</div>
+  
+      
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <!-- <h2>Context</h2> -->
+  
+      <br>
+
+
+      <div class="nhsuk-checkboxes__item nhsuk-u-margin-bottom-6">
+        <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+          value="agree-check" aria-expanded="false">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+          I agree and accept this user agreement
+        </label>
+      </div>
+
+
+      <div class="form-group">
+        <a href="declaration" class="nhsuk-button">
+          Agree and Continue
+        </a>
+      </div>
+
+    </div>
+</div>
+{% endblock %}
