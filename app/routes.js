@@ -868,6 +868,21 @@ router.post(/AreYouSure/, function (req, res) {
   }
 });
 
+// Contraception //
+
+router.post(/Contraceptionremove/, function (req, res) {
+
+  const Contraceptionremove = req.session.data['Contraceptionremove']
+
+  if (Contraceptionremove === "yes") {
+    res.redirect('main');
+  } else {
+    res.redirect('cya');
+  }
+});
+
+
+
 // reports //
 
 router.post(/reportmonthselect/, function (req, res) {
