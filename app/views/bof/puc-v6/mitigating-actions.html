@@ -40,20 +40,98 @@
 
 <form action="unplanned-check-your-answers-new">
 
+  <form>
 
-<div class="nhsuk-form-group">
-    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-      <h1 class="nhsuk-fieldset__heading">
-        What are the actions taken to help reduce the impact of the suspension of services on the users of your pharmacy?
-      </h1>
-      
-    </legend>
-    <div class="nhsuk-hint" id="example-hint">
-      Avoid including any identifiable information such as names of staff or patients here.
+    <div class="nhsuk-form-group">
+  
+      <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            What are the actions taken to help reduce the impact of the suspension of services on the users of your pharmacy?
+          </h1>
+        </legend>
+  
+        <div class="nhsuk-hint" id="example-hint">
+          Select all that apply.
+        </div>
+  
+        <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+              The pharmacy has updated or will update their Dos profiles via Profile Manager to show the temporary suspension.
+            </label>
+          </div>
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+              The pharmacy has implemented or will implement arrangements for making sure that patients are not referred to 
+              it for directed urgent care services during the temporary suspension, as practicable.
+            </label>
+          </div>
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+              The pharmacy has implemented or will implement its arrangements for notifying other pharmaceutical service 
+              providers and GP practices about the suspension and anticipated duration, as practicable.
+            </label>
+          </div>
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+              The pharmacy has displayed or will display information to patients about the suspension and anticipated 
+              duration, in the approved manner, so that it is visible from outside the pharmacy (or, for DSPs, made 
+              the necessary changes to their website).
+            </label>
+          </div>
+
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+              The pharmacy has arranged or will arrange for the continuity of patient care, including for those
+              patients with booked appointments or those attending regularly for supervised administration of medicines.
+            </label>
+          </div>
+
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+              The pharmacy has endeavoured to implement its business continuity plan.
+            </label>
+          </div>
+
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+              Other (provide details).
+            </label>
+          </div>
+
+          
+  
+          <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+  
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="mobile">
+                Avoid including any identifiable information such as names of staff or patients here
+              </label>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+            </div>
+  
+          </div>
+
+        </div>
+      </fieldset>
+  
     </div>
-    <br>
-  <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-</div>
+  
+  </form>
+
+
 
 <!--<div class="nhsuk-form-group">
 
