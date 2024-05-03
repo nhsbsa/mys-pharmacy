@@ -546,6 +546,17 @@ router.post(/ActivitiesClaim/, function (req, res) {
   }
 });
 
+router.post(/Version4Claim/, function (req, res) {
+
+  const Version4Claim = req.session.data['Version4Claim']
+
+  if (Version4Claim === "yes") {
+    res.redirect('Summaryv4');
+  } else {
+    res.redirect('advanced-servicesv4-no');
+  }
+});
+
 // Flu //
 
 router.post(/ViewAndSubmit/, function (req, res) {
