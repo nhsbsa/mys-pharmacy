@@ -895,6 +895,17 @@ router.post(/TemplateManualDeReg/, function (req, res) {
   }
 });
 
+router.post(/EditMonths/, function (req, res) {
+
+  const EditMonths = req.session.data['EditMonths']
+
+  if (EditMonths === "yes") {
+    res.redirect('../manual/new-cya');
+  } else {
+    res.redirect('../manual/declaration');
+  }
+});
+
 router.post(/TemplateAPIDeReg/, function (req, res) {
 
   const TemplateAPIDeReg = req.session.data['TemplateAPIDeReg']
@@ -924,9 +935,9 @@ router.post(/Remove/, function (req, res) {
   const Remove = req.session.data['Remove']
 
   if (Remove === "yes") {
-    res.redirect('declaration-june');
-  } else {
     res.redirect('../api/cya');
+  } else {
+    res.redirect('declaration-june');
   }
 });
 
