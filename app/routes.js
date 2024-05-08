@@ -557,6 +557,23 @@ router.post(/Version4Claim/, function (req, res) {
   }
 });
 
+// NMS//
+
+router.post(/NMSClaimsReg/, function (req, res) {
+
+  const NMSClaimsReg = req.session.data['NMSClaimsReg']
+
+  if (NMSClaimsReg === "yes") {
+    res.redirect('register-declaration');
+  } else {
+    res.redirect('../services');
+  }
+});
+
+
+
+
+
 // Flu //
 
 router.post(/ViewAndSubmit/, function (req, res) {
@@ -886,7 +903,7 @@ router.post(/Contraceptionremove/, function (req, res) {
   const Contraceptionremove = req.session.data['Contraceptionremove']
 
   if (Contraceptionremove === "yes") {
-    res.redirect('main');
+    res.redirect('cya');
   } else {
     res.redirect('cya');
   }
