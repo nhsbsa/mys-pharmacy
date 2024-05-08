@@ -53,246 +53,208 @@ border-bottom: 1px solid #bfc1c3;">
 </div>
 
 <!-- Feedback and Notification block ends here -->
+  {{ backLink({
+  "href": "javascript:history.go(-1)",
+   "text": "Go back"
+  }) }}
 
-              {{ backLink({
-              "href": "javascript:history.go(-1)",
-              "text": "Go back"
-              }) }}
-
-              <header>
-                <h1>
-                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid premises and refrigeration payments</span>
-                Submissions
-                </h1>
-              </header>
+ <header>
+  <h1>
+  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Covid premises and refrigeration payments</span>
+  Submissions
+  </h1>
+ </header>
               
-              <p>Use this service to record and submit your monthly submission for Covid premises and refrigeration payments.</p>
-             
-              <br>
+ <p>Use this service to record and submit your monthly submission for Covid premises and refrigeration payments.</p>
+ <br>
 
+ <h3>Outstanding submissions</h3>
+  
+ <div class="govuk-warning-text">
+   <span class="govuk-warning-text__icon" aria-hidden="true" style = top:-0px;">!</span>
+     <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+       Do not start your submission unless you have your pre-approved authorisation number from your regional team. You will not be able to complete your submission without it.
+     </strong>
+ </div>
 
-              <h3>Outstanding submissions</h3>
-
-              <div class="govuk-warning-text">
-                <span class="govuk-warning-text__icon" aria-hidden="true" style = top:-0px;">!</span>
-                <strong class="govuk-warning-text__text">
-                  <span class="govuk-warning-text__assistive">Warning</span>
-                  Do not start your submission unless you have your pre-approved authorisation number from your regional team. You will not be able to complete your submission without it.
-                </strong>
-              </div>
-
-              <table role="table" class="nhsuk-table-responsive">
-                <caption class="nhsuk-table__caption"></caption>
-                <thead role="rowgroup" class="nhsuk-table__head">
-                  <tr role="row">
-                    <th role="columnheader" class="" scope="col">
-                      Month
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Amount claimed
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Reference number 
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Action
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      
-                    </th>
-                  </tr>
-                </thead>
+<table role="table" class="nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption"></caption>
+    <thead role="rowgroup" class="nhsuk-table__head">
+      <tr role="row">
+        <th role="columnheader" class="" scope="col">
+        Month
+        </th>
+        <th role="columnheader" class="" scope="col">
+        Amount claimed
+        </th>
+        <th role="columnheader" class="" scope="col">
+        Reference number 
+        </th>
+        <th role="columnheader" class="" scope="col">
+        Action
+        </th>
+        <th role="columnheader" class="" scope="col">
+        </th>
+      </tr>
+    </thead>
                 
 
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Type of consultation</span>August 2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of referrals</span>
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Remove</span>
-                      <a href="claiming">Start</a>
-                    </td>
+    <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Type of consultation</span>August 2023
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Number of referrals</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Number of items supplied</span>
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Remove</span>
+            <a href="claiming">Start</a>
+        </td>
+      </tr>
+    </tbody>
 
-                  </tr>
-
-                </tbody>
-
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Type of consultation</span>July 2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of referrals</span>£10.10
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00063
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Remove</span>
-                      <a href="cya-july">Continue</a>
-                    </td>
-
-                  </tr>
-
-                </tbody>
-
-
-                </tbody>
-
-              </table>
-
-              
-              <br>
+    <tbody class="nhsuk-table__body">
+      <tr role="row" class="nhsuk-table__row">
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Type of consultation</span>July 2023
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Number of referrals</span>£10.10
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00063
+        </td>
+        <td role="cell" class="nhsuk-table__cell">
+          <span class="nhsuk-table-responsive__heading">Remove</span>
+            <a href="cya-july">Continue</a>
+        </td>
+      </tr>
+    </tbody>
+</table>
+    
+            <br>
             <br>
             <br>
             <br>
 
             
-              <h3>Previous submissions</h3>
+<h3>Previous submissions</h3>
 
-              <div class="nhsuk-inset-text">
-                <span class="nhsuk-u-visually-hidden">Information: </span>
-                <p>You can edit your previous submissions up until the end of the month you submitted it.</p>
-              </div>
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+    <p>You can edit your previous submissions up until the end of the month you submitted it.</p>
+</div>
 
-              <table role="table" class="nhsuk-table-responsive">
-                <caption class="nhsuk-table__caption"></caption>
-                <thead role="rowgroup" class="nhsuk-table__head">
-                  <tr role="row">
-                    <th role="columnheader" class="" scope="col">
-                      Month
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Amount <br>claimed
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Reference<br> number
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Submission <br> date
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Submitted <br>by
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      Action
-                    </th>
-                    <th role="columnheader" class="" scope="col">
-                      
-                    </th>
-                  </tr>
-                </thead>
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Type of consultation</span>June 2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of referrals</span>£15.10
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00012
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>13/09/2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Leonard Hofstadter
-                    </td>
-                   
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Remove</span>
-                      <a href="edit">Edit</a>
-                    </td>
-                    
+<table role="table" class="nhsuk-table-responsive">
+    <caption class="nhsuk-table__caption"></caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+          Month
+          </th>
+          <th role="columnheader" class="" scope="col">
+          Amount <br>claimed
+          </th>
+          <th role="columnheader" class="" scope="col">
+          Reference<br> number
+          </th>
+          <th role="columnheader" class="" scope="col">
+          Submission <br> date
+          </th>
+          <th role="columnheader" class="" scope="col">
+          Submitted <br>by
+          </th>
+          <th role="columnheader" class="" scope="col">
+          Action
+          </th>
+          <th role="columnheader" class="" scope="col">
+          </th>
+        </tr>
+      </thead>
+    
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Type of consultation</span>June 2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of referrals</span>£15.10
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00012
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>13/09/2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Leonard Hofstadter
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Remove</span>
+          <a href="edit">Edit</a>
+      </td>
+    </tr>
+  </tbody>
 
-                  </tr>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Type of consultation</span>May 2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of referrals</span>£30.50
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00076
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>13/09/2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span> Sheldon Cooper
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Remove</span> 
+        <a href="edit">Edit</a>
+      </td>
+    </tr>
 
-                </tbody>
-
-                <tbody class="nhsuk-table__body">
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Type of consultation</span>May 2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of referrals</span>£30.50
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00076
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span>13/09/2023
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span> Sheldon Cooper
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
-                    </td>
-
-                  </tr>
-
-                  <tbody class="nhsuk-table__body">
-                    <tr role="row" class="nhsuk-table__row">
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Type of consultation</span>April 2023
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Number of referrals</span>£30.50
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00048
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
-                      </td>
-                       <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
-                    </td>
-  
-                    </tr>
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        </div>
-
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Type of consultation</span>April 2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of referrals</span>£30.50
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Y01FA00048
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>13/09/2023
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span>Sheldon Cooper 
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Number of items supplied</span> 
+        <a href="edit">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
         <br>
         <br>
         <br>
-      </div> <p style="margin-bottom: 5px; font-weight: bold;">Missed submissions</p>
+
+      <p style="margin-bottom: 5px; font-weight: bold;">Missed submissions</p>
       <div style="margin-top: 0; font-size: 16px;"><p>If you have missed any submissions for previous months, contact the helpdesk on 0300 330 1368 <br>or email <a href="mailto:mys@nhsbsa.nhs.uk">mys@nhsbsa.nhs.uk</a></p></div>
 
 
-
-
-    </div>
-
-  </div>
-
-</div>
 {% endblock %}
