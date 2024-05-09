@@ -570,6 +570,27 @@ router.post(/NMSClaimsReg/, function (req, res) {
   }
 });
 
+router.post(/NMSremove/, function (req, res) {
+
+  const NMSremove = req.session.data['NMSremove']
+
+  if (NMSremove === "yes") {
+    res.redirect('cya-2');
+  } else {
+    res.redirect('cya-1');
+  }
+});
+
+router.post(/NMSdereg/, function (req, res) {
+
+  const NMSdereg = req.session.data['NMSdereg']
+
+  if (NMSdereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('cya-1');
+  }
+});
 
 
 
@@ -908,6 +929,8 @@ router.post(/Contraceptionremove/, function (req, res) {
     res.redirect('cya');
   }
 });
+
+
 
 
 
