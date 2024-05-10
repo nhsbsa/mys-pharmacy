@@ -593,6 +593,17 @@ router.post(/NMSdereg/, function (req, res) {
 });
 
 
+// Scs //
+router.post(/scsAnother/, function (req, res) {
+
+  const scsAnother = req.session.data['scsAnother']
+
+  if (scsAnother === "yes") {
+    res.redirect('main');
+  } else {
+    res.redirect('cya');
+  }
+});
 
 
 // Flu //
