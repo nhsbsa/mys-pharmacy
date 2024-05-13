@@ -605,6 +605,18 @@ router.post(/scsAnother/, function (req, res) {
   }
 });
 
+router.post(/scsdereg/, function (req, res) {
+
+  const scsdereg = req.session.data['scsdereg']
+
+  if (scsdereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('main');
+  }
+});
+
+
 
 // Flu //
 
