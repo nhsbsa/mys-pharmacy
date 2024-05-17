@@ -1,0 +1,112 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-mdt.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  MDT
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        Manage submissions processing and admin
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+
+
+      <details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Advanced Services
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+
+      <h4 class="nhsuk-heading-s">Flu</h4>
+      <a href="#" class="nhsuk-link">Flu submission reports</a><br>
+      <a href="#" class="nhsuk-link">Flu premises and refrigeration payment reports</a><br><br>
+
+      <h4 class="nhsuk-heading-s">Hep C</h4>
+      <a href="#" class="nhsuk-link">Heptitis C Registration Report</a><br><br>
+
+      <h4 class="nhsuk-heading-s">CPCS</h4>
+      <a href="#" class="nhsuk-link">CPCS Claim submission reports</a><br>
+      <a href="#" class="nhsuk-link">Unlock (delete) CPCS submission</a><br>
+
+
+    </div>
+  </details>
+
+  <details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+  <span class="nhsuk-details__summary-text">
+    Assurance
+  </span>
+  </summary>
+  <div class="nhsuk-details__text">
+
+    <h4 class="nhsuk-heading-s">PQS</h4>
+    <a href="#" class="nhsuk-link">Pharmacy Quality Reports</a><br>
+
+  </div>
+  </details>
+
+  <details class="nhsuk-details nhsuk-expander">
+<summary class="nhsuk-details__summary">
+  <span class="nhsuk-details__summary-text">
+    Core services
+  </span>
+</summary>
+<div class="nhsuk-details__text">
+
+      <h4 class="nhsuk-heading-s">DMS</h4>
+      <a href="#" class="nhsuk-link">Upload NHS Trust Data</a><br><br>
+
+</div>
+</details>
+
+<details class="nhsuk-details nhsuk-expander">
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">COVID Services
+</span>
+</summary>
+<div class="nhsuk-details__text">
+
+        <h4 class="nhsuk-heading-s">COVID</h4>
+        <a href="#" class="nhsuk-link">Covid Premises and refrigeration payment reports</a><br><br>
+
+        <h4 class="nhsuk-heading-s">PPE</h4>
+        <a href="#" class="nhsuk-link">Search PPE submission to delete</a><br>
+        <a href="#" class="nhsuk-link">PPE payment report</a><br>
+
+</div>
+</details>
+
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

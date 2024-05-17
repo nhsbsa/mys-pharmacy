@@ -616,6 +616,16 @@ router.post(/scsdereg/, function (req, res) {
   }
 });
 
+router.post(/smokingremove/, function (req, res) {
+
+  const smokingremove = req.session.data['smokingremove']
+
+  if (smokingremove === "yes") {
+    res.redirect('main');
+  } else {
+    res.redirect('march');
+  }
+});
 
 
 // Flu //
