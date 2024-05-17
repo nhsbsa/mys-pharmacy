@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Coronavirus (COVID-19) Vaccination Service
+Primary-Care-Staff-(PCS)-Flu-Vaccination-Recording
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -23,47 +23,48 @@ Coronavirus (COVID-19) Vaccination Service
 {% block content %}
 <div class="nhsBSA-sidebar-container">
 
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-      <div class="nhsuk-width-container">
-        <div class="nhsuk-main-wrapper" id="maincontent">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
+   
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
 
-              {{ backLink({
-                "href": "javascript:history.go(-1)",
-                "text": "Go back"
-                }) }}
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Go back</a>
+                            </div>
 
-              <header>
-                <h1>
-                  Primary-Care-Staff-(PCS)-Flu-Vaccination-Recording
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
-                </h1>
-              </header>
+                            <header>
+                                <h1>
+                                  Primary-Care-Staff-(PCS)-Flu-Vaccination-Recording
+                                     </h1>
+                            </header>
+                            <hr>
 
-              <h3><a href="start-submissions" class="nhsuk-link">Version 1 - May 2024</a></h3>
-              <ul style="list-style: disc; margin-left: 30px;">
-                <li>Based on requirements from BP364-93</li>
-              </ul>
 
-              <!--h3><a href="covid-dashboard-V2" class="nhsuk-link">Version 2 - 15 June 2023</a></h3>
-              <ul style="list-style: disc; margin-left: 30px;">
-                <li>Based on requirements from BP275-6473</li>
-              </ul-->
+                            <h1 class="nhsuk-heading-l">Version 1</h1>
 
+                            <h3>17 May 2024</h3>
+
+                            <p>The new PCS prototype. <br><br><a href="start-submissions">View prototype redesign version 1</a></p>
+
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-          </div>
-
         </div>
 
-      </div>
-
     </div>
-
-  </div>
 
 </div>
 {% endblock %}
