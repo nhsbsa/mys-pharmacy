@@ -666,6 +666,46 @@ router.post(/CYATWO/, function (req, res) {
 });
 
 
+
+// PCS Flu //
+
+router.post(/ViewAndSubmit/, function (req, res) {
+
+  const ViewAndSubmit = req.session.data['ViewAndSubmit']
+
+  if (ViewAndSubmit === "yes") {
+    res.redirect('cya');
+  } else {
+    res.redirect('manual');
+  }
+});
+
+
+router.post(/FLUCHECKYOURANSWERS/, function (req, res) {
+
+  const FLUCHECKYOURANSWERS = req.session.data['FLUCHECKYOURANSWERS']
+
+  if (FLUCHECKYOURANSWERS === "yes") {
+    res.redirect('flu-dashboard');
+  } else {
+    res.redirect('cya-cya');
+  }
+});
+
+
+router.post(/NEXTMONTH/, function (req, res) {
+
+  const NEXTMONTH = req.session.data['NEXTMONTH']
+
+  if (NEXTMONTH === "yes") {
+    res.redirect('start-submissions');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+
+
 // Covid //
 
 
