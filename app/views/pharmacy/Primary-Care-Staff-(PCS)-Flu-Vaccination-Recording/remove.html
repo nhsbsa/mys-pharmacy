@@ -44,15 +44,11 @@ Primary Care Staff (PCS) Flu Vaccination Recording
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Primary Care Staff (PCS) Flu Vaccination Recording</span>
-                  Check your answers
+                  Confirm deletion
                 </h1>
               </header>
 
-              <h4>Months selected for submission</h4>
-              <p>The number of vaccines you administered for the following months have not yet been confirmed. 
-                Select View and submit for each month to confirm these numbers and complete the declaration.</p>
-
-               <p>We've got the information about your Influenza vaccinations from your pharmacy IT provider.</p>
+              <p>This is a summary of your current submission. If this is correct, select <strong>Continue</strong> to make your declaration.</p>
 
               <table role="table" class="nhsuk-table-responsive">
                 <caption class="nhsuk-table__caption"></caption>
@@ -78,45 +74,47 @@ Primary Care Staff (PCS) Flu Vaccination Recording
                       <span class="nhsuk-table-responsive__heading">Number of vaccinations</span>0
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="#"></a>
+                      <span class="nhsuk-table-responsive__heading">Action</span><a href="removed">Remove</a>
                     </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>March 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of vaccinations</span>0
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="#"></a>
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>February 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Number of vaccinations</span>3
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="view-details">View details</a>
-                    </td>
-                  </tr>
+                  </tr>  
                 </tbody>
               </table>
 
               <br>
               <br>
 
-              
+              <form action="NEXTMONTH" method="post">
+              <div class="nhsuk-form-group">
 
-             
-              <!--div class="form-group">
-                <a href="declaration" class="nhsuk-button">
-                  Continue
-                </a>
-              </div-->
+                <fieldset class="nhsuk-fieldset">
+                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                    <h1 class="nhsuk-fieldset__heading">
+                    Are you sure you want to delete this month from your submission?
+                    </h1>
+                  </legend>
+
+                  <div class="nhsuk-radios nhsuk-radios--inline">
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-inline-1" name="NEXTMONTH" type="radio"
+                        value="yes">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                        Yes
+                      </label>
+                    </div>
+
+                    <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-inline-2" name="NEXTMONTH" type="radio"
+                        value="no">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                        No
+                      </label>
+                    </div>
+
+                  </div>
+                </fieldset>
+
+              </div>
 
               <a href="confirm-submission" class="nhsuk-button">Continue</a>              
 
