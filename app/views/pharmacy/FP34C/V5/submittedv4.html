@@ -1,0 +1,219 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+
+                            <div class="main-content">
+
+                                <header>
+                                    <h1>
+                                      <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C submissions - December 2023</span>
+                                     
+                                       </h1>
+                                  </header>
+                                
+
+
+                                <div
+                                    class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+                                    <div class="nhsuk-card__content">
+
+                                        <h1 class="nhsuk-card__title nhsuk-u-margin-bottom-4">
+                                            <span id="done-tick"></span>Submission complete 
+  
+                                        </h1>
+
+                                       
+
+                                              
+                                              
+                                           
+                                           
+                                          </div>
+                                      
+                                    </div>
+                                <br>
+                                <p>You've completed your submission.
+                                  <br>
+                                  <br>
+                                  We will send an email to (email address) confirming your submission. 
+                                 <br>
+                                  Make sure you keep this email for your records.</p>
+                                </div>
+
+                               <br>
+
+                                <div class="grid-row">
+                                    <div class="column-two-thirds">
+                                        <h2 class="heading-large">What's next?</h2>
+
+                                        <p>Sort and send your paper prescriptions</p>
+                                      <br>
+                                        
+                                                <dt class="cya-question">
+                                                    <h2>Sort prescriptions into groups</h2>
+                                                </dt>
+                                                
+                                               
+                                              <div class="govuk-warning-text">
+                                                <span class="govuk-warning-text__icon" aria-hidden="true" style = top:-13px;">!</span>
+                                                <strong class="govuk-warning-text__text">
+                                                  <span class="govuk-warning-text__assistive">Warning</span>
+                                                  Remove any adhesive tape, pins or staples.
+                                                </strong>
+                                              </div>
+                                              
+                                              <br>
+                                              
+                                              <p>Use dividers to separate your groups</p>
+
+                                              <ol>
+                                                <li>Red Separator - Exempt - now including those marked FS, SSP, HMP & Bulk</li>
+                                                <li>Exempt - FP10MDA</li>
+                                                <li>Exempt</li>
+                                                <li>Red Separator - Chargeable</li>
+                                                <li>Paid - FP10MDA</li>
+                                                <li>Paid</li>
+                                                <li>Red Separator - Old Charge Rate (when applicable)</li>
+                                              </ol>
+                                              
+                                              <p>Bulk prescription are identified by the name of the school or institution - the guidance does not currently require bulk prescriptions to specify the word 'Bulk'.</p>
+
+                                              
+                                            </div>
+                                            <details class="nhsuk-details">
+                                              <summary class="nhsuk-details__summary">
+                                                <span class="nhsuk-details__summary-text">
+                                                  Other form types
+                                                </span>
+                                              </summary>
+                                              <div class="nhsuk-details__text">
+                                                <h3>FP57 (Prescription Charge Refund receipts):</h3>
+                                          
+
+                                          
+                                                <p>If you are submitting any FP57 forms, place these at the top of your batch.</p>
+
+                                                 <p>The following forms must be kept separate form the FP10 prescriptions:</p>
+                                               
+    
+                                                <ul>
+                                                    <li>Repeat Authorisation forms</li>
+                                                    <li>ETP token</li>
+                                                    <li>FP57 forms</li>
+                                                </ul>
+    
+                                              </div>
+                                            </details>
+                                           
+                                            <br>
+
+                                           
+                                              <h2>Order your group</h2>
+                                          
+
+                                          
+                                            <p>Each group should be ordered from top to bottom in the following way:</p>
+                                           
+
+                                            <ol>
+                                                <li>Red separator items</li>
+                                                <li>MDA forms</li>
+                                                <li>All other FP10 forms</li>
+                                            </ol>
+
+                                             <details class="nhsuk-details">
+                                              <summary class="nhsuk-details__summary">
+                                                <span class="nhsuk-details__summary-text">
+                                                  What are red separator items?
+                                                </span>
+                                              </summary>
+                                              <div class="nhsuk-details__text">
+                                                <h3>Red separators should be used to separate the following items:</h3>
+                                          
+                                                <ul>
+                                                    <li>FS (free supply of sexual health treatment)</li>
+                                                    <li>Serious Shortage Protocol</li>
+                                                    <li>Bulk</li>
+                                                    <li>HMP</li>
+                                                    <li>Broken Bulk</li>
+                                                    <li>Expensive Items</li>
+                                                    <li>Out of Pocket Expenses</li>
+                                                    <li>Specials</li>
+                                                    <li>Additional Product Information</li>
+                                                    <li>Handwritten amendments</li>
+                                                    <li>Prescriber’s signature encroaching prescribed items</li>
+                                                    
+                                                </ul>
+    
+                                              </div>
+                                            </details>
+                                           
+                                            </div>
+
+                                            
+
+                                            <div>
+
+                                              <br>
+                                              <h2>Send us your batch</h2>
+                                                
+                                                    <p>Send batch by a secure, pre-paid postage method with track and trace.</p>
+
+                                                   <br>
+
+                                           <p>You can <a href="">print your batch documentation</a> again if you have lost it.</p>
+                                              
+                                          
+                                          <br>
+                                           <br>
+                            <a href="V4-end"><p>Continue</p></a>
+                            
+                            <a href="../summary-new" class="nhsuk-link"><p>Back to MYS dashboard</p></a>
+
+                                            </div>
+
+
+                                          </div>
+
+
+                                        </dl>
+
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                           
+
+                            {% endblock %}
