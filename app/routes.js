@@ -667,7 +667,7 @@ router.post(/CYATWO/, function (req, res) {
 
 
 
-// PCS Flu //
+// Community Seasonal Influenza Vaccination Advanced Service //
 
 router.post(/ViewAndSubmit/, function (req, res) {
 
@@ -693,14 +693,16 @@ router.post(/FLUCHECKYOURANSWERS/, function (req, res) {
 });
 
 
+// Community Seasonal Influenza Vaccination Advanced Service //
+
 router.post(/NEXTMONTH/, function (req, res) {
 
   const NEXTMONTH = req.session.data['NEXTMONTH']
 
   if (NEXTMONTH === "yes") {
-    res.redirect('start-submissions');
+    res.redirect('removed');
   } else {
-    res.redirect('declaration');
+    res.redirect('confirm-submission');
   }
 });
 
