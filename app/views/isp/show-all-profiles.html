@@ -1,0 +1,175 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'ISP.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-users">Manage users</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-result">User search</a></li>
+    
+          <li class="nhsuk-breadcrumb__item">Profiles</li>
+    
+        </ol>
+       
+      </div>
+    </nav>
+
+    <!-- Change the page title here -->
+    <h1>
+     
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Profiles</span>
+      Karen Curran
+    </h1>
+
+    <table role="table" class="nhsuk-table-responsive">
+      <caption class="nhsuk-table__caption"></caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="" scope="col">
+            Organisation
+          </th>
+          <th role="columnheader" class="" scope="col">
+            User group
+          </th>
+          <th role="columnheader" class="" scope="col">
+            Status
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Organisation</span>Ashtones Healthcare Solutions LTD
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">User group</span>E-schedule, Pharmacy appliance contractor
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span>
+            <strong class="nhsuk-tag nhsuk-tag--green">
+          Active
+        </strong>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Organisation</span>Cornwell T C Ltd
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">User group</span>E-schedule, Pharmacy appliance contractor
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span>
+            <strong class="nhsuk-tag nhsuk-tag--green">
+          Active
+        </strong>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Organisation</span>Dispharma Retail LTD
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">User group</span>Pharmacy appliance contractor
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span>
+            <strong class="nhsuk-tag nhsuk-tag--green">
+          Active
+        </strong>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Organisation</span>Raylane Pharmacy Group
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">User group</span>E-schedule, Pharmacy appliance contractor
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span>
+            <strong class="nhsuk-tag nhsuk-tag--green">
+          Active
+        </strong>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Organisation</span>Superdrug Stores PLC
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">User group</span>E-schedule, Pharmacy appliance contractor
+          </td>
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Status</span>
+            <strong class="nhsuk-tag nhsuk-tag--green">
+          Active
+        </strong>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+     
+    
+    </table>
+
+    </ul>
+    
+   
+</div>
+   
+
+    </div>
+  </div>
+</div>
+{% endblock %}
