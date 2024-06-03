@@ -51,9 +51,9 @@ Information Service Portal
 
     <div class="nhsuk-card-group">
     <p> 
-      <a href="users-result">Unselect all</a></p>
+      <a href="users-result-select-clone">Select all</a></p>
       <p style="padding-left: 30px;">
-      <a href="users-result">Clear selection</a>
+      <a href="users-result-clone">Clear selection</a>
       </p>
     </div>
 
@@ -65,19 +65,20 @@ Information Service Portal
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading"> Checkbox</span>
-        <div class="nhsuk-checkboxes__item">
-          <input class="nhsuk-checkboxes__input" onchange="la(this.value)" id="example-1" name="example" type="checkbox" value="users-result" value=""checked>
+        <div class="nhsuk-checkboxes__item" >
+          <input class="nhsuk-checkboxes__input" onchange="la(this.value)" id="example-1" name="example" type="checkbox" value="users-result-select-clone">
           <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
         </label>
         </div>
-     
+      </td>
+
         <script>
         function la(src)
         {
           window.location=src;
         }
       </script>
-      </td>
+
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">User details</span>
         <p> <b><a href="karen-curran-user">Curran, Karen</a></b>
@@ -96,6 +97,48 @@ Information Service Portal
           <a href="users-result-clone">Clone user</a>
           </p>
       </td>
+
+      
+    </tr>
+
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading"> Checkbox</span>
+        <div class="nhsuk-checkboxes__item" >
+          <input class="nhsuk-checkboxes__input" onchange="la(this.value)" id="example-1" name="example" type="checkbox" value="users-result-select">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+        </label>
+        </div>
+      </td>
+
+        <script>
+        function la(src)
+        {
+          window.location=src;
+        }
+      </script>
+
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">User details</span>
+        <p> <b><a href="karen-curran-user">Curran, Karen</a></b>
+       <br>
+       karen.curran@pharmacyreal.com
+          <br>
+          Eschedule, Pharmacy appliance contractor 
+          <br>
+          Paydens Ltd - ES00056</p>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Action</span>
+        <p>
+          <a href="show-all-profiles">Show all profiles</a>
+          <br>
+         
+          <a href="users-result-clone">Clone user</a>
+          </p>
+      </td>
+
+      
     </tr>
     
   </tbody>
