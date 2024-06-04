@@ -52,10 +52,10 @@ FP34C
                                 <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
                                   <li>
                                   
-                                   <a href="#example-error-1">The total number of items you have input is significantly different to your previous month's submission. 
-                                    
-                                    If they are correct, re-enter the numbers shown and select Yes to confirm. If they are not correct, enter the correct numbers and select Yes to confirm.
-                                  </a>
+                                   <a href="#example-error-1">  The total number of items you have input is significantly different to your previous month's submission. If they are correct, re-enter the numbers shown and select Yes to confirm. If they are not correct, enter the correct numbers and select Yes to confirm. 
+                                    <br>
+                                    Please fill in all exempt, paid and old rate items fields
+                                   </a>
                                   
                                   </li>
                                 </ul>
@@ -110,6 +110,10 @@ FP34C
                                           Items
                                         </label>
                                       </h1>
+
+                                      <div class="nhsuk-hint" id="dob-day-error-hint">
+                                        First set of figures entered
+                                      </div>
               
                                       <div class="nhsuk-date-input" id="example">
                                         <div class="nhsuk-date-input__item">
@@ -117,7 +121,7 @@ FP34C
                                             <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                               Exempt
                                             </label>
-                                         <p>2</p>
+                                         <p>60</p>
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item" style="padding-left: 10px;">
@@ -125,7 +129,7 @@ FP34C
                                             <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                               Paid
                                             </label>
-                                           <p>2</p>
+                                           <p>60</p>
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item" style="padding-left: 25px;">
@@ -133,51 +137,60 @@ FP34C
                                             <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                               Old rate
                                             </label>
-                                           <p>2</p>
+                                           <p>60</p>
                                           </div>
                                         </div>
                                       </div>
               
                                       <br>
               
-                                      <h1 class="nhsuk-label-wrapper">
-                                        <label class="nhsuk-label nhsuk-label--l" for="example-heading">
-                                          Items
-                                        </label>
-                                      </h1>
-                                     <p>Re-enter the number of items shown if they are correct. If they need to be amended, enter the correct numbers.</p>
-
-              
-                                      <div class="nhsuk-date-input" id="example">
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                                              Exempt
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
-                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="">
+                                      
+                                     
+                                     
+                                        <div class="nhsuk-form-group--error" id="conditional-contact-1">
+                                      
+                                        
+                
+                                        <h1 class="nhsuk-label-wrapper">
+                                          <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+                                            Items
+                                          </label>
+                                        </h1>
+                
+                                        <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-u-visually-hidden">Error:</span> 
+                                       Please fill in all exempt, paid and old rate items fields     </span>
+                
+                                        <div class="nhsuk-date-input" id="example">
+                                          <div class="nhsuk-date-input__item">
+                                            <div class="nhsuk-form-group">
+                                              <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                                Exempt
+                                              </label>
+                                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="" pattern="[0-9]*" inputmode="numeric">
+         
+                                            </div>
+                                          </div>
+                                          <div class="nhsuk-date-input__item">
+                                            <div class="nhsuk-form-group">
+                                              <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                                Paid
+                                              </label>
+                                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="" pattern="[0-9]*" inputmode="numeric">
+                                            </div>
+                                          </div>
+                                          <div class="nhsuk-date-input__item">
+                                            <div class="nhsuk-form-group" >
+                                              <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                                Old rate
+                                              </label>
+                                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="99999999" pattern="[0-9]*" inputmode="numeric">
+                                            </div>
                                           </div>
                                         </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                                              Paid
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
-                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="">
-                                          </div>
-                                        </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                                              Old rate
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
-                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="">
-                                          </div>
-                                        </div>
+                
                                       </div>
-
+                
                                     </div>
 
                                     <br>
@@ -192,9 +205,7 @@ FP34C
                                         </legend>
                                     
                                         <span class="nhsuk-error-message" id="example-error-error">
-                                          <span class="nhsuk-u-visually-hidden">Error:</span> The total number of items you have input is significantly different to your previous month's submission. 
-                                          If they are correct, re-enter the numbers shown and select Yes to confirm. If they are not correct, enter the correct numbers and select Yes to confirm.
-                                        </span>
+                                          <span class="nhsuk-u-visually-hidden">Error:</span>  The total number of items you have input is significantly different to your previous month's submission. If they are correct, re-enter the numbers shown and select Yes to confirm. If they are not correct, enter the correct numbers and select Yes to confirm.  </span>
 
                                     
                                         <div class="nhsuk-radios">
