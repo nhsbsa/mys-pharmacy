@@ -51,17 +51,8 @@ FP34C
                               
                                 <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
                                   <li>
-                                    <a href="#example-error-1">Enter the number of exempt forms you are sending</a>
-                                    <br>
-                                    <a href="#example-error-1">Enter the number of paid forms you are sending</a>
-                                    <br>
-                                    <a href="#example-error-1">Enter the number of old rate forms you are sending</a>
-                                   <br>
-                                   <a href="#example-error-1">The number of exempt items sent must be 0 or more</a>
-                                   <br>
-                                   <a href="#example-error-1">The number of paid items sent must be 0 or more</a>
-                                   <br>
-                                   <a href="#example-error-1">The number of old rate items sent must be 0 or more
+                                  
+                                   <a href="#example-error-1">Are the number of items you have entered correct?
                                   </a>
                                   
                                   </li>
@@ -89,7 +80,7 @@ FP34C
                                 </legend>
               
               
-                                <div class="nhsuk-radios nhsuk-radios--conditional">
+                                <div class="nhsuk-radios">
               
                                   <div class="nhsuk-radios__item">
                                     <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
@@ -100,66 +91,54 @@ FP34C
                                   </div>
 
                                   
+                                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional" id="conditional-contact-1">
               
-                                  <div class="nhsuk-radios__conditional nhsuk-form-group--error" id="conditional-contact-1">
-              
-                                      <div class="nhsuk-form-group--error" id="conditional-contact-1">
-                                        <label class="nhsuk-label" for="email">
-                                      
+                                    <div class="nhsuk-form-group">
+                                      <br>
+                                      <label class="nhsuk-label" for="email">
                                         <h1 class="nhsuk-fieldset__heading">
                                           Tell us how many Forms and Items are exempt, paid, and paid at the old rate.
-                                        <br>
-                                          If none, enter 0 (zero) 
+                                          <br>
+                                          If none, enter 0 (zero)
                                         </h1>
                                       </label>
                                       <br>
-                                    
-                                      
                                       <h1 class="nhsuk-label-wrapper">
                                         <label class="nhsuk-label nhsuk-label--l" for="example-heading">
                                           Forms
                                         </label>
                                       </h1>
               
-                                      <span class="nhsuk-error-message" id="example-error-error">
-                                        <span class="nhsuk-u-visually-hidden">Error:</span>
-                                       
-                                      Enter the number of exempt forms you are sending
-                                      <br>
-                                      Enter the number of paid forms you are sending
-                                      <br>
-                                      Enter the number of old rate forms you are sending
-                                      </span>
-
                                       <div class="nhsuk-date-input" id="example">
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                               Exempt
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="" pattern="[0-9]*" inputmode="numeric">
-       
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
+                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                               Paid
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="" pattern="[0-9]*" inputmode="numeric">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
+                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                               Old rate
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="" pattern="[0-9]*" inputmode="numeric">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
+                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="1">
                                           </div>
                                         </div>
                                       </div>
               
-                                      
                                       <br>
               
                                       <h1 class="nhsuk-label-wrapper">
@@ -168,46 +147,79 @@ FP34C
                                         </label>
                                       </h1>
               
-                                      <span class="nhsuk-error-message" id="example-error-error">
-                                        <span class="nhsuk-u-visually-hidden">Error:</span> 
-                                        The number of exempt items sent must be 0 or more
-                                        <br>
-                                        The number of paid items sent must be 0 or more
-                                        <br>
-                                        The number of old rate items sent must be 0 or more
-                                       </span>
               
                                       <div class="nhsuk-date-input" id="example">
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                               Exempt
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="-1" pattern="[0-9]*" inputmode="numeric">
-       
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
+                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                               Paid
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="-1" pattern="[0-9]*" inputmode="numeric">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
+                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day-error-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                               Old rate
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3 nhsuk-input--error" id="dob-day-error-day" name="dob-day-error-day" type="text" value="-1" pattern="[0-9]*" inputmode="numeric">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
+                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
                                           </div>
                                         </div>
                                       </div>
-              
+
+                                    </div>
+
+                                    <br>
+                                    
+                                    <div class="nhsuk-form-group--error" id="conditional-contact-1">
+                                      
+                                      <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
+                                        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                                          <h1 class="nhsuk-fieldset__heading">
+                                            Are the number of items you have entered correct?
+                                          </h1>
+                                        </legend>
+                                    
+                                        <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-u-visually-hidden">   </span>
+                                          </span>
+
+                                    
+                                        <div class="nhsuk-radios">
+                                    
+                                          <div class="nhsuk-radios__item">
+                                            <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
+                                            <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
+                                              Yes
+                                            </label>
+                                          </div>
+                                    
+                                           <div class="nhsuk-radios__item">
+                                            <input class="nhsuk-radios__input" type="radio" value="no">
+                                            <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
+                                              No
+                                            </label>
+                                          </div>
+                                    
+                                       
+                                      </fieldset>
+        
                                     </div>
               
                                   </div>
+
+                                  
               
                                   <div class="nhsuk-radios__item">
                                     <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
@@ -226,7 +238,7 @@ FP34C
                             
 
 
-                            <a href="paperv4-error-continue" class="nhsuk-button">Continue</a>
+                            <a href="" class="nhsuk-button">Continue</a>
                             
                             </fieldset>
                               
