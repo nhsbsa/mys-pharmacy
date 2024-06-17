@@ -24,7 +24,7 @@ Information Service Portal
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
@@ -52,6 +52,7 @@ Information Service Portal
       </h1>
     </header>
 
+    <p>All fields are mandatory.</p>
 
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
@@ -76,7 +77,7 @@ Information Service Portal
 
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
-        Password
+       Telephone
       </label>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
     </div>
@@ -100,7 +101,9 @@ Information Service Portal
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
         <option value="Select a type"selected >Select a type</option>
+        <option value="E-schedules" >E-schedules</option>
         <option value="Pharmacy/Appliance Contractor" >Pharmacy/Appliance Contractor</option>
+        
       </select>
     </div>
 
@@ -110,7 +113,7 @@ Information Service Portal
         Organisation
       </label>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-      <a href="#when-to-use-buttons">Look up</a>
+      <a href="create-user-lookup">Look up</a>
     </div>
 
    
@@ -139,38 +142,31 @@ Information Service Portal
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                      BSA internal user
+                      BSA Admin
                     </label>
                   </div>
           
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                      CPAF NHS Enlgand
+                      BSA Internal
                     </label>
                   </div>
           
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                      CPAF National
+                      BSA System Admins
                     </label>
                   </div>
 
                   <div class="nhsuk-checkboxes__item">
                     <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                      CPAF only
+                      Pharmacy/ Appliance 
                     </label>
                   </div>
 
-                  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                      CPS role
-                    </label>
-                  </div>
-          
                 </div>
               </fieldset>
           
@@ -187,7 +183,9 @@ Information Service Portal
 
         <br>
 
-        <a href="confirmation" class="nhsuk-button">Create user</a>
+        <a href="confirmation" class="nhsuk-button">Save and create new user</a>
+        <a href="confirmation" class="nhsuk-button">Save and Finish</a>
+        <a href="user-manage" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
  
   </div>
 </div>

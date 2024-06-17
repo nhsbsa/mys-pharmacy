@@ -30,35 +30,67 @@ Information Service Portal
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
       <div class="nhsuk-width-container" >
         <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-users">Manage users</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-result">User search</a></li>
-    
-          <li class="nhsuk-breadcrumb__item">User details</li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="user-manage">Home</a></li>
+          <li class="nhsuk-breadcrumb__item">Create user</li>
     
         </ol>
-       
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            Level three
+          </a>
+        </p>
       </div>
     </nav>
+   
 
-
+      
     <!-- Change the page title here -->
-    <h1>
-     
-      <span class="nhsuk-caption-xl nhsuk-caption--bottom">User details</span>
-      Karen Curran
-    </h1>
+    <header>
+      <h1>
+       Create user
+      </h1>
+    </header>
 
-    <p>Last logged in <br>17 December 2023 11:54:04</p>
-    
+    <p>All fields are mandatory.</p>
+
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        First name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        Last name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        E-mail
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+       Telephone
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+
    
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="select-1">
         Status
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="All" >All</option>
-        <option value="Active" selected>Active</option>
+        <option value="All" selected>All</option>
+        <option value="Active" >Active</option>
         <option value="Locked" >Locked</option>
         <option value="New" >New</option>
         <option value="Rejected" >Rejected</option>
@@ -66,41 +98,13 @@ Information Service Portal
     </div>
 
     <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="input-width-20">
-        First name
-      </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Karen">
-    </div>
-
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="input-width-20">
-        Last name
-      </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Curran">
-    </div>
-
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="input-width-20">
-        E-mail
-      </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="karen.curran@pharmacyreal.com">
-    </div>
-    
-    <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="input-width-20">
-        Telephone
-      </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="07816723649">
-    </div>
-
-    <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="select-1">
-        Organisation type
+        User's organisation type
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1">
-        <option value="Select a type" >Select a type</option>
+        <option value="Select a type"selected >Select a type</option>
         <option value="E-schedules" >E-schedules</option>
-        <option value="Pharmacy/Appliance Contractor" selected>Pharmacy/Appliance Contractor</option>
+        <option value="Pharmacy/Appliance Contractor" >Pharmacy/Appliance Contractor</option>
       </select>
     </div>
 
@@ -109,11 +113,19 @@ Information Service Portal
       <label class="nhsuk-label" for="input-width-20">
         Organisation
       </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="Paydem Ltd">
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
       <a href="#when-to-use-buttons">Look up</a>
     </div>
 
-   
+    <div class="nhsuk-form-group">
+      <p><b>
+        1 records found
+      </b></p>
+     <p>TRINITY PHARMA LTD - FG243 <a href="#when-to-use-buttons" style="padding-left: 30px;">Select</a></p>  
+     
+    </div>
+
+   <br>
     <div class="nhsuk-form-group">
     <div class="nhsuk-grid-column-one-half" style="padding-left: 0%;">
       <label class="nhsuk-label" for="input-width-20">
@@ -163,6 +175,8 @@ Information Service Portal
                       Pharmacy/ Appliance 
                     </label>
                   </div>
+
+               
                 </div>
               </fieldset>
           
@@ -175,19 +189,14 @@ Information Service Portal
     </div>
   </div>
 
-  <br>
- <p><a href="">View Premissions</a> </p>
- <p><a href="">Reset Karen's password</a> </p>
- <p><a href="manage-all-profiles">Manage Karen's profile(s)</a> </p>
+  
+
         <br>
 
-        <a href="users-result" class="nhsuk-button">Save</a>
-
-        <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
-         Delete user
-        </button>
-    
-    
+        <a href="confirmation" class="nhsuk-button">Save and create new user</a>
+        <a href="confirmation" class="nhsuk-button">Save and Finish</a>
+        <a href="user-manage" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+ 
   </div>
 </div>
 {% endblock %}
