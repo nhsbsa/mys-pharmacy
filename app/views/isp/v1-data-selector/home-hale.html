@@ -1,0 +1,85 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'HALE.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+
+    <div class="nhsBSA-sidebar-content">
+
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+      
+        
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+              
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="select-1">
+                      Logged in as 
+                    </label>
+                    <select class="nhsuk-select" id="select-1" name="select-1">
+                      <option value="home-bsa">BSA</option>
+                   
+                      <option value="home-hale" selected>HALE SMITHS PHARMACY</option>
+                    </select>
+                </div>
+                 
+                <a href="home-bsa" class="nhsuk-button">Apply</a>
+
+                </div>
+
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options"></div>
+              <li><a class="active" href="home">Home</a></li>
+              <li><a href="">E-Schedule data file</a></li>
+              <li><a href="">Prescription item report</a></li>
+              <li><a href="">Schedule of payments</a></li>
+              <li><a href="">Supplementary report</a></li>
+              <li><a href="">User management</a></li>
+              <li><a href="">My account</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
