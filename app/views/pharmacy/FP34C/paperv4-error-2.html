@@ -76,31 +76,23 @@ FP34C
                             <div class="nhsuk-form-group">
 
 
-                              <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                                  <h1 class="nhsuk-fieldset__heading">
-                                   
-                                  </h1>
-                                </legend>
-              
-              
                                 <div class="nhsuk-radios">
               
                                   <div class="nhsuk-radios__item">
-                                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
-                                      aria-controls="conditional-contact-1" aria-expanded="false" value="" checked>
-                                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                                    <input class="nhsuk-radios__input" id="agreed" name="agreed" type="radio" value="email"
+                                      aria-controls="agreed" aria-expanded="false" value="" checked>
+                                    <label class="nhsuk-label nhsuk-radios__label" for="agreed">
                                       Yes
                                     </label>
                                   </div>
 
                                   
               
-                                  <div class="nhsuk-radios__conditional nhsuk-form-group--error" id="conditional-contact-1">
+                                  <div class="nhsuk-radios__conditional nhsuk-form-group--error" id="forms">
               
                                     <div class="nhsuk-form-group">
                                       <br>
-                                      <label class="nhsuk-label" for="email">
+                                      <label class="nhsuk-label" for="forms">
                                         <h1 class="nhsuk-fieldset__heading">
                                           Tell us how many Forms and Items are exempt, paid, and paid at the old rate.
                                         <br>
@@ -109,7 +101,7 @@ FP34C
                                       </label>
                                       <br>
                                       <h1 class="nhsuk-label-wrapper">
-                                        <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+                                        <label class="nhsuk-label nhsuk-label--l" for="forms">
                                           Forms
                                         </label>
                                       </h1>
@@ -117,29 +109,29 @@ FP34C
                                       <div class="nhsuk-date-input" id="example">
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="form-exempt">
                                               Exempt
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
-                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="form-exempt"
+                                              name="form-exempt" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="form-paid">
                                               Paid
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
-                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="form-paid"
+                                              name="form-paid" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="form-old-rate">
                                               Old rate
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
-                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="150">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="form-old-rate"
+                                              name="form-old-rate" type="text" pattern="[0-9]*" inputmode="numeric" value="150">
                                           </div>
                                         </div>
                                       </div>
@@ -151,29 +143,29 @@ FP34C
               
                                        <div class="nhsuk-form-group--error" id="conditional-contact-1">
                                       
-                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="exempt-error">
                                           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                                             <h1 class="nhsuk-fieldset__heading">
                                               You have said the number of old rate forms is more than the number of exempt forms.
                                             </h1>
                                           </legend>
                                       
-                                          <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-error-message" id="exempt-error">
                                             <span class="nhsuk-u-visually-hidden">Error:</span> Are the numbers of exempt and old rate forms correct? (If No, correct the figures) 
                                           </span>
                                       
                                           <div class="nhsuk-radios">
                                       
                                             <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
+                                              <input class="nhsuk-radios__input" id="exempt-yes" name="exempt-yes" type="radio" value="yes">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="exempt-yes">
                                                 Yes
                                               </label>
                                             </div>
                                       
                                              <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" type="radio" value="no" checked>
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
+                                              <input class="nhsuk-radios__input" id="exempt-no" type="radio" value="no" checked>
+                                              <label class="nhsuk-label nhsuk-radios__label" for="exempt-no">
                                                 No
                                               </label>
                                             </div>
@@ -188,29 +180,29 @@ FP34C
 
                                       <div class="nhsuk-form-group--error" id="conditional-contact-1">
                                       
-                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="old-rate-error">
                                           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                                             <h1 class="nhsuk-fieldset__heading">
                                               You have said the number of old rate forms is more than the number of paid forms.
                                             </h1>
                                           </legend>
                                       
-                                          <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-error-message" id="old-rate-error">
                                             <span class="nhsuk-u-visually-hidden">Error:</span> Are the numbers of paid and old rate forms correct? (If No, correct the figures) 
                                           </span>
                                       
                                           <div class="nhsuk-radios">
                                       
                                             <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
+                                              <input class="nhsuk-radios__input" id="old-rate-yes" name="old-rate-yes" type="radio" value="yes">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="old-rate-yes">
                                                 Yes
                                               </label>
                                             </div>
                                       
                                              <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" type="radio" value="no" checked>
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
+                                              <input class="nhsuk-radios__input" id="old-rate-no" type="radio" value="no" checked>
+                                              <label class="nhsuk-label nhsuk-radios__label" for="old-rate-no">
                                                 No
                                               </label>
                                             </div>
@@ -224,38 +216,38 @@ FP34C
                                       <br>
 
                                       <h1 class="nhsuk-label-wrapper">
-                                        <label class="nhsuk-label nhsuk-label--l" for="example-heading">
+                                        <label class="nhsuk-label nhsuk-label--l" for="items-label">
                                           Items
                                         </label>
                                       </h1>
               
               
-                                      <div class="nhsuk-date-input" id="example">
+                                      <div class="nhsuk-date-input" id="items-label">
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="Exempt">
                                               Exempt
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
-                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="Exempt"
+                                              name="Exempt" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="paid">
                                               Paid
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
-                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="paid"
+                                              name=paid" type="text" pattern="[0-9]*" inputmode="numeric" value="10">
                                           </div>
                                         </div>
                                         <div class="nhsuk-date-input__item">
                                           <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                            <label class="nhsuk-label nhsuk-date-input__label" for="old-rate">
                                               Old rate
                                             </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
-                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric" value="150">
+                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="old-rate"
+                                              name="old-rate" type="text" pattern="[0-9]*" inputmode="numeric" value="150">
                                           </div>
                                         </div>
                                       </div>
@@ -266,29 +258,29 @@ FP34C
 
                                       <div class="nhsuk-form-group--error" id="conditional-contact-1">
                                       
-                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="old-rate-more">
                                           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                                             <h1 class="nhsuk-fieldset__heading">
                                               You have said the number of old rate items is more than the number of exempt items.
                                             </h1>
                                           </legend>
                                       
-                                          <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-error-message" id="old-rate-more">
                                             <span class="nhsuk-u-visually-hidden">Error:</span> Are the numbers of exempt and old rate items correct? (If No, correct the figures) 
                                           </span>
                                       
                                           <div class="nhsuk-radios">
                                       
                                             <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
+                                              <input class="nhsuk-radios__input" id="yes-old-rate" name="yes-old-rate" type="radio" value="yes">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="yes-old-rate">
                                                 Yes
                                               </label>
                                             </div>
                                       
                                              <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" type="radio" value="no" checked>
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
+                                              <input class="nhsuk-radios__input" id="no-old-rate" type="radio" value="no" checked>
+                                              <label class="nhsuk-label nhsuk-radios__label" for="no-old-rate">
                                                 No
                                               </label>
                                             </div>
@@ -302,29 +294,29 @@ FP34C
           
                                       <div class="nhsuk-form-group--error" id="conditional-contact-1">
                                       
-                                        <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
+                                        <fieldset class="nhsuk-fieldset" aria-describedby="paid-error">
                                           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                                             <h1 class="nhsuk-fieldset__heading">
                                               You have said the number of old rate items is more than the number of paid items.
                                             </h1>
                                           </legend>
                                       
-                                          <span class="nhsuk-error-message" id="example-error-error">
+                                          <span class="nhsuk-error-message" id="paid-error">
                                             <span class="nhsuk-u-visually-hidden">Error:</span> Are the numbers of paid and old rate items correct? (If No, correct the figures) 
                                           </span>
                                       
                                           <div class="nhsuk-radios">
                                       
                                             <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
+                                              <input class="nhsuk-radios__input" id="paid-yes" name="paid-yes" type="radio" value="yes">
+                                              <label class="nhsuk-label nhsuk-radios__label" for="paid-yes">
                                                 Yes
                                               </label>
                                             </div>
                                       
                                             <div class="nhsuk-radios__item">
-                                              <input class="nhsuk-radios__input" id="example-error-2" name="example-error" type="radio" value="no" checked>
-                                              <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
+                                              <input class="nhsuk-radios__input" id="paid-no" name="paid-no" type="radio" value="no" checked>
+                                              <label class="nhsuk-label nhsuk-radios__label" for="paid-no">
                                                 No
                                               </label>
                                             </div>
