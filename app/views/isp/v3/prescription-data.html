@@ -1,0 +1,486 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'BSA.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container" style="margin: 0; padding-left: 32px;">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+             
+
+                <header>
+                  <h1>
+                    Prescription item report
+                  </h1>
+                </header>
+            
+                <p> <a href="prescription">Close</a> the data selector.</p>
+            
+                <p>Use the drop-downs to filter your report criteria.</p>
+
+    
+                <div class="nhsuk-card-group">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="Payment date">
+                      Payment date
+                    </label>
+                    <select class="nhsuk-select" id="Payment date" name="Payment date">
+                      <option value="Show all">Show all</option>
+                      <option value="01 May 2024" >01 May 2024</option>
+                      <option value="01 April 2024" >01 April 2024</option>
+                      <option value="01 March 2024" >01 March 2024</option>
+                      <option value="01 February 2024" >01 February 2024</option>
+                      <option value="01 January 2024" >01 January 2024</option>
+                    </select>
+                  </div>
+               
+               
+                <div class="nhsuk-form-group" style="padding-left:30px" >
+                  <label class="nhsuk-label" for="input-width-20">
+                    Organisation
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" placeholder="Enter an ODS or YP code" style="width: 300px">
+                </div>
+            
+              </div>
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="select-1">
+                    Prescription type
+                  </label>
+                  <select class="nhsuk-select" id="select-1" name="select-1">
+                    <option value="Show all">Show all</option>
+                    <option value="Repeat Prescriptions" >Repeat Prescriptions</option>
+                    <option value="Variable Use Prescriptions" >Variable Use Prescriptions </option>
+                    <option value="Acute Prescriptions" >Acute Prescriptions</option>
+                    <option value="Dosette Boxes or Nomads" >Dosette Boxes or Nomads</option>
+                    <option value="Controlled Drugs" >Controlled Drugs</option>
+                    <option value="Surgical Appliances and Devices" >Surgical Appliances and Devices</option>
+                    <option value="Electronic Prescribing/EPS" >Electronic Prescribing/EPS</option>
+                    <option value="Nominated Chemist" >Nominated Chemist</option>
+                  </select>
+                </div>
+            
+                <a href="" class="nhsuk-button">Apply</a>
+            
+                <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                 Reset
+                </button>
+            
+                <br>
+                <br>
+                <table role="table" class="nhsuk-table-responsive">
+                  <caption class="nhsuk-table__caption">Available reports</caption>
+                  <thead role="rowgroup" class="nhsuk-table__head">
+                    <tr role="row">
+                      <th role="columnheader" class="" scope="col">
+                        Payment date
+                      </th>
+                       <th role="columnheader" class="" scope="col">
+                        Type
+                       </th>
+                       <th role="columnheader" class="" scope="col">
+                        Organisation code
+                       </th>
+                       <th role="columnheader" class="" scope="col">
+                        Action
+                       </th>
+                    </tr>
+                  </thead>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA129
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA328
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA387
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA731
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA737
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA773
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FA876
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAD13
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAD87
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAE37
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAF34
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAF89
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAG42
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAG51
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAJ15
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAJ19
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAJ57
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAK80
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAM12
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"> Payment date </span>01 April 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Type </span>Pharmacy
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Organisation code </span>FAM14
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Action</span>
+                        <a href="/images/Payment-Schedule.pdf" target="_blank">Download</a>
+                      </td>
+                    </tr>
+
+                   
+                  </tbody>
+                </table>
+        
+                
+            <br>
+                <p>Showing 1 to 20 of 1,359</p>
+               
+               
+                <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+                  <ul class="nhsuk-list nhsuk-pagination__list">
+                    
+                    <li class="nhsuk-pagination-item--next">
+                      <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+                        <span class="nhsuk-pagination__title">Next</span>
+                        <span class="nhsuk-u-visually-hidden">:</span>
+                        <span class="nhsuk-pagination__page">Page 2 of 268</span>
+                        <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                          <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+  
+
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options"></div>
+              <li><a href="home-bsa">Home</a></li>
+              <li><a href="eschedule-data-first">E-Schedule data file</a></li>
+              <li><a class="active" href="prescription-data-first">Prescription item report</a></li>
+              <li><a href="schedule-data-first">Schedule of payments</a></li>
+              <li><a href="supplementary-data-first">Supplementary report</a></li>
+              <li><a  href="user-manage">User management</a></li>
+              <li><a href="changes-my-account">My account</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

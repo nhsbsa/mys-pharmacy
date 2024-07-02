@@ -1,0 +1,128 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'BSA.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+
+    <div class="nhsBSA-sidebar-content">
+
+      <div class="nhsuk-width-container-fluid">
+
+        <div class="nhsuk-main-wrapper" id="maincontent">
+
+        
+      
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+
+              
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+              <h1 class="nhsuk-heading-l">Profile</h1>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="logged-in">
+                     Logged in as
+                    </label>
+                    <select class="nhsuk-select" id="logged-in" name="logged-in">
+                      <option value="home-bsa" selected>NHSBSA</option>
+                     
+                      <option value="home-hale">HALE SMITHS PHARMACY</option>
+                    </select>
+                </div>
+                 
+                <a href="home-hale" class="nhsuk-button">Select</a>
+
+                </div>
+
+              </div>
+
+              
+            </div>
+          </div>
+
+
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+
+                
+                  
+
+                  <h1 class="nhsuk-heading-l">Broadcast</h1>
+
+                  <span class="nhsuk-caption-m">10 June 2024</span>
+                 
+                  <h2 class="nhsuk-heading-m">Supplementary report is now available</h2>
+
+                  <p class="nhsuk-u-font-size-19">Supplementary report is now available on MYS ISP.
+                    <br>
+                    Select the side bar to view supplementary report.</p>
+              
+               
+                  <hr>
+
+                  <span class="nhsuk-caption-m">13 May 2024</span>
+                 
+                  <h2 class="nhsuk-heading-m">ISP user guidence</h2>
+
+                  <p class="nhsuk-u-font-size-19">Use the link below for more ISP information.</p>
+              
+                <p class="nhsuk-u-font-size-19">  <a href="">ISP user guidence</a>
+                  </p>
+               
+
+
+              </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options"></div>
+              <li><a class="active" href="home-bsa">Home</a></li>
+              <li><a href="eschedule-data-first">E-Schedule data file</a></li>
+              <li><a href="prescription-data-first">Prescription item report</a></li>
+              <li><a href="schedule-data-first">Schedule of payments</a></li>
+              <li><a href="supplementary-data-first">Supplementary report</a></li>
+              <li><a href="user-manage">User management</a></li>
+              <li><a href="changes-my-account">My account</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
