@@ -1,0 +1,153 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'ISP.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
+          <li class="nhsuk-breadcrumb__item">Manage roles</li>
+         
+        </ol>
+       
+      </div>
+    </nav>
+
+    <!-- Change the page title here -->
+    <h1>
+      Manage roles
+    </h1>
+
+    <a href="create-new-role" class="nhsuk-button">Create new role</a>
+
+    <table role="table" class="nhsuk-table-responsive">
+      <caption class="nhsuk-table__caption"></caption>
+      <thead role="rowgroup" class="nhsuk-table__head">
+        <tr role="row">
+          <th role="columnheader" class="Role" scope="col">
+            Role
+          </th>
+          <th role="columnheader" class="Description" scope="col">
+            Description
+          </th>
+          <th role="columnheader" class="Action" scope="col">
+            Action
+          </th>
+        </tr>
+      </thead>
+      
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Role</span>Admin
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Description</span>
+            Can access the admin functionality
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="edit-role">Edit</a><br><a href="delete-role">Delete</a><br>
+          </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Role</span>Financial Reporting Area Team
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Description</span>
+            Can view financial reports at Area Team level
+          </td>   
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="">Edit</a><br><a href="">Delete</a><br>
+          </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+        
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Role</span>Financial Reporting DH
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Description</span>
+            DH to view financial reports
+          </td>   
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="">Edit</a><br><a href="">Delete</a><br>
+          </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Role</span>Financial Reporting PCO
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Description</span>
+            Can view financial reports IPP/PMD at PCO level
+          </td>   
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="">Edit</a><br><a href="">Delete</a><br>
+          </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    
+      <tbody class="nhsuk-table__body">
+        <tr role="row" class="nhsuk-table__row">
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Role</span>Guest
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Description</span>
+            Can view payment reports that are available to everyone
+          </td>   
+          <td role="cell" class="nhsuk-table__cell">
+            <span class="nhsuk-table-responsive__heading">Action</span><a href="">Edit</a><br><a href="">Delete</a><br>
+          </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    </ul>
+    
+   
+</div>
+   
+
+    </div>
+  </div>
+</div>
+{% endblock %}
