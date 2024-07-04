@@ -399,6 +399,19 @@ router.post(/AddAnotherTrainee/, function (req, res) {
 });
 
 
+
+router.post(/AddVersion/, function (req, res) {
+
+  const AddVersion = req.session.data['AddVersion']
+
+  if (AddVersion === "yes") {
+    res.redirect('create-trainee');
+  } else {
+    res.redirect('user-agreement-opens-new-tab');
+  }
+});
+
+
 // LFT //
 
 router.post(/Select/, function (req, res) {
