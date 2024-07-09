@@ -407,7 +407,7 @@ router.post(/AddVersion/, function (req, res) {
   if (AddVersion === "yes") {
     res.redirect('create-trainee');
   } else {
-    res.redirect('user-agreement-opens-new-tab');
+    res.redirect('../mys-hee-v16/version-c/declaration');
   }
 });
 

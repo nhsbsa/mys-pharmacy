@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+WT&E
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Foundation Trainee Pharmacist training grant and <br>Pre-registration Trainee Pharmacy Technician education and training contribution payments</span>
+        Check your answers
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+
+    <form action="AddVersion" method="post">
+
+      <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row" role="row">
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Trainee name</td>
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Trainee type</td>
+            <!-- <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;">Reason for unplanned
+              suspension</td> -->
+            <td class="nhsuk-table__cell" style="font-weight:700; padding: 8px 24px 8px 0px;"></td>
+          </tr>
+          <tr class="nhsuk-table__row" role="row">
+            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">Martin Crane</td>
+            <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">Pharmacist Foundation Training Programme</td>
+            <!-- <td class="nhsuk-table__cell" style="padding: 8px 24px 8px 0px;">	Adverse weather, such as snow or flood</td> -->
+            <td class="nhsuk-table__cell" style="text-align: right; padding: 8px 24px 8px 0px;">
+              <a class="nhsuk-link" href="hee-create-trainee-cya">View</a>
+            </td>
+            <td class="nhsuk-table__cell" style="text-align: right; padding: 8px 24px 8px 0px;">
+              <a class="nhsuk-link" href="delete-confirmation">Delete</a>
+            </td>
+
+
+
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you want to add another trainee?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios nhsuk-radios--inline">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="AddVersion" type="radio"
+                value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="AddVersion" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+
+      <br>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+    </form>
+
+
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> -->
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
