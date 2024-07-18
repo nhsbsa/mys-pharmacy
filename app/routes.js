@@ -570,6 +570,76 @@ router.post(/Version4Claim/, function (req, res) {
   }
 });
 
+// FP34D HVV//
+
+router.post(/HVVConfirmapi/, function (req, res) {
+
+  const HVVConfirmapi = req.session.data['HVVConfirmapi']
+
+  if (HVVConfirmapi === "yes") {
+    res.redirect('confirm-path-api');
+  } else {
+    res.redirect('manual/months-manual');
+  }
+});
+
+router.post(/selectapiHVV/, function (req, res) {
+
+  const selectapiHVV = req.session.data['selectapiHVV']
+
+  if (selectapiHVV === "yes") {
+    res.redirect('months');
+  } else {
+    res.redirect('select-path');
+  }
+});
+
+router.post(/vaccinehvv/, function (req, res) {
+
+  const vaccinehvv = req.session.data['vaccinehvv']
+
+  if (vaccinehvv === "yes") {
+    res.redirect('add-gp');
+  } else {
+    res.redirect('vaccine-detail-1');
+  }
+});
+
+router.post(/addgpyesorno/, function (req, res) {
+
+  const addgpyesorno = req.session.data['addgpyesorno']
+
+  if (addgpyesorno === "yes") {
+    res.redirect('gp-details');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+router.post(/oldconfirmhvv/, function (req, res) {
+
+  const oldconfirmhvv = req.session.data['oldconfirmhvv']
+
+  if (oldconfirmhvv === "yes") {
+    res.redirect('add-gp-old');
+  } else {
+    res.redirect('vaccine-detail-old');
+  }
+});
+
+router.post(/gpaddold/, function (req, res) {
+
+  const gpaddold = req.session.data['gpaddold']
+
+  if (gpaddold === "yes") {
+    res.redirect('gp-details-old');
+  } else {
+    res.redirect('declaration-old');
+  }
+});
+
+
+
 // NMS//
 
 router.post(/NMSClaimsReg/, function (req, res) {

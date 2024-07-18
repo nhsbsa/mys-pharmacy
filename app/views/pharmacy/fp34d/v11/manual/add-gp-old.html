@@ -1,0 +1,200 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+High volume vaccinations
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">July 2024 submission</span>
+                  Check you answers
+                </h1>
+              </header>
+
+
+              <table role="table" class="nhsuk-table-responsive">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Prescriber
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Hep A
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Hep B
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                     Influenza
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Meningococcal
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Pneumococcal
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Typhoid
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Total
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span>Dr Charlie Robert
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Hep B</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Influenza</span>
+                      <a href="add-gp-1-old">34</a>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Meningococcal</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Pneumococcal</span>0
+                    </td>  
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>34
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="vaccine-detail-old">Edit</a> or <a href="delete-confirmation-old">Delete</a> 
+                    </td>
+                  </tr>
+
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span>Dr Crystal Yip
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Hep B</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Influenza</span>
+                      <a href="">14</a>
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Meningococcal</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Pneumococcal</span>0
+                    </td>  
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>14
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span><a href="vaccine-detail-crystal">Edit</a> or <a href="">Delete</a> 
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+              <br>
+
+
+              <form action="gpaddold" method="post">
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Do you want to add another gp or nurse?
+                      </h1>
+                    </legend>
+
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="yes" name="gpaddold" type="radio"
+                          value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                          Yes
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="no" name="gpaddold" type="radio"
+                          value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="no">
+                          No
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                </div>
+
+                <br>
+
+                <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Continue
+                </button>
+
+                <a href="../months" class="nhsuk-button nhsuk-button--secondary"> Save for later</a>
+             
+              </form>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
