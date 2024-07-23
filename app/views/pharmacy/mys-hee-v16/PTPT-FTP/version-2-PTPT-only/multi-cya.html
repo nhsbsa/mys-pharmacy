@@ -46,7 +46,7 @@ WT&E
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
 
-    <form action="AddAnotherTrainee" method="post">
+    <form action="PtptAdd" method="post">
 
       <table class="nhsuk-table">
         <tbody class="nhsuk-table__body">
@@ -83,14 +83,14 @@ WT&E
           <div class="nhsuk-radios nhsuk-radios--inline">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-inline-1" name="AddAnotherTrainee" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="PtptAdd" name="PtptAdd" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
                 Yes
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-inline-2" name="AddAnotherTrainee" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="PtptAdd" name="PtptAdd" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
                 No
               </label>
@@ -100,13 +100,12 @@ WT&E
         </fieldset>
 
       </div>
-    </form>
+    
+    
       <br>
 
-      <a href="declaration" class="nhsuk-button">
-        Continue
-      </a>
-    
+      <button class="nhsuk-button" data-module="nhsuk-button"type="submit">Continue</button>
+    </form>  
 
     <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> -->
 
