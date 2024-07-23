@@ -392,19 +392,19 @@ router.post(/AddAnotherTrainee/, function (req, res) {
   const AddAnotherTrainee = req.session.data['AddAnotherTrainee']
 
   if (AddAnotherTrainee === "yes") {
-    res.redirect('..//create-trainee');
+    res.redirect('create-trainee');
   } else {
-    res.redirect('..//declaration');
+    res.redirect('declaration');
   }
 });
 
 
 
-router.post(/AddVersion/, function (req, res) {
+router.post(/PtptAdd/, function (req, res) {
 
-  const AddVersion = req.session.data['AddVersion']
+  const PtptAdd = req.session.data['PtptAdd']
 
-  if (AddVersion === "yes") {
+  if (PtptAdd === "yes") {
     res.redirect('create-trainee');
   } else {
     res.redirect('declaration');
