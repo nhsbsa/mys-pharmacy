@@ -392,9 +392,9 @@ router.post(/AddAnotherTrainee/, function (req, res) {
   const AddAnotherTrainee = req.session.data['AddAnotherTrainee']
 
   if (AddAnotherTrainee === "yes") {
-    res.redirect('create-trainee');
+    res.redirect('..//create-trainee');
   } else {
-    res.redirect('declaration');
+    res.redirect('..//declaration');
   }
 });
 
@@ -407,7 +407,7 @@ router.post(/AddVersion/, function (req, res) {
   if (AddVersion === "yes") {
     res.redirect('create-trainee');
   } else {
-    res.redirect('../mys-hee-v16/version-c/declaration');
+    res.redirect('declaration');
   }
 });
 
