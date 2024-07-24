@@ -411,6 +411,17 @@ router.post(/PtptAdd/, function (req, res) {
   }
 });
 
+router.post(/ContractAccepted/, function (req, res) {
+
+  const ContractAccepted = req.session.data['ContractAccepted']
+
+  if (ContractAccepted === "yes") {
+    res.redirect('create-trainee-accepted');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
 
 // LFT //
 
