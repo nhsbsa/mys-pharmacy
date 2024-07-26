@@ -1,0 +1,197 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="user-manage">Home</a></li>
+          <li class="nhsuk-breadcrumb__item">Create user</li>
+    
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            Level three
+          </a>
+        </p>
+      </div>
+    </nav>
+   
+
+      
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        Create user account
+      </h1>
+    </header>
+
+    <p>All fields are mandatory.</p>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="first-name">
+        First names
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="first-name" name="first-name" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="last-name">
+        Last name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="last-name" name="last-name" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="email">
+        E-mail
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Telephone">
+       Telephone
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Telephone" name="Telephone" type="text">
+    </div>
+    
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Status">
+        Status
+      </label>
+      <select class="nhsuk-select" id="Status" name="Status">
+        <option value="All" >All</option>
+        <option value="Active" >Active</option>
+        <option value="Locked" >Locked</option>
+        <option value="New" selected>New</option>
+        <option value="Rejected" >Rejected</option>
+      </select>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="organisation-type">
+        User's organisation type
+      </label>
+      <select class="nhsuk-select" id="organisation-type" name="organisation-type">
+        <option value="Select a type"selected >Select a type</option>
+        <option value="E-schedules" >E-schedules</option>
+        <option value="Pharmacy/Appliance Contractor" >Pharmacy/Appliance contractor</option>
+        
+      </select>
+    </div>
+
+    
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Organisation">
+        Organisation
+      </label>
+
+      <div class="nhsuk-hint" id="example-hint">
+        Enter the first 3 characters of the organisation or the ODS/YP code and select ‘Look up’
+      </div>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Organisation" name="Organisation" type="text">
+      <a href="create-user-lookup">Look up</a>
+    </div>
+
+   
+    <div class="nhsuk-form-group">
+ 
+      <div class="nhsuk-label" for="user-groups">
+        User groups
+      </div>
+
+
+            <div class="nhsuk-hint" id="select-user-group">
+              Select user groups.
+            </div>
+      
+            <div class="nhsuk-checkboxes">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="bsa-admin" name="bsa-admin" type="checkbox" value="bsa-admin">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="bsa-admin">
+                  NHSBSA Admin
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="bsa-internal" name="bsa-internal" type="checkbox" value="bsa-internal">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="bsa-internal">
+                  NHSBSA Internal
+                </label>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="system" name="system" type="checkbox" value="system">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="system">
+                  NHSBSA System Admins
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="isle-of-Man" name="isle-of-Man" type="checkbox" value="isle-of-Man">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="isle-of-Man">
+                  Isle of Man
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Pharmacy" name="Pharmacy" type="checkbox" value="Pharmacy">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Pharmacy">
+                  Pharmacy/ Appliance
+                </label>
+              </div>
+      
+            </div>
+          </fieldset>
+      
+        </div>
+      
+    
+
+    
+    </div>
+  </div>
+
+  
+
+        <br>
+
+        <a href="create-user-loop" class="nhsuk-button">Save and create new user</a>
+        <a href="confirmation" class="nhsuk-button">Save and Finish</a>
+        <a href="user-manage" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+ 
+        <br>
+        <br>
+        <br>
+        <a href="create-user-email-error">A warning page for if email is already registered</a>
+  </div>
+</div>
+{% endblock %}
