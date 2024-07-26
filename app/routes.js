@@ -241,6 +241,65 @@ router.post(/pcsoptin/, function (req, res) {
 });
 
 
+// ISP //
+
+router.post(/eschedulerange/, function (req, res) {
+
+  const eschedulerange = req.session.data['eschedulerange']
+
+  if (eschedulerange === "yes") {
+    res.redirect('eschedule-data-single');
+  } else {
+    res.redirect('eschedule-data-month');
+  }
+});
+
+router.post(/prescriptionrange/, function (req, res) {
+
+  const prescriptionrange = req.session.data['prescriptionrange']
+
+  if (prescriptionrange === "yes") {
+    res.redirect('prescription-data-single');
+  } else {
+    res.redirect('prescription-data-month');
+  }
+});
+
+router.post(/schedulerange/, function (req, res) {
+
+  const schedulerange = req.session.data['schedulerange']
+
+  if (schedulerange === "yes") {
+    res.redirect('schedule-data-single');
+  } else {
+    res.redirect('schedule-data-month');
+  }
+});
+
+router.post(/supplementaryrange/, function (req, res) {
+
+  const supplementaryrange = req.session.data['supplementaryrange']
+
+  if (supplementaryrange === "yes") {
+    res.redirect('supplementary-data-single');
+  } else {
+    res.redirect('supplementary-data-month');
+  }
+});
+
+router.post(/homerange/, function (req, res) {
+
+  const homerange = req.session.data['homerange']
+
+  if (homerange === "yes") {
+    res.redirect('home-bsa-single');
+  } else {
+    res.redirect('home-bsa-month');
+  }
+});
+
+
+
 // Registration Services //
 
 router.post(/opt-in/, function (req, res) {
