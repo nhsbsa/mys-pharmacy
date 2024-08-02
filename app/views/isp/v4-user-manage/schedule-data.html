@@ -30,32 +30,51 @@ Information Service Portal
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
         
-              <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-                <div class="nhsuk-width-container-full">
-                  <ol class="nhsuk-breadcrumb__list">
-                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="schedule-data-first">Find a pharmacy</a></li>
-                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="schedule-data-range">Report range</a></li>
-                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="schedule-data-single">Single range</a></li>
-                 
-                    <li class="nhsuk-breadcrumb__item">Schedule of payments</li>
-                   </ol>
-                </div>
-              </nav>
-
                 <header>
                   <h1>
                    Schedule of payments
                   </h1>
                 </header>
+
+                <p> <a href="schedule">Close</a> the data selector.</p>
             
-                
+            
+                <p>Use the drop-downs to filter your report criteria.</p>
+
+    
+                <div class="nhsuk-card-group">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="Payment date">
+                      Payment date
+                    </label>
+                    <select class="nhsuk-select" id="Payment date" name="Payment date">
+                      <option value="Show all">Show all</option>
+                      <option value="01 May 2024" >01 May 2024</option>
+                      <option value="01 April 2024" >01 April 2024</option>
+                      <option value="01 March 2024" >01 March 2024</option>
+                      <option value="01 February 2024" >01 February 2024</option>
+                      <option value="01 January 2024" >01 January 2024</option>
+                    </select>
+                  </div>
+               
+                <div class="nhsuk-form-group" style="padding-left:30px" >
+                  <label class="nhsuk-label" for="input-width-20">
+                    Organisation
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" placeholder="Enter an ODS or YP code" style="width: 300px">
+                </div>
+            
+              </div>
             
             
-                <p> <a href="schedule-data">Filter your report criteria.</a> </p>
+                <a href="" class="nhsuk-button">Apply</a>
             
-                
+                <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                 Reset
+                </button>
+            
                 <br>
-                
+                <br>   
             
                      <table role="table" class="nhsuk-table-responsive">
                       <caption class="nhsuk-table__caption">Available reports</caption>
@@ -407,7 +426,7 @@ Information Service Portal
                
                 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
                   <ul class="nhsuk-list nhsuk-pagination__list">
-                    
+                  
                     <li class="nhsuk-pagination-item--next">
                       <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
                         <span class="nhsuk-pagination__title">Next</span>
@@ -441,7 +460,7 @@ Information Service Portal
               <li><a href="prescription-data-first">Prescription item report</a></li>
               <li><a class="active" href="schedule-data-first">Schedule of payments</a></li>
               <li><a href="supplementary-data-first">Supplementary report</a></li>
-              
+              <li><a href="user-manage">User management</a></li>
               <li><a href="changes-my-account">Help</a></li>
             </ul>
           </div>

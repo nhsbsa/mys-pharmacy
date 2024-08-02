@@ -1,0 +1,178 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="user-manage">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-role">Manage roles</a></li>
+          <li class="nhsuk-breadcrumb__item">Create new role</li>
+    
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            Level three
+          </a>
+        </p>
+      </div>
+    </nav>
+   
+
+      
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+       Create new role
+      </h1>
+    </header>
+
+    
+
+
+    <p> This section allows you to create different roles in the system with different premission.</p>
+
+    
+    <br>
+    
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Role name">
+        Role name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Role name" name=" Role name" type="text">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="role-description">
+       Role description
+      </label>
+     
+      <textarea class="nhsuk-textarea" id="role-description" name="role-description" rows="4" aria-describedby="role-description" style="width: 395px;"></textarea>
+    </div>
+
+  
+    <div class="nhsuk-form-group">
+ 
+      <div class="nhsuk-label" for="premission">
+        Select premissions
+      </div>
+
+      <form>
+
+            <div class="nhsuk-hint" id="premission">
+              Permissions define what information the “User” can view.
+            </div>
+      
+            <div class="nhsuk-checkboxes">
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Broadcast" name="Broadcast" type="checkbox" value="Broadcast">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Broadcast">
+                 Broadcast
+                </label>
+              </div>
+
+      <br>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="E-Schedule" name="E-Schedule" type="checkbox" value="E-Schedule">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="E-Schedule">
+                  E-Schedule data file
+                </label>
+              </div>
+      
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Prescription" name="Prescription" type="checkbox" value="Prescription">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Prescription">
+                  Prescription item report
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="payments" name="payments" type="checkbox" value="payments">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="payments">
+                 Schedule of payments
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Supplementary" name="Supplementary" type="checkbox" value="Supplementary">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Supplementary">
+                  Supplementary report
+                </label>
+              </div>
+
+              <br>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id=" Create user account" name=" Create user account" type="checkbox" value=" Create user account">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for=" Create user account">
+                  Create user account
+                </label>
+              </div>
+
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Manage" name="Manage" type="checkbox" value="Manage">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Manage">
+                 Manage roles
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                 Manage user accounts
+                </label>
+              </div>
+
+            </div>
+          </fieldset>
+      
+        </div>
+      
+      </form>
+    
+    </div>
+    
+  </div>
+
+
+ 
+        <br>
+
+        <a href="manage-role" class="nhsuk-button">Save</a>
+
+        <a href="manage-role" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+    
+  </div>
+</div>
+{% endblock %}

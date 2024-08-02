@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'HALE.html' %}
+{% extends 'layout-sidebar.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -29,6 +29,7 @@ Information Service Portal
         <div class="nhsuk-main-wrapper" id="maincontent">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
+            
               <ul class="nhsuk-grid-row nhsuk-card-group">
 
                 <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -36,7 +37,7 @@ Information Service Portal
                   <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                        <a class="nhsuk-card__link" href="FP34C/Dashboard">Eschedule data file</a>
+                        <a class="nhsuk-card__link" href="create-user">Create user account</a>
                       </h2>
                       <p class="nhsuk-card__description"></p>
                     </div>
@@ -49,7 +50,7 @@ Information Service Portal
                   <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                        <a class="nhsuk-card__link" href="FP34C/Dashboard">Prescription Item Report</a>
+                        <a class="nhsuk-card__link" href="manage-role">Manage <br>roles</a>
                       </h2>
                       <p class="nhsuk-card__description"></p>
                     </div>
@@ -62,7 +63,7 @@ Information Service Portal
                   <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                        <a class="nhsuk-card__link" href="FP34C/Dashboard">Schedule of Payments</a>
+                        <a class="nhsuk-card__link" href="manage-user-groups">Manage user groups</a>
                       </h2>
                       <p class="nhsuk-card__description"></p>
                     </div>
@@ -75,7 +76,7 @@ Information Service Portal
                   <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                       <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                        <a class="nhsuk-card__link" href="FP34C/Dashboard">Supplementary Report</a>
+                        <a class="nhsuk-card__link" href="manage-users">Manage user accounts</a>
                       </h2>
                       <p class="nhsuk-card__description"></p>
                     </div>
@@ -85,7 +86,7 @@ Information Service Portal
 
              
 
-              </ul>
+                </ul>
             </div>
           </div>
         </div>
@@ -97,9 +98,14 @@ Information Service Portal
           <div class="options" id="options">
             <ul>
               <div class="options" id="options"></div>
-              <li><a href="home-hale">Home</a></li>
-              <li><a class="active" href="payment-hale">Payment Information</a></li>
-              
+              <li><a href="../../pharmacy/summary-new">Back to MYS dashboard</a></li>
+              <li><a href="home-bsa">Home</a></li>
+              <li><a href="eschedule-data-first">E-Schedule data file</a></li>
+              <li><a href="prescription-data-first">Prescription item report</a></li>
+              <li><a href="schedule-data-first">Schedule of payments</a></li>
+              <li><a href="supplementary-data-first">Supplementary report</a></li>
+              <li><a class="active" href="user-manage">User management</a></li>
+              <li><a href="changes-my-account">Help</a></li>
             </ul>
           </div>
         </ul>

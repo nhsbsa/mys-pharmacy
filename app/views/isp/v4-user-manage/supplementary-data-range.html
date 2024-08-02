@@ -29,15 +29,11 @@ Information Service Portal
         <div class="nhsuk-main-wrapper" id="maincontent">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-         
-             
               <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
                 <div class="nhsuk-width-container-full">
                   <ol class="nhsuk-breadcrumb__list">
-                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="schedule-data-first">Find a pharmacy</a></li>
-                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="schedule-data-range">Report range</a></li>
-                 
-                    <li class="nhsuk-breadcrumb__item">Single range</li>
+                    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="supplementary-data-first">Find a pharmacy</a></li>
+                    <li class="nhsuk-breadcrumb__item">Report range</li>
                    </ol>
                 </div>
               </nav>
@@ -45,12 +41,11 @@ Information Service Portal
               <header>
                 <h1>
                  
-                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Schedule of payments</span>
-                   What month would you like to download?
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Supplementary report</span>
+                   What report range would you like to download? 
                 </h1>
               </header>
           
-              <p>Reports are available from the month you began using MYS (June 2018) <br>and are held for a maximum of 18 months.</p>
               <!-- Add your content here -->
               <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
               <!-- <h2>Context</h2> -->
@@ -58,52 +53,50 @@ Information Service Portal
             
           
               
-              <form action="Select" method="post">
+              <form action="supplementaryrange" method="post">
           
           
+               
                 <div class="nhsuk-form-group">
-                  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-                    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                      <h1 class="nhsuk-fieldset__heading">
-                       Report date
-                      </h1>
-                    </legend>
-                    <div class="nhsuk-hint" id="example-hint">
-                      For example, 3 2018
-                    </div>
-                
+          
+                  <fieldset class="nhsuk-fieldset">
                    
-                      <div class="nhsuk-date-input__item">
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                            Month
-                          </label>
-                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                
+                    <div class="nhsuk-radios">
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="Single" name="supplementaryrange" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="Single">
+                         Single range
+                        </label>
                       </div>
-                      <div class="nhsuk-date-input__item">
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                            Year
-                          </label>
-                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-                        </div>
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="Month" name="supplementaryrange" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="Month">
+                          Month range
+                        </label>
                       </div>
+                
                     </div>
                   </fieldset>
                 
-                
-                 <br>
+                </div>
+                  <br>
                  
-              <a class="nhsuk-button" href="schedule">Next</a>
-                <br>
-                <br>   
-            
-            </div>
+                 
+                  <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                   Next
+                </button>
+    <br>
+    <br>   
+          
+   
           </div>
         </div>
       </div>
     </div>
+  </div>
     <div class="nhsBSA-sidebar-nav">
       <div class="side-nav">
         <ul>
@@ -114,9 +107,9 @@ Information Service Portal
               <li><a href="home-bsa">Home</a></li>
               <li><a href="eschedule-data-first">E-Schedule data file</a></li>
               <li><a href="prescription-data-first">Prescription item report</a></li>
-              <li><a class="active" href="schedule-data-first">Schedule of payments</a></li>
-              <li><a href="supplementary-data-first">Supplementary report</a></li>
-              
+              <li><a href="schedule-data-first">Schedule of payments</a></li>
+              <li><a class="active" href="supplementary-data-first">Supplementary report</a></li>
+              <li><a  href="user-manage">User management</a></li>
               <li><a href="changes-my-account">Help</a></li>
             </ul>
           </div>
