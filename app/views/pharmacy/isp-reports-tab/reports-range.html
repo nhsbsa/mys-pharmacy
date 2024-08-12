@@ -23,7 +23,7 @@ Information services portal
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
@@ -54,42 +54,159 @@ Information services portal
   
 
     
+    
+     
+    <p>Reports are available from the month you began using MYS (June 2018) and are held for a maximum of 18 months.</p>
+   
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+  
+
+    
     <form action="reportmonthselect" method="post">
 
+      <div class="nhsuk-radios nhsuk-radios--conditional">
+              
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
+            aria-controls="conditional-contact-1" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+            Single range
+          </label>
+        </div>
 
-     
-      <div class="nhsuk-form-group">
+        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
 
-        <fieldset class="nhsuk-fieldset">
+          <div class="nhsuk-form-group">
+            <br>
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                  <h2 class="nhsuk-fieldset__heading">
+                   Report date
+                  </h2>
+                </legend>
+                <div class="nhsuk-hint" id="example-hint">
+                  For example, 3 2018
+                </div>
+            
+               
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            
+            </div>
+            </div>
          
-      
-          <div class="nhsuk-radios">
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-1" name="reportmonthselect" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-               Single range
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-2" name="reportmonthselect" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                Month range
-              </label>
-            </div>
-      
-          </div>
-        </fieldset>
-      
+
+       
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+            aria-controls="conditional-contact-2" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+            Month range
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+
+          <br> 
+
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                <h2 class="nhsuk-fieldset__heading">
+                 Report start date
+                </h2>
+              </legend>
+              <div class="nhsuk-hint" id="example-hint">
+                For example, 3 2018
+              </div>
+          
+             
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          
+          
+    
+            <br>
+           
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                   Report end date
+                  </h1>
+                </legend>
+                <div class="nhsuk-hint" id="example-hint">
+                  For example, 3 2019
+                </div>
+            
+               
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
       </div>
+
+</div>
+  </div>
+</div>
         <br>
        
        
-        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-         Next
-      </button>
-        
+        <a class="nhsuk-button" href="selection-download">Next</a>
+
+
+
 
     
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
