@@ -241,6 +241,65 @@ router.post(/pcsoptin/, function (req, res) {
 });
 
 
+// ISP //
+
+router.post(/eschedulerange/, function (req, res) {
+
+  const eschedulerange = req.session.data['eschedulerange']
+
+  if (eschedulerange === "yes") {
+    res.redirect('eschedule-data-single');
+  } else {
+    res.redirect('eschedule-data-month');
+  }
+});
+
+router.post(/prescriptionrange/, function (req, res) {
+
+  const prescriptionrange = req.session.data['prescriptionrange']
+
+  if (prescriptionrange === "yes") {
+    res.redirect('prescription-data-single');
+  } else {
+    res.redirect('prescription-data-month');
+  }
+});
+
+router.post(/schedulerange/, function (req, res) {
+
+  const schedulerange = req.session.data['schedulerange']
+
+  if (schedulerange === "yes") {
+    res.redirect('schedule-data-single');
+  } else {
+    res.redirect('schedule-data-month');
+  }
+});
+
+router.post(/supplementaryrange/, function (req, res) {
+
+  const supplementaryrange = req.session.data['supplementaryrange']
+
+  if (supplementaryrange === "yes") {
+    res.redirect('supplementary-data-single');
+  } else {
+    res.redirect('supplementary-data-month');
+  }
+});
+
+router.post(/homerange/, function (req, res) {
+
+  const homerange = req.session.data['homerange']
+
+  if (homerange === "yes") {
+    res.redirect('home-bsa-single');
+  } else {
+    res.redirect('home-bsa-month');
+  }
+});
+
+
+
 // Registration Services //
 
 router.post(/opt-in/, function (req, res) {
@@ -580,6 +639,76 @@ router.post(/Version4Claim/, function (req, res) {
     res.redirect('advanced-servicesv4-no');
   }
 });
+
+// FP34D HVV//
+
+router.post(/HVVConfirmapi/, function (req, res) {
+
+  const HVVConfirmapi = req.session.data['HVVConfirmapi']
+
+  if (HVVConfirmapi === "yes") {
+    res.redirect('confirm-path-api');
+  } else {
+    res.redirect('manual/months-manual');
+  }
+});
+
+router.post(/selectapiHVV/, function (req, res) {
+
+  const selectapiHVV = req.session.data['selectapiHVV']
+
+  if (selectapiHVV === "yes") {
+    res.redirect('months');
+  } else {
+    res.redirect('select-path');
+  }
+});
+
+router.post(/vaccinehvv/, function (req, res) {
+
+  const vaccinehvv = req.session.data['vaccinehvv']
+
+  if (vaccinehvv === "yes") {
+    res.redirect('add-gp');
+  } else {
+    res.redirect('vaccine-detail-1');
+  }
+});
+
+router.post(/addgpyesorno/, function (req, res) {
+
+  const addgpyesorno = req.session.data['addgpyesorno']
+
+  if (addgpyesorno === "yes") {
+    res.redirect('gp-details');
+  } else {
+    res.redirect('declaration');
+  }
+});
+
+router.post(/oldconfirmhvv/, function (req, res) {
+
+  const oldconfirmhvv = req.session.data['oldconfirmhvv']
+
+  if (oldconfirmhvv === "yes") {
+    res.redirect('add-gp-old');
+  } else {
+    res.redirect('vaccine-detail-old');
+  }
+});
+
+router.post(/gpaddold/, function (req, res) {
+
+  const gpaddold = req.session.data['gpaddold']
+
+  if (gpaddold === "yes") {
+    res.redirect('gp-details-old');
+  } else {
+    res.redirect('declaration-old');
+  }
+});
+
+
 
 // NMS//
 

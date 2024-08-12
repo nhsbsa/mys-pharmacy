@@ -1,0 +1,104 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container" style="margin: 0; padding-left: 32px;">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+                <div class="nhsuk-width-container-full">
+                  <ol class="nhsuk-breadcrumb__list">
+                       <li class="nhsuk-breadcrumb__item">Find a pharmacy</li>
+                   </ol>
+                </div>
+              </nav>
+
+              <header>
+                <h1>
+                   
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Eschedule data file</span>
+                   Find a pharmacy
+                </h1>
+              </header>
+          
+              <!-- Add your content here -->
+              <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+              <!-- <h2>Context</h2> -->
+              <!-- <p class="nhsuk-body">Content?</p> -->
+            
+              <p >Use this service to download monthly reports for your pharmacies.</p>
+             <br>
+             
+                <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Pharmacy
+                      </h1>
+                    </legend>
+                  <div class="nhsuk-hint" id="example-hint">Enter ODS code, YP code or location</div>
+                  <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                  </div>
+          
+                 
+                 
+                 
+              <a class="nhsuk-button" href="eschedule-data-range">Next</a>
+
+    <br>
+    <br>
+  
+    
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options"></div>
+              <li><a href="../../pharmacy/summary-new">Back to MYS dashboard</a></li>
+             
+              <li><a class="active" href="eschedule-data-first">E-Schedule data file</a></li>
+              <li><a href="prescription-data-first">Prescription item report</a></li>
+              <li><a href="schedule-data-first">Schedule of payments</a></li>
+              <li><a href="supplementary-data-first">Supplementary report</a></li>
+              
+              <li><a href="changes-my-account">Help</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,152 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prototype Templates - Manual Prototype
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <div class="nhsuk-back-link">
+      <a class="nhsuk-back-link__link" href="javascript:history.back()">
+        <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path
+            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+          </path>
+        </svg>
+        Go back</a>
+    </div>
+
+    <h1>
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">July 2024 submission</span>
+              
+       Confirm deletion
+    </h1>
+
+    <form action="EditMonths" method="post">
+
+
+<!-- deletion table -->
+<table role="table" class="nhsuk-table-responsive">
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Prescriber
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Hep A
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Hep B
+      </th>
+      <th role="columnheader" class="" scope="col">
+       Influenza
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Meningococcal
+      </th>
+      
+      <th role="columnheader" class="" scope="col">
+        Typhoid
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Total
+      </th>
+     
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span>Dr Charlie Robert
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Hep B</span>0
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Influenza</span>
+        <a href="add-gp-1-old">34</a>
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Meningococcal</span>0
+      </td>
+     
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>34
+      </td>
+     
+    </tr>
+    
+  </tbody>
+</table>
+
+<br>
+
+            <!--div class="nhsuk-hint" id="example-hint">
+              The month 'June' is selected for deletion
+            </div-->
+
+<div class="nhsuk-form-group">
+ <fieldset class="nhsuk-fieldset">
+   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+    <h1 class="nhsuk-fieldset__heading">
+              Are you sure you want to delete this vaccine details?
+            </h1>
+          </legend>
+      
+          <div class="nhsuk-radios nhsuk-radios--inline">
+      
+            <div class="nhsuk-radios__item ">
+              <input class="nhsuk-radios__input" id="example-inline-1" name="EditMonths" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-inline-2" name="EditMonths" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
+      </div>
+
+      <br>
+
+      <a href="add-gp" class="nhsuk-button">Continue</a>
+     
+<!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

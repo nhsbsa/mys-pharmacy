@@ -1,0 +1,198 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'ISP.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="user-manage">Home</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-role">Manage user groups</a></li>
+          <li class="nhsuk-breadcrumb__item">Create new group</li>
+    
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            Level three
+          </a>
+        </p>
+      </div>
+    </nav>
+   
+
+      
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+       Edit user group
+      </h1>
+    </header>
+
+    
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="User groups">
+        User groups
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="User groups" name="User groups" type="text" value="Default standard">
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Group-description">
+        Group description
+      </label>
+     
+      <textarea class="nhsuk-textarea" id="Group-description" name="Group-description" rows="4" aria-describedby="Group-description" style="width: 395px;">Default NHS users</textarea>
+    </div>
+
+  
+    <div class="nhsuk-form-group">
+ 
+      <div class="nhsuk-label" for="Assign">
+       Assign roles
+      </div>
+
+      <form>
+
+            <div class="nhsuk-hint" id="Assign">
+              Permissions define what information the “User” can view.
+            </div>
+      
+            <div class="nhsuk-checkboxes">
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Admin" name="Admin" type="checkbox" value="Admin">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Admin">
+                 Admin
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can access the admin functionality
+                </div>
+              </div>
+      
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="National" name="National" type="checkbox" value="National">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="National">
+                 Financial Reporting National
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can view financial reports at National level
+                </div>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Reporting" name="Reporting" type="checkbox" value="Reporting">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Reporting">
+                  Financial Reporting PCO
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can view financial reports IPP/PMD at PCO level
+                </div>
+              </div>
+      
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Financial" name="Financial" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Financial">
+                  Financial Reporting Area Team
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can view financial reports at Area Team level
+                </div>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Guest" name="Guest" type="checkbox" value="" checked>
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Guest">
+               Guest
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can view payment reports that are available to everyone
+                </div>
+              </div>
+
+             
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="Data Analyser" name="Data Analyser" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="Data Analyser">
+                 Practice Data Analyser
+                </label>
+                <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                  Can view sensitive prescribing item reports such as practice level
+                </div>
+              </div>
+
+
+            
+
+            </div>
+          </fieldset>
+      
+        </div>
+      
+      </form>
+
+      <hr>
+      <div class="nhsuk-label" for="Admin group">
+        Admin group
+      </div>
+
+            <div class="nhsuk-hint" id="Admin group">
+              if you are creating a group
+Which is for “System Admin” Users only. A tick in this box means
+a NHSBSA Admin User will not be able to select this “User
+Group”.
+
+            </div>
+      
+
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+         Admin group
+        </label>
+     
+      </div>
+    
+    </div>
+    
+  </div>
+
+
+ 
+        <br>
+
+        <a href="manage-user-groups" class="nhsuk-button">Save</a>
+
+        <a href="manage-user-groups" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+
+        
+    
+  </div>
+</div>
+{% endblock %}

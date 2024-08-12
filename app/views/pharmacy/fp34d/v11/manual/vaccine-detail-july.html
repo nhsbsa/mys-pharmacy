@@ -1,0 +1,108 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+High volume vaccinations
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">July 2024 submission</span>
+                  Enter vaccine details
+                </h1>
+              </header>
+
+             
+                <div class="nhsuk-form-group">
+
+                  <p class="nhsuk-body">  Enter the details of vaccines administered by Dr Crystal Yip for July 2024, then select Add vaccine to add it to your submission.     </p>
+                  </p>
+
+                  <p class="nhsuk-body">Once entered, each vaccine will appear under ‘Vaccines you have entered for Dr Crystal Yip’. </p>
+                  </p>
+
+                  <p class="nhsuk-body">You will be able to add another vaccine administered by Dr Crystal Yip after each entry.</p>
+                </p>
+
+                <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true" style = top:-13px;">!</span>
+                  <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Do not enter doses that were centrally supplied.
+                  </strong>
+                </div>
+
+                <br>
+                <a href="vaccine-type-old-1" class="nhsuk-button">Add vaccine</a>
+             
+              
+              <table role="table" class="nhsuk-table-responsive">
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Vaccine type
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Vaccine
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Total vaccine doses
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Action
+                    </th>
+                  </tr>
+                </thead>
+              
+              </table>
+
+              <br>
+              <p>There are no vaccines to submit.</p>
+                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Save and continue
+                </button> -->
+
+              </form>
+
+             
+             
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

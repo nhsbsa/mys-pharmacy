@@ -1,0 +1,84 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'ISP.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-fluid">
+
+
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+  
+    
+   
+
+      
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        Eschedule data file
+      </h1>
+    </header>
+
+    
+<h3>Data selector</h3>
+
+    <p> Please select the report criteria.</p>
+
+    
+    
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-1">
+        Payment date
+      </label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="Show all">Show all</option>
+        <option value="01 May 2024" >01 May 2024</option>
+        <option value="01 April 2024" >01 April 2024</option>
+        <option value="01 March 2024" >01 March 2024</option>
+        <option value="01 February 2024" >01 February 2024</option>
+        <option value="01 January 2024" >01 January 2024</option>
+      </select>
+    </div>
+   
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="input-width-20">
+        Organisation
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" placeholder="Enter an F- or YP code">
+    </div>
+
+   
+
+    <a href="eschedule" class="nhsuk-button">Apply</a>
+
+    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+     Reset
+    </button>
+
+  </div>
+</div>
+{% endblock %}

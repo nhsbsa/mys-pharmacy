@@ -1,0 +1,162 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
+      <div class="nhsuk-width-container" >
+        <ol class="nhsuk-breadcrumb__list">
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
+          <li class="nhsuk-breadcrumb__item">My account details</li>
+    
+        </ol>
+        <p class="nhsuk-breadcrumb__back">
+          <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+            <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+            Level three
+          </a>
+        </p>
+      </div>
+    </nav>
+   
+
+      
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+       My account details
+      </h1>
+    </header>
+
+    <p>Some of your details are not editable from this page. If you wish to make amendments to these details please contact
+      NHSBSA information services at <a href=mailto:DataServicesSupport@nhsbsa.nhs.uk>DataServicesSupport@nhsbsa.nhs.uk</a> 
+    </p>
+
+    <br>
+
+    <h2 class="nhsuk-heading-m">Personal details</h2>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="first name">
+        First name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="first name" name="first name" type="text" value="Joe"disabled>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="last name">
+        Last name
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="last name" name="last name" type="text" value="Bloggs"disabled>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Telephone">
+        Telephone
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Telephone" name="Telephone" type="text" value="07846294638"disabled>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="email">
+        Email
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text" value=" joe.bloggs@nhs.net"disabled>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="organisation type">
+        User's organisation type
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="organisation type" name="organisation type" type="text" value="Pharmacy/Appliance Contractor"disabled>
+    </div>
+    
+    
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Organisation">
+        Organisation
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Organisation" name="Organisation" type="text" value="BSA"disabled>
+      
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="Organisation code">
+        Organisation code
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="Organisation code" name="Organisation code" type="text" value="FA123"disabled>
+     
+    </div>
+
+    <div class="nhsuk-card-group">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="Default profile">
+         Default profile
+        </label>
+        <select class="nhsuk-select" id="Default profile" name="Default profile">
+          <option value="NHSBSA">NHSBSA</option>
+          <option value="HALE SMITHS PHARMACY" >HALE SMITHS PHARMACY</option>
+         
+        </select>
+      </div>
+  </div>
+    
+   <hr>
+
+   <h3>
+    Change password
+   </h3>
+  
+   <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="Current password">
+     Current password
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-20" id="Current password" name="Current password" type="text">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="New password">
+      New password
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-20" id="New password" name="New password" type="text" >
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="Confirm new password">
+     Confirm new password
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-20" id="Confirm new password" name="Confirm new password" type="text">
+  </div>
+
+
+        <br>
+
+        <a href="confirmation-account" class="nhsuk-button">Save changes</a>
+        <a href="home-bsa" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
+  </div>
+</div>
+{% endblock %}
