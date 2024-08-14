@@ -26,16 +26,10 @@ Information services portal
   <div class="nhsuk-grid-column-two-thirds">
 
 
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-      <div class="nhsuk-width-container-full">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="reports-search">Information services portal</a></li>
-          <li class="nhsuk-breadcrumb__item">Report range type</li>
-         </ol>
-      </div>
-    </nav>
-    
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
    
 
     <!-- Change the page title here -->
