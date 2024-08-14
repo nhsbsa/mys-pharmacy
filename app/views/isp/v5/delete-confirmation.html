@@ -25,20 +25,10 @@ Prototype Templates - API Prototype
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-      <div class="nhsuk-width-container" >
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-users">Manage users</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-result">User search</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-all-profiles">Profiles</a></li>
-    
-          <li class="nhsuk-breadcrumb__item">Delete Profile</li>
-    
-        </ol>
-       
-      </div>
-    </nav>
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
 
     <h1>
       <span class="nhsuk-caption-xl nhsuk-caption--bottom">Delete profile</span>
