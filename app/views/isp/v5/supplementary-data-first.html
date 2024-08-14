@@ -29,14 +29,11 @@ Information Service Portal
         <div class="nhsuk-main-wrapper" id="maincontent">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-              <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-                <div class="nhsuk-width-container-full">
-                  <ol class="nhsuk-breadcrumb__list">
-                       <li class="nhsuk-breadcrumb__item">Find a pharmacy</li>
-                   </ol>
-                </div>
-              </nav>
-
+              {{ backLink({
+                "href": "javascript:history.go(-1)",
+                "text": "Go back"
+                }) }}
+             
               <header>
                 <h1>
                    
