@@ -30,8 +30,10 @@ Information Service Portal
    
       <div class="nhsuk-width-container">
       
-        <a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a>
-       
+        {{ backLink({
+          "href": "javascript:history.go(-1)",
+          "text": "Go back"
+          }) }}  
       </div>
    
 <br>

@@ -27,18 +27,11 @@ Information Service Portal
   <div class="nhsuk-grid-column-full">
 
 
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-      <div class="nhsuk-width-container" >
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="home-bsa">Home</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="manage-users">Manage users</a></li>
-    
-          <li class="nhsuk-breadcrumb__item">User search</li>
-    
-        </ol>
-       
-      </div>
-    </nav>
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+   
   
     <!-- Change the page title here -->
     <header>
