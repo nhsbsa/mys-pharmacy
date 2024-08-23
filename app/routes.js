@@ -250,7 +250,7 @@ router.post(/eschedulerange/, function (req, res) {
   if (eschedulerange === "yes") {
     res.redirect('eschedule-data-single');
   } else {
-    res.redirect('eschedule-data-month');
+    res.redirect('eschedule');
   }
 });
 
@@ -261,7 +261,7 @@ router.post(/prescriptionrange/, function (req, res) {
   if (prescriptionrange === "yes") {
     res.redirect('prescription-data-single');
   } else {
-    res.redirect('prescription-data-month');
+    res.redirect('prescription');
   }
 });
 
@@ -272,7 +272,7 @@ router.post(/schedulerange/, function (req, res) {
   if (schedulerange === "yes") {
     res.redirect('schedule-data-single');
   } else {
-    res.redirect('schedule-data-month');
+    res.redirect('schedule');
   }
 });
 
@@ -283,7 +283,7 @@ router.post(/supplementaryrange/, function (req, res) {
   if (supplementaryrange === "yes") {
     res.redirect('supplementary-data-single');
   } else {
-    res.redirect('supplementary-data-month');
+    res.redirect('supplementary');
   }
 });
 
