@@ -40,7 +40,7 @@ Information Service Portal
                 <h1>
                  
                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescription item report</span>
-                   What report range would<br> you like to download? 
+                   What report range would <br>you like to download? 
                 </h1>
               </header>
           
@@ -50,10 +50,6 @@ Information Service Portal
               <!-- <p class="nhsuk-body">Content?</p> -->
             
           
-              
-              <form action="prescriptionrange" method="post">
-          
-                 
             
     
      
@@ -66,12 +62,12 @@ Information Service Portal
   
 
     
-    <form action="reportmonthselect" method="post">
+    <form action="prescriptionrange" method="post">
 
       <div class="nhsuk-radios nhsuk-radios--conditional">
               
         <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
+          <input class="nhsuk-radios__input" id="contact-1" name="prescriptionrange" type="radio" value="yes"
             aria-controls="conditional-contact-1" aria-expanded="false">
           <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
             Single range
@@ -120,7 +116,7 @@ Information Service Portal
        
 
         <div class="nhsuk-radios__item">
-          <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+          <input class="nhsuk-radios__input" id="contact-2" name="prescriptionrange" type="radio" value="no"
             aria-controls="conditional-contact-2" aria-expanded="false">
           <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
             Month range
@@ -204,11 +200,9 @@ Information Service Portal
         <br>
        
        
-        <a class="nhsuk-button" href="prescription">Next</a>
-
-
-
-        
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Next</button>
+             
+          
         </div>
       </div>
     </div>
