@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-WT&E
+RTEC
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -65,8 +65,8 @@ border-bottom: 1px solid #bfc1c3;">
         <!-- Change the page title here -->
         <header>
             <h1>
-                Foundation Trainee Pharmacist and <br> Pre-registration Trainee Pharmacy Technician reports
-                <p>Download report .csv files</p>
+                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Upload RTEC declarations in bulk</span>
+                Complete bulk RTEC declarations
             </h1>
         </header>
 
@@ -74,50 +74,16 @@ border-bottom: 1px solid #bfc1c3;">
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-      
+        <p>Complete bulk RTEC declarations by uploading a .csv</p>
 
-        <table role="table" class="nhsuk-table-responsive">
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+              Upload a file
+            </label>
+            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+        </div>
          
-          <thead role="rowgroup" class="nhsuk-table__head">
-            <tr role="row">
-              <th role="columnheader" class="" scope="col">
-                Report
-              </th>
-            
-              <th role="columnheader" class="" scope="col">
-                Action
-              </th>
-            </tr>
-          </thead>
-
-          <tbody class="nhsuk-table__body">
-            <tr role="row" class="nhsuk-table__row">
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Registration Report
-              </td>
-
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Download</a>
-              </td>
-            </tr>
-          </tbody>
-
-          <tbody class="nhsuk-table__body"></tbody>
-            <tr role="row" class="nhsuk-table__row">             
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Payment Report
-              </td>
-
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span><a href="#">Download</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <br>
-        <br>
-    
+ 
     
 
 
