@@ -25,16 +25,11 @@ Manage users
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
 
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb" style="background-color: #EFF4F5;">
-      <div class="nhsuk-width-container-full">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../summary-new">Dashboard</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="users-search-result">Manage users</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="cya-user">User details</a></li>
-          <li class="nhsuk-breadcrumb__item">Remove user</li>
-         </ol>
-      </div>
-    </nav>
+   
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
 
               <header>
       <h1>
