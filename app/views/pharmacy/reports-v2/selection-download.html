@@ -1,0 +1,302 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Service reports
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+   
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+       
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Service reports</span>
+         What reports would you like to download?
+      </h1>
+    </header>
+
+    <form>
+
+      <div class="nhsuk-form-group">
+    
+     
+          <div class="nhsuk-hint" id="example-hint">
+            Select all that apply
+          </div>
+    
+          <div class="nhsuk-checkboxes">
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="AMR Declarations" name="AMR Declarations" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="AMR Declarations">
+                AMR Declarations
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Aspirational PQS Declarations" name="Aspirational PQS Declarations" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Aspirational PQS Declarations">
+                Aspirational PQS Declarations
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="COVID LFD Monthly Submissions" name="COVID LFD Monthly Submissions" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="COVID LFD Monthly Submissions">
+                COVID LFD Monthly Submissions
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Covid LFD Submissions (4th October onwards)" name="Covid LFD Submissions (4th October onwards)" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Covid LFD Submissions (4th October onwards)">
+                Covid LFD Submissions (4th October onwards)
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Covid Premises" name="Covid Premises" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Covid Premises">
+                Covid Premises and Refrigeration Submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Discharge Medicine Service Submissions" name="Discharge Medicine Service Submissions" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Discharge Medicine Service Submissions">
+                Discharge Medicine Service Submissions
+              </label>
+            </div>
+
+            <!--
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Eschedule" name="Eschedule" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Eschedule">
+                Eschedule data file
+              </label>
+            </div>
+            -->
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Extra Hours Declarations" name="Extra Hours Declarations" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Extra Hours Declarations">
+                Extra Hours Declarations
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Flu Premises and Refrigeration Submissions" name="Flu Premises and Refrigeration Submissions" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Flu Premises and Refrigeration Submissions">
+                Flu Premises and Refrigeration Submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id=" Flu submission" name=" Flu submission" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for=" Flu submission">
+                Flu submission
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Foundation Trainee Pharmacist" name="Foundation Trainee Pharmacist" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Foundation Trainee Pharmacist">
+                Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Submission Report
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="FP34C" name="FP34C" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="FP34C">
+                FP34C submission
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="GP Referral" name="GP Referral" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="GP Referral">
+                GP Referral Pathway Submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Hepatitis" name="Hepatitis" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Hepatitis">
+                Hepatitis C Submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Home Delivery Advanced Service" name="Home Delivery Advanced Service" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Home Delivery Advanced Service">
+                Home Delivery Advanced Service Declarations
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Hypertension" name="Hypertension" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Hypertension">
+                Hypertension case finding advanced service user submission report
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Lateral Flow Device" name="Lateral Flow Device" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Lateral Flow Device">
+                Lateral Flow Device Submission Report
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id=" Outstanding Referback" name=" Outstanding Referback" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for=" Outstanding Referback">
+                Outstanding Referback / Disallowed Report
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Pharmacy First" name="Pharmacy First" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Pharmacy First">
+                Pharmacy First Submission
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="COVID Vaccine" name="COVID Vaccine" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="COVID Vaccine">
+                Pharmacy COVID Vaccine submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Pharmacy Quality Scheme" name="Pharmacy Quality Scheme" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Pharmacy Quality Scheme">
+                Pharmacy Quality Scheme 2020/21 Part 1 Essential Criteria Checklist
+              </label>
+            </div>
+            
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="PPE" name="PPE" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="PPE">
+                PPE Claim Submissions
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="PQS" name="PQS" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="PQS">
+                PQS Declarations
+              </label>
+            </div>
+
+            <!--
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Prescription item report" name="Prescription item report" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Prescription item report">
+                Prescription item report
+              </label>
+            </div>
+
+          -->
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Referback" name="Referback" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Referback">
+                Referback Information added by pharmacy
+              </label>
+            </div>
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Referback Processed " name="Referback Processed " type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Referback Processed ">
+                Referback Processed by NHS BSA
+              </label>
+            </div>
+    
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="RTEC" name="RTEC" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="RTEC">
+                RTEC Declarations
+              </label>
+            </div>
+    
+            <!--
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Schedule of payments" name="Schedule of payments" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Schedule of payments">
+                Schedule of payments
+              </label>
+            </div>
+          -->
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id=" Smoking Cessation Service" name=" Smoking Cessation Service" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for=" Smoking Cessation Service">
+                Smoking Cessation Service Submission Report
+              </label>
+            </div>
+
+            <!--
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="Supplementary report" name="Supplementary report" type="checkbox" value="phone">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="Supplementary report">
+                Supplementary report
+              </label>
+            </div>
+             -->
+
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="User Compliance" name="User Compliance" type="checkbox" value="text message">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="User Compliance">
+                User Compliance Report
+              </label>
+            </div>
+
+
+          </div>
+        </fieldset>
+    
+      </div>
+    
+    </form>
+     
+        <br>
+       
+       
+    <a class="nhsuk-button" href="confirmation">Download reports</a>
+
+    
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
