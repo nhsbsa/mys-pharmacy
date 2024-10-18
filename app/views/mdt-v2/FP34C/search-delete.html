@@ -12,15 +12,12 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Flu
+FP34C
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
 
-<!-- Feedback and Notification block starts here -->
-
-<!-- Feedback and Notification block ends here -->
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -31,6 +28,18 @@ Flu
     <div class="nhsuk-grid-column-full">
 
 
+<!-- phase banner -->
+<!--div class="phase-banner"
+style="margin-bottom: 20px;
+line-height: 1.25;
+margin-top: 40px;
+border-bottom: 1px solid #bfc1c3;">
+
+<p></strong> Your <a href="https://online1.snapsurveys.com/MYS_FEEDBACK_SURVEY?pgn=CPCS" target="_blank">feedback (opens in a new tab)</a> 
+    will help us improve our service.</p>
+</div-->
+
+<!-- Feedback and Notification block ends here -->
 
         {{ backLink({
         "href": "javascript:history.go(-1)",
@@ -42,41 +51,29 @@ Flu
 
         <!-- Change the page title here -->
         <header>
-             <h1>
-              Flu Premises & Refrigeration 
-              Payments reports
+            <h1>
+              Search FP34C submission to delete
             </h1>
         </header>
 
-       <p>Download report .csv files</p>
-         
-      <table class="nhsuk-table">
-        <thead role="rowgroup" class="nhsuk-table__head">
-          <tr role="row">
-            <th role="columnheader" class="" scope="col">
-              Report
-            </th>
-            <th role="columnheader" class="" scope="col">
-             Action
-            </th>
-          </tr>
-        </thead>
-        <tbody class="nhsuk-table__body">
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Breakdown report</td>
-            <td class="nhsuk-table__cell "><a href="">Download report</a></td>
-          </tr>
-          <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Fees report</td>
-            <td class="nhsuk-table__cell "><a href="">Download report</a></td>
-          </tr>
-         
-        </tbody>
-      </table>
-  
-      <a href="confirmation" class="nhsuk-button">Download all</a>
+        <p>Search for a submission to delete</p>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            Dispenser Code
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+        </div>
+        <!-- Add your content here -->
+        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <!-- <h2>Context</h2> -->
 
       
+      <a href="search-result" class="nhsuk-button">Search for submission</a>
+
+        <br>
+        <br>
+    
     
 
 
