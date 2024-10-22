@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-RTEC
+CVD
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,25 +35,22 @@ RTEC
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Upload RTEC declarations in bulk</span>
-                Complete bulk RTEC declarations
-            </h1>
+            <h1 class="nhsuk-caption--bottom"></span>
+                CVD Deregistrations Report
+            </h1>   
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Complete bulk RTEC declarations by uploading a .csv</p>
+        <p>Declarations report</p>
 
+        <br>
+
+        <a href="confirmation-cvd-deregistrations" class="nhsuk-button">Download report</a>
         
-        <div class="govuk-form-group">
-            <label class="nhsuk-heading-s" for="file-upload-1">
-              Upload a file    
-            </label>                      
-            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-        </div>
+       
          
     </div>
 </div>

@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-RTEC
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,26 +35,40 @@ RTEC
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Upload RTEC declarations in bulk</span>
-                Complete bulk RTEC declarations
-            </h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">Account identifier re-print</span>
+            <h1>Account identifier submission search</h1>  
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Complete bulk RTEC declarations by uploading a .csv</p>
+        <p>Run a submission search to re-print relevant Account identifier form</p>
+      
 
-        
-        <div class="govuk-form-group">
-            <label class="nhsuk-heading-s" for="file-upload-1">
-              Upload a file    
-            </label>                      
-            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+                Dispenser Code
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">           
+            <input class="nhsuk-input" id="example" name="example" type="text">            
+          </div>
         </div>
-         
+
+        <div class="nhsuk-form-group"></div>
+            <label class="nhsuk-label" for="example">
+                Part Month Period (Optional)
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+                Enter 6 numeric part month digits in the YYYYMM format i.e. 201801 for January 2018            
+            <input class="nhsuk-input" id="example" name="example" type="text">            
+          </div>
+        
+
+<br>        
+
+        <a href="account-identifier-submission-results" class="nhsuk-button">Search for submissions</a>
+      
     </div>
 </div>
 {% endblock %}

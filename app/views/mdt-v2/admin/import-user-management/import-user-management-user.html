@@ -12,12 +12,11 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-RTEC
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-
 
 {% endblock %}
 
@@ -27,7 +26,10 @@ RTEC
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-     
+  
+
+
+
         {{ backLink({
         "href": "javascript:history.go(-1)",
         "text": "Go back"
@@ -35,19 +37,17 @@ RTEC
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Upload RTEC declarations in bulk</span>
-                Complete bulk RTEC declarations
-            </h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+            <h1>Import user management user details</h1>
+            
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Complete bulk RTEC declarations by uploading a .csv</p>
-
-        
+        <p>Update these details by uploading a .csv file</p>
+     
         <div class="govuk-form-group">
             <label class="nhsuk-heading-s" for="file-upload-1">
               Upload a file    
@@ -55,6 +55,12 @@ RTEC
             <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
         </div>
          
-    </div>
+<br>
+<br>
+
+ <a href="#" class="nhsuk-button">Upload AAD user details</a>
+
 </div>
+</div>
+
 {% endblock %}

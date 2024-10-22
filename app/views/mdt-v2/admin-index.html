@@ -1,0 +1,325 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+MDT-MYS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">    
+    <div class="nhsBSA-sidebar-content">
+
+ <!-- Notification banner -->
+      <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 80px;"></div>
+      <div class="nhsuk-width-container" style="margin: 0; padding-left: 30px;">
+
+<!-- Feedback and Notification block starts here -->
+      <p style="color: #000;
+      font-size: 16px;
+      line-height: 1.25;
+      margin-top: -7.5%;
+      padding: 8px 10px 8px;
+      
+      letter-spacing: 1px;">
+    <span style="text-decoration: none;">
+    <strong>Reminder: </strong>
+     You must submit your Pharmacy Quality Scheme (PQS) declaration for 2023/24 by 11:59pm on <br> 1 September 2024.</span></p>
+
+        
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <ul class="nhsuk-grid-row nhsuk-card-group">
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="./admin/account-identifier-re-print/account-identifier-re-print">Account identifier re-print</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>   
+                
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./admin/create-user-management-user/create-user-management-user">Create user management user records in bulk</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li> 
+
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./admin/edit-application/edit-application-settings">Edit application settings</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+
+                  </li> 
+
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./admin/head-office-MI-reports/head-office-MI-reports">Head office MI reports</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+                  
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                      <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                            <a class="nhsuk-card__link" href="./admin/head-office-users/head-office-user">Head Office User Extract</a>
+                          </h2>
+                          <p class="nhsuk-card__description"></p>
+                        </div>
+                      </div>
+    
+                  </li> 
+  
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                      <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                            <a class="nhsuk-card__link" href="./admin/import-and-download-dispenser/import-and-download-dispenser">Import and download dispenser details</a>
+                          </h2>
+                          <p class="nhsuk-card__description"></p>
+                        </div>
+                      </div>
+                        
+                  </li> 
+
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                        <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                          <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                              <a class="nhsuk-card__link" href="./admin/import-covid-vaccine-site/import-covid-vaccine-site">Import Covid Vaccine Site Selection Process</a>
+                            </h2>
+                            <p class="nhsuk-card__description"></p>
+                          </div>
+                        </div>
+      
+                  </li>   
+                      
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      
+                          <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                            <div class="nhsuk-card__content">
+                              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link" href="./admin/import-digital-fp34c/import-digital-fp34c">Import Digital FP34C tolerance check data</a>
+                              </h2>
+                              <p class="nhsuk-card__description"></p>
+                            </div>
+                          </div>
+        
+                  </li> 
+      
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+      
+                          <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                            <div class="nhsuk-card__content">
+                              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link" href="./admin/import-referback/import-referback-data">Import referback data from CIP</a>
+                              </h2>
+                              <p class="nhsuk-card__description"></p>
+                            </div>
+                          </div>
+                            
+                  </li> 
+
+                  <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./admin/import-user-management/import-user-management-user">Import user management user details</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+                  
+                    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                      <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                            <a class="nhsuk-card__link" href="./admin/manage-shared-email/manage-shared-email">Manage shared emails</a>
+                          </h2>
+                          <p class="nhsuk-card__description"></p>
+                        </div>
+                      </div>
+    
+                    </li> 
+  
+                    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                      <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                            <a class="nhsuk-card__link" href="./admin/organisation-unlock/organisation-unlock">Organisation Unlock</a>
+                          </h2>
+                          <p class="nhsuk-card__description"></p>
+                        </div>
+                      </div>
+  
+                    </li> 
+  
+                    <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                      <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                        <div class="nhsuk-card__content">
+                          <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                            <a class="nhsuk-card__link" href="./admin/search-covid-premises/search-covid-premises-and-refrigeration">Search Covid premises and refrigeration submission to delete</a>
+                          </h2>
+                          <p class="nhsuk-card__description"></p>
+                        </div>
+                      </div>
+    
+                    </li>   
+                    
+                      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    
+                        <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                          <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                              <a class="nhsuk-card__link" href="./admin/search-flu-premises/search-flu-premises-and-refrigeration">Search flu premises and refrigeration submission to delete</a>
+                            </h2>
+                            <p class="nhsuk-card__description"></p>
+                          </div>
+                        </div>
+      
+                      </li> 
+    
+                      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+    
+                        <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                          <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                              <a class="nhsuk-card__link" href="./admin/search-flu-submission/search-flu-submission-to-delete">Search flu submission to delete</a>
+                            </h2>
+                            <p class="nhsuk-card__description"></p>
+                          </div>
+                        </div>
+                          
+                      </li> 
+  
+                      <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+  
+                          <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                            <div class="nhsuk-card__content">
+                              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                <a class="nhsuk-card__link" href="./admin/single-gp-mi/single-gp-mi-reports">Single GP MI reports</a>
+                              </h2>
+                              <p class="nhsuk-card__description"></p>
+                            </div>
+                          </div>
+        
+                        </li>   
+                        
+                          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        
+                            <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                              <div class="nhsuk-card__content">
+                                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                  <a class="nhsuk-card__link" href="./admin/single-pharmacy/single-pharmacy-mi-reports">Single pharmacy MI reports</a>
+                                </h2>
+                                <p class="nhsuk-card__description"></p>
+                              </div>
+                            </div>
+          
+                          </li> 
+        
+                          <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+        
+                            <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                              <div class="nhsuk-card__content">
+                                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                                  <a class="nhsuk-card__link" href="./admin/warehouse-search/warehouse-search">Warehouse Search</a>
+                                </h2>
+                                <p class="nhsuk-card__description"></p>
+                              </div>
+                            </div>
+                              
+                          </li>  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options">
+              <li><a href="admin-index">Admin</a></li>
+              <li><a href="CVD-index">Cardio Vascular Disease (CVD)</a></li>
+              <li><a href="#">Contraception</a></li>
+              <li><a href="covid-index">COVID</a></li>
+              <li><a href="#">Covid Premises</a></li>
+              <li><a href="#">Discharge medicine service (DMS)</a></li>
+              <li><a href="#">Flu</a></li>
+              <li><a href="#">FP34C</a></li>
+              <li><a href="#">GP Portal</a></li>
+              <li><a href="#">Lateral Flow Test (LFD)</a></li>
+              <li><a href="#">Ophthalmic</a></li>
+              <li><a href="#">Pharmacy</a></li>
+              <li><a href="pharmacyFirst-index">Pharmacy First</a></li>
+              <li><a href="./PQS/Pharmacy-quality-reports">Pharmacy Quality Scheme (PQS)</a></li>
+              <li><a href="./RTEC/rtec-index">Real Time Exemption Checking (RTEC)</a></li>
+              <li><a href="#">Refer backs / DA)</a></li>
+              <li><a href="#">Smoking Cessation Service (SCS)</a></li>
+              <li><a href="./WT&E/ftp-ptpt-index">Workforce, Training & Education (WT&E)</a></li>
+            </div>
+            </ul>
+              </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

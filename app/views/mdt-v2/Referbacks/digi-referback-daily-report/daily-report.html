@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-RTEC
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -36,7 +36,7 @@ RTEC
         <!-- Change the page title here -->
         <header>
             <h1 class="nhsuk-caption--bottom"></span>
-                RTEC declarations report
+                Digi refer back daily report
             </h1>   
         </header>
 
@@ -44,14 +44,32 @@ RTEC
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Declarations report</p>
+        <p>Select month and year</p>
 
-        <br>
+        <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <label class="nhsuk-label" for="input-width-30">
+                <strong>Month year <option value=""></option></strong>
+              </label>
+            <div class="test-case" style="overflow: visible">
+                <div>
+                    <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true">
+                        <option value="">Select month</option>
+                        <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">June
+                                                                          2024</option>
+                        <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">July
+                                                                          2024</option>                       
+                    </select>
+                </div>
+              </div>
+            </fieldset>
+        </div>
 
-        <a href="confirmation-rtec-declaration" class="nhsuk-button">Download report</a>
-        
-       
-         
+<br>        
+
+        <a href="confirmation-download" class="nhsuk-button">Download report</a>
+
+     </div>
     </div>
 </div>
 {% endblock %}

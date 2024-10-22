@@ -1,0 +1,357 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <!-- Change the page title here -->
+        <header>
+            <h1>
+                Manage Covid treatments
+            </h1>
+        </header>
+
+        <!-- Add your content here -->
+        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <!-- <h2>Context</h2> -->
+
+        <p>View, add or edit Covid treatments</p>
+
+        <br>
+
+        <a href="add-new-covid" class="nhsuk-button">Add a new covid treatment</a>
+
+        <table role="table" class="nhsuk-table-responsive">
+         
+          <thead role="rowgroup" class="nhsuk-table__head">
+            <tr role="row">
+              <th role="columnheader" class="" scope="col">
+                Manufacturer
+              </th>
+            
+              <th role="columnheader" class="" scope="col">
+                Treatment
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Details
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Cost
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Fee
+              </th>
+            
+              <th role="columnheader" class="" scope="col">
+                Effective from
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Effective to
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Snomed code
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Type
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Case Type
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Action
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Manufacturer</span>PFIZER Vaccines
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Treatment</span>Covid Vaccine A
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Details</span>New Virus
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Cost</span>18.00
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Fee</span>1.50
+                  </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective from</span>July 2023
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective to</span>September 2024
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Snomed code</span>3453321100001103
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Type</span>Vaccine
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Case Type</span>Care_home
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Edit</a>
+                </td>
+                </tr>
+          </tbody>
+
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Manufacturer</span>PFIZER Vaccines
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Treatment</span>Covid Vaccine A
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Details</span>New Virus
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Cost</span>18.00
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Fee</span>1.50
+                  </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective from</span>July 2023
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective to</span>September 2024
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Snomed code</span>3453321100001103
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Type</span>Vaccine
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Case Type</span>Care_home
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Edit</a>
+                </td>
+                </tr>
+          </tbody>
+
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Manufacturer</span>PFIZER Vaccines
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Treatment</span>Covid Vaccine A
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Details</span>New Virus
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Cost</span>18.00
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Fee</span>1.50
+                  </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective from</span>July 2023
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective to</span>September 2024
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Snomed code</span>3453321100001103
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Type</span>Vaccine
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Case Type</span>Care_home
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Edit</a>
+                </td>
+                </tr>
+          </tbody>
+
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Manufacturer</span>PFIZER Vaccines
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Treatment</span>Covid Vaccine A
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Details</span>New Virus
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Cost</span>18.00
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Fee</span>1.50
+                  </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective from</span>July 2023
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective to</span>September 2024
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Snomed code</span>3453321100001103
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Type</span>Vaccine
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Case Type</span>Care_home
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Edit</a>
+                </td>
+                </tr>
+          </tbody>
+
+          <tbody class="nhsuk-table__body">
+            <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Manufacturer</span>PFIZER Vaccines
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Treatment</span>Covid Vaccine A
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Details</span>New Virus
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Cost</span>18.00
+                  </td>
+    
+                  <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Fee</span>1.50
+                  </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective from</span>July 2023
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Effective to</span>September 2024
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Snomed code</span>3453321100001103
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Type</span>Vaccine
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Case Type</span>Care_home
+                </td>
+
+                <td role="cell" class="nhsuk-table__cell">
+                    <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Edit</a>
+                </td>
+                </tr>
+          </tbody>
+
+        </table>
+
+        <br>
+        <br>
+    
+    
+
+
+       
+
+    </div>
+</div>
+
+{% endblock %}

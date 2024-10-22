@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-WT&E
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -25,7 +25,8 @@ WT&E
 {% block content %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-two-thirds">
+  
 
 
 
@@ -36,17 +37,19 @@ WT&E
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                Foundation Trainee Pharmacist and <br> Pre-registration Trainee Pharmacy Technician reports
-            </h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+            <h1>Import and download dispensers</h1>
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Download report .csv files</p>
+        <p>Manage dispensers by uploading a CSV file. Download current dispensers list as a CSV file
+        </p>
 
+        <br>
+        
         <table role="table" class="nhsuk-table-responsive">
          
           <thead role="rowgroup" class="nhsuk-table__head">
@@ -64,37 +67,34 @@ WT&E
           <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Registration Report
+                <span class="nhsuk-table-responsive__heading">Report</span>Download CSV report existing dispensers
               </td>
 
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Action</span><a href="#">Download</a>
+                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation-dispensers">Download</a>
               </td>
             </tr>
           </tbody>
 
-          <tbody class="nhsuk-table__body"></tbody>
-            <tr role="row" class="nhsuk-table__row">             
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Payment Report
-              </td>
 
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span><a href="#">Download</a>
-              </td>
-            </tr>
-          </tbody>
         </table>
 
         <br>
-        <br>
-    
-    
+     
+        <div class="govuk-form-group">
+            <label class="nhsuk-heading-s" for="file-upload-1">
+              Upload a file    
+            </label>                      
+            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+        </div>
+         
+<br>
+<br> 
 
-
-       
-
-    </div>
+</div>
 </div>
 
+ <a href="#" class="nhsuk-button nhsuk-u-margin-right-2">Upload a file of user management users</a>
+ <a href="../manage-shared-email/manage-shared-email" class="nhsuk-button nhsuk-button--secondary">Manage shared emails</a>
+ 
 {% endblock %}
