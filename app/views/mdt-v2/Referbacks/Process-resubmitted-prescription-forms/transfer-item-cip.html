@@ -1,0 +1,339 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Referback
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container">
+        
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <!-- Change the page title here -->
+        <header>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">Process resubmitted prescription forms</span>
+            <h1>
+                Transfer items to CIP
+            </h1>
+        </header>
+
+        <!-- Add your content here -->
+        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <!-- <h2>Context</h2> -->
+
+<!-- Tables -->
+
+        <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Prescribed</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    
+                  </th>
+                </tr>
+              </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Product name</strong></td>
+                <td class="nhsuk-table__cell ">Tramadol 100mg modified-release tablets</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Quantity</strong></td>
+                <td class="nhsuk-table__cell ">120</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Additional information</strong></td>
+                <td class="nhsuk-table__cell "></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Dispensed</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+                <tr role="row">
+                  <th role="columnheader" class="" scope="col">
+                    
+                  </th>
+                  <th role="columnheader" class="" scope="col">
+                    
+                  </th>
+                </tr>
+              </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Product name</strong></td>
+                <td class="nhsuk-table__cell ">Tramadol 100mg modified-release tablets</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Quantity</strong></td>
+                <td class="nhsuk-table__cell ">120</td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><strong>Additional information</strong></td>
+                <td class="nhsuk-table__cell "></td>
+              </tr>
+            </tbody>
+          </table>
+
+<!-- warning -->
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" style="margin: -2px;" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-visually-hidden"></span>
+              Reason code: RB1A
+            </strong>
+          </div>
+<br>
+<!-- Table 1 -->
+        <table role="table" class="nhsuk-table-responsive">
+         
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Account
+                </th>
+              
+                <th role="columnheader" class="" scope="col">
+                  Form
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Charge status <br>
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Reason code <br>
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Paper type <br>
+                </th>
+              
+                <th role="columnheader" class="" scope="col">
+                  Prescriber <br>
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Parent/Practice
+                </th>
+              </tr>
+            </thead>
+  
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Account</span>FLG31
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Form</span>25
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Charge status</span>E
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Reason code</span>RB1A
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Paper type</span>FP10SS
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Prescriber</span>834449
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Parent/Practice</span>EPHM
+                </td>
+              </tr>
+            </tbody>
+  
+          </table>
+
+<br>
+<br>
+
+<!-- Table 2 -->
+
+          <table role="table" class="nhsuk-table-responsive">
+         
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Original period 
+                </th>
+              
+                <th role="columnheader" class="" scope="col">
+                  Ex cat
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Presc type 
+                </th>
+  
+                <th role="columnheader" class="" scope="col">
+                  Item number
+                </th>
+  
+              </tr>
+            </thead>
+  
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Original period</span>202406
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Ex cat</span>C
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Presc type</span>ARAIN TA
+                </td>
+  
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Item number</span>1
+                </td>
+                
+              </tr>
+            </tbody>
+  
+          </table>
+
+        <br>
+        <br>
+
+<!-- Tabs -->        
+      
+<h2>Conversation history</h2>
+<details class="nhsuk-details nhsuk-expander">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Show conversation history
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+      <p><strong>Contractor added the following on 09 Sep 2023 13:52:43</strong></p>
+      
+      <p><strong>Supplier: </strong> AAH <strong>Pack size: </strong> 60 <strong>Pack price: </strong> £23.33 </p>
+       
+      <strong>Previous message from CIP operator </strong>       
+
+    </div>
+</details>
+
+
+<!-- Tabs end here -->
+<br>
+<!-- Radios -->
+
+<div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+            Is this ok? 
+        </h1>
+      </legend>
+  
+      <div class="nhsuk-radios nhsuk-radios--inline">
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+            Yes
+          </label>
+        </div>
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+            No
+          </label>
+        </div>
+  
+      </div>
+    </fieldset>
+  
+  </div>
+
+<!-- radios end here -->
+
+        <br>
+
+<!-- fragments -->    
+
+<div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+      <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+        <h1 class="nhsuk-fieldset__heading">
+            KFP form details
+        </h1>
+      </legend>   
+  
+      <div class="nhsuk-date-input" id="example">
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                Fragment Id
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="example-month" name="example[month]" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="nhsuk-date-input__item">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                Form number
+            </label>
+            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="example-year" name="example[year]" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  
+  </div>
+
+  <!-- section ends here -->
+
+<br>
+
+  <a href="" class="nhsuk-button">Submit</a>
+      
+
+    </div>
+</div>
+
+{% endblock %}

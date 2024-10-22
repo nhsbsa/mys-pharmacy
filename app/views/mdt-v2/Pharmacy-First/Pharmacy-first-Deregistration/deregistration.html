@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-RTEC
+Pharmacy First
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -35,26 +35,33 @@ RTEC
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                <span class="nhsuk-caption-xl nhsuk-caption--bottom">Upload RTEC declarations in bulk</span>
-                Complete bulk RTEC declarations
-            </h1>
+            <h1 class="nhsuk-caption--bottom"></span>
+                Pharmacy First deregistration
+            </h1>   
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Complete bulk RTEC declarations by uploading a .csv</p>
-
-        
-        <div class="govuk-form-group">
-            <label class="nhsuk-heading-s" for="file-upload-1">
-              Upload a file    
-            </label>                      
-            <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+        <p>Search for an F Code to deregister</p>
+      
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+              F Code
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+                Enter a valid F Code.
+             
+            <input class="nhsuk-input" id="example" name="example" type="text">
+            
+          </div>
         </div>
-         
+
+<br>        
+
+        <a href="search-deregistration" class="nhsuk-button">Search</a>
+      
     </div>
 </div>
 {% endblock %}

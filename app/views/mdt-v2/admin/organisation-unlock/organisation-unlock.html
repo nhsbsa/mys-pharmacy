@@ -1,0 +1,94 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Admin
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <!-- Change the page title here -->
+        <header>
+            <h1 class="nhsuk-caption--bottom"></span>
+                Edit application Settings
+            </h1>   
+        </header>
+
+        <!-- Add your content here -->
+        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+        <!-- <h2>Context</h2> -->
+
+        <p>Set application parameters</p>
+    
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+               <strong>F Code</strong>
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+                Enter a valid F Code
+            </div>            
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
+        </div>
+
+        <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <label class="nhsuk-label" for="input-width-30">
+                <strong>Select org type</strong>
+              </label>
+            <div class="test-case" style="overflow: visible">
+                <div>
+                    <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true">
+                        <option value="">Select option</option>
+                        <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">CLASSIC
+                                                                          </option>
+                        <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">CLASSIC
+                                                                          </option>                       
+                    </select>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+               <strong>Org name</strong> 
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+                You can enter the organisation name here
+             </div>            
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
+        </div>
+<br>        
+
+        <a href="confirmation-unlock" class="nhsuk-button">Unlock</a>
+
+     </div>
+    </div>
+</div>
+{% endblock %}
