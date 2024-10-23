@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Smoking Cessation Service
+DMS
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -43,41 +43,55 @@ Smoking Cessation Service
         <!-- Change the page title here -->
         <header>
             <h1>
-             SCS payments report
+                DMS Payment reports
                 
             </h1>
         </header>
 
-          <div class="nhsuk-hint" id="contact-hint">
+        <div class="nhsuk-form-group">
+          <h2 class="nhsuk-heading-s">Select period</h2>
+      <div class="nhsuk-hint" id="contact-hint">
         Select a year and month.
       </div>
-    
+      </div>
   
-     
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="year">
+          Year
+        </label>
+        <select class="nhsuk-select" id="year" name="year">
+          <option value="Select" selected>Select option</option>
+          <option value="2024" >2024</option>
+          <option value="2023" >2023</option>
+          <option value="2022" >2022</option>
+          <option value="2021" >2021</option>
+        </select>
+      </div>
+
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="month">
-          Month and Year
+          Month
         </label>
         <select class="nhsuk-select" id="month" name="month">
           <option value="Select" selected>Select option</option>
-          <option value="December" >December 2024</option>
-          <option value="November" >November 2024</option>
-          <option value="October" >October 2024</option>
-          <option value="September" >September 2024</option>
-          <option value="August" >August 2024</option>
-          <option value="July" >July 2024</option>
-          <option value="June" >June 2024</option>
-          <option value="May" >May 2024</option>
-          <option value="April" >April 2024</option>
-          <option value="March" >March 2024</option>
-          <option value="February" >February 2024</option>
-          <option value="January" >January 2024</option>
+          <option value="December" >December</option>
+          <option value="November" >November</option>
+          <option value="October" >October</option>
+          <option value="September" >September</option>
+          <option value="August" >August</option>
+          <option value="July" >July</option>
+          <option value="June" >June</option>
+          <option value="May" >May</option>
+          <option value="April" >April</option>
+          <option value="March" >March</option>
+          <option value="February" >February</option>
+          <option value="January" >January</option>
         </select>
       </div>
   <br>
       
     
-      <a href="download-payment-report" class="nhsuk-button">Download report</a>
+      <a href="payment-reports-download" class="nhsuk-button">Get reports</a>
 
       
     
