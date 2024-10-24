@@ -1,0 +1,221 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+MDT-MYS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">    
+    <div class="nhsBSA-sidebar-content">
+
+ <!-- Notification banner -->
+      <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 80px;"></div>
+      <div class="nhsuk-width-container" style="margin: 0; padding-left: 30px;">
+
+<!-- Feedback and Notification block starts here -->
+      <p style="color: #000;
+      font-size: 16px;
+      line-height: 1.25;
+      margin-top: -7.5%;
+      padding: 8px 10px 8px;
+      
+      letter-spacing: 1px;">
+    <span style="text-decoration: none;">
+    <strong>Reminder: </strong>
+     You must submit your Pharmacy Quality Scheme (PQS) declaration for 2023/24 by 11:59pm on <br> 1 September 2024.</span></p>
+
+    <!--div class="phase-banner"
+    style="margin: 5px ;
+    line-height: 1.25;
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid #bfc1c3;">
+    <p></strong> Your <a href="https://online1.snapsurveys.com/MYS_FEEDBACK_SURVEY?pgn=ServiceDashboard" target="_blank">feedback (opens in a new tab)</a> will help us improve our service.</p>
+
+  </div-->
+<!-- Feedback and Notification block ends here -->
+        
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <ul class="nhsuk-grid-row nhsuk-card-group">
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="./All-payments/Contraception-service-payment">Contraception Submission and Payment Reports</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="./All-payments/COVIDPRE-payment-report">Covid Prem﻿ises & Refrigeration Payment Reports</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="./All-payments/CVD-Claims-Payments-Report">CVD Claims Payments Report</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>   
+                
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/CVD-Incentive-Payements-Report">CVD Incentive Payments Report</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/DMS-payment-report">DMS Paymen﻿t reports</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/FLU-payment-report">Flu Premises & Refrigeration Payments reports</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/LFD-payment-report">Lateral Flow Device Submission 
+                            and Payment Report</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/PF-payment-reports">Pharmacy First Payment Reports</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                    <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                      <div class="nhsuk-card__content">
+                        <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                          <a class="nhsuk-card__link" href="./All-payments/SCS-payment-report">SCS payments report</a>
+                        </h2>
+                        <p class="nhsuk-card__description"></p>
+                      </div>
+                    </div>
+  
+                  </li>   
+
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+
+            <ul>
+              <div class="options" id="options">
+              <li><a href="admin-index">Admin</a></li>
+              <li><a href="CVD-index">Cardio Vascular Disease (CVD)</a></li>
+              <li><a href="contraception-index">Contraception</a></li>
+              <li><a href="covid-index">COVID</a></li>
+              <li><a href="covid-premises-index">Covid Premises</a></li>
+              <li><a href="dms-index">Discharge medicine service (DMS)</a></li>
+              <li><a href="flu-index">Flu</a></li>
+              <li><a href="FP34C-index">FP34C</a></li>
+              <li><a href="LFD-index">Lateral Flow Test (LFD)</a></li>
+              <li><a href="pharmacyFirst-index">Pharmacy First</a></li>
+              <li><a href="pqs-index">Pharmacy Quality Scheme (PQS)</a></li>
+              <li><a href="rtec-index">Real Time Exemption Checking (RTEC)</a></li>
+              <li><a href="refer-back-index">Refer backs / DA)</a></li>
+              <li><a href="SCS-index">Smoking Cessation Service (SCS)</a></li>
+              <li><a href="WT&E-index">Workforce, Training & Education (WT&E)</a></li>
+              <li><a href="all-deregistration-reports">All deregistration reports</a></li>
+              <li><a href="all-payments-reports" class="active">All payment reports</a></li>
+              <li><a href="all-registration-reports">All registration reports</a></li>
+            </div>
+            </ul>
+
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
