@@ -1,0 +1,106 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+DMS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+
+        <!-- Change the page title here -->
+        <header>
+            <h1>
+                DMS Payment reports
+                
+            </h1>
+        </header>
+
+        <div class="nhsuk-form-group">
+          <h2 class="nhsuk-heading-s">Select period</h2>
+      <p>
+        Select a year and month.
+      </p>
+      </div>
+  
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="year">
+          Year
+        </label>
+        <select class="nhsuk-select" id="year" name="year">
+          <option value="Select" selected>Select option</option>
+          <option value="2024" >2024</option>
+          <option value="2023" >2023</option>
+          <option value="2022" >2022</option>
+          <option value="2021" >2021</option>
+        </select>
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="month">
+          Month
+        </label>
+        <select class="nhsuk-select" id="month" name="month">
+          <option value="Select" selected>Select option</option>
+          <option value="December" >December</option>
+          <option value="November" >November</option>
+          <option value="October" >October</option>
+          <option value="September" >September</option>
+          <option value="August" >August</option>
+          <option value="July" >July</option>
+          <option value="June" >June</option>
+          <option value="May" >May</option>
+          <option value="April" >April</option>
+          <option value="March" >March</option>
+          <option value="February" >February</option>
+          <option value="January" >January</option>
+        </select>
+      </div>
+  <br>
+      
+    
+      <a href="DMS-payment-reports-download" class="nhsuk-button">Get reports</a>
+
+      
+    
+
+
+       
+</div>
+</div>
+    </div>
+</div>
+
+{% endblock %}
