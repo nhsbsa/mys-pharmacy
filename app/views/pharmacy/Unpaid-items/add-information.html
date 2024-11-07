@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-
+Unpaid items
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -43,7 +43,7 @@
 
               <header>
                 <h1>
-                  Add item information
+                  Add missing information to item
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Item 1 of 14</Summary></span>
                 </h1>
               </header>
@@ -77,7 +77,7 @@
                 <tbody class="nhsuk-table__body">
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Processing period </span>202207
+                      <span class="nhsuk-table-responsive__heading">Processing period </span>October 2023
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading"> Account type</span>EPHM
@@ -227,11 +227,14 @@
               </details>
 
               <br>
-
+              <h3>Enter the missing information</h3>
                <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="input-width-20">
                   Supplier
                 </label>
+                <div class="nhsuk-hint" id="example-hint">
+                  More than one Manufacturer/Supplier is available for this product. Please indicate which has been supplied, please add the full name of the supplier as there may be more than 1 option for the same company, for example AAH Hillcross, AAH Pharmaceuticals Ltd, Alliance Healthcare, Alliance Pharmaceuticals, etc
+                </div>
                 <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
               </div>
 
@@ -239,46 +242,69 @@
                 <label class="nhsuk-label" for="input-width-20">
                   Pack size
                 </label>
+                <div class="nhsuk-hint" id="example-hint">
+                  The endorsement is incomplete. The size of pack that this item was dispensed from must be present.
+                </div>
                 <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
               </div>
 
               
-              <div class="nhsuk-date-input" id="example">
-                <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
-                  <div class="nhsuk-form-group">
+              
+              <div class="nhsuk-form-group">
+
+                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                 
                     <label class="nhsuk-label nhsuk-date-input__label" for="pounds">
-                    Pack price<br>
-                      Pounds (£)
-                    </label>
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-20" id="pounds" name="pounds"
-                      type="text" pattern="[0-9]*" inputmode="numeric">
+                        Pack price<br>
+
+                  <div class="nhsuk-hint" id="example-hint">
+                    For orders that are not listed in Part VIIIA of the Drug 
+                    Tariff a pack size and basic price (excluding VAT) are 
+                    required. Please state the price per pack and the pack 
+                    size from which the item was dispensed. For example, 
+                    £156.00 for 30, £156.00 / 30.
+                 
                   </div>
-                </div>
-                <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
-                  <div class="nhsuk-form-group">
-                    <p>.</p>
+              
+                  <div class="nhsuk-date-input" id="example">
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="pounds">
+                          Pound
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-6" id="pounds" name="pounds" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    
+                    <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <p>.</p>
+                        </div>
+                      </div>
+
+                    <div class="nhsuk-date-input__item">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-date-input__label" for="pence">
+                          Pence
+                        </label>
+                        <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="pence" name="pence" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    
                   </div>
-                </div>
-                <div class="nhsuk-date-input__item">
-                  <div class="nhsuk-form-group">
-                    <label class="nhsuk-label nhsuk-date-input__label" for="pence">
-                      Pence
-                    </label>
-                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="pence" name="pence"
-                      type="text" pattern="[0-9]*" inputmode="numeric">
-                  </div>
-                </div>
+                </fieldset>
+              
               </div>
 
-                  </div>
-                </div>
-
+  
+                
+                
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label" for="example">
                     Additional information
                   </label>
                   <div class="nhsuk-hint" id="example-hint">
-                    Need to be aware of one RB code (RB7) where this isn’t required.
+                    Enter any additional information that will help us to process this item.
                   </div>
                   <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
                 </div>
