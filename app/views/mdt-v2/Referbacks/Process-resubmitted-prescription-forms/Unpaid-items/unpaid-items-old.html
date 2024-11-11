@@ -1,0 +1,256 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Unpaid items
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Back</a>
+                            </div>
+
+                            <header>
+                                <h1>
+                                    Unpaid items
+                                </h1>
+                            </header>
+    
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-one-quarter">
+                            <h2 class="nhsuk-heading-m">Incomplete (4)</h2>
+                        </div>
+                        <div class="nhsuk-grid-column-two-thirds">
+                            <p>We can't pay these items until you add missing information.</p>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <dl class="nhsuk-summary-list">
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        Title
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Description
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Returned
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        EPS
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Imodium 2mg capsules (Janssen-Cilag Ltd)
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        24/01/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">Add information</a>
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">
+
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Prednisolone 1mg gastro-resistant tablets
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        24/01/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">Add information</a>
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        Paper
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Paper prescription item
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        24/01/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">Add information</a>
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">
+
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Paper prescription item
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        24/01/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">Add information</a>
+                                    </dd>
+                                </div>
+
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-row nhsuk-form-group">
+                        <div class="nhsuk-grid-column-one-quarter">
+                            <h2 class="nhsuk-heading-m">To be processed (1)</h2>
+                        </div>
+                        <div class="nhsuk-grid-column-two-thirds">
+                            <p>You have successfully added information to these items.</p>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+
+                            <dl class="nhsuk-summary-list">
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        Title
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Description
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Updated
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        EPS
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Imodium 2mg capsules (Janssen-Cilag Ltd)
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        30/01/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">View information</a>
+                                    </dd>
+                                </div>
+
+                            </dl>
+                        </div>
+                    </div>
+
+
+                    <div class="nhsuk-grid-row nhsuk-form-group">
+                        <div class="nhsuk-grid-column-one-quarter">
+                            <h2 class="nhsuk-heading-m">Processed (1)</h2>
+                        </div>
+                        <div class="nhsuk-grid-column-two-thirds">
+                            <p>We have processed the information for these items.</p>
+                        </div>
+                    </div>
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+
+                            <dl class="nhsuk-summary-list">
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        Title
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Description
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Updated
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        
+                                    </dd>
+                                </div>
+
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__value">
+                                        EPS
+                                    </dt>
+                                    <dd class="nhsuk-summary-list__value">
+                                        Imodium 2mg capsules (Janssen-Cilag Ltd)
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__value">
+                                        01/02/2017
+                                    </dd>
+                                    <dd class="nhsuk-summary-list__actions">
+                                        <a href="Add information">View information</a>
+                                    </dd>
+                                </div>
+
+                            </dl>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
