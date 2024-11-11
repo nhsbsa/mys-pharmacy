@@ -1,0 +1,890 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Disallowed item
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+    <div class="nhsBSA-sidebar-wrapper">
+        <div class="nhsBSA-sidebar-content">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-main-wrapper" id="maincontent">
+
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-full">
+
+                            <div class="nhsuk-back-link">
+                                <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                                    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                                        </path>
+                                    </svg>
+                                    Back</a>
+                            </div>
+
+                            <h1>
+                                <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+                                Disallowed and challenged items
+                              </h1>
+                             
+    
+                        </div>
+                    </div>
+                   
+                    <p>Disallowed items are EPS or paper prescription items that we may not reimburse.</p>
+                       
+                    <p>If you disagree with a disallowed item, you can challenge the decision.</p>
+                        
+                        <h2> Disallowed items (15)</h2>
+             
+                    <details class="nhsuk-details nhsuk-expander">
+                        <summary class="nhsuk-details__summary">
+                          <span class="nhsuk-details__summary-text">
+                            EPS prescription items (14 items)
+                          </span>
+                        </summary>
+                        <div class="nhsuk-details__text">
+                            <div class="nhsuk-grid-row">
+                               
+                            </div>
+                             
+                            <table class="nhsuk-table">
+                                <caption class="nhsuk-table__caption">
+                                   </caption>
+                                <thead role="rowgroup" class="nhsuk-table__head">
+                                  <tr role="row">
+                                    <tr role="row">
+                                      <th role="columnheader" class="" scope="col">
+                                        Part month of the <br>prescription item 
+                                    </th>
+                                        <th role="columnheader" class="" scope="col">
+                                          Number of months before the item is deleted 
+                                  </th>  
+                                    <th role="columnheader" class="" scope="col">
+                                      Name of prescription item
+                                    </th>
+                                    <th role="columnheader" class="" scope="col">
+                                      Reason item disallowed 
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody class="nhsuk-table__body">
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Sulfasalazine 250mg/5ml oral suspension</td>
+                                    <td class="nhsuk-table__cell "> <a href="disallowed-received-eps">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Carmellose 0.5% eye drops</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Dexamethasone 0.1% eye drops preservative free</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Sodium chloride 0.9% infusion 1litre bags</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Prednisolone 1mg gastro-resistant tablets</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Paracetamol 500mg caplets (Galpharm International Ltd)</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Metformin 500mg modified-release tablets (Actavis UK Ltd)</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">DDuoResp Spiromax 320micrograms/dose / 9micrograms/dose dry <br>powder inhaler (Teva UK Ltd)</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Propranolol 160mg modified-release capsules</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Sodium chloride 0.9% irrigation solution 25ml sachets</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Micropore tape (3M Health Care Ltd)</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Nurse It sterile dressing pack with medium/large gloves <br>(Medicareplus International Ltd)</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Hypodermic insulin needles for pre-filled / reusable pen <br>injectors screw on 8mm/30gauge</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                  <tr role="row" class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">October 2023</td>
+                                    <td class="nhsuk-table__cell">2</td>
+                                    <td class="nhsuk-table__cell">Cavilon No Sting barrier film</td>
+                                    <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                        </details>
+                    
+                        <details class="nhsuk-details nhsuk-expander">
+                            <summary class="nhsuk-details__summary">
+                              <span class="nhsuk-details__summary-text">
+                                Paper prescription items (1 items)
+                              </span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+                                <div class="nhsuk-grid-row">
+                                   
+                                </div>
+                                 
+                                <table class="nhsuk-table">
+                                    <caption class="nhsuk-table__caption">
+                                       </caption>
+                                    <thead role="rowgroup" class="nhsuk-table__head">
+                                    
+                                      <tr role="row">  
+                                        <th role="columnheader" class="" scope="col">
+                                        Part month of the <br>prescription item 
+                                    </th>
+                                        <th role="columnheader" class="" scope="col">
+                                          Number of months <br>before the item is deleted 
+                                  </th>  
+                                        <th role="columnheader" class="" scope="col">
+                                          Name of prescription item
+                                        </th>
+                                        <th role="columnheader" class="" scope="col">
+                                          Reason item disallowed
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="nhsuk-table__body">
+                                      <tr role="row" class="nhsuk-table__row">
+                                        <td class="nhsuk-table__cell">October 2023</td>
+                                        <td class="nhsuk-table__cell">2</td>
+                                        <td class="nhsuk-table__cell">Item name not available</td>
+                                        <td class="nhsuk-table__cell "> <a href="disallowed-received-paper">View item</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                            </details>
+                  
+                            <br>
+
+                            <h2> Challenged items (3)</h2>
+                            
+                            <p>You have submitted a challenge to these disallowed items.</p>
+
+                            <details class="nhsuk-details nhsuk-expander">
+                              <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">
+                                  EPS prescription items (0 items)
+                                </span>
+                              </summary>
+                              <div class="nhsuk-details__text">
+                                  <div class="nhsuk-grid-row">
+                                     
+                                  </div>
+                                   
+                                  <h2 class="nhsuk-heading-m">There is no missing EPS prescription information.</h2>
+                                  </div>
+                              </details>
+
+                            <details class="nhsuk-details nhsuk-expander">
+                              <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">
+                                  Paper prescription items (3 items)
+                                </span>
+                              </summary>
+                              <div class="nhsuk-details__text">
+                                  <div class="nhsuk-grid-row">
+                                     
+                                  </div>
+                                   
+                                  <table class="nhsuk-table">
+                                      <caption class="nhsuk-table__caption">
+                                         </caption>
+                                      <thead role="rowgroup" class="nhsuk-table__head">
+                                        <tr role="row">
+                                          <th role="columnheader" class="" scope="col">
+                                            Part month of the <br>prescription item 
+                                        </th>
+                                            <th role="columnheader" class="" scope="col">
+                                              Number of months <br>before the item is deleted 
+                                      </th>  
+                                          <th role="columnheader" class="" scope="col">
+                                            Name of prescription item
+                                          </th>
+                                          <th role="columnheader" class="" scope="col">
+                                            Action
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="nhsuk-table__body">
+                                        <tr role="row" class="nhsuk-table__row">
+                                          <td class="nhsuk-table__cell">October 2023</td>
+                                          <td class="nhsuk-table__cell">2</td>
+                                          <td class="nhsuk-table__cell">Item name not available</td>
+                                          <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                         </tr>
+                                      </tbody>
+
+                                      <tbody class="nhsuk-table__body">
+                                        <tr role="row" class="nhsuk-table__row">
+                                          <td class="nhsuk-table__cell">October 2023</td>
+                                          <td class="nhsuk-table__cell">2</td>
+                                          <td class="nhsuk-table__cell">Item name not available</td>
+                                          <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                         </tr>
+                                      </tbody>
+
+                                      <tbody class="nhsuk-table__body">
+                                        <tr role="row" class="nhsuk-table__row">
+                                          <td class="nhsuk-table__cell">October 2023</td>
+                                          <td class="nhsuk-table__cell">2</td>
+                                          <td class="nhsuk-table__cell">Item name not available</td>
+                                          <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                         </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                              </details>
+
+
+                              <h2> Successfully challenged items (8)</h2>
+
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    EPS prescription items (5 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                             Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Imuvac vaccine suspension for injection 0.5ml pre-filled syringes</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Citalopram 10mg tablets</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Nicorette 15mg patches</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Cardicor 10mg tablets (Merck Serono Ltd)</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Meningitec vaccine suspension for injection 0.5ml vials</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                </details>
+                              
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    Paper prescription items (3 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                              Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                              </details>
+                                    <br>
+
+                              <h2> Unsuccessfully challenged items (8)</h2>
+
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    EPS prescription items (5 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                             Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Imuvac vaccine suspension for injection 0.5ml pre-filled syringes</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Citalopram 10mg tablets</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Nicorette 15mg patches</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Cardicor 10mg tablets (Merck Serono Ltd)</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Meningitec vaccine suspension for injection 0.5ml vials</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                </details>
+                              
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    Paper prescription items (3 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                              Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+</details>
+                              <br>
+                             <hr>
+                             <br>
+                              <h2>Archived items</h2>
+
+                              <p>TThese are items which you have archived.</p>
+
+                              <p>We will delete these items after 18 months.</p>
+
+                              <h2>Disallowed items (8)</h2>
+
+                              <p>These are items which you have not previously challenged.</p>
+
+                              <p>You can still challenge any item that you have archived.</p>
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    EPS prescription items (5 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                              Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Imuvac vaccine suspension for injection 0.5ml pre-filled syringes</td>
+                                            <td class="nhsuk-table__cell "> <a href="disallowed-received-eps-archived">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Citalopram 10mg tablets</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                        
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Nicorette 15mg patches</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Cardicor 10mg tablets (Merck Serono Ltd)</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Meningitec vaccine suspension for injection 0.5ml vials</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                </details>
+                              
+                              <details class="nhsuk-details nhsuk-expander">
+                                <summary class="nhsuk-details__summary">
+                                  <span class="nhsuk-details__summary-text">
+                                    Paper prescription items (3 items)
+                                  </span>
+                                </summary>
+                                <div class="nhsuk-details__text">
+                                    <div class="nhsuk-grid-row">
+                                       
+                                    </div>
+                                     
+                                    <table class="nhsuk-table">
+                                        <caption class="nhsuk-table__caption">
+                                           </caption>
+                                        <thead role="rowgroup" class="nhsuk-table__head">
+                                          <tr role="row">
+                                            <th role="columnheader" class="" scope="col">
+                                              Name of prescription item
+                                            </th>
+                                            <th role="columnheader" class="" scope="col">
+                                              Action
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="disallowed-received-paper-archived">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+  
+                                        <tbody class="nhsuk-table__body">
+                                          <tr role="row" class="nhsuk-table__row">
+                                            <td class="nhsuk-table__cell">Item name not available</td>
+                                            <td class="nhsuk-table__cell "> <a href="">View item</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                </details>
+
+                                <br>
+
+                                <h2> Successfully challenged items (8)</h2>
+
+                                <details class="nhsuk-details nhsuk-expander">
+                                  <summary class="nhsuk-details__summary">
+                                    <span class="nhsuk-details__summary-text">
+                                      EPS prescription items (5 items)
+                                    </span>
+                                  </summary>
+                                  <div class="nhsuk-details__text">
+                                      <div class="nhsuk-grid-row">
+                                         
+                                      </div>
+                                       
+                                      <table class="nhsuk-table">
+                                          <caption class="nhsuk-table__caption">
+                                             </caption>
+                                          <thead role="rowgroup" class="nhsuk-table__head">
+                                            <tr role="row">
+                                              <th role="columnheader" class="" scope="col">
+                                                Name of prescription item
+                                              </th>
+                                              <th role="columnheader" class="" scope="col">
+                                               Action
+                                              </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Imuvac vaccine suspension for injection 0.5ml pre-filled syringes</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Citalopram 10mg tablets</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                          
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Nicorette 15mg patches</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Cardicor 10mg tablets (Merck Serono Ltd)</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Meningitec vaccine suspension for injection 0.5ml vials</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                  </details>
+                                
+                                <details class="nhsuk-details nhsuk-expander">
+                                  <summary class="nhsuk-details__summary">
+                                    <span class="nhsuk-details__summary-text">
+                                      Paper prescription items (3 items)
+                                    </span>
+                                  </summary>
+                                  <div class="nhsuk-details__text">
+                                      <div class="nhsuk-grid-row">
+                                         
+                                      </div>
+                                       
+                                      <table class="nhsuk-table">
+                                          <caption class="nhsuk-table__caption">
+                                             </caption>
+                                          <thead role="rowgroup" class="nhsuk-table__head">
+                                            <tr role="row">
+                                              <th role="columnheader" class="" scope="col">
+                                                Name of prescription item
+                                              </th>
+                                              <th role="columnheader" class="" scope="col">
+                                                Action
+                                              </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                </details>
+                                      <br>
+
+                                <h2> Unsuccessfully challenged items (8)</h2>
+
+                                <details class="nhsuk-details nhsuk-expander">
+                                  <summary class="nhsuk-details__summary">
+                                    <span class="nhsuk-details__summary-text">
+                                      EPS prescription items (5 items)
+                                    </span>
+                                  </summary>
+                                  <div class="nhsuk-details__text">
+                                      <div class="nhsuk-grid-row">
+                                         
+                                      </div>
+                                       
+                                      <table class="nhsuk-table">
+                                          <caption class="nhsuk-table__caption">
+                                             </caption>
+                                          <thead role="rowgroup" class="nhsuk-table__head">
+                                            <tr role="row">
+                                              <th role="columnheader" class="" scope="col">
+                                                Name of prescription item
+                                              </th>
+                                              <th role="columnheader" class="" scope="col">
+                                               Action
+                                              </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Imuvac vaccine suspension for injection 0.5ml pre-filled syringes</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Citalopram 10mg tablets</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                          
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Nicorette 15mg patches</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Cardicor 10mg tablets (Merck Serono Ltd)</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Meningitec vaccine suspension for injection 0.5ml vials</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-eps">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                  </details>
+                                
+                                <details class="nhsuk-details nhsuk-expander">
+                                  <summary class="nhsuk-details__summary">
+                                    <span class="nhsuk-details__summary-text">
+                                      Paper prescription items (3 items)
+                                    </span>
+                                  </summary>
+                                  <div class="nhsuk-details__text">
+                                      <div class="nhsuk-grid-row">
+                                         
+                                      </div>
+                                       
+                                      <table class="nhsuk-table">
+                                          <caption class="nhsuk-table__caption">
+                                             </caption>
+                                          <thead role="rowgroup" class="nhsuk-table__head">
+                                            <tr role="row">
+                                              <th role="columnheader" class="" scope="col">
+                                                Name of prescription item
+                                              </th>
+                                              <th role="columnheader" class="" scope="col">
+                                                Action
+                                              </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+    
+                                          <tbody class="nhsuk-table__body">
+                                            <tr role="row" class="nhsuk-table__row">
+                                              <td class="nhsuk-table__cell">Item name not available</td>
+                                              <td class="nhsuk-table__cell "> <a href="challenged-received-paper">View item</a></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+</details>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
