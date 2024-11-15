@@ -49,8 +49,12 @@ Financial reports
 
     
     
-     
-    <p>Reports are available for a maximum of 7 years.</p>
+    <p>These reports refer to payment month, which is the month you were paid after you submitted a claim. </p>
+
+    <p>Reports are available for the previous 7 years.</p>
+
+    <p>Reports containing data over a period greater than 12 months result in a large file size and will take a long time to download. For reports spanning several years, we advise generating multiple reports split into 12-month periods.</p>
+   
    
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
@@ -67,7 +71,7 @@ Financial reports
           <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
             aria-controls="conditional-contact-1" aria-expanded="false">
           <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-            Single range
+            Single month
           </label>
         </div>
 
@@ -83,7 +87,7 @@ Financial reports
                   </h2>
                 </legend>
                 <div class="nhsuk-hint" id="example-hint">
-                  For example, 3 2018
+                  Enter the payment month and year of report <br>For example, 3 2018
                 </div>
             
                
@@ -116,15 +120,14 @@ Financial reports
           <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
             aria-controls="conditional-contact-2" aria-expanded="false">
           <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-            Month range
+            Range of months
           </label>
         </div>
 
         <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
 
           <br> 
-          <p>Limit the range of months that can be downloaded ? Text for this.</p>
-          
+
           <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
               <legend class="nhsuk-fieldset__legend nhsuk-label--l">
@@ -133,7 +136,8 @@ Financial reports
                 </h2>
               </legend>
               <div class="nhsuk-hint" id="example-hint">
-                For example, 3 2018
+                Enter the payment month and year of the start of the report 
+                <br>For example, 3 2018
               </div>
           
              
@@ -168,7 +172,8 @@ Financial reports
                   </h1>
                 </legend>
                 <div class="nhsuk-hint" id="example-hint">
-                  For example, 3 2019
+                  Enter the payment month and year of the end of the report
+                  <br> For example, 3 2019
                 </div>
             
                
