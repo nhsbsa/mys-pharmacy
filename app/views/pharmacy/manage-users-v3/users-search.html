@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Financial reports
+Manage users
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -26,6 +26,7 @@ Financial reports
   <div class="nhsuk-grid-column-full">
 
 
+   
     {{ backLink({
       "href": "javascript:history.go(-1)",
       "text": "Go back"
@@ -36,41 +37,52 @@ Financial reports
     <header>
       <h1>
          
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial reports</span>
-         Find a pharmacy
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Admin</span>
+         Manage users
       </h1>
     </header>
+
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
   
-    <p >Use this service to download monthly reports for your pharmacies.</p>
-   <br>
-   
-   <div class="nhsuk-form-group">
-    <label class="nhsuk-label" for="ODS code">
-     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-       <h1 class="nhsuk-fieldset__heading">
-         Pharmacy
-       </h1>
-     </label>
-     </legend>
-   <div class="nhsuk-hint" id="hint">Enter ODS code, YP code, ES code, name of group or location</div>
-   
-   <input class="nhsuk-input nhsuk-input--width-20" id="ODS code" name="ODS code" type="text">
-   </div>
-       
-       
-       
-    <a class="nhsuk-button" href="reports-range">Next</a>
 
-    
+   
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Find a user
+            </h1>
+          </legend>
+          <div class="nhsuk-hint" id="example-hint">
+            Search by first name, email or ODS/F code
+          </div>
+        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+        </div>
+
+       
+       
+       
+    <a class="nhsuk-button" href="users-search-result">Search</a>
+
+    <a href="create-users" class="nhsuk-button nhsuk-button--secondary">Add a new user</a>
+
+    <br>
+    <br>
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
-    </form>
-    <!-- End of content -->
+    
+    <div class="nhsuk-hint" id="example-hint">
+      You can sort this table by Name or by F Code by selecting the relevant column title.
+    </div>
+   
+
+   <hr>
+   <p>We could not find any user.</p>
+   <p> <a href="">Show all users</a></p>
 
   </div>
 </div>
