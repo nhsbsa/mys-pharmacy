@@ -1,0 +1,93 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+
+        <!-- Change the page title here -->
+        <header>
+          <span class="nhsuk-caption-xl">Manage FP34C claim periods</span>
+            <h1>
+              Import and download FP34C claim periods
+            </h1>
+        </header>
+
+       <p>Manage FP34C claim periods by uploading a CSV file.
+        Download current periods list as a CSV file.</p>
+
+      <table class="nhsuk-table">
+        <thead role="rowgroup" class="nhsuk-table__head">
+          <tr role="row">
+            <th role="columnheader" class="" scope="col">
+              CSV Report
+            </th>
+            <th role="columnheader" class="" scope="col">
+             Action
+            </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">CSV report for existing claim periods</td>
+            <td class="nhsuk-table__cell "><a href="">Download</a></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="file-upload-1" style="font-weight: 800;">
+          Upload a file
+        </label>
+        <p>Upload a CSV file of FP34C claim periods and replace existing periods in the database</p>
+        <input class="nhsuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" style="font-size: larger;">
+      </div>
+
+      <br>
+  
+      <a href="confirmation-upload" class="nhsuk-button">Upload claim periods</a>
+
+      <a href="FP34C-index" class="nhsuk-button nhsuk-button--secondary">Back to FP34C index</a>
+
+</div>
+</div>
+    </div>
+</div>
+
+{% endblock %}
