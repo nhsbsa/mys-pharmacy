@@ -33,7 +33,7 @@ Manage users
       }) }}
     
    
-
+      <div class="nhsuk-grid-column-two-thirds">
     <!-- Change the page title here -->
     <header>
       <h1>
@@ -45,6 +45,7 @@ Manage users
 
    
     <div class="nhsuk-form-group">
+      
       <label class="nhsuk-label" for="input-width-20">
         Full name
       </label>
@@ -67,43 +68,59 @@ Manage users
     
 
     <br>
-    <div class="nhsuk-form-group">
+   
 
-      <fieldset class="nhsuk-fieldset">
+    <div class="nhsuk-form-group">
+    
+      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-fieldset__heading">
             User permissions
           </h1>
         </legend>
-    
-        <div class="nhsuk-radios">
-    
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="mobile" aria-describedby="example-hints-1-item-hint">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+  
+        <div class="nhsuk-hint" id="nationality-hint">
+          Select all options that are relevant.
+        </div>
+  
+        <div class="nhsuk-checkboxes">
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="pharmacy" aria-describedby="item-hint-1">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
               Pharmacy
             </label>
-            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
               Access to pharmacy submissions and surveys.
             </div>
           </div>
-    
-          <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="landline" aria-describedby="example-hints-2-item-hint">
-            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="financial" aria-describedby="item-hint-2">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+              Financial Reports
+            </label>
+            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+              Access to Eschedule data file, Prescription item report, Schedule of payments, Supplementary report.
+            </div>
+          </div>
+  
+          <div class="nhsuk-checkboxes__item">
+            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="managment" aria-describedby="item-hint-3">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
               Management
             </label>
-            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
               Access to pharmacy reports, payment schedules and user management.
             </div>
           </div>
-    
+  
         </div>
       </fieldset>
-    
+  
     </div>
-       
-       
+    
+    
        
     <a class="nhsuk-button" href="confirmation-new">Add user</a>
 
