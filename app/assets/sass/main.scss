@@ -77,6 +77,30 @@
   padding: 0px;
 }
 
+.first-nav ul li {
+  list-style: none;
+  margin-left:20px; 
+  padding-bottom:20px;
+}
+
+.sec-nav ul li {
+  list-style: none;
+  margin-left:60px; 
+  padding-bottom:20px;
+}
+
+#special-li {
+  list-style: none;
+  margin-left:20px; 
+  padding-bottom:20px;
+}
+
+#second-li{
+  list-style: none;
+  margin-left:60px; 
+  padding-bottom:20px;
+}
+
 .side-nav li a {
   display: block;
   color: #005EB8;
