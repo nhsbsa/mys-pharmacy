@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-WT&E
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -36,25 +36,42 @@ WT&E
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                Foundation Trainee Pharmacist and <br> Pre-registration Trainee Pharmacy Technician reports
-            </h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">Account identifier re-print</span>
+            <h1>Account identifier submission search results</h1>
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Download report .csv files</p>
+        <p>Account identifier submission search results</p>
 
+        <br>
+        
         <table role="table" class="nhsuk-table-responsive">
          
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">
-                Report
+                Dispenser code
               </th>
             
+              <th role="columnheader" class="" scope="col">
+                First Name
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Surname
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Submission date
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Part Month
+              </th>
+
               <th role="columnheader" class="" scope="col">
                 Action
               </th>
@@ -64,37 +81,37 @@ WT&E
           <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Registration Report
+                <span class="nhsuk-table-responsive__heading">Dispenser code</span>FA002
               </td>
 
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation">Download report</a>
+                <span class="nhsuk-table-responsive__heading">First Name</span>John
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Surname</span>Smith
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Submission date</span>02/09/2024  00:00
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Part month</span>202408
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation">Download</a>
               </td>
             </tr>
           </tbody>
 
-          <tbody class="nhsuk-table__body"></tbody>
-            <tr role="row" class="nhsuk-table__row">             
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Payment Report
-              </td>
 
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span><a href="confirmation">Download report</a>
-              </td>
-            </tr>
-          </tbody>
         </table>
 
         <br>
         <br>
     
-        
-
-        <a href="confirmation" class="nhsuk-button">Downloaad All</a>
-
-
-       
 
     </div>
 </div>

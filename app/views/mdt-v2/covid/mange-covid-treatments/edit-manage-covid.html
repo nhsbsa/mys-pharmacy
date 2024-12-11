@@ -1,0 +1,210 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Covid
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-grid-row">
+
+        
+        <!-- Change the page title here -->
+        <header>
+             <h1>
+              Edit Covid treatment
+            </h1>
+        </header>
+
+
+       <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Manufacturer
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Manufacturer's name, up to 60 characters
+           </div>
+           <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint">PFIZER VACCINES</textarea> 
+       </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Treatment
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Treatment name, up to 300 characters
+           </div>
+           <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint">COVID VACCINE A</textarea>      
+        </div>
+      
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Snomed code
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Snomed code, up to 20 characters
+           </div>
+           <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint">34533211000001103</textarea> 
+       </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Details
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          Must include 2 comma separated value, expected quantity dispensed (Number or Decimal) and Expected Unit of Measure (Letters Only) i.e '10.5, ML or 10,ML'                       
+           </div>
+        <input class="nhsuk-input nhsuk-input--width-full" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric" value="NEW VIRUS">
+      </div>
+      
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+          <label class="nhsuk-label" for="input-width-20">
+            Period effective from
+          </label>
+
+          <div class="test-case" style="overflow: visible;">
+            <div>
+                <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true" style="width: 630px;">
+                    <option value="">Select option</option>
+                    <option value="June">June 2023</option>
+                    <option value="July" selected>July 2023</option>
+                    <option value="August">August 2023</option> 
+                    <option value="September">September 2023</option>
+                </select>
+            </div>
+          </div>
+        </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <label class="nhsuk-label" for="input-width-20">
+              Period effective to
+            </label>
+            <div class="test-case" style="overflow: visible">
+              <div>
+                  <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true" style="width: 630px;">
+                      <option value="">Select option</option>
+                      <option value="June">June 2024</option>
+                      <option value="July">July 2024</option>
+                      <option value="August">August 2024</option> 
+                      <option value="September" selected>September 2024</option>
+                  </select>
+              </div>
+            </div>
+          </fieldset>  
+        </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Cost
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          You are only allowed a number with 2 digits up to 50 and optionally up to 2 decimal places i.e. 10.23 or 10
+           </div>
+        <input class="nhsuk-input nhsuk-input--width-full" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric" value="18.00">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="example-with-hint-text">
+          Fee
+        </label>
+        <div class="nhsuk-hint" id="example-with-hint-text-hint">
+          You are only allowed a number with 2 digits up to 50 and optionally up to 2 decimal places i.e. 10.23 or 10
+           </div>
+        <input class="nhsuk-input nhsuk-input--width-full" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric" value="1.50">
+      </div>
+
+            
+
+        <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <label class="nhsuk-label" for="input-width-60">
+                Type
+              </label>
+
+              <div class="test-case" style="overflow: visible" >
+                <div>
+                    <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true" style="width: 630px;">
+                        <option value="">Select option</option>
+                        <option value="Vaccine" selected>Vaccine
+                        </option>
+                        <option value="Other">Other
+                        </option>
+                        
+                    </select>
+                </div>
+              </div>
+            </fieldset>
+            </div>
+
+
+        <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <label class="nhsuk-label" for="input-width-20">
+                Case Type
+              </label>
+              <div class="test-case" style="overflow: visible">
+                <div>
+                    <select id="influenza-vaccine" class="typeahead js-hidden nhsuk-select" name="influenza-vaccine" aria-required="true" style="width: 630px;">
+                        <option value="">Select option</option>
+                        <option value="Standard">Standard
+                        </option>
+                        <option value="Long-Stay Care Home or Long-Stay Residential" selected>Long-Stay Care Home or Long-Stay Residential
+                        </option>
+                        <option value="Home of Housebound">Home of Housebound
+                        </option> 
+                        <option value="Other Residential Care Settings, Immunosuppressed Individuals, or At Risk Children Age 5-15">Other Residential Care Settings, Immunosuppressed Individuals, or At Risk Children Age 5-15  
+                        </option>
+                        <option value="Other">Other
+                        </option>    
+                        <option value="5-11 Year old (not at risk)">5-11 Year old (not "at risk")
+                        </option> 
+                    </select>
+                </div>
+              </div>
+            </fieldset>  
+          </div>
+<br>    
+       
+     
+      <a href="confirmation-edit" class="nhsuk-button">Save vaccine</a>
+</div>
+</div>
+    </div>
+</div>
+
+{% endblock %}

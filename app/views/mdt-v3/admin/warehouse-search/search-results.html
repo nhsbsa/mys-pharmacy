@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-WT&E
+Admin
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -36,27 +36,46 @@ WT&E
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-                Foundation Trainee Pharmacist and <br> Pre-registration Trainee Pharmacy Technician reports
-            </h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+            <h1>Warehouse search results</h1>
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Download report .csv files</p>
+        <p>You search between 01 June 2024 and 01 July 2024 has produced 1 results. You are currently browsing page 1 out of 1.</p>
+
+        <br>
+        <h3>Result timestamp: 03 June 2024 11:16</h3>
+        <strong>Item 1</strong>
 
         <table role="table" class="nhsuk-table-responsive">
          
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">
-                Report
+                Progressing period
               </th>
             
               <th role="columnheader" class="" scope="col">
-                Action
+                Account type
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Account
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Fragment
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                Form
+              </th>
+
+              <th role="columnheader" class="" scope="col">
+                EPS/Prescription UUID
               </th>
             </tr>
           </thead>
@@ -64,37 +83,38 @@ WT&E
           <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Registration Report
+                <span class="nhsuk-table-responsive__heading">Progressing period</span>202403
               </td>
 
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation">Download report</a>
+                <span class="nhsuk-table-responsive__heading">Account type</span>EPHM
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Account</span>FA002
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Fragment</span>O
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">Form</span>10
+              </td>
+
+              <td role="cell" class="nhsuk-table__cell">
+                <span class="nhsuk-table-responsive__heading">EPS/Prescription UUID</span>
               </td>
             </tr>
           </tbody>
-
-          <tbody class="nhsuk-table__body"></tbody>
-            <tr role="row" class="nhsuk-table__row">             
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Foundation Trainee Pharmacist and Pre-registration Trainee Pharmacy Technician Payment Report
-              </td>
-
-              <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading"></span><a href="confirmation">Download report</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+       </table>
 
         <br>
-        <br>
-    
         
-
-        <a href="confirmation" class="nhsuk-button">Downloaad All</a>
-
-
-       
+        <h3>Prescription image</h3>
+        <figure class="nhsuk-image">
+            <img class="nhsuk-image__img" src="/images/image_png.png" alt="precription form.">
+          </figure>
 
     </div>
 </div>
