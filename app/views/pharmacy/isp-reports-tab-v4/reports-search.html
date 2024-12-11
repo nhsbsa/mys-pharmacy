@@ -23,10 +23,9 @@ Financial reports
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
-   
     {{ backLink({
       "href": "javascript:history.go(-1)",
       "text": "Go back"
@@ -37,52 +36,41 @@ Financial reports
     <header>
       <h1>
          
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial reports</span>
-         Manage users
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Admin</span>
+         Financial Reports
       </h1>
     </header>
-
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
   
-
+    <p >Download financial reports such as prescription item reports and schedules of payments for your pharmacies.</p>
+   <br>
    
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Find a user
-            </h1>
-          </legend>
-          <div class="nhsuk-hint" id="example-hint">
-            Enter first name, email or ODS code
-          </div>
-        <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
-        </div>
-
+   <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="ODS code">
+     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+       <h1 class="nhsuk-fieldset__heading">
+       Find a pharmacy
+       </h1>
+     </label>
+     </legend>
+   <div class="nhsuk-hint" id="hint">Enter the ODS code, YP code, group name or location, such as postcode or town.</div>
+   
+   <input class="nhsuk-input nhsuk-input--width-20" id="ODS code" name="ODS code" type="text">
+   </div>
        
        
        
-    <a class="nhsuk-button" href="users-search-result">Search</a>
-
-    <a href="create-users" class="nhsuk-button nhsuk-button--secondary">Add a new user</a>
-
-    <br>
-    <br>
-    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+    <a class="nhsuk-button" href="reports-range">Search</a>
 
     
-    <div class="nhsuk-hint" id="example-hint">
-      Sort this table by name or ODS code by selecting the column title
-    </div>
-   
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
-   <hr>
-   <p>We could not find any user.</p>
-   <p> <a href="">Show all users</a></p>
+    </form>
+    <!-- End of content -->
 
   </div>
 </div>
