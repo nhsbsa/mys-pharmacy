@@ -1,0 +1,121 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'isp-non-mys.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Financial reports
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    
+
+      <div class="nhsuk-grid-column-full">
+
+        <div class="nhsuk-back-link">
+          <a class="nhsuk-back-link__link" href="javascript:history.back()">
+            <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+            </svg>
+            Go back</a>
+        </div>
+
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial Reports</span>
+        Home page
+      </h1>
+
+      <!-- <h2>Request for temporary suspension of services</h2>
+        <p>You must submit requests for any planned closures that are scheduled for your pharmacy. Requests must be submitted 90 days in advance of the temporary suspension of service.</p>
+        <div class="nhsuk-action-link">
+          <a class="nhsuk-action-link__link" href="planned-length">
+            <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+            </svg>
+            <span class="nhsuk-action-link__text">Request a temporary suspension of service</span>
+          </a>
+        </div> -->
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+          
+        <br>
+
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+          <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content nhsuk-card__content--primary">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="reports-range">Download financial reports</a>
+                </h2>
+                <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers</p>
+                
+                <!-- SVG icon positioned to the right -->
+                <svg class="nhsuk-icon icon-right" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+                  <circle cx="13.333" cy="13.333" r="13.333" fill="#025db8" />
+                  <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
+                    <path d="M15.438 13l-3.771 3.771" />
+                    <path data-name="Path" d="M11.667 9.229L15.438 13" />
+                  </g>
+                </svg>
+                
+              </div>
+            </div>
+          </li>
+
+          <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable">
+              <div class="nhsuk-card__content nhsuk-card__content--primary">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="manage-users/users-search">User management</a>
+                </h2>
+                <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers</p>
+                
+                <!-- SVG icon positioned to the right -->
+                <svg class="nhsuk-icon icon-right" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false">
+                  <circle cx="13.333" cy="13.333" r="13.333" fill="#025db8" />
+                  <g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667">
+                    <path d="M15.438 13l-3.771 3.771" />
+                    <path data-name="Path" d="M11.667 9.229L15.438 13" />
+                  </g>
+                </svg>
+                
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        
+        <style>
+          .nhsuk-card__content {
+            position: relative;
+            padding-right: 40px; /* Add padding to prevent overlap */
+          }
+        
+          .icon-right {
+            position: absolute;
+            top: 50%;
+            right: 15px; /* Adjust as needed to align with card edge */
+            transform: translateY(-50%);
+          }
+        </style>
+<!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
