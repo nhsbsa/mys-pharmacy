@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'isp-non-mys.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Financial reports
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+
+              <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Manage users</span>
+        User details
+      </h1>
+    </header>
+
+   
+
+              <dl class="nhsuk-summary-list">
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Name 
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    AADUser2
+                  </dd>
+                </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Email address
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    aaduser2@nhs.net
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                    Telephone
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    07364928765
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                   F code
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                   FAAAA
+                  </dd>
+                </div>
+
+                <div class="nhsuk-summary-list__row">
+                  <dt class="nhsuk-summary-list__key">
+                  Permissions
+                  </dt>
+                  <dd class="nhsuk-summary-list__value">
+                    Financial reports
+                  </dd>
+                </div>
+
+                </dl>
+
+                 
+  
+                  </dl>
+  
+                
+
+                </dl>
+
+              </div>
+
+              
+           
+          </div>
+          
+          
+                
+          <a class="nhsuk-button" href="view-users">Edit</a>
+
+          <a class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit" href="delete-user">
+           Remove
+          </a>
+                
+
+                    
+            
+    
+         
+  </div>
+</div>
+{% endblock %}

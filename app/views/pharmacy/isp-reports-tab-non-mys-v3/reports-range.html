@@ -1,0 +1,219 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'isp-non-mys.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Financial reports
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+   
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+       
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial Reports</span>
+         What report range would you like to download? 
+      </h1>
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+  
+
+    
+    
+    <p>These reports refer to payment month, which is the month you were paid after you submitted a claim. </p>
+
+    <p>Reports are available for the previous 7 years.</p>
+
+    <p>Reports containing data over a period greater than 12 months result in a large file size and will take a long time to download. For reports spanning several years, we advise generating multiple reports split into 12-month periods.</p>
+   
+   
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <!-- <p class="nhsuk-body">Content?</p> -->
+  
+
+    
+    <form action="reportmonthselect" method="post">
+
+      <div class="nhsuk-radios nhsuk-radios--conditional">
+              
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
+            aria-controls="conditional-contact-1" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+            Single month
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+
+          <div class="nhsuk-form-group">
+            <br>
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                  <h2 class="nhsuk-fieldset__heading">
+                   Report date
+                  </h2>
+                </legend>
+                <div class="nhsuk-hint" id="example-hint">
+                  Enter the payment month and year of report <br>For example, 3 2018
+                </div>
+            
+               
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            
+            </div>
+            </div>
+         
+
+       
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+            aria-controls="conditional-contact-2" aria-expanded="false">
+          <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+            Range of months
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+
+          <br> 
+
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+              <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                <h2 class="nhsuk-fieldset__heading">
+                 Report start date
+                </h2>
+              </legend>
+              <div class="nhsuk-hint" id="example-hint">
+                Enter the payment month and year of the start of the report 
+                <br>For example, 3 2018
+              </div>
+          
+             
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="1-month">
+                      Month
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="1-month" name="1-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="nhsuk-date-input__item">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label nhsuk-date-input__label" for="1-year">
+                      Year
+                    </label>
+                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="1-year" name="1-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          
+          
+    
+            <br>
+           
+            <div class="nhsuk-form-group">
+              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                   Report end date
+                  </h1>
+                </legend>
+                <div class="nhsuk-hint" id="example-hint">
+                  Enter the payment month and year of the end of the report
+                  <br> For example, 3 2019
+                </div>
+            
+               
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="2-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="2-month" name="2-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="2-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="2-year" name="2-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+      </div>
+
+</div>
+  </div>
+</div>
+        <br>
+       
+       
+        <a class="nhsuk-button" href="selection-download">Next</a>
+
+
+<br>
+
+    
+    <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
+
+    </form>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

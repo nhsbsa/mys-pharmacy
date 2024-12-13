@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'isp-non-mys.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Manage users
+Financial reports
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -23,7 +23,7 @@ Manage users
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
     
@@ -33,7 +33,7 @@ Manage users
       }) }}
     
    
-      <div class="nhsuk-grid-column-two-thirds">
+
     <!-- Change the page title here -->
     <header>
       <h1>
@@ -45,12 +45,12 @@ Manage users
 
    
     <div class="nhsuk-form-group">
-      
       <label class="nhsuk-label" for="input-width-20">
         Full name
       </label>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
     </div>
+
     
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
@@ -61,66 +61,48 @@ Manage users
     
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
-        Pharmacy code
+       Telephone
       </label>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
     </div>
     
-
-    <br>
-   
-
     <div class="nhsuk-form-group">
-    
-      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+      <label class="nhsuk-label" for="input-width-20">
+        Organisation
+      </label>
+      <div class="nhsuk-hint" id="example-hints-1-item-hint">
+        ODS code, YP code or F code
+      </div>
+      <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+    </div>
+    <br>
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-fieldset__heading">
             User permissions
           </h1>
         </legend>
-  
-        <div class="nhsuk-hint" id="nationality-hint">
-          Select all options that are relevant.
-        </div>
-  
-        <div class="nhsuk-checkboxes">
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="pharmacy" aria-describedby="item-hint-1">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-              Pharmacy
+    
+        <div class="nhsuk-radios">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="" checked aria-describedby="example-hints-1-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              Financial reports
             </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
-              Access to pharmacy submissions and surveys.
-            </div>
+            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
+              Give permission to user to download Prescription item reports, Schedule of payments and Supplementary reports   </div>
           </div>
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="financial" aria-describedby="item-hint-2">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-              Financial Reports
-            </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
-              Access to Prescription item report, Schedule of payments, Supplementary report.
-            </div>
-          </div>
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="managment" aria-describedby="item-hint-3">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-              Management
-            </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
-              Access to pharmacy reports and user management.
-            </div>
-          </div>
-  
+    
+          
         </div>
       </fieldset>
-  
+    
     </div>
-    
-    
+       
+       
        
     <a class="nhsuk-button" href="confirmation-new">Add user</a>
 
