@@ -298,6 +298,41 @@ router.post(/homerange/, function (req, res) {
   }
 });
 
+// rsv //
+
+router.post(/rsvcya/, function (req, res) {
+
+const rsvcya = req.session.data['rsvcya']
+
+if (rsvcya === "yes") {
+  res.redirect('months-come-back');
+} else {
+  res.redirect('declaration');
+}
+});
+
+router.post(/rsvdereg/, function (req, res) {
+
+  const rsvdereg = req.session.data['rsvdereg']
+  
+  if (rsvdereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('months');
+  }
+  });
+
+  router.post(/rsvdeletion/, function (req, res) {
+
+    const rsvdeletion = req.session.data['rsvdeletion']
+    
+    if (rsvdeletion === "yes") {
+      res.redirect('months');
+    } else {
+      res.redirect('cya');
+    }
+    });
+
 
 
 // Registration Services //
