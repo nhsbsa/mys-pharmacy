@@ -3,7 +3,7 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'layout.html' %}
+{% extends 'isp-non-mys.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -23,7 +23,7 @@ Financial reports
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
     {{ backLink({
@@ -37,13 +37,16 @@ Financial reports
     <header>
       <h1>
        
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial reports</span>
+         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Financial Reports</span>
          What reports would you like to download?
       </h1>
     </header>
+    <h3 class="nhsuk-heading-m">Reports for Boots pharmacy</h3>
+
 
     <form>
 
+    
       <div class="nhsuk-form-group">
     
      
@@ -53,12 +56,7 @@ Financial reports
     
           <div class="nhsuk-checkboxes">
 
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="Eschedule" name="Eschedule" type="checkbox" value="text message">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="Eschedule">
-                Eschedule data file
-              </label>
-            </div>
+            
 
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="Prescription" name="Prescription" type="checkbox" value="text message">
@@ -97,14 +95,11 @@ Financial reports
        
        
     <a class="nhsuk-button" href="">Download reports</a>
-
     <hr>
 
-    <p class="nhsuk-body"><a href="reports-search" class="nhsuk-link">Back to Financial Reports</a></p>
+    <p class="nhsuk-body"><a href="multi-landing" class="nhsuk-link">Back to select a pharmacy</a></p>
 
-    <p class="nhsuk-body"><a href="../summary-new" class="nhsuk-link">Back to MYS dashboard</a></p>
-
-   
+    
     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Start now</button> -->
 
     </form>

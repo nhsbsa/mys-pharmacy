@@ -1,0 +1,131 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Respiratory Syncytial Virus
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Pertussis Vaccine Claims</span>
+        Deregister for this service
+      </h1>
+    </header>
+
+    <p>Read the following summary of terms and conditions and, if you agree, complete the details required and tick the agreement box.</p>
+
+    <p>If you choose not to accept (sign this declaration) your de-registration will not be progressed.</p>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="declaration">
+
+        <p>I confirm that:</p>
+        <br>
+        <ul>
+          <li style="margin-left:40px; padding-bottom:10px;">the information provided in this submission is correct
+          </li>
+
+          <li style="margin-left:40px; padding-bottom:10px;">my acceptance of this declaration will act as my electronic
+            signature</li>
+
+          <!--
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+        </ul>
+      </div>
+      <fieldset>
+        <legend class="visually-hidden">New Submission</legend>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Last name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+        </div>
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+            address, enter it below.</p>
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email-with-hint-text">
+            Email address (optional)
+          </label>
+          
+          <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+            aria-describedby="email-with-hint-text-hint">
+        </div>
+
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                  value="agree-check" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                  I agree and accept this declaration
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <a href="de-registration-confirmation" class="nhsuk-button">
+            Submit
+          </a>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> -->
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
