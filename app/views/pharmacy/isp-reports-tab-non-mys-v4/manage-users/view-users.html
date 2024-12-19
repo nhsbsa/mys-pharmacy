@@ -37,10 +37,7 @@ Financial reports
 
     <!-- Change the page title here -->
     <header>
-      <h1>
-         
-         <span class="nhsuk-caption-xl nhsuk-caption--bottom">Manage users</span>
-         Edit user details
+      <h1>Edit user details
       </h1>
     </header>
 
@@ -61,17 +58,17 @@ Financial reports
     
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
-       Telephone
+        Telephone number (optional)
       </label>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="07364928765">
     </div>
     
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="input-width-20">
-        Organisation
+        Pharmacy ODS or YP code
       </label>
       <div class="nhsuk-hint" id="example-hints-1-item-hint">
-        ODS code, YP code or F code
+        For example FA999 or YP11111
       </div>
       <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text" value="FAAAA">
     </div>
@@ -81,7 +78,7 @@ Financial reports
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1 class="nhsuk-fieldset__heading">
-            User permissions
+            User permissions:
           </h1>
         </legend>
     
@@ -93,7 +90,13 @@ Financial reports
               Financial reports
             </label>
             <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-1-item-hint">
-              Access to Eschedule data file, Prescription item report, Schedule of payments, Supplementary report
+              Allow user to download: 
+              <ul>
+                <li>prescription item reports</li>
+                <li>schedule of payments</li>
+                <li>supplementary reports</li>
+                <li>eschedule report, this is only available on request</li>
+              </ul>
             </div>
           </div>
     
@@ -105,7 +108,7 @@ Financial reports
        
        
        
-    <a class="nhsuk-button" href="confirmation-update">Save</a>
+    <a class="nhsuk-button" href="confirmation-update">Update user details</a>
 
     <a href="cya-user" class="nhsuk-button nhsuk-button--secondary">Cancel</a>
 
