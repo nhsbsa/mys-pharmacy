@@ -1,0 +1,137 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Respiratory Syncytial Virus
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+   
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Respiratory Syncytial Virus and Pertussus Vaccine Claims</span>
+                  Submission
+                </h1>
+              </header>
+
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">Current months</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>There are no claims to submit.
+                    </td>
+                  
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+              <br>
+              <br>
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">Previous months</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Total
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>November 2024
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>2
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>October 2024
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>2
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>September 2024
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>6
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>August 2024
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>6
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>
+              <br>
+              <h3>Missed a submission?</h3>
+              <p>Contact the helpdesk on 0300 330 1368 or via email at <a href="">mys@nhsbsa.nhs.uk</a> for help.</p>
+
+              <br>
+              <br>
+
+              <p class="nhsuk-body"><a href="de-registration" class="nhsuk-link">Deregister from this service</a></p>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
