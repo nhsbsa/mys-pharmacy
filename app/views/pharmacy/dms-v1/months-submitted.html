@@ -11,7 +11,7 @@
 -->
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Respiratory Syncytial Virus
+Discharge medicines service
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -21,19 +21,13 @@ Respiratory Syncytial Virus
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
-   
-          <div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 
-              {{ backLink({
-              "href": "javascript:history.go(-1)",
-              "text": "Go back"
-              }) }}
 
               <header>
                 <h1>
-                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Respiratory Syncytial Virus</span>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Discharge medicines service</span>  
                   Submission
                 </h1>
               </header>
@@ -47,6 +41,9 @@ Respiratory Syncytial Virus
                       Month
                     </th>
                     <th role="columnheader" class="" scope="col">
+                      No. of patients
+                    </th>
+                    <th role="columnheader" class="" scope="col">
                       Action
                     </th>
                   </tr>
@@ -54,34 +51,13 @@ Respiratory Syncytial Virus
                 <tbody class="nhsuk-table__body">
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>November 2024
+                      <span class="nhsuk-table-responsive__heading">Month</span>December 2024
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="cya">Continue</a>
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>October 2024
+                      <span class="nhsuk-table-responsive__heading">Patient</span>0
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="">Start submission</a>
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>September 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="">Start submission</a>
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>August 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Action</span><a href="">Start submission</a>
+                      <span class="nhsuk-table-responsive__heading">View</span><a href="patient">Start</a>
                     </td>
                   </tr>
                 </tbody>
@@ -98,52 +74,85 @@ Respiratory Syncytial Virus
                       Month
                     </th>
                     <th role="columnheader" class="" scope="col">
-                      Total
+                      No. of patients
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Action
                     </th>
                   </tr>
                 </thead>
                 <tbody class="nhsuk-table__body">
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>July 2024
+                      <span class="nhsuk-table-responsive__heading">Month</span>November 2024
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Total</span>4
+                      <span class="nhsuk-table-responsive__heading">Patient</span>11
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">View</span><a href="previous-month">View</a>
                     </td>
                   </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>June 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Total</span>2
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>May 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Total</span>6
-                    </td>
-                  </tr>
-                  <tr role="row" class="nhsuk-table__row">
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Month</span>April 2024
-                    </td>
-                    <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Total</span>6
-                    </td>
-                  </tr>
+                  <tbody class="nhsuk-table__body">
+                    <tr role="row" class="nhsuk-table__row">
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Month</span>October 2024
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">Patient</span>8
+                      </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading">View</span><a href="">View</a>
+                      </td>
+                    </tr>
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Month</span>September 2024
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">Patient</span>2
+                        </td>
+                        <td role="cell" class="nhsuk-table__cell">
+                          <span class="nhsuk-table-responsive__heading">View</span><a href="">View</a>
+                        </td>
+                      </tr>
                 </tbody>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>August 2024
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Patient</span>2
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">View</span><a href="">View</a>
+                    </td>
+                  </tr>
+            </tbody>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Month</span>July 2024
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">Patient</span>2
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading">View</span><a href="">View</a>
+                </td>
+              </tr>
+        </tbody>
               </table>
+
 
               <br>
               <br>
+
               <h3>Missed a submission?</h3>
               <p>Contact the helpdesk on 0300 330 1368 or via email at <a href="">mys@nhsbsa.nhs.uk</a> for help.</p>
 
-              <br>
               <br>
 
               <p class="nhsuk-body"><a href="de-registration" class="nhsuk-link">Deregister from this service</a></p>

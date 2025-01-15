@@ -1,0 +1,154 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Discharge medicines service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Discharge medicines service</span>    
+                  Stages provided
+                </h1>
+              </header>
+
+                
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Stage 1 of the DMS provided?
+                      </h1>
+                    </legend>
+                
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-1-yes" name="stage-1-yes" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-1-yes">
+                          Yes
+                        </label>
+                      </div>
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-1-no" name="stage-1-no" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-1-no">
+                          No
+                        </label>
+                      </div>
+                
+                    </div>
+                  </fieldset>
+                
+                </div>
+              
+
+                <br>
+              
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Stage 2 of the DMS provided? 
+                      </h1>
+                    </legend>
+                
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-2-yes" name="stage-2-yes" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-2-yes">
+                          Yes
+                        </label>
+                      </div>
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-2-no" name="stage-2-no" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-2-no">
+                          No
+                        </label>
+                      </div>
+                
+                    </div>
+                  </fieldset>
+                
+                </div>
+
+                <br>
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Stage 3 of the DMS provided?
+                      </h1>
+                    </legend>
+                
+                    <div class="nhsuk-radios nhsuk-radios--inline">
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-3-yes" name="stage-3-yes" type="radio" value="yes">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-3-yes">
+                          Yes
+                        </label>
+                      </div>
+                
+                      <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="stage-3-no" name="stage-3-no" type="radio" value="no">
+                        <label class="nhsuk-label nhsuk-radios__label" for="stage-3-no">
+                          No
+                        </label>
+                      </div>
+                
+                    </div>
+                  </fieldset>
+                
+                </div>
+              
+              
+              <br>
+              
+              <a href="final-stage-date" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

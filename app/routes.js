@@ -1210,6 +1210,42 @@ router.post(/reportmonthselect/, function (req, res) {
   }
 });
 
+// DMS //
+
+router.post(/addMore/, function (req, res) {
+
+  const addMore = req.session.data['addMore']
+
+  if (addMore === "yes") {
+    res.redirect('patient');
+  } else {
+    res.redirect('summary-submission');
+  }
+});
+
+router.post(/NovAnother/, function (req, res) {
+
+  const NovAnother = req.session.data['NovAnother']
+
+  if (NovAnother === "yes") {
+    res.redirect('patient-nov');
+  } else {
+    res.redirect('summary-submission-nov');
+  }
+});
+
+router.post(/DMSDeReg/, function (req, res) {
+
+  const DMSDeReg = req.session.data['DMSDeReg']
+
+  if (DMSDeReg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('months');
+  }
+});
+
+
 
 // Templates //
 
