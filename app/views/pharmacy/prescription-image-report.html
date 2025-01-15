@@ -23,7 +23,7 @@ Prescription image request
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-two-thirds">
 
 
     {{ backLink({
@@ -37,30 +37,66 @@ Prescription image request
     <!-- Change the page title here -->
     <header>
       <h1>
-         Prescription image request
+        Request an image of a prescription
       </h1>
     </header>
 
+    <p>Images will usually be ready to view within x days.</p>
+    <p>Images are deleted after 2 years/18 months.</p>
+
+    <br>
+
+    <div class="nhsuk-form-group">
+         
+      <div class="nhsuk-hint" id="contact-hint">
+        Select a year and month.
+      </div>
+      </div>
+  
 
     <!-- Add your content here -->
     <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
     <!-- <h2>Context</h2> -->
     <!-- <p class="nhsuk-body">Content?</p> -->
+
+
+
+
     <div class="nhsuk-card-group">
     <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="select-1" >
-        Year
+       Month Year
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1" style="width: 180px;">
         <option value="1" selected>Select option</option>
-        <option value="2">2024</option>
-        <option value="3">2023</option>
-        <option value="3">2022</option>
-        <option value="3">2021</option>
+        <option value="2">December 2024</option>
+        <option value="3">November 2024</option>
+        <option value="4">October 2024</option>
+        <option value="5">September 2024</option>
+        <option value="6">August 2024</option>
+        <option value="7">July 2024</option>
+        <option value="8">June 2024</option>
+        <option value="9">May 2024</option>
+        <option value="10">April 2024</option>
+        <option value="11">March 2024</option>
+        <option value="12">February 2024</option>
+        <option value="13">January 2024</option>
+        <option value="14">December 2023</option>
+        <option value="15">November 2023</option>
+        <option value="16">October 2023</option>
+        <option value="17">September 2023</option>
+        <option value="18">August 2023</option>
+        <option value="19">July 2023</option>
+        <option value="20">June 2023</option>
+        <option value="21">May 2023</option>
+        <option value="22">April 2023</option>
+        <option value="23">March 2023</option>
+        <option value="24">February 2023</option>
+        <option value="25">January 2023</option>
       </select>
     </div>
     
-    <div class="nhsuk-form-group" style="padding-left: 25px;"">
+    <!--div class="nhsuk-form-group" style="padding-left: 25px;">
       <label class="nhsuk-label" for="select-1">
         Month
       </label>
@@ -72,8 +108,7 @@ Prescription image request
         <option value="3" >January</option>
         <option value="3" >December</option>
       </select>
-    </div>
-
+    </div-->
    
   <div class="nhsuk-form-group" style="padding-left: 25px; width: 200px; ">
     <label class="nhsuk-label" for="input-width-10" >
@@ -82,9 +117,14 @@ Prescription image request
     <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
   </div>
 
-</div>
+  </div>
 
-<a class="nhsuk-button" href="">Request image</a>
+
+
+
+
+
+<a class="nhsuk-button" href="">Submit request</a>
 
 <hr>
 
@@ -93,17 +133,14 @@ Prescription image request
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              Previous requested
+              Your requests for prescription images
             </h1>
           </legend>
-          <div class="nhsuk-hint" id="example-hint">
-            Paper prescription images
-          </div>
          </div>
 
         
          <table role="table" class="nhsuk-table-responsive">
-          <caption class="nhsuk-table__caption">Available</caption>
+          <caption class="nhsuk-table__caption">Images ready to view</caption>
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">
@@ -139,7 +176,7 @@ Prescription image request
               </td>
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/images/prescription-image.png" download="prescription-image.png">Download</a>
+                <a href="/images/prescription-image.png" view="prescription-image.png" target="_blank">View</a>
               </td>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -157,7 +194,7 @@ Prescription image request
               </td>
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/images/prescription-image.png" download="prescription-image.png">Download</a>
+                <a href="/images/prescription-image.png" view="prescription-image.png" target="_blank">View</a>
               </td>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -175,7 +212,7 @@ Prescription image request
               </td>
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/images/prescription-image.png" download="prescription-image.png">Download</a>
+                <a href="/images/prescription-image.png" view="prescription-image.png" target="_blank">View</a>
               </td>
             </tr>
             <tr role="row" class="nhsuk-table__row">
@@ -193,7 +230,7 @@ Prescription image request
               </td>
               <td role="cell" class="nhsuk-table__cell">
                 <span class="nhsuk-table-responsive__heading">Action</span>
-                <a href="/images/prescription-image.png" download="prescription-image.png">Download</a>
+                <a href="/images/prescription-image.png" view="prescription-image.png" target="_blank">View</a>
               </td>
             </tr>
           </tbody>
@@ -203,7 +240,7 @@ Prescription image request
     <br>
 
     <table role="table" class="nhsuk-table-responsive">
-      <caption class="nhsuk-table__caption">Pending</caption>
+      <caption class="nhsuk-table__caption">Requests in progress</caption>
       <thead role="rowgroup" class="nhsuk-table__head">
         <tr role="row">
           <th role="columnheader" class="" scope="col">
