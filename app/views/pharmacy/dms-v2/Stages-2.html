@@ -1,0 +1,210 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Discharge medicines service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Discharge medicines service</span>    
+                   Stage 2 provision
+                </h1>
+              </header>
+
+                
+                <div class="nhsuk-form-group">
+
+                  <div class="nhsuk-form-group">
+
+                    <fieldset class="nhsuk-fieldset" aria-describedby="conditional-Yes-1">
+                      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                        <h1 class="nhsuk-fieldset__heading">
+                          Stage 2 of the DMS provided ? 
+                        </h1>
+                      </legend>
+                  
+                      <div class="nhsuk-radios nhsuk-radios--conditional">
+                  
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="contact-1" name="Yes" type="radio" value="Yes" aria-controls="conditional-Yes-1" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                            Yes
+                          </label>
+                        </div>
+                  
+                        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-Yes-1">
+                  
+                          <div class="nhsuk-form-group">
+                          <br>
+                            <fieldset class="nhsuk-fieldset" aria-describedby="date-hint" role="group">
+                              <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                <h1 class="nhsuk-fieldset__heading">
+                                  What date was the service provided?
+                                </h1>
+                              </legend>
+                              <div class="nhsuk-hint" id="date-hint">
+                                For example, 15 3 2023
+                              </div>
+                          
+                              <div class="nhsuk-date-input" id="day">
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                                      Day
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="day" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                                      Month
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="month" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                                <div class="nhsuk-date-input__item">
+                                  <div class="nhsuk-form-group">
+                                    <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                                      Year
+                                    </label>
+                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
+                                  </div>
+                                </div>
+                              </div>
+                            </fieldset>
+                          
+                          </div>
+                  
+                        </div>
+                  
+                        <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="no-2" name="no" type="radio" value="no" aria-controls="conditional-no-2" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-radios__label" for="no-2">
+                            No
+                          </label>
+                        </div>
+                  
+                        <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-no-2">
+                  
+                          <br>
+
+                          <form>
+
+                            <div class="nhsuk-form-group">
+                          
+                              <fieldset class="nhsuk-fieldset" aria-describedby="why-not-hint">
+                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                                  <h1 class="nhsuk-fieldset__heading">
+                                    Why not?
+                                  </h1>
+                                </legend>
+                          
+                                <div class="nhsuk-hint" id="why-not-hint">
+                                  Select all that apply.
+                                </div>
+                          
+                                <div class="nhsuk-checkboxes">
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                    <input class="nhsuk-checkboxes__input" id="why-not-1" name="why-not" type="checkbox" value="different">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="why-not-1">
+                                      Patient changed community pharmacy after stage 1
+                                    </label>
+                                  </div>
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                    <input class="nhsuk-checkboxes__input" id="why-not-2" name="why-not" type="checkbox" value="other">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="why-not-2">
+                                      Patient withdrew consent or uncontactable after stage 1
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                                      This includes where a patient has been readmitted to hospital, admitted to a care home, or has died
+                                    </div>
+                                  </div>
+                          
+                                  <div class="nhsuk-checkboxes__item">
+                                    <input class="nhsuk-checkboxes__input" id="why-not-3" name="why-not" type="checkbox" value="other">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="why-not-3">
+                                      Temporary closure of community pharmacy
+                                    </label>
+                                    <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+                                      This is where a closure of one week or more has prevented completion of this stage
+                                    </div>
+                                  </div>
+
+                                  <div class="nhsuk-checkboxes__item">
+                                    <input class="nhsuk-checkboxes__input" id="why-not-1" name="why-not" type="checkbox" value="different">
+                                    <label class="nhsuk-label nhsuk-checkboxes__label" for="why-not-4">
+                                      Other
+                                    </label>
+                                  </div>
+
+                                </div>
+                              </fieldset>
+                          
+                            </div>
+                          
+                          </form>
+                  
+                        </div>
+                  
+                      
+                  
+                      </div>
+                    </fieldset>
+                  
+                  </div>
+                
+                </div>
+              
+
+            </div>
+                
+                </div>
+              
+              
+             
+              
+              <a href="Stages-3" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
