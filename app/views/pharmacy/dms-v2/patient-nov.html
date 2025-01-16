@@ -1,0 +1,82 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Discharge medicines service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Discharge medicines service</span>     
+                  Patient's NHS number 
+                </h1>
+              </header>
+
+
+            
+                <div class="nhsuk-form-group">
+
+                
+                    <label class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        What is the patient's NHS number?
+                      </h1>
+                    </label>
+
+                   
+                     
+                      <div class="nhsuk-hint" id="example-with-hint-text-hint">
+                        Your NHS number is a 10 digit number that you find on any letter the NHS has sent you. For example, 485 777 3456.
+                      </div>
+                      <input class="nhsuk-input nhsuk-input--width-10" id="example-with-hint-text" name="example-with-hint-text" type="text" aria-describedby="example-with-hint-text-hint" inputmode="numeric">
+                    </div>
+                 
+
+                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+                  Save and continue
+                </button> -->
+
+              <br>
+
+              <a href="date-referral-nov" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

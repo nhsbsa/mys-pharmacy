@@ -1,0 +1,78 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Discharge medicines service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Discharge medicines service</span>    
+                  Referring trust
+                </h1>
+              </header>
+
+
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    Which trust did the referral come from?
+                  </h1>
+                </label>
+                <span id="council-hint" class="nhsuk-hint">
+                  This needs to be the precise name of the trust. If you are not sure what this is, <a href="">check the correct name in the NHS Trusts etr file on the NHS Digital website.</a> 
+                </span>
+                <select class="nhsuk-select" id="select-1" name="select-1" style="width: 700px;">
+                  <option value="1" selected>Select a trust</option>
+                 <option value="Sunderland Teaching NHS Foundation Trust" >Trust not known</option> 
+                 <option value="Gateshead Health NHS Foundation Trust" >Gateshead Health NHS Foundation Trust</option>
+                  <option value="Newcastle upon Tyne NHS Foundation Trust" >Newcastle upon Tyne NHS Foundation Trust</option>
+                  <option value="Sunderland Teaching NHS Foundation Trust" >Sunderland Teaching NHS Foundation Trust</option>
+               </select>
+              </div>
+
+              
+              <br>
+             
+              
+              <a href="Stages-1" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
