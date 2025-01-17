@@ -83,11 +83,11 @@ Prescription image request
         Choose month and year
       </label>
       <select class="nhsuk-select" id="select-1" name="select-1" style="width: 180px;">
-        <option value="1" selected>Select option</option>
+        <option value="1">Select option</option>
         <option value="2">December 2024</option>
         <option value="3">November 2024</option>
         <option value="4">October 2024</option>
-        <option value="5">September 2024</option>
+        <option value="5" selected>September 2024</option>
         <option value="6">August 2024</option>
         <option value="7">July 2024</option>
         <option value="8">June 2024</option>
@@ -132,7 +132,7 @@ Prescription image request
     <span class="nhsuk-error-message" id="form-number">
       <span class="nhsuk-u-visually-hidden">Error:</span> Please enter a valid Form number
     </span>
-    <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-10 " id="input-width-10" name="test-width-10" type="text" aria-describedby="name-error">
+    <input class="nhsuk-input nhsuk-input--error nhsuk-input--width-10 " id="input-width-10" name="test-width-10" type="text" aria-describedby="name-error" pattern="[0-9]*" inputmode="numeric" value="hhhjjjj">
   </div>
 
   </div>
