@@ -37,7 +37,7 @@ Admin
         <!-- Change the page title here -->
         <header>
             <h1 class="nhsuk-caption--bottom">
-                Warehouse Search
+                Warehouse search
             </h1>
         </header>
 <br>
@@ -45,32 +45,28 @@ Admin
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Search for prescriptions</p>
+        <p>Use this function to search for  prescriptions issued within the last 18 months.
 
-        <br>
+          Search using a date range and prescription details.</p>
+
+          <h2>Date range</h2>
+          <p>Enter the date range during which the prescriptions were issued.</p>
+
+
 
         <div class="nhsuk-form-group">
-
-            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-              <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                <h3 class="nhsuk-fieldset__heading">
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">              
+                <h3 class="nhsuk-heading-s" >
                     Start date
                 </h3>
-              </legend>
+
               <div class="nhsuk-hint" id="example-hint">
-                It must be a valid date, for example,11 1 2017. It can go back as far as 18 months.
+                Enter month and year, for example 1 2024.
               </div>
           
               <div class="nhsuk-date-input" id="example">
                 <div class="nhsuk-date-input__item">
-                <div class="nhsuk-date-input__item">
- <div class="nhsuk-form-group">
-                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                        Date
-                      </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
-                    </div>
-                  </div>
+                
                   <div class="nhsuk-date-input__item">
                     <div class="nhsuk-form-group">
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
@@ -79,6 +75,7 @@ Admin
                       <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
                     </div>
                   </div>
+                  
                   <div class="nhsuk-date-input__item">
                     <div class="nhsuk-form-group">
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
@@ -91,27 +88,18 @@ Admin
              
             </fieldset>
          </div>
-            
+<br>            
         <div class="nhsuk-form-group">         
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                  <h3 class="nhsuk-fieldset__heading">
-                      To date
+                  <h3 class="nhsuk-heading-s">
+                      End date
                   </h3>
-                </legend>
                 <div class="nhsuk-hint" id="example-hint">
-                  For example, 11 05 2018
+                  For example, 05 2024
                 </div>
             
                 <div class="nhsuk-date-input" id="example">
-                  <div class="nhsuk-date-input__item">
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                        Date
-                      </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
-                    </div>
-                  </div>
+                 
                   <div class="nhsuk-date-input__item">
                     <div class="nhsuk-form-group">
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
@@ -133,26 +121,32 @@ Admin
            
         </div>        
 
+
+        <h2>Prescription details</h2>
+          
+
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-               <strong>Dispenser Code</strong>
+               <strong>ODS/F code</strong>
             </label>
             <div class="nhsuk-hint" id="contact-hint">
-                One or more of Dispenser code, Fragment ID and Form number must be filled in
+              You must enter an ODS/F code.
+              You can also enter fragment ID, form number, or both to narrow your 
+              search.
             </div>            
             <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
         </div>
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                <strong>Fragment ID (Optional)</strong>
+                <strong>Fragment ID (optional)</strong>
              </label>           
              <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
         </div> 
 
         <div class="nhsuk-form-group">
              <label class="nhsuk-label" for="example">
-                <strong>Form Number (Optional)</strong>
+                <strong>Form number (optional)</strong>
              </label>           
              <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
         </div> 
