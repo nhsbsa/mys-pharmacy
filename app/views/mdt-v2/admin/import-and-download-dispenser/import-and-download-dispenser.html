@@ -45,8 +45,11 @@ Admin
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Manage dispensers by uploading a CSV file. Download current dispensers list as a CSV file
-        </p>
+        <p>Use this function to:</p>
+        <ul>
+          <li>Upload and replace an existing list of dispensers</li>
+          <li>Download the current list of dispensers</li>
+        </ul>
 
 <br>
         
@@ -55,7 +58,7 @@ Admin
           <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">
               <th role="columnheader" class="" scope="col">
-                Report
+                List
               </th>
             
               <th role="columnheader" class="" scope="col">
@@ -67,11 +70,11 @@ Admin
           <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Report</span>Download CSV report existing dispensers
+                <span class="nhsuk-table-responsive__heading">Report</span>Current list of dispensers
               </td>
 
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation-dispensers">Download report</a>
+                <span class="nhsuk-table-responsive__heading">Action</span><a href="confirmation-dispensers">Download list</a>
               </td>
             </tr>
           </tbody>
@@ -83,7 +86,7 @@ Admin
      
         <div class="govuk-form-group">
             <label class="nhsuk-heading-s" for="file-upload-1">
-              Upload a file    
+              Upload a CSV file    
             </label>                      
             <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" style="font-size: larger;">
         </div>
@@ -94,7 +97,7 @@ Admin
 </div>
 </div>
 
- <a href="confirmation-upload" class="nhsuk-button nhsuk-u-margin-right-2">Upload a file of user management users</a>
+ <a href="confirmation-upload" class="nhsuk-button nhsuk-u-margin-right-2">Upload dispenser list</a>
  <a href="../manage-shared-email/manage-shared-email" class="nhsuk-button nhsuk-button--secondary">Manage shared emails</a>
  
 {% endblock %}
