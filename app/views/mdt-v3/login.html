@@ -1,0 +1,75 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Log in MYS APP
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-grid-column-two-thirds">
+
+<!--contents-->
+
+<h1>
+    Manage Your Service Administration Processing Portal (MYS APP)
+  </h1>
+
+  <!-- Add your content here -->
+  <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+  <h3>Pharmacy:</h3>
+    <p>I understand that NHSBSA may use and share information. I provide in 
+    relation to all claims made via this portal with the Department of Health 
+    and Social Care (DHSC), NHS England (NHSE) and the NHS Counter Fraud Authority 
+    (NHSCFA) for the purposes of the prevention, detection, loss measurement, 
+    investigation and prosecution of fraud or any other unlawful activity affecting the NHS.
+    </p>
+
+  <p><strong>By logging into MYS using your NHS Mail address and password you accept the above statement.</strong></p>
+
+  <a href="access-2-login" class="nhsuk-button">Log in</a>
+  
+
+  <details class="nhsuk-details">
+    <summary class="nhsuk-details__summary">
+      <span class="nhsuk-details__summary-text">
+        Need help with log in?
+      </span>
+    </summary>
+    <div class="nhsuk-details__text">
+     
+      <p>Contact the helpdesk on 0300 330 1368 or via email at <a href="mailto: mdt@nhs.net">mdt@nhs.net</a> for help</p>
+      
+  <!--contents-->
+
+  </div>
+  </details>
+  </div>
+  </div>
+  </div>
+
+
+{% endblock %}

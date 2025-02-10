@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Lateral Flow Device
+Sign in MYS APP
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -29,45 +29,25 @@ Lateral Flow Device
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-grid-column-two-thirds">
 
+<!--contents-->
 
+<h1>
+    Manage Your Service Administration Processing Portal (MYS APP)
+  </h1>
 
-        {{ backLink({
-        "href": "javascript:history.go(-1)",
-        "text": "Go back"
-        }) }}
+  <!-- Add your content here -->
+  <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-two-thirds">
+  
 
-        <!-- Change the page title here -->
-        <header>
-            <h1 class="nhsuk-caption--bottom">
-              Lateral flow device registration report
-                
-            </h1>
-        </header>
+  <a href="mdt-index" class="nhsuk-button">Sign in</a>
+  
 
-        <!-- Add your content here -->
-        <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-        <!-- <h2>Context</h2> -->
-<br>
+  </div>
+  </div>
+  </div>
 
-      <p>Download report .csv files</p>
-<br>
-
-      <a href="confirmation" class="nhsuk-button">Download report</a>
-
-        <br>
-        <br>
-    
-    
-
-
-       
-</div>
-</div>
-    </div>
-</div>
 
 {% endblock %}
