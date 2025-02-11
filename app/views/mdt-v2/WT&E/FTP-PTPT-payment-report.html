@@ -12,7 +12,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-Lateral Flow Device
+WT&E
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -42,51 +42,24 @@ Lateral Flow Device
 
         <!-- Change the page title here -->
         <header>
-            <h1>
-              Lateral Flow Device submission and payment report
-                
+            <h1 class="nhsuk-caption--bottom">
+                Foundation trainee pharmacist and <br> Pre-registration trainee pharmacy technician payment report              
             </h1>
         </header>
 
-       
-        <h3>
-          Select a year and month
-        <h3>
-        
+<br>
+
+         <div class="nhsuk-hint" id="contact-hint">
+        Select a year and month to view reports.
+      </div>
   
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="year">
           Month Year
         </label>
-        <select class="nhsuk-select" id="year" name="year" style="width: 630px;">
-          <option value="Select" selected>Select option</option>
-          <!--option value="2021" >2021</option>
-          <option value="2022" >2022</option>
-          <option value="2023" >2023</option>
-          <option value="2024" >2024</option>
-          <option value="2025" >2025</option>
-        </select>
-      </div>
-
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="month">
-          Month
-        </label>
-        <select class="nhsuk-select" id="month" name="month">
-          <option value="Select" selected>Select option</option>
-          <option value="January" >January</option>
-          <option value="February" >February</option>
-          <option value="March" >March</option>
-          <option value="April" >April</option>
-          <option value="May" >May</option>
-          <option value="June" >June</option>
-          <option value="July" >July</option>
-          <option value="August" >August</option>
-          <option value="September" >September</option>
-          <option value="October" >October</option>
-          <option value="November" >November</option>
-          <option value="December" >December</option-->
-        
+        <select class="nhsuk-select" id="year" name="monthyear" aria-required="true" style="width: 630px;">
+          <option value="">Select option</option>
+         
             <option value="January 2021">January 2021</option>
             <option value="February 2021">February 2021</option>
             <option value="March 2021">March 2021</option>
@@ -141,14 +114,12 @@ Lateral Flow Device
 
             <option value="January 2025">January 2025</option>
             <option value="February 2025">February 2025</option>
-        
-        
-          </select>
+        </select>
       </div>
   <br>
       
     
-      <a href="download-payment-report" class="nhsuk-button">Download report</a>
+      <a href="payment-reports" class="nhsuk-button">Get reports</a>
 
       
     
