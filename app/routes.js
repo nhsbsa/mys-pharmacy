@@ -1246,7 +1246,6 @@ router.post(/DMSDeReg/, function (req, res) {
 });
 
 
-
 // Templates //
 
 router.post(/TemplateManualDeReg/, function (req, res) {
