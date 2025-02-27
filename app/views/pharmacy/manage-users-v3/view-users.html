@@ -60,64 +60,77 @@ Manage users
     </div>
     
     <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="Pharmacy code">
-        Pharmacy code
+      
+      <label class="nhsuk-label" for="ODS">
+        Pharmacy ODS or YP code
       </label>
-      <input class="nhsuk-input nhsuk-input--width-20" id="Pharmacy code" name="Pharmacy code" type="text" value="FAAAA">
+      <div class="nhsuk-hint" id="nationality-hint">
+        For example FA999 or YP11111  </div>
+      <input class="nhsuk-input nhsuk-input--width-20" id="ODS" name="test-width-20" type="text" value="FAAAA">
     </div>
-    
 
     <br>
-    <div class="nhsuk-form-group">
     
-      <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading">
+          <h2 class="nhsuk-fieldset__heading">
             User permissions
-          </h1>
+          </h2>
         </legend>
-  
+    
         <div class="nhsuk-hint" id="nationality-hint">
-          Select all options that are relevant.
-        </div>
-  
-        <div class="nhsuk-checkboxes">
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="pharmacy" aria-describedby="item-hint-1" value="" checked>
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+          Select the user’s MYS access permissions. Only give Management and financial user permissions if full access is required.
+         </div>
+
+        <div class="nhsuk-radios">
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Pharmacy-hints-1" name="permissions-hints" type="radio" value="mobile" aria-describedby="Pharmacy-hints-1-item-hint" value="" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="Pharmacy-hints-1">
               Pharmacy
             </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
+            <div class="nhsuk-hint nhsuk-radios__hint" id="Pharmacy-hints-1-item-hint">
               Access to pharmacy submissions and surveys.
             </div>
           </div>
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="financial" aria-describedby="item-hint-2">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
-              Financial Reports
+
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Financial-hints-1" name="permissions-hints" type="radio" value="mobile" aria-describedby="Financial-hints-1-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="Financial-hints-1">
+              Financial reports
             </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
-              Access to Eschedule data file, Prescription item report, Schedule of payments, Supplementary report.
+            <div class="nhsuk-hint nhsuk-radios__hint" id="Financial-hints-1-item-hint">
+              Access to Prescription item report, Schedule of payments, Supplementary report.
             </div>
           </div>
-  
-          <div class="nhsuk-checkboxes__item">
-            <input class="nhsuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="managment" aria-describedby="item-hint-3">
-            <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Management-hints-1" name="permissions-hints" type="radio" value="mobile" aria-describedby="Management-hints-1">
+            <label class="nhsuk-label nhsuk-radios__label" for="Management-hints-1">
               Management
             </label>
-            <div class="nhsuk-hint nhsuk-checkboxes__hint" id="nationality-1-item-hint">
-              Access to pharmacy reports, payment schedules and user management.
+            <div class="nhsuk-hint nhsuk-radios__hint" id="Management-hints-1-hint">
+              Access to pharmacy reports and user management.
             </div>
           </div>
-  
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Double-item-hint" name="permissions-hints" type="radio" value="mobile" aria-describedby="Double-item-hint">
+            <label class="nhsuk-label nhsuk-radios__label" for="Double-item-hint">
+              Management and financial
+            </label>
+            <div class="nhsuk-hint nhsuk-radios__hint" id="Double-item-hint">
+              These permissions will give the user full access. It combines the Pharmacy, Financial reports and Management user permissions.
+            </div>
+          </div>
+    
         </div>
       </fieldset>
-  
+    
     </div>
-       
+
        
        
     <a class="nhsuk-button" href="confirmation-update">Save</a>
