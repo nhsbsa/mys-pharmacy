@@ -1,0 +1,223 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+MYS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+<!-- Notification banner -->
+       <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 80px;"></div>
+       <div class="nhsuk-width-container" style="margin: 0; padding-left: 30px;">
+ 
+ <!-- Feedback and Notification block starts here -->
+       <p style="color: #000;
+       font-size: 16px;
+       line-height: 1.25;
+       margin-top: -7.5%;
+       padding: 8px 10px 8px;
+       
+       letter-spacing: 1px;">
+     <span style="text-decoration: none;">
+     <strong>Reminder: </strong>
+     Unplanned temporary suspension of services</span></p>
+ 
+ <!-- Feedback and Notification block ends here -->
+
+     <div class="nhsuk-main-wrapper" id="maincontent">
+
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                </div>
+                <div class="nhsuk-grid-column-one-quarter">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">14</p>
+                  <p><a href="Unpaid-items/unpaid-items"
+                      class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">Unpaid
+                      items</a>
+                  </p>
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption"> </caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Items with missing information
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+
+                        </th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">
+                            0
+                          </strong></td>
+                        <td class="nhsuk-table__cell ">EPS items</td>
+                      </tr>
+                      <tr role="row" class="nhsuk-table__row">
+                        <td class="nhsuk-table__cell"><strong class="nhsuk-tag nhsuk-tag--red">
+                            14
+                          </strong></td>
+                        </td>
+                        <td class="nhsuk-table__cell ">Paper prescription items</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+
+
+                </div>
+                <div class="nhsuk-grid-column-full">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                </div>
+                <div class="nhsuk-grid-column-one-quarter">
+                  <p class="nhsuk-heading-xl nhsuk-u-font-size-24 nhsuk-u-margin-bottom-1">Submissions <br>and payments</p>
+                  <br>
+                  <p>
+                    Missed a submission?
+                    <br>
+                    Contact the helpdesk on 
+                    <br>0300 330 1368 or via email 
+                    <br>
+                    <a href="mys@nhsbsa.nhs.uk"
+                      class="nhsuk-card__link nhsuk-u-font-weight-normal nhsuk-u-font-size-19 nhsuk-link--no-visited-state">mys@nhsbsa.nhs.uk
+                      </a>
+                      for help.
+                  </p>
+                </div>
+                <div class="nhsuk-grid-column-one-half">
+                  <table class="nhsuk-table">
+                    <caption class="nhsuk-table__caption"> </caption>
+                    <thead role="rowgroup" class="nhsuk-table__head">
+                      <tr role="row">
+                        <th role="columnheader" class="" scope="col">
+                          Period
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                       Status
+                        </th>
+                        <th role="columnheader" class="" scope="col">
+                          Action
+                           </th>
+                      
+                    </tr>
+                    </thead>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td role="row" class="nhsuk-table__cell">
+                            December 2023
+                          </td>
+                        <td role="row" class="nhsuk-table__cell "><strong class="nhsuk-tag nhsuk-tag--red">
+                          Not started</strong></td>
+                          <td role="row" class="nhsuk-table__cell">
+                            <span class="nhsuk-table-responsive__heading"></span><a href="FP34C/paperv4">Start submission</a>
+                          </td>
+                          </tr>
+
+                    <tbody class="nhsuk-table__body">
+                      <tr role="row" class="nhsuk-table__row">
+                        <td role="row" class="nhsuk-table__cell">
+                            November 2023
+                          </td>
+                          <td role="row" class="nhsuk-table__cell ">
+                      Processed</td>
+                          <td role="row" class="nhsuk-table__cell">
+                            <span class="nhsuk-table-responsive__heading"></span><a href="FP34C/Summaryv4-nov">View</a>
+                          </td>
+                          </tr>
+
+                      <td role="row" class="nhsuk-table__cell">
+                        October 2023
+                      </td>
+                    <td role="row" class="nhsuk-table__cell ">
+                      Processed</td>
+                      <td role="row" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"></span><a href="">View</a>
+                      </td>
+                      </tr>
+                      
+                      <td role="row" class="nhsuk-table__cell">
+                        September 2023
+                      </td>
+                    <td role="row" class="nhsuk-table__cell ">
+                      Processed</td>
+                      <td role="row" class="nhsuk-table__cell">
+                        <span class="nhsuk-table-responsive__heading"></span><a href="">View</a>
+                      </td>
+                      </tr>
+                      
+                     
+                      
+                    </tbody>
+                  </table>
+
+
+                </div>
+                <div class="nhsuk-grid-column-full">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              
+              <li><a class="active" href="yp-summary">Summary</a></li>
+              
+              <li><a href="yp-services">Manage your services</a></li>
+              
+              <li><a href="yp-admin">Admin</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
