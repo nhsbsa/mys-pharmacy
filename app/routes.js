@@ -333,7 +333,18 @@ router.post(/rsvdereg/, function (req, res) {
     }
     });
 
+    router.post(/errorcya/, function (req, res) {
 
+      const errorcya = req.session.data['errorcya']
+      
+      if (errorcya === "yes") {
+        res.redirect('cya');
+      } else {
+        res.redirect('error2-enter-number-RSV-vaccines');
+      }
+      });
+      
+      
 
 // Registration Services //
 
