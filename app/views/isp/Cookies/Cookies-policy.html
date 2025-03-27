@@ -1,0 +1,137 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'ISP.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Information Service Portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+
+          <div class="nhsuk-back-link">
+              <a class="nhsuk-back-link__link" href="javascript:history.back()">
+                  <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                          d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z">
+                      </path>
+                  </svg>
+                  Go back</a>
+          </div>
+
+          <header>
+              <h1>
+                Cookies on Manage Your Service
+              </h1>
+          </header>
+          
+          <p class="nhsuk-body">Cookies are small files saved on your phone, tablet or computer when you visit a website.</p>
+
+          <p class="nhsuk-body">They store information about how you use the website. Some of them can be turned on and off.</p>
+          
+          <p class="nhsuk-body">This website stores cookies that are essential to make the site secure and work properly. This means they cannot be turned off.</p>
+
+          <p class="nhsuk-body">You cannot be identified by the cookies used on this website.</p>
+            
+          <p class="nhsuk-body">Let us know which cookies we can use. We'll use a cookie to save your settings.</p>
+
+         
+
+          <table role="table" class="nhsuk-table-responsive">
+            <caption class="nhsuk-table__caption">Cookies needed for the website to work</caption>
+            <thead role="rowgroup" class="nhsuk-table__head">
+              <tr role="row">
+                <th role="columnheader" class="" scope="col">
+                  Name
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Purpose
+                </th>
+                <th role="columnheader" class="" scope="col">
+                  Expiry
+                </th>
+              </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name</span>AWSALB, AWSALBCORS
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose</span>Used by AWS Load Balancer for routing requests to web servers.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry</span>1 week
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Name </span>SESSION
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose</span>This cookie is used to maintain a session without having to repeatedly sign in. This cookie is not persistent and is deleted after a session is closed.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry</span>When you close the browser
+                </td>
+              </tr>
+              <tr role="row" class="nhsuk-table__row">
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Age</span>nhsuk-mys-cookie-consent
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Purpose</span>This cookie is used to remember your analytics cookie choices.
+                </td>
+                <td role="cell" class="nhsuk-table__cell">
+                  <span class="nhsuk-table-responsive__heading" aria-hidden="true">Expiry</span>1 year
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="nhsuk-u-padding-bottom-8"></div>
+
+          <h2 class="nhsuk-heading-l">Change your cookie settings</h2>
+
+          <p class="nhsuk-body">Some cookies, like those used to measure how you use our website, are not needed for our website to work.</p>
+          
+          <p class="nhsuk-body">These cookies can help us make our website better, but we'll only use them if you said it's OK.</p>
+
+          <p class="nhsuk-body"> <a href="Cookies-choose">Choose which cookies we use</a></p>
+
+
+      </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+{% endblock %}
