@@ -1,0 +1,135 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Contraception
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-grid-column-two-thirds">
+
+
+
+        {{ backLink({
+        "href": "javascript:history.go(-1)",
+        "text": "Go back"
+        }) }}
+
+        
+          
+
+        <!-- Change the page title here -->
+        <header>
+          <!--span class="nhsuk-caption-xl">Contraception Submission and Payment Reports</span-->
+            <h1 class="nhsuk-caption--bottom">
+              Contraception registration payment report
+            </h1>
+        </header>
+<br>
+       <p>Use this application to download Contraception registration payment report as a CSV file.</p>
+  
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="year">
+          Select month and year
+        </label>
+        <!--select class="nhsuk-select" id="year" name="year">
+          <option value="Select" selected>Select option</option>
+          <option value="2023" >2023</option>
+          <option value="2024" >2024</option>
+          <option value="2025" >2025</option>
+        </select>
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="month">
+          Month
+        </label>
+        <select class="nhsuk-select" id="month" name="month">
+          <option value="Select" selected>Select option</option>
+          <option value="January" >January</option>
+          <option value="February" >February</option>
+          <option value="March" >March</option>
+          <option value="April" >April</option>
+          <option value="May" >May</option>
+          <option value="June" >June</option>
+          <option value="July" >July</option>
+          <option value="August" >August</option>
+          <option value="September" >September</option>
+          <option value="October" >October</option>
+          <option value="November" >November</option>
+          <option value="December" >December</option>
+
+        </select-->
+      
+      
+        <select class="nhsuk-select" id="monthyear" name="monthyear" style="width: 630px;">
+          <option value="Select" selected>Select option</option> 
+          <option value="January 2023">January 2023</option>
+          <option value="February 2023">February 2023</option>
+          <option value="March 2023">March 2023</option>
+          <option value="April 2023" >April 2023</option>
+          <option value="May 2023" >May 2023</option>
+          <option value="June 2023" >June 2023</option>
+          <option value="July 2023" >July 2023</option>
+          <option value="August 2023" >August 2023</option>
+          <option value="September 2023">September 2023</option>
+          <option value="October 2023">October 2023</option>
+          <option value="November 2023">November 2023</option>
+          <option value="December 2023">December 2023</option>
+
+          <option value="January 2024">January 2024</option>
+          <option value="February 2024">February 2024</option>
+          <option value="March 2024">March 2024</option>
+          <option value="April 2024" >April 2024</option>
+          <option value="May 2024" >May 2024</option>
+          <option value="June 2024" >June 2024</option>
+          <option value="July 2024" >July 2024</option>
+          <option value="August 2024" >August 2024</option>
+          <option value="September 2024">September 2024</option>
+          <option value="October 2024">October 2024</option>
+          <option value="November 2024">November 2024</option>
+          <option value="December 2024">December 2024</option>
+
+          <option value="January 2025">January 2025</option>
+          <option value="February 2025">February 2025</option>
+          
+          
+        </select>
+      
+      
+      </div>
+  <br>
+      
+    
+      <a href="" class="nhsuk-button">Download report</a>
+
+           
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
