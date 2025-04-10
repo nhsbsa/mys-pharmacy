@@ -1205,9 +1205,6 @@ router.post(/Contraceptionremove/, function (req, res) {
 });
 
 
-
-
-
 // reports //
 
 router.post(/reportmonthselect/, function (req, res) {
@@ -1253,6 +1250,17 @@ router.post(/DMSDeReg/, function (req, res) {
     res.redirect('de-registration-declaration');
   } else {
     res.redirect('months');
+  }
+});
+
+router.post(/Fatdel/, function (req, res) {
+
+  const Fatdel = req.session.data['Fatdel']
+
+  if (Fatdel === "yes") {
+    res.redirect('../dms-v1/delete-confirmation-panel');
+  } else {
+    res.redirect('summary-submission');
   }
 });
 
