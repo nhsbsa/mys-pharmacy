@@ -43,8 +43,7 @@ Discharge medicines service
       </h1>
     </header>
 
-    <form action="EditMonths" method="post">
-
+    
 
 <!-- deletion table -->
 <table role="table" class="nhsuk-table-responsive">
@@ -105,41 +104,44 @@ Discharge medicines service
 
 <br>
 
-<div class="nhsuk-form-group">
- <fieldset class="nhsuk-fieldset">
-   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+<form action="Fatdel" method="post">
 
-    <h1 class="nhsuk-fieldset__heading">
-              Are you sure you want to delete this claim?
-            </h1>
-          </legend>
-      
-          <div class="nhsuk-radios nhsuk-radios--inline">
-      
-            <div class="nhsuk-radios__item ">
-              <input class="nhsuk-radios__input" id="example-inline-1" name="EditMonths" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
-                Yes
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-inline-2" name="EditMonths" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
-                No
-              </label>
-            </div>
-      
+
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading">
+            Are you sure you want to delete this claim?
+          </h1>
+        </legend>
+    
+        <div class="nhsuk-radios nhsuk-radios--inline">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Fatdel" name="Fatdel" type="radio" value="yes">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+              Yes
+            </label>
           </div>
-        </fieldset>
-      
-      </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="Fatdel" name="Fatdel" type="radio" value="no">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+              No
+            </label>
+          </div>
+    
+        </div>
+      </fieldset>
+    
+    </div>
 
-      <br>
+    <br>
 
-      <a href="summary-submission" class="nhsuk-button">Continue</a>
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue</button>
 
-     
+     </form>
 <!-- End of content -->
 
   </div>
