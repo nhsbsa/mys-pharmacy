@@ -1264,6 +1264,29 @@ router.post(/Fatdel/, function (req, res) {
   }
 });
 
+// GP admin portal //
+
+router.post(/gpadmin/, function (req, res) {
+
+  const gpadmin = req.session.data['gpadmin']
+
+  if (gpadmin === "yes") {
+    res.redirect('../manage-users-v1/create-users');
+  } else {
+    res.redirect('../manage-users-v1/create-users-summary');
+  }
+});
+
+router.post(/createquestion/, function (req, res) {
+
+  const createquestion = req.session.data['createquestion']
+
+  if (createquestion === "yes") {
+    res.redirect('../manage-users-v1/create-users');
+  } else {
+    res.redirect('../manage-users-v1/confirmation-new');
+  }
+});
 
 // Templates //
 
