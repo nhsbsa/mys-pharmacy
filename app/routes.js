@@ -766,6 +766,16 @@ router.post(/vaccinedelete/, function (req, res) {
 });
 
 
+router.post(/Influenzadelete/, function (req, res) {
+
+  const Influenzadelete = req.session.data['Influenzadelete']
+
+  if (Influenzadelete === "yes") {
+    res.redirect('confirmation-delete-influen');
+  } else {
+    res.redirect('vaccine-detail-1');
+  }
+});
 
 // NMS//
 
