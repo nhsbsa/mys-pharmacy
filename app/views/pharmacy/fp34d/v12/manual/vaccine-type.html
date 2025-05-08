@@ -1,0 +1,87 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+High volume vaccinations
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">August 2024 submission</span>
+                  Add vaccine
+                 
+                </h1>
+              </header>
+
+              <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+              
+                <div class="nhsuk-form-group">
+                
+                  <h2 class="nhsuk-heading-m">Vaccine type</h2>
+
+                  <div class="nhsuk-hint" id="example-hint">
+                    Select a type of vaccine administered by Dr Charlie Robert for August 2024.
+                   </div>
+                 
+                    <div class="nhsuk-form-group">
+                     
+                      <select class="nhsuk-select" id="select-1" name="select-1">
+                        <option value="Select a GP or nurse" selected>Select a vaccine type</option>
+                        <option value="Hepatitis A">Hepatitis A</option>
+                        <option value="Hepatitis B">Hepatitis B</option> 
+                        <option value="Influenza">Influenza</option>
+                        <option value="Memingococcal">Memingococcal</option>
+                        <option value="Pneumococcal">Pneumococcal</option>
+                        <option value="Typhoid">Typhoid</option>
+                      </select>
+                    </div>
+                  </fieldset>
+
+                </div>
+
+                
+              <br>
+
+              <a href="vaccine" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
