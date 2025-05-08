@@ -686,7 +686,7 @@ router.post(/Version4Claim/, function (req, res) {
   }
 });
 
-// FP34D HVV//
+// HVV//
 
 router.post(/HVVConfirmapi/, function (req, res) {
 
@@ -751,6 +751,17 @@ router.post(/gpaddold/, function (req, res) {
     res.redirect('gp-details-old');
   } else {
     res.redirect('declaration-old');
+  }
+});
+
+router.post(/vaccinedelete/, function (req, res) {
+
+  const vaccinedelete = req.session.data['vaccinedelete']
+
+  if (vaccinedelete === "yes") {
+    res.redirect('confirmation-delete');
+  } else {
+    res.redirect('add-gp');
   }
 });
 

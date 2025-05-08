@@ -28,26 +28,27 @@ Flu
 {% block content %}
 
 <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
+  <div class="nhsuk-grid-column-full">
 
 
 
-        {{ backLink({
-        "href": "javascript:history.go(-1)",
-        "text": "Go back"
-        }) }}
+      {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
 
-        <div class="nhsuk-grid-row">
-          <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
 
         <!-- Change the page title here -->
         <header>
              <h1 class="nhsuk-caption--bottom">
-              Flu premises & refrigeration payments reports
+              Flu vaccination payment reports
             </h1>
         </header>
 <br>
-       <p>Download report .csv files</p>
+        <p>Select a report to download as a CSV file.</p>
+       <p>Reports will be available in your download folder or any folder configured as your default download folder.</p>
          
       <table class="nhsuk-table">
         <thead role="rowgroup" class="nhsuk-table__head">
@@ -66,22 +67,20 @@ Flu
             <td class="nhsuk-table__cell "><a href="">Download report</a></td>
           </tr>
           <tr role="row" class="nhsuk-table__row">
-            <td class="nhsuk-table__cell">Fees report</td>
+            <td class="nhsuk-table__cell">Drug cost report</td>
             <td class="nhsuk-table__cell "><a href="">Download report</a></td>
           </tr>
-         
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">Flu fee report</td>
+            <td class="nhsuk-table__cell "><a href="">Download report</a></td>
+          </tr>
         </tbody>
       </table>
   
-      <a href="confirmation" class="nhsuk-button">Download all</a>
-
-      
-    
+      <a href="" class="nhsuk-button">Download all</a>
 
 
-       
-</div>
-</div>
+        </div>
     </div>
 </div>
 
