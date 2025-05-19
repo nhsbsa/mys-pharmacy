@@ -1,0 +1,85 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+GP portal
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">GP portal</span>    
+                  Dispenser selection
+                </h1>
+              </header>
+
+
+              <div class="nhsuk-form-group">
+
+                
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                  <h1 class="nhsuk-fieldset__heading">
+                    Enter ODS code
+                  </h1>
+                </label>
+
+               
+                <input
+                  id="council"
+                  name="council"
+                  class="nhsuk-input"
+                  list="trusts"
+                  aria-describedby="council-hint"
+                />
+                <datalist id="trusts">
+                  <option value="Pharmacy 1"></option>
+                  <option value="Pharmacy 2"></option>
+                  <option value="Pharmacy 3"></option>
+                </datalist>
+              </div>
+              
+              
+              <br>
+              <br>
+              
+              <a href="index-gp-portal" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
