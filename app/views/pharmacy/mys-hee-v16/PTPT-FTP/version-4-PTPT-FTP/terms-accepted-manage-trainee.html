@@ -1,0 +1,338 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+WT&E
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+  
+  
+  
+      {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Go back"
+      }) }}
+  
+  
+  
+      <!-- Change the page title here -->
+      <header>
+        <h1>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">Foundation Trainee Pharmacist training grant and <br>Pre-registration Trainee Pharmacy Technician education and training contribution payments</span>
+            Terms and conditions
+        </h1>
+      </header>
+  
+      <!--div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" style="margin-top: auto;" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            Read the following summary of terms and conditions and, if you agree, complete the details required and tick the
+        agreement box.
+          </strong>
+        </div-->
+
+        <p>Read the following summary of terms and conditions and, if you agree, complete the details required and tick the
+            agreement box.</p>
+     
+            <h3>Pre-registration Trainee Pharmacy Technician
+    
+                <br> and Education and Training Contribution Payments</h3>
+        
+                    <p><strong>Last update: 25-Oct-2024</strong></p>
+        
+                    <p>If you agree to the terms and conditions of the proposed contract, complete the details required and tick 
+                        the agreement box below. This will be your offer to carry out the training on the terms and conditions 
+                        set out.</p>
+                  
+                      <p>If NHS England accept your offer to carry out the training, they will email confirmation of acceptance 
+                        of the offer of training the trainee(s). The terms and conditions shall be binding from the date of such 
+                        confirmation.</p>
+                  
+                      <p>Save as varied below, the terms and conditions applicable to these activities shall be those set 
+                        out in the Main Body Terms of the NHS Education Agreement as published by NHS England at the time 
+                        of your application together with the schedules as detailed below.</p>
+                      
+                  
+                      <p>The Main Body Terms of the NHS Education Agreement can be found here:
+                        <br><a href="https://www.england.nhs.uk/terms-and-conditions-2/new-nhs-education-contract/" target="_blank" >NHS England» NHS Education Funding Agreement 2024-27</a></p>
+        
+                    <br>
+        
+                    <h3>Adaption of the Main Body Terms:</h3>
+        
+                    <ol>
+                      <li style="margin-left:40px; padding-bottom:10px;">There shall be no signed copy of the NHS Education Agreement.
+                      </li>
+        
+                      <li style="margin-left:40px; padding-bottom:10px;">Your acceptance of the terms and conditions on behalf of 
+                        the Provider will be acknowledged through your completing the details and tick box below.</li>
+        
+                      <li style="margin-left:40px; padding-bottom:10px;">NHS England’s acceptance of your offer will be 
+                        through the email to you confirming the acceptance of the training of the trainee(s). As such, 
+                        the Main Body Terms are varied as follows:</li>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">3.1 The definition of <strong>“Commencement Date”</strong> 
+                            shall be replaced: <strong>“means the date of the email from NHS England confirming the acceptance 
+                            of the Provider’s offer to take the PTPT(s)(as defined in Schedule 1)”.</strong></p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">3.2 The <strong>“Provider”</strong> or person who is contracting with 
+                            NHS England will be the corporate body, individual, or partnership that is associated with the 
+                            Organisation Data Service (ODS) code from which the application for the PTPT(s)
+                            (as defined in Schedule 1) is made.</p>
+        
+                    </ol>
+        
+                    <h3>SCHEDULE 1: Provider Services</h3>
+                    
+                    <ol>
+                      <li style="margin-left:40px; padding-bottom:10px;"><strong>Milestones:</strong> There are no separate Milestones 
+                        associated with these services.
+                      </li>
+        
+                      <li style="margin-left:40px; padding-bottom:10px;"><strong>Manager:</strong> The individual completing this 
+                        form on behalf of the Provider shall be the Manager, unless or until the Provider gives 
+                        notice of an alternative Manager.</li>
+        
+                      <li style="margin-left:40px; padding-bottom:10px;"><strong>Service specification:</strong></li>
+                        <p style="margin-left:60px; padding-bottom:10px;">3.1 The activity covered within this 
+                            Schedule 1 is non-recurrent for the period described below and within Schedule 2 of
+                             this agreement relates to the <strong>education and training of pre-registration trainee 
+                             pharmacy technicians (PTPT).</strong></p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">3.2 Activity will be for a maximum 
+                            twenty-four-month period, unless suspension, necessary delay or cessation shall 
+                            at any time apply.</p>
+                        <p style="margin-left:60px; padding-bottom:10px;">3.3 The Provider will accommodate 
+                            a PTPT for both Year 1 and Year 2 of training, with funding provided as per 
+                            Schedule 2 of this agreement.
+                        </p>  
+                        <p style="margin-left:60px; padding-bottom:10px;">3.4 The Provider is responsible 
+                            for employing PTPT(s) in line with their existing policies and procedures.
+                        </p>
+                        <p style="margin-left:60px; padding-bottom:10px;">3.5 The Provider as employer 
+                            will ensure appropriate DBS and reference checks are carried out as per 
+                            the employing organisations HR policies and confirm that the PTPT is 16 years or older.
+                        </p>
+                        <p style="margin-left:60px; padding-bottom:10px;">3.6 The Provider as employer will 
+                            ensure the PTPT meets apprenticeship funding rules before appointment. 
+                            Funding rules are: <a href="https://www.gov.uk/guidance/apprenticeship-funding-rules" target="_blank">
+                                https://www.gov.uk/guidance/apprenticeship-funding-rules</a>
+                        </p>
+                        <p style="margin-left:60px; padding-bottom:10px;">3.7 Funding has been allocated on the basis 
+                            that PTPTs will be employed as per the national minimum wage rate.
+                        </p>
+        
+        
+                        <li style="margin-left:40px; padding-bottom:10px;"><strong>Programme Requirements:</strong></li>
+                        <p style="margin-left:40px; padding-bottom: 10px;;">PTPT Training Programmes will:</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.1 Meet the requirements of the GPhC 2017 
+                            IET standards for pharmacy technicians.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.2 Be overseen by a designated Educational
+                             Supervisor, who must be a GPhC registered pharmacy professional.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.3 Have a work-based Practice / 
+                            Clinical Supervisor throughout each care setting.
+                        </p>  
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.4 Include training and 
+                            development to ensure the final accuracy check of items dispensed by 
+                            others and training in medicines reconciliation.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.5 Provide experiential 
+                            learning opportunities.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.6 Demonstrate quality 
+                            benchmarking aligned to the NHS England Education Quality Framework.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.7 Have a learning 
+                            plan (demonstrably) in place before the PTPT starts.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.8 Have placement 
+                            objectives for each care setting covering the full 24-month training 
+                            programme.</a>
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">4.9 Where the training 
+                            programme includes placements, the Provider must ensure that the PTPT 
+                            is fully inducted into each placement and appropriate supervision is in place.
+                        </p>
+        
+        
+                        <li style="margin-left:40px; padding-bottom:10px;"><strong>Education Provision:</strong></li>
+                        <p style="margin-left:60px; padding-bottom:10px;">5.1 Education provision will be through the 
+                            Level 3 Pharmacy Technician (Integrated) apprenticeship standard.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">5.2 The Provider will procure the 
+                            apprenticeship provision which shall be a GPhC-approved national qualification 
+                            or course by a GPhC accredited training provider.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">5.3 The Provider is responsible for 
+                            ensuring that the PTPT meets the apprenticeship providers’ entry requirements and 
+                            undertakes any pre-screening as required.
+                        </p>  
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">5.4 The PTPT must be given a minimum 
+                            of one day per week to attend their apprenticeship provider and / or complete any 
+                            distance/e-learning. This should be part of their paid employment and may contribute 
+                            towards their ‘off-the-job' training requirement.
+                        </p>
+        
+        
+                        <li style="margin-left:40px; padding-bottom:10px;"><strong>Designated Educational Supervisor:</strong></li>
+                        <p style="margin-left:60px; padding-bottom:10px;">6.1 The Provider must have a named registered pharmacy 
+                            professional to act as a designated Educational Supervisor who has been registered with the GPhC 
+                            for at least two years at the point when the PTPT commences their Programme.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">6.2 A designated Educational Supervisor is someone who 
+                            is selected, appropriately trained and responsible for the overall Supervision and management of 
+                            the PTPT’s educational progress during the 24-month training Programme.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">6.3 To become a designated Educational Supervisor, 
+                            candidates must: be a registered pharmacy professional, have been practising as a registered 
+                            pharmacy professional for at least two years in pharmacy, meet the GPhC guidance on tutoring 
+                            and supervising pharmacy professionals in training and meet the apprenticeship Provider’s requirement.
+                        </p>  
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">6.4 The designated Educational Supervisor should work 
+                            collaboratively with the Practice / Clinical Supervisors to ensure the overall training programme 
+                            meets the GPhC 2017 IET standards for pharmacy technicians and monitor the PTPTs progress throughout 
+                            the training programme in order to give feedback on progression and at the annual appraisal.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">6.5 It is expected that the Educational Supervisor will 
+                            also meet their PTPT at least once a month to provide holistic care, review progress and support.
+                        </p>
+                        
+        
+                        <li style="margin-left:40px; padding-bottom:10px;"><strong>Practice/Named Clinical Supervisors</strong></li>
+                        <p style="margin-left:60px; padding-bottom:10px;">7.1 A Practice / Named Clinical Supervisor in pharmacy 
+                            is someone who is selected, appropriately trained and responsible for overseeing a specified PTPT’s 
+                            work and provide developmental feedback during a period of training. This role requires appropriate 
+                            assessment skills.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">7.2 Practice / Named Clinical Supervisors will support 
+                            PTPTs to identify opportunities for learning in the workplace and provide supervision of PTPTs on a 
+                            day-to-day basis, identifying PTPTs requiring additional support.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">7.3 Practice / Named Clinical Supervisors will be 
+                            involved in and contribute to a work-based learning culture.
+                        </p>  
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">7.4 The Practice / Named Clinical Supervisor should 
+                            meet with the PTPT at the beginning of a 12-week period to agree learning outcomes, training and 
+                            support. Following this, Practice / Named Clinical Supervisors and PTPTs should meet mid-12-week 
+                            period to provide interim feedback and support and then again at the end of the 12-week period 
+                            to give summative feedback.
+                        </p>
+        
+                    </ol>
+        
+        
+                    <h3>SCHEDULE 2: FUNDING</h3>
+                    
+            <ol>
+                      <li style="margin-left:40px; padding-bottom:10px;"><strong>Funding:</strong>
+                      </li>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.1 Providers will be paid monthly, 
+                            2 months in arrears, by twelve monthly (pro-rata) payments which will total £15,053, 
+                            in year 1 (one) of the two-year training programme.</strong></p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.2 Providers will be paid monthly, 2
+                             months in arrears, by twelve monthly (pro-rata) payments which will total £15,053, 
+                             in Year 2 (two) of the two-year training programme.</p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.3 All funding offers within this 
+                            Schedule 2 are contingent upon NHS England receiving the necessary funding approvals 
+                            for the relevant Financial Year.
+                        </p>  
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.4 NHS England reserves the right to 
+                            withdraw from or suspend any activity, where finance is either delayed, suspended or 
+                            ceased. In such cases, NHS England will follow the Termination process under clause 
+                            37 of the main body terms .
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.5 NHS England will provide funding 
+                            contingent upon the Provider delivering Year 1 and Year 2 PTPT training to the PTPT 
+                            confirmed as accepted by NHS England.
+                        </p>
+        
+                        <p style="margin-left:60px; padding-bottom:10px;">1.6 Repayments of education and training 
+                            contributions due to withdrawals If a PTPT withdraws from training the Provider must 
+                            inform NHS England immediately. The monthly payments will stop from the month the PTPT 
+                            withdraws. If additional payments are made, the Provider will be liable to return the 
+                            additional money.
+                        </p>
+            </ol>
+        
+                    <h3>SCHEDULE 3: QUALITY AND PERFORMANCE REQUIREMENTS</h3>
+            <ol>
+                    <p style="margin-left:40px; padding-bottom:10px;">1. By accepting these terms and conditions 
+                        the Provider agrees to be bound by the Quality and Performance requirements published as 
+                        Schedule 3 to NHS Education Agreement which can be found here: <br><br> 
+                        <a href="https://www.england.nhs.uk/terms-and-conditions-2/new-nhs-education-contract/" target="_blank">
+                            NHS England » NHS Education Funding Agreement 2024-27</a>
+                    </p>   
+            </ol>
+                    
+                    <h3>SCHEDULE 4</h3>
+                    
+                    <p style="margin-left:40px; padding-bottom:10px;"> 
+                        Not used
+                    </p>
+      
+    
+                    <h3>SCHEDULE 5: DATA SHARING AGREEMENT</h3>
+            <ol>      
+                    <p style="margin-left:40px; padding-bottom:10px;">1. By accepting these terms and conditions the Provider agrees to be bound by 
+                        the Data Sharing Agreement published as Schedule 5 to NHS Education Agreement which can be found here: <br><br> 
+                        <a href="https://www.england.nhs.uk/terms-and-conditions-2/new-nhs-education-contract/" target="_blank">
+                            NHS England » NHS Education Funding Agreement 2024-27</a>
+                    </p>               
+          
+            </ol>
+    
+    </div>
+    </div>
+
+
+
+<!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <!-- <h2>Context</h2> -->
+  
+      <br>
+ 
+      <a href="hee-manage-trainee1" class="nhsuk-button">
+        Go back
+      </a>
+
+    </div>
+</div>
+{% endblock %}
