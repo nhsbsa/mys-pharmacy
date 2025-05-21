@@ -25,7 +25,7 @@ Administration
 {% block content %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-full">
 
 
 
@@ -48,9 +48,8 @@ Administration
         <p>Search result for Covid premises submission to delete</p>
 
         <h3>Submission found</h3>
-
-
-<!-- 1st table-->        
+       
+        <!-- 1st table-->        
 
         <table role="table" class="nhsuk-table-responsive">
          
@@ -172,75 +171,22 @@ Administration
 
         </table>
 
+        <br>
+        <br>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true" style="margin-top: -3px;">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-visually-hidden">Warning</span>
+                        This submission is past the deadline for deletion. You may now <a href="search-flu-submission-to-delete"> run another search</a>
+                </strong>
+        </div>
 
 <br>
-<br>
 
-<!--button-->
-        <a href="confr-del-serach-results" class="nhsuk-button" data-module="nhsuk-button">
-        Delete submission
-        </a>     
-<br>
-<br>
-
-<!--error-->
-
-
-              <!--form>
-
-                <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
-                  <h2 class="nhsuk-error-summary__title" id="error-summary-title">
-                    There is a problem
-                  </h2>
-                  <div class="nhsuk-error-summary__body">
-                    <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
-                      <li> <a href="#name">Enter your full name</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-
-              </form-->
-            
-
-
-
-<!--radios-->
-
+        <p><a href="../../admin-index">Go back to admin</a></p>       
     
-          <!--div class="nhsuk-form-group nhsuk-form-group--error">
-
-            <fieldset class="nhsuk-fieldset" aria-describedby="example-error-hint example-error-error">
-              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                <h1 class="nhsuk-fieldset__heading">
-                  Have you changed your name?
-                </h1>
-              </legend>
-              <div class="nhsuk-hint" id="example-error-hint">
-                This includes changing your last name or spelling your name differently.
-              </div>
-              <span class="nhsuk-error-message" id="example-error-error">
-                <span class="nhsuk-u-visually-hidden">Error:</span> Select yes if you have changed your name
-              </span>
-              <div class="nhsuk-radios nhsuk-radios--inline">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-error-1" name="example-error" type="radio" value="yes">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-error-1">
-                    Yes
-                  </label>
-                </div>
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="example-error-2" name="example-error" type="radio" value="no">
-                  <label class="nhsuk-label nhsuk-radios__label" for="example-error-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div-->
-
-
+        
 
     </div>
 </div>

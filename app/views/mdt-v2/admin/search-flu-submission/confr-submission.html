@@ -1,0 +1,63 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Administration
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              
+              
+
+                <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4">
+
+                <div class="nhsuk-panel">
+                    <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+                         Submission has successfully been deleted. Please add this 
+                      reference number 'FZZZZ202501131619' to your email reply to
+                      the pharmacy's deletion request.
+                    </h1>
+                    
+                </div>
+
+                </div>
+
+                
+<br>
+
+                <p class="nhsuk-body">You can now go back to the home page.</p>
+                
+                <p class="nhsuk-body"><a href="../../admin-index" class="nhsuk-link">Back to Admin
+                </a></p>
+
+                <p class="nhsuk-body"><a href="../../mdt-index" class="nhsuk-link">Back to dashboard</a></p>
+
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        
+{% endblock %}
