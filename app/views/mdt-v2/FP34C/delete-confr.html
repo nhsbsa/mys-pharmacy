@@ -52,25 +52,49 @@ border-bottom: 1px solid #bfc1c3;">
         <!-- Change the page title here -->
         <header>
             <h1 class="nhsuk-caption--bottom">
-              Search FP34C submission to delete
+              Delete submission
             </h1>
         </header>
 <br>
-        <p>Search for a submission to delete</p>
+
 
         <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-20">
-            Dispenser Code
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+
+        <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h3 class="nhsuk-fieldset__heading">
+                Are you sure you want to delete this month's submission?
+            </h3>
+            </legend>
+
+            <p class="nhsuk-body">
+            You will not be able to recover the data once it has been deleted.
+            </p>
+
+            <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-1" name="example-inline" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-1">
+                Yes
+                </label>
+            </div>
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="example-inline-2" name="example-inline" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-inline-2">
+                No
+                </label>
+            </div>
+            </div>
+        </fieldset>
         </div>
+
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
 <br>        
       
-      <a href="search-result" class="nhsuk-button">Search for submission</a>
+      <a href="confirmation-delete" class="nhsuk-button">Confirm</a>
 
         <br>
         <br>
