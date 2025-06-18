@@ -1,0 +1,150 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Children's vaccine service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+   
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              {{ backLink({
+              "href": "javascript:history.go(-1)",
+              "text": "Go back"
+              }) }}
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Children's vaccine service</span>
+                 Submissions
+                </h1>
+              </header>
+
+
+
+              <table role="table" class="nhsuk-table-responsive">
+                <caption class="nhsuk-table__caption">Current months</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">
+                      Month
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Total
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>June 2025
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>4
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>May 2025
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>2
+                    </td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Month</span>April 2025
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading">Total</span>6
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <br>
+              <br>
+
+             <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        Which months would you like to claim for?
+                      </h1>
+                    </legend>
+
+                    <div class="nhsuk-hint" id="contact-hint">
+                      Select more than one if needed.
+                    </div>
+
+                    <div class="nhsuk-checkboxes">
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="may" name="PICKMONTH" type="checkbox"
+                          value="may">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                          June 2025
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="april" name="PICKMONTH" type="checkbox"
+                          value="april">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+                          May 2025
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="march" name="PICKMONTH" type="checkbox"
+                          value="march">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+                          April 2025
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+
+                   <br>
+            
+
+              <a href="cya" class="nhsuk-button">Continue</a>
+
+              <br>
+              <br>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
