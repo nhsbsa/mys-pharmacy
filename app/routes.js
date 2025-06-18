@@ -646,6 +646,19 @@ router.post(/testaction/, function (req, res) {
   }
 });
 
+// Children's vaccine service //
+
+router.post(/childrenvaccinedelete/, function (req, res) {
+
+  const childrenvaccinedelete = req.session.data['childrenvaccinedelete']
+
+  if (childrenvaccinedelete === "yes") {
+    res.redirect('cya-no-june');
+  } else {
+    res.redirect('cya');
+  }
+});
+
 
 
 
