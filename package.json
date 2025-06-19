@@ -37,10 +37,10 @@
     "keypather": "^3.0.0",
     "nhsuk-frontend": "^4.0.0",
     "nunjucks": "^3.2.2",
-    "path": "^0.12.7",
-    "sass": "^1.89.2"
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "sass": "^1.89.2"
   }
 }
