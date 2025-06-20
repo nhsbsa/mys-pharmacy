@@ -22,48 +22,51 @@ Children's vaccine service
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+{{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+   
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-two-thirds">
 
-              {{ backLink({
-              "href": "javascript:history.go(-1)",
-              "text": "Go back"
-              }) }}
+             
 
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Children's vaccine service</span>
-                  Check your answers
+                 Monthly submission
                 </h1>
               </header>
 
+<div class="nhsuk-inset-text">
+                <span class="nhsuk-u-visually-hidden">Information: </span>
+                <p>You've submitted the following totals through Manage Your Service for the period of 1 May 2025 to 31 June 2025.</p>
 
-              <table class="nhsuk-table">
-  <caption class="nhsuk-table__caption">Submission months</caption>
+                <p>Check the numbers of vaccines for your submission. If you think these are incorrect, contact your NHS XXXXXXXXXXX provider. For example, Pinnacle Health (PharmOutcomes) or Sonar Informatics.</p>
+              </div>
+
+          <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">June 2025</caption>
   <thead class="nhsuk-table__head">
     <tr>
-      <th scope="col" class="nhsuk-table__header">Month</th>
-      <th scope="col" class="nhsuk-table__header">Action</th>
+      <th scope="col" class="nhsuk-table__header">Type of vaccines</th>
+      <th scope="col" class="nhsuk-table__header">Total</th>
     </tr>
   </thead>
+  <tbody class="nhsuk-table__body">
     <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">May 2025</td>
-      <td class="nhsuk-table__cell"><a href="">View</a> | <a href="delete-confirmation">Remove</a></td>
+      <td class="nhsuk-table__cell">Number of Vaccine A</td>
+      <td class="nhsuk-table__cell">10</td>
     </tr>
     <tr class="nhsuk-table__row">
-      <td class="nhsuk-table__cell">April 2025</td>
-      <td class="nhsuk-table__cell"><a href="">View</a> | <a href="delete-confirmation">Remove</a></td>
+      <td class="nhsuk-table__cell">Number of Vaccine B</td>
+      <td class="nhsuk-table__cell">6</td>
     </tr>
   </tbody>
 </table>
-             
-               
-
-               <a href="declaration" class="nhsuk-button">Continue</a>
-           
-              
-              </form>
-
 
             </div>
 

@@ -23,7 +23,7 @@ Children's vaccine service
 {% block content %}
 
           <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
+            <div class="nhsuk-grid-column-two-thirds">
 
               {{ backLink({
               "href": "javascript:history.go(-1)",
@@ -38,78 +38,32 @@ Children's vaccine service
               </header>
 
 
+              <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">Submission months</caption>
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Month</th>
+      <th scope="col" class="nhsuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">June 2025</td>
+      <td class="nhsuk-table__cell"><a href="june-view">View</a> | <a href="delete-confirmation">Remove</a> </td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">May 2025</td>
+      <td class="nhsuk-table__cell"><a href="">View</a> | <a href="delete-confirmation">Remove</a></td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">April 2025</td>
+      <td class="nhsuk-table__cell"><a href="">View</a> | <a href="delete-confirmation">Remove</a></td>
+    </tr>
+  </tbody>
+</table>
              
-                <table role="table" class="nhsuk-table-responsive">
-                  <caption class="nhsuk-table__caption"></caption>
-                  <thead role="rowgroup" class="nhsuk-table__head">
-                    <tr role="row">
-                      <th role="columnheader" class="" scope="col">
-                        Month
-                      </th>
-                      <th role="columnheader" class="" scope="col">
-                        Total
-                      </th>
-                      <th role="columnheader" class="" scope="col">
-                        Action
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="nhsuk-table__body">
-                    <tr role="row" class="nhsuk-table__row">
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Month</span>June 2025
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Total</span>4
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Delete</span><a href="delete-confirmation">Remove</a> 
-                      </td>
-                    </tr>
-                  </tbody>
-
-                   <tbody class="nhsuk-table__body">
-                    <tr role="row" class="nhsuk-table__row">
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Month</span>May 2025
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Total</span>2
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Delete</span><a href="">Remove</a> 
-                      </td>
-                    </tr>
-                  </tbody>
-
-                   <tbody class="nhsuk-table__body">
-                    <tr role="row" class="nhsuk-table__row">
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Month</span>April 2025
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Total</span>6
-                      </td>
-                      <td role="cell" class="nhsuk-table__cell">
-                        <span class="nhsuk-table-responsive__heading">Delete</span><a href="">Remove</a> 
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Save and continue
-                </button> -->
-
-              </form>
-
-              <br>
-             
-              <form action="rsvcya" method="post">
-
                
-
-                <button class="nhsuk-button" href="declaration">Continue</button>
+<a href="declaration" class="nhsuk-button">Continue</a>
 
            
               
