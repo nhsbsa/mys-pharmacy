@@ -22,44 +22,45 @@ Children's vaccine service
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
+{{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
 
-              {{ backLink({
-              "href": "javascript:history.go(-1)",
-              "text": "Go back"
-              }) }}
+
+   
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+
+             
 
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Children's vaccine service</span>
-                  What is the total of the Pertussis vaccine claims in January 2025?
+                 Previous submission
                 </h1>
               </header>
 
 
-              <form action="Add your form title when you want to set up a route" method="post">
-
-                
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="input-width-10">
-                    Enter the total of the Pertussis Vaccine Claims
-                  </label>
-                  <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text" value="2">
-                </div>
-                  
-
-
-                <!-- Use this when you need to route. <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-                  Save and continue
-                </button> -->
-
-              </form>
-
-              <br>
-
-              <a href="cya" class="nhsuk-button">Update</a>
-
+          <table class="nhsuk-table">
+  <caption class="nhsuk-table__caption">June 2025</caption>
+  <thead class="nhsuk-table__head">
+    <tr>
+      <th scope="col" class="nhsuk-table__header">Type of vaccines</th>
+      <th scope="col" class="nhsuk-table__header">Total</th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Number of Vaccine A</td>
+      <td class="nhsuk-table__cell">10</td>
+    </tr>
+    <tr class="nhsuk-table__row">
+      <td class="nhsuk-table__cell">Number of Vaccine B</td>
+      <td class="nhsuk-table__cell">6</td>
+    </tr>
+  </tbody>
+</table>
 
             </div>
 
