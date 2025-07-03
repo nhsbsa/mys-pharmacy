@@ -53,17 +53,68 @@ Referred back
             <textarea class="nhsuk-textarea" id="example" name="example" rows="1" aria-describedby="example-hint"></textarea> 
         </div>
 
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-               <strong> Part month (Optional)</strong>
-            </label>
-            <div class="nhsuk-hint" id="example-hint">
-                Select a year and month
-             
-        
 <br>
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">                
+            <label class="nhsuk-label" for="example">
+            <strong> Part month (Optional)</strong>
+            </label>
+                
+               <label class="nhsuk-label" for="input-width-30">
+                <div class="nhsuk-label" id="example">
+                    Select a year and month
+                </div>
+            </label>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap;">
+                      <div>
+                        <label class="nhsuk-label" for="example-month">
+                            Month
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="example-month" name="example[month]" type="text" inputmode="numeric" style="width: 305px;">
+                            <option value="Select" selected>Select option</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="nhsuk-label" for="example-year">
+                            Year
+                        </label>
+                        <select class="nhsuk-select nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" style="width: 305px;">
+                            <option value="Select" selected>Select a year</option>                            
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>   
+                            <option value="2023">2023</option> 
+                            <option value="2021">2022</option>
+                            <option value="2021">2021</option> 
+                            <option value="2020">2020</option>  
+                        </select>
+                    </div>
+                    <div>
+
+                </div>
+                </fieldset>
+
+
+
+
+
+
+
+
         
-            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+            <!--fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
               <label class="nhsuk-label" for="input-width-30">
                 
                 <div class="nhsuk-label" id="example">
@@ -74,7 +125,7 @@ Referred back
 
             <div class="test-case" style="overflow: visible">
                 <div>
-                    <select class="nhsuk-select" id="year" name="year" aria-required="true" style="width: 630px;">
+                    <select class="nhsuk-select" id="year" name="year" aria-required="true">
                         <option value="">Select year</option>
                         <option value="2025">2025</option>
                         <option value="2024">2024</option>   
@@ -100,7 +151,7 @@ Referred back
   
               <div class="test-case" style="overflow: visible">
                   <div>
-                    <select class="nhsuk-select" id="month" name="month" style="width: 630px;">
+                    <select class="nhsuk-select" id="month" name="month">
                       <option value="Select" selected>Select option</option>
                       <option value="January" >January</option>
                       <option value="February" >February</option>
@@ -119,9 +170,10 @@ Referred back
                 </div>
               </fieldset>
 
-        </div>
+        </div-->
 
-<br>        
+<br>     
+
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
