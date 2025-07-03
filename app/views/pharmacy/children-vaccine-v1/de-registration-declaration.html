@@ -37,7 +37,7 @@ Children's vaccine service
     <!-- Change the page title here -->
     <header>
       <h1>
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Children's vaccine service</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Childhood seasonal influenza vaccinations</span>
         Complete the declaration to deregister from this service
       </h1>
     </header>
@@ -80,47 +80,55 @@ service
       </div>
       <fieldset>
         <legend class="visually-hidden">New Submission</legend>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            First name
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
-        </div>
+         <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="first-name">
+                      First name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                  </div>
 
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            Last name
-          </label>
-          <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
-        </div>
-        <div class="nhsuk-inset-text">
-          <span class="nhsuk-u-visually-hidden">Information: </span>
-          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
-            address, enter it below.</p>
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="email-with-hint-text">
-            Email address (optional)
-          </label>
-          
-          <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
-            aria-describedby="email-with-hint-text-hint">
-        </div>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="last-name">
+                      Last name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                  </div>
+                  <div class="nhsuk-inset-text">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
+                    <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                      address, enter it below.</p>
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="email">
+                      Email address (optional)
+                    </label>
+                    <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
+                      <span id="emailHint" class="panel panel-border-narrow">
+                        A confirmation email will be sent to <contractor email address>
+                          <br>
+                          If you would like a copy sent to another email address, enter it below.
+                      </span>
+                    </div> -->
+                    <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="email"
+                      aria-describedby="email">
+                  </div>
 
 
-        <div class="nhsuk-form-group">
-          <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-            <div class="nhsuk-checkboxes">
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
-                  value="agree-check" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
-                  I agree to and accept this declaration   
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+                  <div class="nhsuk-form-group">
+                   
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                            value="agree-check" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                            I agree to and accept this declaration
+                          </label>
+                        </div>
+                      </div>
+                   
+                  </div>
+
+                  <br>
 
         <div class="form-group">
           <a href="de-registration-confirmation" class="nhsuk-button">
