@@ -661,6 +661,18 @@ router.post(/childrenvaccinedelete/, function (req, res) {
 
 
 
+router.post(/notstartdereg/, function (req, res) {
+
+  const notstartdereg = req.session.data['notstartdereg']
+
+  if (notstartdereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('../not-live');
+  }
+});
+
+
 
 // HEE REG/DE-REG //
 

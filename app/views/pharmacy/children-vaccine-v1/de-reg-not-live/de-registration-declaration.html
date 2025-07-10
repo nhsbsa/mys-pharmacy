@@ -1,0 +1,151 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Children's vaccine service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Childhood seasonal influenza vaccinations</span>
+        Complete the declaration to deregister from this service
+      </h1>
+    </header>
+
+    <p class="nhsuk-body">If you deregister, you can still use this portal to make historic claims for the
+community pharmacy childhood seasonal influenza vaccination service until
+XXX.</p>
+
+    <p class="nhsuk-body">A historical claim means anything dated before the date you deregistered.</p>
+    
+<p class="nhsuk-body">After that date you will not be able to use this portal to claim.</p>
+
+<p class="nhsuk-body">Read the following summary of terms and conditions and, if you agree,
+complete the details required and tick the agreement box.</p>
+
+<p class="nhsuk-body">If you choose not to accept (sign this declaration) your deregistration will not be
+progressed.</p>
+
+</div>
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="declaration">
+
+        <p class="nhsuk-body">I declare that:</p>
+        <br>
+        <ul>
+          <li style="margin-left:40px; padding-bottom:10px;">I am giving 28 days’ notice that I wish to deregister my pharmacy from
+the community pharmacy childhood seasonal influenza vaccination
+service
+          </li>
+
+          <li style="margin-left:40px; padding-bottom:10px;">I will continue to deliver the service during the notice period.</li>
+
+          <!--
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+        </ul>
+      </div>
+      <fieldset>
+        <legend class="visually-hidden">New Submission</legend>
+         <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="first-name">
+                      First name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="last-name">
+                      Last name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                  </div>
+                  <div class="nhsuk-inset-text">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
+                    <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                      address, enter it below.</p>
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="email">
+                      Email address (optional)
+                    </label>
+                    <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
+                      <span id="emailHint" class="panel panel-border-narrow">
+                        A confirmation email will be sent to <contractor email address>
+                          <br>
+                          If you would like a copy sent to another email address, enter it below.
+                      </span>
+                    </div> -->
+                    <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="email"
+                      aria-describedby="email">
+                  </div>
+
+
+                  <div class="nhsuk-form-group">
+                   
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                            value="agree-check" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                            I agree to and accept this declaration
+                          </label>
+                        </div>
+                      </div>
+                   
+                  </div>
+
+                  <br>
+
+        <div class="form-group">
+          <a href="de-registration-confirmation" class="nhsuk-button">
+            Accept declaration
+          </a>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> -->
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
