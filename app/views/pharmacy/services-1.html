@@ -1,0 +1,271 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-sidebar.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+MYS
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">    
+    <div class="nhsBSA-sidebar-content">
+
+ <!-- Notification banner -->
+      <div class="alert-banner" style="background-color: #FAE100; padding-bottom: 80px;"></div>
+      <div class="nhsuk-width-container" style="margin: 0; padding-left: 30px;">
+
+<!-- Feedback and Notification block starts here -->
+      <p style="color: #000;
+      font-size: 16px;
+      line-height: 1.25;
+      margin-top: -7.5%;
+      padding: 8px 10px 10px;      
+      letter-spacing: 1px;">
+    <span style="text-decoration: none;">
+    <strong>Reminder: </strong>
+    Unplanned temporary suspension of services</span></p>
+
+<!-- Feedback and Notification block ends here -->
+        
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+              <ul class="nhsuk-grid-row nhsuk-card-group">
+
+
+                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="Contraception/optin">Contraception Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+              
+
+                <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../pharmacy/cvp-mys-v2/registration">COVID-19 Vaccination Programme: Site Sign-up Process for Suppliers</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+                <!--li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../pharmacy/cprp/summary">COVID-19 premises and refrigeration claims</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li-->
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="Covid/covid-dashboard-V2">COVID-19 Vaccination Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../mdt-v2/dms-index">Discharge Medicines Services</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+               
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="Flu/flu-dashboard">Flu Vaccination Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="mys-hee-v16/PTPT-FTP/version-2-PTPT-only/start-submission-ptpt">FTP and PTPT</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>  
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="#">Hypertension Case-Finding Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+                
+
+                <!--li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" style="width: 300px; height: 205px;">
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../isp/v4/eschedule-data-first">Information service portal (ISP)</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li-->
+
+              
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../pharmacy/lateralflow-v9/lft-start-page-new">Lateral Flow Device Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="CPCS-CCS/registration">Pharmacy First Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="hrt-ppc-v5/start-page">Sell a Prescription Prepayment Certificate (PPC)</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+             
+
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="scs/dashboard">Smoking Cessation Service</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>                   
+
+                
+                <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+
+                  <div class="nhsuk-card nhsuk-card--clickable" >
+                    <div class="nhsuk-card__content">
+                      <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                        <a class="nhsuk-card__link" href="../bof/puc-v7/notify-start">Unplanned Temporary Suspension of Services</a>
+                      </h2>
+                      <p class="nhsuk-card__description"></p>
+                    </div>
+                  </div>
+
+                </li>
+
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nhsBSA-sidebar-nav">
+      <div class="side-nav">
+        <ul>
+          <div class="options" id="options">
+            <ul>
+              <div class="options" id="options"></div>
+              <li><a href="summary-new">Summary</a></li>
+              <li><a href="index3">Prescription Submissions</a></li>
+              <li><a class="active" href="services">Services</a></li>
+              <li><a href="pqs">PQS (to hide via app settings)</a></li>
+              <li><a href="audits">Audits (to hide via app settings)</a></li>
+              <li><a href="admin">Admin</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
