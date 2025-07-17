@@ -167,7 +167,7 @@
 }
 
 .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content {
-  flex: 1 0 auto;
+  flex: auto;
   background-color: #f0f4f5;
   padding: 0px;
   margin: 0px;
@@ -501,9 +501,7 @@
 }
 
 
-
-element.style {
-}
+// Custom styles for the app example page
 .app-example-page {
     padding: 30px;
 }
@@ -525,3 +523,6 @@ body {
 
 }
 
+.nhsuk-heading-m {
+    font-size: 1.3rem;
+}
