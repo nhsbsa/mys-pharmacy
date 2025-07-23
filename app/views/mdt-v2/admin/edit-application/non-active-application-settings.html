@@ -44,12 +44,17 @@ Administration
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 
-        <p>Set application parameters</p>
+        <p>Use this function to amend the dates that an application is visible. By editing visibility dates you can give or remove users' access to a service.</p>
         
-<br>      
-        <a href="edit-application-settings" class="nhsuk-button">Active application settings</a>
 
-        <div class="nhsuk-form-group">
+
+    <div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+
+    <p>Edit the visibility settings and give access to <a href="edit-application-settings">active MYS services</a>.</p>
+    </div>
+
+        <!--div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
                 AMR Audit Period
             </label>
@@ -67,7 +72,7 @@ Administration
                 Enter AMS Safety Audit 2022/23 visibility period as a pair of dates and times e.g. 2021-11-01 00:00,2022-10-01 23:59
             </div>
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>
-          </div>
+          </div-->
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
@@ -80,6 +85,16 @@ Administration
         </div>
 
         <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+              Flu season
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+              Enter Flu season visibility period as a pair of dates and times e.g. 2021-01-01 00:00,2021-12-31 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>
+        </div>
+
+        <!--div class="nhsuk-form-group">
           <label class="nhsuk-label" for="example">
             Discharge Medicines Services (DMS) API Journey
           </label>
@@ -170,36 +185,8 @@ Administration
             Enter Valproate Safety Audit 2022/23 visibility period as a pair of dates and times e.g. 2021-11-01 00:00,2022-10-01 23:59   
           </div>            
           <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea> 
-        </div>
+        </div-->
 <br>              
-
-         <!--access audit and pqs -->
-        <h2 class="nhsuk-heading-l nhsuk-caption--bottom-1">
-            Edit application settings for PQS and Access Audit
-        </h2> 
-
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-                PQS
-            </label>
-            <div class="nhsuk-hint" id="example-hint">
-                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
-            </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
-        </div>
-
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-                Access Audit
-            </label>
-            <div class="nhsuk-hint" id="example-hint">
-                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
-            </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>         
-        </div>
-<br>
-
-        <!--access audit and pqs ends here-->
 
         <a href="confirmation-application-settings" class="nhsuk-button">Save Parameters</a>
 

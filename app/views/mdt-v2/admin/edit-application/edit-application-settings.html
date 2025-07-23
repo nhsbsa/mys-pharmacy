@@ -44,35 +44,50 @@ Administration
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 <br>
-        <p>Use this function to give access to individual MYS services by setting the application parameters for visibility.</p>
+        <p>Use this function to amend the dates that an application is visible. By editing visibility dates you can give or remove users' access to a service.</p>
         
-<br>
-      
-        <a href="non-active-application-settings" class="nhsuk-button">Non-active application settings</a>
 
+
+    <div class="nhsuk-inset-text">
+    <span class="nhsuk-u-visually-hidden">Information: </span>
+
+    <p>Edit the visibility settings and give access to <a href="non-active-application-settings">inactive MYS services</a>.</p>
+    </div>
+
+
+ <!--summary-->   
         <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">Summary</h2>
             <label class="nhsuk-label" for="example">
-                Community Pharmacy Assurance Framework (CPAF) full questionnaire
+                Summary for the application
+            </label>
+         </div>
+<br>
+<!--prescriptions-->    
+        <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">Prescriptions submissions tab</h2>
+            <label class="nhsuk-label" for="example">
+                Disallowed items
             </label>
             <div class="nhsuk-hint" id="contact-hint">
-                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59   
+                Set the End Date to 9999-12-31 00:00 if the menu or tile should remain visible at all times.   
             </div>            
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-03-01 07:00,9999-03-02 00:30</textarea> 
         </div>
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Contraception Service
+                FP34C Submissions
             </label>
             <div class="nhsuk-hint" id="example-hint">
-                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+                Set the End Date to 9999-12-31 00:00 if the menu or tile should remain visible at all times. 
             </div>
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>
           </div>
 
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Covid Premises and Refrigeration Payments
+                Prescription image request
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -82,7 +97,7 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Covid Vaccination Claims submission period
+                Unpaid items
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of years and months. For example, 2024-01, 2024-12
@@ -90,9 +105,12 @@ Administration
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-07,2024-10</textarea>         
         </div>
 
+
+<!--services-->        
         <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">Services tab</h2>
             <label class="nhsuk-label" for="example">
-                COVID-19 vaccination programme: Site Sign-up Process for Suppliers
+                Children's Flu service - registration
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -102,7 +120,7 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Discharge Medicines Service (DMS) Manual Journey
+                Contraception Service
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -112,17 +130,17 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Hypertension Case-Finding Advanced Service
+                COVID-19 vaccination programme site selection process
             </label>
             <div class="nhsuk-hint" id="example-hint">
-                Enter Hypertension Case-Finding Advanced Service period as a pair of dates and times e.g. 2021-01-01 00:00,2021-12-31 23:59
+                Enter COVID-19 vaccination programme site selection process period as a pair of dates and times e.g. 2021-01-01 00:00,2021-12-31 23:59
             </div>
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>         
         </div>
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Flu Season Range
+                COVID-19 vaccination claims submission period
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of years and months. For example, 2024-01, 2024-12
@@ -132,12 +150,42 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Foundation Trainee Pharmacist training grant and Pre-registration Trainee Pharmacy Technician education and training contribution payments
+                COVID-19 premises and refrigeration payments
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
             </div>
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 9999-12-31 23:59</textarea>         
+        </div>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+                Discharge Medicines Service (DMS)
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 9999-12-31 23:59</textarea>         
+        </div>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+                Foundation trainee pharmacist training grant and pre-registration trainee pharmacy technician education and training contribution payments
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2024-02-29 17:48,2024-11-29 17:48</textarea>         
+        </div>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+                Hypertension Case-Finding Advanced Service
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 2024-12-31 23:59</textarea>         
         </div>
 
         <div class="nhsuk-form-group">
@@ -150,39 +198,42 @@ Administration
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 9999-12-31 23:59</textarea>         
         </div>
 
+
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                NHS Community Pharmacy Smoking Cessation Advanced Service Registration
+                Pharmacy First Service
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
             </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2024-02-29 17:48,2024-11-29 17:48</textarea>         
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>         
         </div>
+
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                NHS Community Pharmacy Smoking Cessation Advanced Service Claim
+                Prescription Prepayment Certificate (PPC)
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
             </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 2024-12-31 23:59</textarea>         
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
         </div>
+
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Pharmacy first service
+                Respiratory syncytial virus (RSV) and pertussis vaccine claims
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
             </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00, 9999-12-31 23:59</textarea>         
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
         </div>
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                RTEC Declaration
+                Smoking Cessation Advanced Service Claim
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -190,9 +241,50 @@ Administration
             <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2020-02-04 09:00, 2025-03-02 00:30</textarea>         
         </div>
 
-        <div class="nhsuk-form-group">
+         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Sell a Prescription Prepayment Certificate (PPC)
+                Unplanned temporary suspension of services
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
+        </div>
+     
+
+
+        <!--pqs-->
+
+        <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">PQS tab</h2>
+            <label class="nhsuk-label" for="example">
+                PQS submissions
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
+        </div>
+
+
+        <!--audits-->
+        <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">Audits tab</h2>
+            <label class="nhsuk-label" for="example">
+                Audits
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>         
+        </div>
+
+
+        <!--admin-->
+        <div class="nhsuk-form-group">
+            <h2 class="nhsuk-heading-l">Admin tab</h2>
+            <label class="nhsuk-label" for="example">
+                Financial reports
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -202,24 +294,7 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Unplanned Temporary Suspension of Services
-            </label>
-            <div class="nhsuk-hint" id="example-hint">
-                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
-            </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
-        </div>
-<br>        
-
-
-        <!--access audit and pqs -->
-        <h2 class="nhsuk-heading-l nhsuk-caption--bottom-1">
-            Edit application settings for PQS and Access Audit
-        </h2> 
-
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-                PQS
+                Real Time Exemption Checking (RTEC) declaration
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
@@ -229,18 +304,26 @@ Administration
 
         <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="example">
-                Access Audit
+                Submission reports
             </label>
             <div class="nhsuk-hint" id="example-hint">
                 Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
             </div>
-            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2021-01-01 00:00,9999-12-31 23:59</textarea>         
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
         </div>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="example">
+                User management
+            </label>
+            <div class="nhsuk-hint" id="example-hint">
+                Enter start and end date as a pair of dates and times. For example, 2023-11-01 00:00, 2023-12-01 23:59
+            </div>
+            <textarea class="nhsuk-textarea" id="example" name="example" rows="2" aria-describedby="example-hint">2023-01-01 00:00, 9999-12-31 23:59</textarea>         
+        </div>
+       
+
 <br>
-
-        <!--access audit and pqs ends here-->
-
-
         <a href="confirmation-application-settings" class="nhsuk-button">Save parameters</a>
 
      </div>
