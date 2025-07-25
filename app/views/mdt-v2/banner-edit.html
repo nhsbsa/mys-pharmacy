@@ -25,17 +25,19 @@ Notification List
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-     
-        {{ backLink({
+{{ backLink({
         "href": "javascript:history.go(-1)",
         "text": "Go back"
         }) }}
 
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+        
+
         <!-- Change the page title here -->
         <header>
-            <h1 class="nhsuk-caption--bottom">Edit notification</h1>  
+            <h1 class="nhsuk-caption--bottom">Edit banner message</h1>  
         </header>
 
         <!-- Add your content here -->
@@ -44,14 +46,13 @@ Notification List
 <br>
 
 
-            <p><a href="notification-previous">Link to previous messages</a></p>
+            <p><a href="banner-list">Use this link to view previous, current and future messages</a></p>
 
 
-        
         <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
         <div class="nhsuk-form-group">
             <h2 class="nhsuk-label-wrapper"><label class="nhsuk-label nhsuk-label--l nhsuk-u-margin-bottom-1" for="more-detail">
-                Current message
+                Banner message
             </label>
             </h2>
             <div class="nhsuk-hint nhsuk-u-margin-bottom-1" id="more-detail-hint">
@@ -88,7 +89,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                         Date
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="01">
                     </div>
                   </div>
                   <div class="nhsuk-date-input__item">
@@ -96,7 +97,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                         Month
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="07">
                     </div>
                   </div>
                   <div class="nhsuk-date-input__item">
@@ -104,7 +105,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                         Year
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2025">
                     </div>
                   </div>
                 </div>
@@ -130,7 +131,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                         Date
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="31">
                     </div>
                   </div>
 
@@ -139,7 +140,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                         Month
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example[month]" type="text" inputmode="numeric" value="07">
                     </div>
                   </div>
                   <div class="nhsuk-date-input__item">
@@ -147,7 +148,7 @@ Notification List
                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                         Year
                       </label>
-                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric">
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example[year]" type="text" inputmode="numeric" value="2025">
                     </div>
                   </div>
                 </div>
@@ -157,7 +158,7 @@ Notification List
 
 <br>        
 
-        <a href="notification-update-confirmation" class="nhsuk-button">Update notification</a>
+        <a href="banner-update-confirmation" class="nhsuk-button">Update message</a>
 
     </div>
 </div>

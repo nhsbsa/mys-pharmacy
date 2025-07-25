@@ -25,51 +25,47 @@ Notification List
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-     
-        {{ backLink({
+{{ backLink({
         "href": "javascript:history.go(-1)",
         "text": "Go back"
         }) }}
 
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+        
+
         <!-- Change the page title here -->
         <header>
-            <h1 class="nhsuk-caption--bottom">Notification list</h1>  
+            <h1 class="nhsuk-caption--bottom">Create banner message</h1>  
         </header>
 
         <!-- Add your content here -->
         <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
         <!-- <h2>Context</h2> -->
 <br>
+<br>
 
 
-            <p><a href="notification-previous">Link to previous messages</a></p>
+            <p><a href="banner-list">Use this link to view previous, current and future messages</a></p>
 
-
-        
-        <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
-        <div class="nhsuk-form-group">
-            <h2 class="nhsuk-label-wrapper"><label class="nhsuk-label nhsuk-label--l nhsuk-u-margin-bottom-1" for="more-detail">
+<!--h2 class="nhsuk-caption--bottom nhsuk-u-margin-bottom-1">
                 Current message
-            </label>
+            
             </h2>
-            <div class="nhsuk-hint nhsuk-u-margin-bottom-1" id="more-detail-hint">
-            Do not include personal information like your name, date of birth or NHS number
-            </div> 
-            <textarea class="nhsuk-textarea nhsuk-js-character-count" id="threshold" name="threshold" rows="5">Unplanned temporary suspension of services.</textarea>
-        </div>
+<div class="nhsuk-inset-text">
+    
+  <span class="nhsuk-u-visually-hidden">Information: </span>
 
-        <div class="nhsuk-hint nhsuk-character-count__message" id="more-detail-info">
-            You can enter up to 200 characters
-        </div>
-        </div>
+  <p>Unplanned temporary suspension of services. Use this link to <a href="notification-edit" class="nhsuk-link">update message</a></p>
+</div-->
+
 
 <br>
             <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
             <div class="nhsuk-form-group">
             <h2 class="nhsuk-label-wrapper"><label class="nhsuk-label nhsuk-label--l nhsuk-u-margin-bottom-1" for="more-detail">
-                Create message
+                Create a new banner message
             </label>
             </h2>
             <div class="nhsuk-hint nhsuk-u-margin-bottom-1" id="more-detail-hint">
@@ -173,7 +169,7 @@ Notification List
 
 <br>        
 
-        <a href="notification-confirmation" class="nhsuk-button">Submit</a>
+        <a href="banner-confirmation" class="nhsuk-button">Submit</a>
 
     </div>
 </div>
