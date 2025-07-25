@@ -22,26 +22,26 @@ Notification List
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsBSA-sidebar-container">
 
-  <div class="nhsBSA-sidebar-wrapper">
-    <div class="nhsBSA-sidebar-content">
-      <div class="nhsuk-width-container">
-        <div class="nhsuk-main-wrapper" id="maincontent">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
-
-              {{ backLink({
+ {{ backLink({
               "href": "javascript:history.go(-1)",
               "text": "Go back"
               }) }}
 
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+             
+
               
               <header>
-                <h1 class="nhsuk-caption--bottom nhsuk-u-margin-bottom-3">Previous notification list</h1>  
+                <h1 class="nhsuk-caption--bottom nhsuk-u-margin-bottom-3">Manage banner messaging list</h1>  
               </header>
 
-              <p>This table lists your current and previous notifications.</p>
+              <p>This table lists your current, future and previous banner messages.</p>
+             <br>
+              <p><a href="banner-create" class="nhsuk-link">Create new banner message</a></p>
               <br>
 
               <table role="table" class="nhsuk-table-responsive">
@@ -73,25 +73,25 @@ Notification List
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
                         class="nhsuk-tag nhsuk-tag--green">
-                        Active
+                        Current
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading"></span><a href="notification-edit">Edit</a>
+                      <span class="nhsuk-table-responsive__heading"></span><a href="banner-edit">Edit</a>
                     </td>
                   </tr>
 
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Period</span>01 June 2025 to <br>30 June 2025
+                      <span class="nhsuk-table-responsive__heading">Period</span>01 August 2025 to <br>30 August 2025
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Notification and messages</span>Unplanned temporary suspension of services.
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
-                        class="nhsuk-tag nhsuk-tag--grey">
-                        Not active
+                        class="nhsuk-tag nhsuk-tag">
+                        Future
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -101,15 +101,15 @@ Notification List
 
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Period</span>01 May 2025 to <br>31 May 2025
+                      <span class="nhsuk-table-responsive__heading">Period</span>01 September 2025 to <br>30 September 2025
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Notification and messages</span>Unplanned temporary suspension of services
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
-                        class="nhsuk-tag nhsuk-tag--grey">
-                        Not active
+                        class="nhsuk-tag nhsuk-tag">
+                        Future
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -119,15 +119,15 @@ Notification List
 
                   <tr role="row" class="nhsuk-table__row">
                     <td role="cell" class="nhsuk-table__cell">
-                      <span class="nhsuk-table-responsive__heading">Period</span>01 April 2025 to <br>30 April 2025
+                      <span class="nhsuk-table-responsive__heading">Period</span>01 October 2025 to <br>30 October 2025
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Notification and messages</span>Unplanned temporary suspension of services
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
-                        class="nhsuk-tag nhsuk-tag--grey">
-                        Not active
+                        class="nhsuk-tag nhsuk-tag">
+                        Future
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -145,7 +145,7 @@ Notification List
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
                         class="nhsuk-tag nhsuk-tag--grey">
-                        Not active
+                        Past
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -163,7 +163,7 @@ Notification List
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading">Status</span><strong
                         class="nhsuk-tag nhsuk-tag--grey">
-                        Not active
+                        Past
                       </strong>
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
