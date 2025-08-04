@@ -48,6 +48,7 @@ app.locals.serviceName = config.serviceName
 var appViews = [
   path.join(__dirname, 'app/views/'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'de_modules/@nhsbsa/session-timeout-warning-component/component'),
   path.join(__dirname, 'docs/views/')
 ]
 
@@ -155,6 +156,7 @@ documentationApp.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
+app.use(express.static('./node_modules/@nhsbsa/session-timeout-warning-component/dist'));
 
 
 // Check if the app is documentation only
