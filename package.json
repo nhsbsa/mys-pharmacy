@@ -20,6 +20,7 @@
     "10": "^0.0.1",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
+    "@nhsbsa/session-timeout-warning-component": "0.0.3",
     "accessible-autocomplete": "^3.0.1",
     "basic-auth": "^2.0.1",
     "body-parser": "^1.19.0",

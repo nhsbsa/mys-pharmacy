@@ -1,0 +1,18 @@
+{% if params.redirectOnSessionTimeout %}
+    <dialog id="js-modal-dialog" data-url-redirect="{{params.urlRedirect}}" data-session-timeout="{{params.sessionTimeout}}" data-session-timeout-warning="{{ params.sessionTimeoutWarning }}"
+                data-session-timeout-timer-text="{{ params.timerText }}"  data-session-timeout-timer-extra-text="{{ params.extraText }}"
+            class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
+        <div class="modal-dialog__inner">
+            <h1 id="dialog-title" class="heading-large">
+                {{ params.heading }}
+            </h1>
+            <div class="modal-dialog__inner__text">
+                <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div>
+                <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div>
+            </div>
+            <div class="modal-dialog__inner__block">
+                <button class="nhsuk-button js-dialog-close">{{params.buttonText}}</button>
+            </div>
+        </div>
+    </dialog>
+{% endif %}
