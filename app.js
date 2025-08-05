@@ -48,7 +48,7 @@ app.locals.serviceName = config.serviceName
 var appViews = [
   path.join(__dirname, 'app/views/'),
   path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
-  path.join(__dirname, 'de_modules/@nhsbsa/session-timeout-warning-component/component'),
+  path.join(__dirname, 'node_modules/@nhsbsa/session-timeout-warning-component/component'),
   path.join(__dirname, 'docs/views/')
 ]
 
