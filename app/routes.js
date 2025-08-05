@@ -717,7 +717,7 @@ router.post(/vaccinehvv/, function (req, res) {
   if (vaccinehvv === "yes") {
     res.redirect('add-gp');
   } else {
-    res.redirect('vaccine-detail-1');
+    res.redirect('vaccine-type');
   }
 });
 
