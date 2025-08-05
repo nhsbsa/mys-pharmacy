@@ -35,7 +35,6 @@
 {%- from 'summary-list/macro.njk' import summaryList %}
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'textarea/macro.njk' import textarea %}
-{%- from 'session-timeout-warning/macro.njk' import sessionTimeoutWarning %}
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en" style="{{ html_style }}"><!--<![endif]-->
   <head>
@@ -57,7 +56,6 @@
     {% endblock %}
 
     <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
-    <script src="/timeout.js" defer></script>
 
     {% block headIcons %}
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">

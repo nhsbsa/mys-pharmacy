@@ -32,46 +32,6 @@
 
 <script src="/assets/javascripts/scripts.js"></script>
 
-
-{{ sessionTimeoutWarning({ 
-redirectOnSessionTimeout: true, 
-sessionTimeout: 30,
-sessionTimeoutWarning: 15 - 5,
-heading: "Your application will time out soon", 
-timerText: "We will sign you out in", 
-extraText: "This is to protect your data", 
-buttonText: "Continue Application", 
-urlRedirect: "/session-timeout.html"
-}) }}
-
-
-
-<dialog id="js-modal-dialog" data-url-redirect="session-timeout.html" data-session-timeout="60" data-session-timeout-warning="45" data-session-timeout-timer-text="You will be signed out in " data-session-timeout-timer-extra-text="This is to ensure you data is safe" class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
-
-   <div class="modal-dialog__inner"> 
-
-      <h1 id="dialog-title" class="heading-large"> Session Timeout </h1> 
-
-      <div class="modal-dialog__inner__text"> 
-
-         <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div> 
-
-         <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div> 
-
-      </div> 
-
-      <div class="modal-dialog__inner__block"> 
-
-          <button class="nhsuk-button js-dialog-close">Continue Application</button> 
-
-      </div> 
-
-   </div> 
-
-</dialog>
-
-
-
 {% block footer %}
 
   <footer role="contentinfo">
