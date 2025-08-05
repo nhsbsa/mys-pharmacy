@@ -796,7 +796,7 @@ router.post(/Influenzadelete/, function (req, res) {
   const Influenzadelete = req.session.data['Influenzadelete']
 
   if (Influenzadelete === "yes") {
-    res.redirect('confirmation-delete-influen');
+    res.redirect('vaccine-detail-1-confirmation');
   } else {
     res.redirect('vaccine-detail-1');
   }
