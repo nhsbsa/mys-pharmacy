@@ -183,7 +183,8 @@ if (useDocumentation || onlyDocumentation == 'true') {
   // Nunjucks configuration for documentation
   var docViews = [
     path.join(__dirname, 'docs/views/'),
-    path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components')
+    path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+    path.join(__dirname, 'node_modules/@nhsbsa/session-timeout-warning-component/component')
   ]
 
   var nunjucksAppEnv = nunjucks.configure(docViews, {

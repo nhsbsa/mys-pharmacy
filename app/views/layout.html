@@ -22,7 +22,26 @@
 <!-- Header goes inside the header block -->
 <!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
 
-<dialog id="js-modal-dialog" data-url-redirect="session-timeout.html" data-session-timeout="60" data-session-timeout-warning="45" data-session-timeout-timer-text="You will be signed out in " data-session-timeout-timer-extra-text="This is to ensure you data is safe" class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
+
+
+
+{% block header %}
+  {{ header({
+    "service": {
+        "name": "Prototype kit",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+{% endblock %}
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+
+<dialog id="js-modal-dialog" data-url-redirect="https://mys-pharmacy.herokuapp.com/session-timeout" data-session-timeout="20" data-session-timeout-warning="5" data-session-timeout-timer-text="You will be signed out in " data-session-timeout-timer-extra-text="This is to ensure you data is safe" class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
 
    <div class="modal-dialog__inner"> 
 
@@ -46,22 +65,6 @@
 
 </dialog>
 
-
-{% block header %}
-  {{ header({
-    "service": {
-        "name": "Prototype kit",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false"
-    })
-  }}
-{% endblock %}
-
-<!-- Footer goes inside the footer block -->
-<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
-{% block footer %}
   {{ footer({
     "links": [
       {
