@@ -1,0 +1,146 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Children's vaccine service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+    }) }}
+
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Childhood seasonal influenza vaccinations</span>
+        Complete the declaration to provide the service
+      </h1>
+    </header>
+
+    <p class="nhsuk-body">Read the following summary of terms and conditions and, if you agree,
+complete the details required and tick the agreement box. If you choose not to
+accept (sign the declaration) your registration will not be progressed.</p>
+    
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    </div>
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="declaration">
+
+        <p class="nhsuk-body"> I declare that I want to register to provide the community
+pharmacy childhood seasonal influenza vaccination service and that:</p>
+        <br>
+        <ul>
+          <li style="margin-left:40px; padding-bottom:10px;">I have read the service specification and I will be able to provide the
+service by the point I start service delivery
+          </li>
+
+          <li style="margin-left:40px; padding-bottom:10px;">relevant pharmacy staff involved in the provision of the service have
+completed the essential training and will be competent with the specific
+skills and knowledge, as outlined in the service specification, by the point
+I start service delivery</li>
+
+<li style="margin-left:40px; padding-bottom:10px;">I will comply with the national requirements in place for ordering and
+stock management of the central supply of vaccines for this service, and
+understand that supply may be withheld under specific circumstances</li>
+
+<li style="margin-left:40px; padding-bottom:10px;">all pharmacists providing the service have read and appropriately signed
+the patient group directions for this service.Any pharmacy professionals
+who are employed after this date and provide this service will have read
+and signed the same.</li>
+          <!--
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+        </ul>
+      </div>
+      <fieldset>
+        <legend class="visually-hidden">New Submission</legend>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="first-name">
+            First name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="last-name">
+            Last name
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+        </div>
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+            address, enter it below.</p>
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Email address (optional)
+          </label>
+          
+          <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+            aria-describedby="email">
+        </div>
+
+
+        <div class="nhsuk-form-group">
+         
+            <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                  value="agree-check" aria-expanded="agree-check">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                  I agree to and accept this declaration
+                </label>
+              </div>
+            </div>
+          
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <a href="reg-confirmation" class="nhsuk-button">
+            Accept declaration
+          </a>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-confirmation">Submit</a> 
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
