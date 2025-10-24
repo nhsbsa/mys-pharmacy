@@ -43,7 +43,7 @@
 
 
 <dialog id="js-modal-dialog" data-url-redirect="https://mys-pharmacy.herokuapp.com/session-timeout"
-   data-session-timeout="1200" data-session-timeout-warning="300"
+   data-session-timeout="300" data-session-timeout-warning="300"
    data-session-timeout-timer-text="You have been inactive for 10 minutes and will be signed out automatically in 5 minutes if no action is taken. <br><br> Are you still there?"  data-session-timeout-timer-extra-text=""
    class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
    <div class="modal-dialog__inner">
@@ -56,7 +56,7 @@
       </div>
       <div class="modal-dialog__inner__block">
          <button class="nhsuk-button js-dialog-close">Yes, I’m here</button>
-         <a href="login" class="nhsuk-button js-dialog-logout nhsuk-button--secondary">Sign out</a>
+         <a href="/login" class="nhsuk-button js-dialog-logout nhsuk-button--secondary">Sign out</a>
       </div>
    </div>
 </dialog>
