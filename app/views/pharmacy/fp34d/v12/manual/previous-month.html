@@ -22,8 +22,8 @@ High volume vaccinations
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
+<div class="nhsuk-width-container app-width-container">
+  <div class="nhsuk-width-container-fluid">
 
               {{ backLink({
               "href": "javascript:history.go(-1)",
@@ -44,7 +44,7 @@ High volume vaccinations
                     <th role="columnheader" class="" scope="col">
                       Prescriber
                     </th>
-                    <th role="columnheader" class="" scope="col">
+                    <!--th role="columnheader" class="" scope="col">
                       Hep A
                     </th>
                     <th role="columnheader" class="" scope="col">
@@ -59,9 +59,12 @@ High volume vaccinations
                    
                     <th role="columnheader" class="" scope="col">
                       Typhoid
-                    </th>
+                    </th-->
                     <th role="columnheader" class="" scope="col">
                       Total
+                    </th>
+                    <th role="columnheader" class="" scope="col">
+                      Action
                     </th>
                   </tr>
                 </thead>
@@ -70,7 +73,7 @@ High volume vaccinations
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span>Dr Charlie Robert
                     </td>
-                    <td role="cell" class="nhsuk-table__cell">
+                    <!--td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -86,9 +89,13 @@ High volume vaccinations
                    
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
-                    </td>
+                    </td-->
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>34
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span>
+                      <a href="add-gp-1-previous">View</a>
                     </td>
                   </tr>
 
@@ -96,7 +103,7 @@ High volume vaccinations
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span>Dr Crystal Yip
                     </td>
-                    <td role="cell" class="nhsuk-table__cell">
+                    <!--td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
                     </td>
                     <td role="cell" class="nhsuk-table__cell">
@@ -112,9 +119,13 @@ High volume vaccinations
                     
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
-                    </td>
+                    </td-->
                     <td role="cell" class="nhsuk-table__cell">
                       <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>14
+                    </td>
+                    <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span>
+                      <a href="add-gp-1-previous">View</a>
                     </td>
                   </tr>
                   
@@ -123,7 +134,7 @@ High volume vaccinations
                       <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Prescriber </span><b>Total</b>
                       </td>
-                      <td role="cell" class="nhsuk-table__cell">
+                      <!--td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Hep A </span>0
                       </td>
                       <td role="cell" class="nhsuk-table__cell">
@@ -139,10 +150,13 @@ High volume vaccinations
                      
                       <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Typhoid</span>0
-                      </td>
+                      </td-->
                       <td role="cell" class="nhsuk-table__cell">
                         <span class="nhsuk-table-responsive__heading" aria-hidden="true">Total</span>48
                       </td>
+                      <td role="cell" class="nhsuk-table__cell">
+                      <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action</span>           
+                    </td>
                     </tr>
                     
                   </tbody>
@@ -151,15 +165,7 @@ High volume vaccinations
 
               <br>
 
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
+            
 
   </div>
 

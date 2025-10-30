@@ -41,28 +41,24 @@
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
 
-<dialog id="js-modal-dialog" data-url-redirect="https://mys-pharmacy.herokuapp.com/session-timeout" data-session-timeout="1200" data-session-timeout-warning="300" data-session-timeout-timer-text="You will be signed out in " data-session-timeout-timer-extra-text="This is to ensure you data is safe" class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
 
-   <div class="modal-dialog__inner"> 
-
-      <h1 id="dialog-title" class="heading-large"> Session Timeout </h1> 
-
-      <div class="modal-dialog__inner__text"> 
-
-         <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div> 
-
-         <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div> 
-
-      </div> 
-
-      <div class="modal-dialog__inner__block"> 
-
-          <button class="nhsuk-button js-dialog-close">Continue Application</button> 
-
-      </div> 
-
-   </div> 
-
+<dialog id="js-modal-dialog" data-url-redirect="https://mys-pharmacy.herokuapp.com/session-timeout"
+   data-session-timeout="300" data-session-timeout-warning="300"
+   data-session-timeout-timer-text="You have been inactive for 10 minutes and will be signed out automatically in 5 minutes if no action is taken. <br><br> Are you still there?"  data-session-timeout-timer-extra-text=""
+   class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer">
+   <div class="modal-dialog__inner">
+      <h1 id="dialog-title" class="heading-large">
+         You will be signed out soon
+      </h1>      
+      <div class="modal-dialog__inner__text">
+         <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions"></div>
+         <div id="at-timer" class="at-timer nhsuk-u-visually-hidden" role="status"></div>
+      </div>
+      <div class="modal-dialog__inner__block">
+         <button class="nhsuk-button js-dialog-close">Yes, I’m here</button>
+         <a href="/login" class="nhsuk-button js-dialog-logout nhsuk-button--secondary">Sign out</a>
+      </div>
+   </div>
 </dialog>
 
   {{ footer({
