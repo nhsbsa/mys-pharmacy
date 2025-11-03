@@ -1,0 +1,59 @@
+
+{% extends 'layout-sidebar.html' %}
+
+{% block header %}
+
+  {{ header({
+    service: {
+      text: serviceName,
+      href: '/'
+    },
+    search: {
+      placeholder: 'Enter search criteria',
+      visuallyHiddenLabel: 'Search the information service portal'
+    },
+    account: {
+      items: [
+        {
+          text: 'Logged in as Joe Bloggs',
+          action: '/',
+          icon: false
+        },
+        {
+          text: 'Log out',
+          href: '/'
+        }
+      ]
+    },
+    containerClasses: 'nhsuk-width-container-fluid'
+  }) }}
+
+  {% block secondaryNav %}
+    <div class="nhsuk-secondary-navigation">
+    <div class="nhsuk-secondary-navigation__container">
+      <div class="nhsuk-secondary-navigation__nav">
+        <nav class="nhsuk-secondary-navigation" aria-label="Logged in as">
+          <ul class="nhsuk-secondary-navigation__list">
+            <li class="nhsuk-secondary-navigation__item">
+              <a class="nhsuk-secondary-navigation__link" aria-current="Logged in as" href="">Logged in as NHSBSA</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  
+{% endblock %}
+
+
+
+{% block footer %}
+
+  {{ footer({
+    containerClasses: 'nhsuk-width-container-fluid'
+  }) }}
+
+{% endblock %}
+

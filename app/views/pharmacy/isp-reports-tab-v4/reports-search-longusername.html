@@ -3,12 +3,36 @@
 <!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
 
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'isp-mys-long.html' %}
+{% extends 'layout.html' %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
     - add custom CSS and JavaScript
 -->
+
+{% block header %}
+
+  {{ header({
+    service: {
+      text: serviceName,
+      href: '/'
+    },
+    account: {
+      items: [
+        {
+          text: 'Logged in as non_mys_frs_super_user_test@mysb2cdev.onmivrosoft.com',
+          action: '/',
+          icon: false
+        },
+        {
+          text: 'Log out',
+          href: '/'
+        }
+      ]
+    }
+  }) }}
+  
+{% endblock %}
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}

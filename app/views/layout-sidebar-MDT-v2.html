@@ -1,0 +1,30 @@
+
+{% extends "layout-sidebar.html" %}
+
+{% block secondaryNav %}
+  <div class="nhsuk-secondary-navigation">
+    <div class="nhsuk-secondary-navigation__container">
+      <div class="nhsuk-secondary-navigation__nav">
+        <nav class="nhsuk-secondary-navigation" aria-label="Primary navigation">
+          <ul class="nhsuk-secondary-navigation__list">
+            <li class="nhsuk-secondary-navigation__item">
+              <a class="nhsuk-secondary-navigation__link" aria-current="page" href="/mdt-v3/mdt-index">MYS Administration Processing Portal (MYS APP)</a>
+            </li>
+
+            <!--<li class="nhsuk-secondary-navigation__item">
+							<a class="nhsuk-secondary-navigation__link" href="#2">Head office dashboard</a>
+						</li>
+
+						<li class="nhsuk-secondary-navigation__item">
+							<a class="nhsuk-secondary-navigation__link" href="#3">MDT functions</a>
+						</li>-->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer() }}
+{% endblock%}

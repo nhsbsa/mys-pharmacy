@@ -1,5 +1,5 @@
 // Import NHS.UK frontend library
-@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+@import 'nhsuk-frontend/dist/nhsuk';
 
 // Components that are not in the NHS.UK frontend library
 @import 'components/related-nav';
@@ -15,6 +15,17 @@
 ///////////////////////////////////////////
 
 
+
+.has-sidebar.nhsuk-width-container-fluid {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.has-sidebar .nhsuk-main-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 //NHS BSA Full Width Header
 
 .NHSBSA-full-width-header {
@@ -22,7 +33,7 @@
   .nhsuk-width-container {
     @include nhsuk-width-container-fluid;
 
-    @include mq($until: tablet) {
+    @include nhsuk-media-query($until: tablet) {
       padding-left: nhsuk-spacing(0);
       padding-right: nhsuk-spacing(0);
     }

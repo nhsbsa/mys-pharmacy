@@ -1,72 +1,67 @@
-<!--
-  This is the main layout where you can:
-    - change the header and footer
-    - add custom CSS and JavaScript
--->
 
-<!-- Extends the layout from /docs/views/template.html -->
-{% extends "template-full-width.html" %}
+{% extends "prototype-kit-template.njk" %}
 
-<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-{% block headCSS %}
+{% block head %}
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
 
-<!-- Set the page title inside the pageTitle block -->
-{% block pageTitle %}
-  MYS Optometry
-{% endblock %}
+{% block pageTitle %}{{ serviceName }}{% endblock %}
 
-<!-- Header goes inside the header block -->
-<!-- More info and code for the header can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/header -->
 {% block header %}
+
   {{ header({
-    "service": {
-        "name": "Manage Your Service",
-        "href": "/"
-      },
-      "showNav": "false",
-      "showSearch": "false",
-      "classes": "NHSBSA-full-width-header"
-    })
-  }}
+    service: {
+      text: serviceName,
+      href: '/'
+    },
+    account: {
+      items: [
+        {
+          text: 'Logged in as Joe Bloggs',
+          action: '/',
+          icon: false
+        },
+        {
+          text: 'Log out',
+          href: '/'
+        }
+      ]
+    },
+    containerClasses: 'nhsuk-width-container-fluid'
+  }) }}
+  
 {% endblock %}
 
-<!-- Footer goes inside the footer block -->
-<!-- More info and code for the footer can be found at https://beta.nhs.uk/service-manual/styles-components-patterns/footer -->
+
+
 {% block footer %}
+
   {{ footer({
-    "links": [
-      {
-        "URL": "/",
-        "label": "Home"
-      },
-      {
-        "URL": "/page-example",
-        "label": "Example page"
-      },
-      {
-        "URL": "/",
-        "label": "Email the MYS support team"
-      },
-      {
-        "URL": "/",
-        "label": "call us 0300 330 1368"
-      },
-      {
-        "URL": "https://online1.snapsurveys.com/interview/816b552f-4a8a-4786-bcef-0c2fd4d1dc35",
-        "label": "Give us your feedback about your experience"
-      }
-    ],
-    "classes": "NHSBSA-full-width-footer"
-  })}}
+    meta: {
+      items: [
+        {
+          href: '#',
+          text: 'Home'
+        },
+        {
+          href: '#',
+          text: 'Privacy'
+        },
+        {
+          href: '#',
+          text: 'Email the MYS support team'
+        },
+        {
+          href: '#',
+          text: 'Call us 0300 330 1368'
+        },
+        { href: 'https://online1.snapsurveys.com/interview/816b552f-4a8a-4786-bcef-0c2fd4d1dc35',
+          text: 'Give us your feedback about your experience'
+        }
+      ]
+    },
+    containerClasses: 'nhsuk-width-container-fluid'
+  }) }}
+
 {% endblock %}
 
-{% block bodyEnd %}
-  {% block scripts %}
-    <!-- Custom JavaScript files can be added to this file -->
-    {% include "includes/scripts.html" %}
-    <!-- For adding page specific JavsScript -->
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-{% endblock %}

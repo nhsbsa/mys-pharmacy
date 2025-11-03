@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+
+  {{ header({
+    service: {
+      text: 'Information service portal',
+      href: '/'
+    },
+    account: {
+      items: [
+        {
+          text: 'Logged in as Joe Bloggs',
+          action: '/',
+          icon: false
+        },
+        {
+          text: 'Log out',
+          href: '/'
+        }
+      ]
+    }
+  }) }}
+
+{% endblock %}
+
+
+{% block footer %}
+  {{ footer() }}
+{% endblock %}
