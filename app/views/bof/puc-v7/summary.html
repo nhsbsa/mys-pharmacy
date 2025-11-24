@@ -21,6 +21,14 @@ Planned/unplanned closures
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back"
+    }) }}
+
+<br>
+
 <div class="nhsBSA-sidebar-container">
 
   <div class="nhsBSA-sidebar-wrapper">
@@ -29,11 +37,6 @@ Planned/unplanned closures
         <div class="nhsuk-main-wrapper" id="maincontent">
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
-
-              {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
 
               <header>
                 <h1>
