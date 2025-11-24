@@ -17,14 +17,20 @@
    {% block beforeContent %} {% endblock %} <!-- Your page content goes inside the content block -->
    <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
    {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      {{ backLink({
+
+{{ backLink({
   href: 'javascript:history.back()',
   text: 'Back'
-}) }}<!-- Change the page title here -->
+}) }}
+<br>
+<br>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
       <header class="page-header">
-        <span class="heading-secondary">Sell a PPC or an HRT PPC</span>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Sell a PPC or an HRT PPC</span>
         <h1 class="nhsuk-heading-l govuk-heading-l">Your customer already has a PPC or an HRT PPC</h1>
       </header>
       <p>Your customer already has a PPC or an HRT PPC. They should be advised that they are already covered to receive HRT medication free of charge.</p>
