@@ -17,6 +17,10 @@ Covid
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 {% endblock %}
 
@@ -29,10 +33,7 @@ Covid
 
 
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
         <!-- Change the page title here -->
         <header>

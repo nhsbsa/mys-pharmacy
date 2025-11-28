@@ -17,6 +17,10 @@ Respiratory Syncytial Virus
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->

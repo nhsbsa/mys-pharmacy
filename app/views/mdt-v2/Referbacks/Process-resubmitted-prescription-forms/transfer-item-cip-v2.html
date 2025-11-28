@@ -1,0 +1,273 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Referred back
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+ 
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-width-container">
+    
+
+        <!-- Change the page title here -->
+        <header>
+            <span class="nhsuk-caption-xl nhsuk-caption--bottom">Process resubmitted prescription forms</span>
+            <h1>
+                Transfer items to CIP
+            </h1>
+        </header>
+
+<!--Image-->
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    <!-- Image / Prescription scan -->  
+            <img class="nhsuk-image__img" src="/images/image_png.png" alt="precription form.">       
+  </div>
+
+  <div class="nhsuk-grid-column-one-half">
+   
+   <dl class="nhsuk-summary-list">
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Account</dt>
+        <dd class="nhsuk-summary-list__value">FLG31</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">Form</dt>
+        <dd class="nhsuk-summary-list__value">2553421</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Charge status
+        </dt>
+        <dd class="nhsuk-summary-list__value">E</dd>
+      </div>
+
+       <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Reason code
+        </dt>
+        <dd class="nhsuk-summary-list__value">RB1A</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Paper type
+        </dt>
+        <dd class="nhsuk-summary-list__value">FP10SS</dd>
+      </div>
+      
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Prescriber
+        </dt>
+        <dd class="nhsuk-summary-list__value">834449</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key">
+          Parent / Practice
+        </dt>
+        <dd class="nhsuk-summary-list__value"></dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          EPHM
+        </dt>
+        <dd class="nhsuk-summary-list__value"></dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Original period
+        </dt>
+        <dd class="nhsuk-summary-list__value">202406</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Ex cat
+        </dt>
+        <dd class="nhsuk-summary-list__value">C</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Presc type
+        </dt>
+        <dd class="nhsuk-summary-list__value">ARAIN TA</dd>
+      </div>
+
+      <div class="nhsuk-summary-list__row">
+        <dt class="nhsuk-summary-list__key" >
+          Item number
+        </dt>
+        <dd class="nhsuk-summary-list__value">1</dd>
+      </div>
+
+    </dl>
+    
+    <!-- warning -->
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" style="margin: -2px;" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-visually-hidden"></span>
+              Reason code: RB2B
+            </strong>
+          </div>
+
+  </div>
+</div>
+
+  <div class="nhsuk-u-padding-bottom-7"></div>
+
+<!-- previous message -->
+ <p class="nhsuk-body"><strong>Previous message from CIP operator </strong> </p>      
+
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+ <p class="nhsuk-body">Contractor added the following on <strong>09 Sep 2023 13:52:43</strong>
+  <br>
+ <strong>Presentation:</strong> tablets <strong>Additional information: </strong>Bisoprolol 5mg tablets 56/28</p>
+       <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+ 
+
+<!-- Radios -->
+
+
+  <div class="nhsuk-u-padding-bottom-6"></div>
+
+<style>
+  .nhsuk-radios__conditional {
+    display: none;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+  input[type="radio"]:checked + label + .nhsuk-radios__conditional {
+    display: block;
+  }
+</style>
+
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Is this ok?
+      </h1>
+    </legend>
+
+    
+    <div class="nhsuk-radios nhsuk-radios--conditional">
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-yes" name="contact" type="radio" value="yes" checked>
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-yes">Yes</label>
+        <div class="nhsuk-radios__conditional">
+          <div class="nhsuk-form-group">
+            <h2 class="nhsuk-label-wrapper">
+              <label class="nhsuk-label nhsuk-label--m" for="fragment-id">KFP Form Details</label>
+            </h2>
+            <div class="nhsuk-date-input">
+              <div class="nhsuk-date-input__item">
+                <label class="nhsuk-label nhsuk-date-input__label" for="fragment-id">Fragment ID</label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="fragment-id" name="fragment-id" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+              <div class="nhsuk-date-input__item">
+                <label class="nhsuk-label nhsuk-date-input__label" for="form-number">Form Number</label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-5" id="form-number" name="form-number" type="text" pattern="[0-9]*" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-no" name="contact" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-no">No</label>
+        <div class="nhsuk-radios__conditional">
+          <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">Why?</h1>
+              </legend>
+              <div class="nhsuk-hint" id="contact-hint">Select one option</div>
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="returnback-1" name="returnback" type="radio" value="returnback">
+                  <label class="nhsuk-label nhsuk-radios__label" for="returnback-1">Return back</label>
+                  <div class="nhsuk-radios__conditional">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="returnback-reason">Reason code</label>
+                      <input class="nhsuk-input nhsuk-u-width-one-half" id="returnback-reason" name="returnback-reason" type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="example">
+                        Additional notes
+                      </label>
+                      <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint" style="width: 390px;"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-2" name="returnback" type="radio" value="disallowed">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-2">Disallowed</label>
+                  <div class="nhsuk-radios__conditional">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="disallowed-reason">Reason code</label>
+                      <input class="nhsuk-input nhsuk-u-width-one-half" id="disallowed-reason" name="disallowed-reason" type="text">
+                    </div>
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="example">
+                        Additional notes
+                      </label>
+                      <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="example-hint" style="width: 390px;"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+ 
+ 
+<!-- radios end here -->
+
+<br>
+
+
+  <a href="" class="nhsuk-button">Submit</a>
+      
+    </div>
+</div>
+{% endblock %}

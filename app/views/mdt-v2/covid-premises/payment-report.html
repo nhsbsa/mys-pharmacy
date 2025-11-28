@@ -17,6 +17,10 @@ Covid Premises
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 <!-- Feedback and Notification block starts here -->
 
@@ -33,10 +37,7 @@ Covid Premises
       <div class="nhsuk-grid-column-two-thirds">
 
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
 
         <!-- Change the page title here -->

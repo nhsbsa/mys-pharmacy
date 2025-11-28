@@ -17,6 +17,10 @@ Lateral Flow Device
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 <!-- Feedback and Notification block starts here -->
 
@@ -31,10 +35,7 @@ Lateral Flow Device
     <div class="nhsuk-grid-column-full">
       <div class="nhsuk-grid-column-two-thirds">
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
        
           

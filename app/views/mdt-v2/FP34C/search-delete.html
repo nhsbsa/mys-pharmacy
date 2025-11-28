@@ -17,6 +17,10 @@ FP34C
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 {% endblock %}
 
@@ -42,10 +46,7 @@ border-bottom: 1px solid #bfc1c3;">
 
 <!-- Feedback and Notification block ends here -->
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
           
 
