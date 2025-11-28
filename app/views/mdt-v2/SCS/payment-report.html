@@ -17,6 +17,10 @@ Smoking Cessation Service
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 <!-- Feedback and Notification block starts here -->
 
@@ -32,10 +36,7 @@ Smoking Cessation Service
       <div class="nhsuk-grid-column-two-thirds">
 
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
 
         <!-- Change the page title here -->

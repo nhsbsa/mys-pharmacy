@@ -17,6 +17,10 @@ Respiratory syncytial virus (RSV) and pertussis vaccine claims
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 <!-- Feedback and Notification block starts here -->
 
@@ -32,10 +36,7 @@ Respiratory syncytial virus (RSV) and pertussis vaccine claims
 
 
 
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
         <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-two-thirds">

@@ -17,6 +17,10 @@ Referred back
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 {% endblock %}
 
@@ -27,10 +31,7 @@ Referred back
 <div class="nhsuk-grid-row">
     <div class="nhsuk-width-container">
         
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
         <!-- Change the page title here -->
         <header>
@@ -148,7 +149,7 @@ Referred back
           <tbody class="nhsuk-table__body">
             <tr role="row" class="nhsuk-table__row">
               <td role="cell" class="nhsuk-table__cell">
-                <span class="nhsuk-table-responsive__heading">Dispenser code</span>FVX51
+                <span class="nhsuk-table-responsive__heading">Dispenser code</span>FVK28
               </td>
 
               <td role="cell" class="nhsuk-table__cell">

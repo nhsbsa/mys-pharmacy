@@ -17,6 +17,10 @@ Pharmacy First
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 
 
 {% endblock %}
@@ -28,10 +32,7 @@ Pharmacy First
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
      
-        {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+       
 
         <!-- Change the page title here -->
         <header>

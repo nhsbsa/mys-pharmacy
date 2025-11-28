@@ -16,6 +16,10 @@ Administration
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -25,10 +29,7 @@ Administration
           <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 
-              <!-- {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }} -->
+              <!-- -->
 
 
               <div class="nhsuk-grid-column-two-thirds">

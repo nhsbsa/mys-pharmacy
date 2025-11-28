@@ -16,6 +16,10 @@ Unpaid items
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -31,10 +35,7 @@ Unpaid items
                     <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
 
-                            {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+                           
 
                             <h1>
                                 <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
