@@ -1,0 +1,78 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back"
+    }) }}
+
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+
+    <!-- Change the page title here -->
+    <header>
+      <h1><span class="nhsuk-caption-xl nhsuk-caption--bottom">Hub and spoke</span>
+        Start your submission
+    </header>
+
+    <!-- Add your content here -->
+    <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+    <!-- <h2>Context</h2> -->
+    <p>Use this service to submit an intention to enter into a hub and spoke arrangement and allow core dispensing functions to be subcontracted to a hub.</p>
+
+    <p>This service can also be used to change the end date of previous submissions.</p>
+
+    <div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>You must make this submission at least 28 days before the start of the hub and spoke arrangement takes effect.</p>
+</div>
+
+    <p>You'll need:</p>
+    <ul style="list-style: disc; margin-left: 30px;">
+      <li>hub organisation name</li>
+      <li>hub trading name</li>
+      <li>hub address</li>
+      <li>GPhC premises number</li>
+      <li>hub ODS code or F code (optional)</li>
+    </ul>
+
+    <br>
+
+
+    <!-- <a class="nhsuk-button" href="reg-declaration">Register</a> -->
+    <a href="view-submissions" class="nhsuk-button">
+      Start now
+    </a>
+
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

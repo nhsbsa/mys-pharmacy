@@ -1,0 +1,191 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+    {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Back"
+    }) }}
+
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+             <header>
+                <h1>
+                  <span class="nhsuk-caption-xl">Hub & spoke</span>
+                  View your submissions
+                </h1>
+              </header>
+            
+
+              <a href="create-trainee" class="nhsuk-button">
+                Start new submission
+              </a>
+              
+              <p class="nhsuk-body-m">Use this table to view and update your submissions.</p>
+<br>
+
+            <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__key">
+                Hub organisation name
+                </dt>
+                <dt class="nhsuk-summary-list__key">
+                GPhC premises number
+                </dt>
+                <dt class="nhsuk-summary-list__key">
+                ODS code
+                </dt>
+                <dt class="nhsuk-summary-list__key">
+                Date range
+                </dt>
+                <dt class="nhsuk-summary-list__actions">
+                <strong>Actions</strong>
+                </dt>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__value">
+                Hub organisation name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                GPhC premises number
+                </dd>
+                <dd class="nhsuk-summary-list__value">
+                ODS code
+                </dd>
+                <dt class="nhsuk-summary-list__value">
+                Date range
+                </dt>
+                <dd class="nhsuk-summary-list__actions">
+                    <a class="nhsuk-link" href="view-submissions">View<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="change-end-date">Change end date<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="delete-submission">Delete<span class="nhsuk-u-visually-hidden"> contact information</span></a>
+                </dd>
+            </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__value">
+                Hub organisation name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                GPhC premises number
+                </dd>
+                <dd class="nhsuk-summary-list__value">
+                ODS code
+                </dd>
+                <dt class="nhsuk-summary-list__value">
+                Date range
+                </dt>
+                <dd class="nhsuk-summary-list__actions">
+                    <a class="nhsuk-link" href="view-submissions">View<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="change-end-date">Change end date<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="delete-submission">Delete<span class="nhsuk-u-visually-hidden"> contact information</span></a>
+                </dd>
+            </div>
+
+                <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__value">
+                Hub organisation name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                GPhC premises number
+                </dd>
+                <dd class="nhsuk-summary-list__value">
+                ODS code
+                </dd>
+                <dt class="nhsuk-summary-list__value">
+                Date range
+                </dt>
+                <dd class="nhsuk-summary-list__actions">
+                    <a class="nhsuk-link" href="view-submissions">View<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="change-end-date">Change end date<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="delete-submission">Delete<span class="nhsuk-u-visually-hidden"> contact information</span></a>
+                </dd>
+            </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__value">
+                Hub organisation name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                GPhC premises number
+                </dd>
+                <dd class="nhsuk-summary-list__value">
+                ODS code
+                </dd>
+                <dt class="nhsuk-summary-list__value">
+                Date range
+                </dt>
+                <dd class="nhsuk-summary-list__actions">
+                    <a class="nhsuk-link" href="view-submissions">View<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="change-end-date">Change end date<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="delete-submission">Delete<span class="nhsuk-u-visually-hidden"> contact information</span></a>
+                </dd>
+            </div>
+
+
+                <div class="nhsuk-summary-list__row">
+                <dt class="nhsuk-summary-list__value">
+                Hub organisation name
+                </dt>
+                <dd class="nhsuk-summary-list__value">
+                GPhC premises number
+                </dd>
+                <dd class="nhsuk-summary-list__value">
+                ODS code
+                </dd>
+                <dt class="nhsuk-summary-list__value">
+                Date range
+                </dt>
+                <dd class="nhsuk-summary-list__actions">
+                    <a class="nhsuk-link" href="view-submissions">View<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="change-end-date">Change end date<span class="nhsuk-u-visually-hidden"> contact information</span> | </a>
+                    <a class="nhsuk-link" href="delete-submission">Delete<span class="nhsuk-u-visually-hidden"> contact information</span></a>
+                </dd>
+            </div>
+
+            </dl>
+
+    
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+{% endblock %}
