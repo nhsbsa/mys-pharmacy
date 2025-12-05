@@ -1,0 +1,47 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- Change the page title here -->
+    <div class="nhsuk-panel">
+    <h1 class="nhsuk-panel__title">
+        You have successfully changed the end date
+    </h1>
+    </div>
+
+    <p class="nhsuk-body">The end date of this hub and spoke arrangement is now 23 May 2025.</p>
+    <p> <a href="view-your-submissions">Back to View your submissions</a></p>
+    <p> <a href="../services">Back to MYS dashboard</a></p>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

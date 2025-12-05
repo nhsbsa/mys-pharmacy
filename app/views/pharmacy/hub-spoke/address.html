@@ -1,0 +1,138 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- Change the page title here -->
+
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Hub and spoke</span>
+
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">
+        Select the hub organisation address
+      </h1>
+
+    <p class="nhsuk-body">This is the address where the dispensing activity, assembly or part assembly will take place.</p>
+    <p class="nhsuk-body"><strong>17</strong> addresses found for <strong>BD20 6LT</strong>. If you can't find the address, check the postcode and <a href="">search again</a>, or enter the address manually.</p>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label nhsuk-label--s" for="region">
+    Address
+  </label>
+  <!--div id="region-hint" class="nhsuk-hint">
+    Address
+  </div-->
+  <select class="nhsuk-select" id="region" name="region" aria-describedby="region-hint">
+    <option value="choose" selected>Select the hub address</option>
+    <option value="east">1 Maple Avenue
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="london">2 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="midlands">3 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="yorkshire">4 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="northwest">5 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="southeast">6 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="southeast">7 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+ <option value="east">8 Maple Avenue
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="london">9 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="midlands">10 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="yorkshire">11 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="northwest">12 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="southeast">13 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="southeast">14 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+<option value="midlands">15 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="yorkshire">16 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+    <option value="northwest">17 Oak Grove
+KEIGHLEY
+BD20 6LT
+United Kingdom</option>
+  </select>
+</div>
+
+     <a href="gphc-premises-number" class="nhsuk-button">
+      Continue
+    </a>
+    <p><a href="manual-address-entry">
+      Enter address manually
+    </a></p>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}

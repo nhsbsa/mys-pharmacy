@@ -1,0 +1,78 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- Change the page title here -->
+    <header>
+      <h1><span class="nhsuk-caption-xl nhsuk-caption--bottom">Hub and spoke</span>
+        Are you sure you want to delete this hub and spoke arrangement
+    </header>
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="">
+    
+      <p class="nhsuk-body-l nhsuk-u-margin-bottom-1">
+        Confirm you want to delete this submission for Hub name starting 23 May 2025.
+      </p>
+
+<br>
+    <!-- Radio buttons -->
+
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example" name="example" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="example">
+          Yes
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<br>
+
+    <a href="confirm-delete" class="nhsuk-button">
+      Confirm
+    </a>
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
