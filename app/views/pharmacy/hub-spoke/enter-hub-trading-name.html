@@ -1,0 +1,55 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Hub and spoke
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <!-- Change the page title here -->
+
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom">Hub and spoke</span>
+      <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-5">
+        Enter hub trading name (optional)
+      </h1>
+
+      <div class="nhsuk-form-group">
+        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="hub-trading-name" name="hubTradingName" type="text">
+        </div>
+
+     <a href="hub-organisation-postcode" class="nhsuk-button">
+      Continue
+    </a>
+
+    <!-- End of content -->
+
+  </div>
+</div>
+{% endblock %}
