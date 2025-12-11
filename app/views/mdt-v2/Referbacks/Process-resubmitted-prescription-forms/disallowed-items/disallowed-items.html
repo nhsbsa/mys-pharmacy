@@ -16,30 +16,27 @@ Disallowed item
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-{{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+<a class="nhsuk-back-link" href="#">
+  Back
+</a>
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+   
 <div class="nhsBSA-sidebar-container">
 
     <div class="nhsBSA-sidebar-wrapper">
+      
         <div class="nhsBSA-sidebar-content">
+          
             <div class="nhsuk-width-container">
-                <div class="nhsuk-main-wrapper" id="maincontent">
 
                     <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
 
-                            {{ backLink({
-                              href: 'javascript:history.back()',
-                              text: 'Back'
-                            }) }}
-
+                          
                             <h1>
                                 <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
                                 Disallowed and challenged items
