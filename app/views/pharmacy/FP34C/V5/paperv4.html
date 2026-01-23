@@ -16,7 +16,12 @@ FP34C
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+     {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
+
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
@@ -25,151 +30,127 @@ FP34C
 
     <div class="nhsBSA-sidebar-wrapper">
         <div class="nhsBSA-sidebar-content">
-            <div class="nhsuk-width-container">
-                <div class="nhsuk-main-wrapper" id="maincontent">
-                    <div class="nhsuk-grid-row">
-                        <div class="nhsuk-grid-column-full">
+       
 
-                            {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+ <header>
+  <h1>
+    <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+      FP34C submissions - December 2023
+    </span>
+    Are you sending any paper prescriptions?
+  </h1>
+</header>
 
-                            <header>
-                                <h1>
-                                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C submissions - December 2023</span>
-                                  Are you sending any paper prescriptions?
-                                </h1>
-                            </header>
-                           
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <div class="nhsuk-radios nhsuk-radios--conditional">
 
-                            <div class="nhsuk-form-group">
+      <!-- YES -->
+      <div class="nhsuk-radios__item">
+        <input
+          class="nhsuk-radios__input"
+          id="paper-yes"
+          name="paper"
+          type="radio"
+          aria-controls="conditional-paper-yes"
+        >
+        <label class="nhsuk-label nhsuk-radios__label" for="paper-yes">
+          Yes
+        </label>
+      </div>
 
-                              <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-                                <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                                  <h1 class="nhsuk-fieldset__heading">
-                                   
-                                  </h1>
-                                </legend>
-              
-              
-                                <div class="nhsuk-radios nhsuk-radios--conditional">
-              
-                                  <div class="nhsuk-radios__item">
-                                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email"
-                                      aria-controls="conditional-contact-1" aria-expanded="false">
-                                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                                      Yes
-                                    </label>
-                                  </div>
-              
-                                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-              
-                                    <div class="nhsuk-form-group">
-                                      <br>
-                                      <label class="nhsuk-label" for="email">
+      <div
+        class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden"
+        id="conditional-paper-yes"
+      >
+        <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="email">
                                         <h1 class="nhsuk-fieldset__heading">
                                           Tell us how many Forms and Items are exempt, paid, and paid at the old rate.
-                                        <br>
-                                          If none, enter 0 (zero) 
+                                           <br>
+                                          If none, enter 0 (zero)
                                         </h1>
                                       </label>
                                       <br>
-                                      <h1 class="nhsuk-label-wrapper">
-                                        <label class="nhsuk-label nhsuk-label--l" for="example-heading">
-                                          Forms
-                                        </label>
-                                      </h1>
-              
-                                      <div class="nhsuk-date-input" id="example">
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                                              Exempt
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
-                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                                              Paid
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
-                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                                              Old rate
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
-                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                      </div>
-              
-                                      <br>
-              
-                                      <h1 class="nhsuk-label-wrapper">
-                                        <label class="nhsuk-label nhsuk-label--l" for="example-heading">
-                                          Items
-                                        </label>
-                                      </h1>
-              
-              
-                                      <div class="nhsuk-date-input" id="example">
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                                              Exempt
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-day"
-                                              name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                                              Paid
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-month"
-                                              name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                        <div class="nhsuk-date-input__item">
-                                          <div class="nhsuk-form-group">
-                                            <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                                              Old rate
-                                            </label>
-                                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-3" id="example-year"
-                                              name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-                                          </div>
-                                        </div>
-                                      </div>
-              
-                                      <br>
-              
-              
-                                    </div>
-              
-                                  </div>
-              
-                                  <div class="nhsuk-radios__item">
-                                    <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
-                                      aria-controls="conditional-contact-2" aria-expanded="false">
-                                    <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-                                      No
-                                    </label>
-                                  </div>
-              
-              
-                                </div>
-              
-              
-                            </div>
+          <label class="nhsuk-label nhsuk-label--l" for="example-heading">Forms</label>
+          <div class="nhsuk-date-input">
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="forms-exempt">Exempt</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="forms-exempt" type="text">
+            </div>
+
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="forms-paid">Paid</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="forms-paid" type="text">
+            </div>
+
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="forms-old">Old rate</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="forms-old" type="text">
+            </div>
+          </div>
+<br>
+          <!-- Items -->
+          <label class="nhsuk-label nhsuk-label--l" for="example-heading">Items</label>
+          <div class="nhsuk-date-input">
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="items-exempt">Exempt</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="items-exempt" type="text">
+            </div>
+
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="items-paid">Paid</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="items-paid" type="text">
+            </div>
+
+            <div class="nhsuk-date-input__item">
+              <label class="nhsuk-label" for="items-old">Old rate</label>
+              <input class="nhsuk-input nhsuk-input--width-3" id="items-old" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NO -->
+      <div class="nhsuk-radios__item">
+        <input
+          class="nhsuk-radios__input"
+          id="paper-no"
+          name="paper"
+          type="radio"
+        >
+        <label class="nhsuk-label nhsuk-radios__label" for="paper-no">
+          No
+        </label>
+      </div>
+
+    </div>
+  </fieldset>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.nhsuk-radios__input').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      document
+        .querySelectorAll('.nhsuk-radios__conditional')
+        .forEach(function (el) {
+          el.classList.add('nhsuk-radios__conditional--hidden')
+        })
+
+      if (this.checked && this.getAttribute('aria-controls')) {
+        const target = document.getElementById(
+          this.getAttribute('aria-controls')
+        )
+        if (target) {
+          target.classList.remove('nhsuk-radios__conditional--hidden')
+        }
+      }
+    })
+  })
+})
+</script>
+
+</div>
+
 
                             <br>
                             <a href="epsv4" class="nhsuk-button">Continue</a>
