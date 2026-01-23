@@ -16,9 +16,11 @@ Disallowed item
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
-<a class="nhsuk-back-link" href="#">
-  Back
-</a>
+
+          {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->

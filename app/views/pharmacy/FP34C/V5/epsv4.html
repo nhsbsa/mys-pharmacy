@@ -16,7 +16,12 @@ FP34C
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+     {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
+
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
@@ -25,15 +30,10 @@ FP34C
 
     <div class="nhsBSA-sidebar-wrapper">
         <div class="nhsBSA-sidebar-content">
-            <div class="nhsuk-width-container">
-                <div class="nhsuk-main-wrapper" id="maincontent">
-                    <div class="nhsuk-grid-row">
-                        <div class="nhsuk-grid-column-full">
+        
+ <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
 
-                            {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
 
                             <header>
                               <h1>
@@ -66,7 +66,6 @@ FP34C
                                   <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
               
                                     <div class="nhsuk-form-group">
-                                      <br>
                                       <label class="nhsuk-label" for="email">
                                         <h1 class="nhsuk-fieldset__heading">
                                           Tell us how many Forms and Items are exempt, paid, and paid at the old rate.
@@ -167,7 +166,33 @@ FP34C
               
               
                                 </div>
-              
+              <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const radios = document.querySelectorAll('.nhsuk-radios__input');
+
+  radios.forEach(function (radio) {
+    radio.addEventListener('change', function () {
+
+      // hide all conditional panels
+      document
+        .querySelectorAll('.nhsuk-radios__conditional')
+        .forEach(function (el) {
+          el.classList.add('nhsuk-radios__conditional--hidden');
+        });
+
+      // show the one this radio controls
+      const targetId = this.getAttribute('aria-controls');
+      if (this.checked && targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.classList.remove('nhsuk-radios__conditional--hidden');
+        }
+      }
+    });
+  });
+});
+</script>
+
               
                             </div>
                             <br>

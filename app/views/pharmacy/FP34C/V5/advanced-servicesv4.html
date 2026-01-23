@@ -15,7 +15,11 @@ FP34C
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
-{% block beforeContent %}
+{% block beforeContent %}            
+ {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
@@ -25,16 +29,10 @@ FP34C
 
   <div class="nhsBSA-sidebar-wrapper">
     <div class="nhsBSA-sidebar-content">
-      <div class="nhsuk-width-container">
-        <div class="nhsuk-main-wrapper" id="maincontent">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-full">
 
-              {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
-
+       <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+  
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C submissions - December 2023</span>
@@ -45,16 +43,9 @@ FP34C
               
 
 
-              <form>
-
                 <div class="nhsuk-form-group">
 
                   <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                      <h1 class="nhsuk-fieldset__heading">
-                        
-                      </h1>
-                    </legend>
 
                     <div class="nhsuk-hint" id="contact-hint">
                       Select all options that are relevant to you.
@@ -63,21 +54,21 @@ FP34C
                     <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
 
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="contact-1" name="contact" type="checkbox"
-                          value="email" aria-controls="conditional-contact-1" aria-expanded="false">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-1">
+                        <input class="nhsuk-checkboxes__input" id="FP57" name="submitted" type="checkbox"
+                          value="FP57" aria-controls="conditional-FP57" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="FP57">
                           Sending FP57 forms (Prescription Charge Refund receipts)
                         </label>
                       </div>
 
                       <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
-                        id="conditional-contact-1">
+                        id="conditional-FP57">
 
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="input-width-20">
+                          <label class="nhsuk-label" for="FP57-count">
                             No. of FP57 forms submitted
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-20" id="FP57-count" name="FP57-count" type="text">
                         </div>
 
                         <div class="nhsuk-date-input" id="example">
@@ -109,51 +100,51 @@ FP34C
                       </div>
 
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox"
-                          value="phone" aria-controls="conditional-contact-2" aria-expanded="false">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+                        <input class="nhsuk-checkboxes__input" id="aur" name="aur" type="checkbox"
+                          value="aur" aria-controls="conditional-aur" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="aur">
                           Appliance Use Reviews (AUR)
                         </label>
                       </div>
 
                       <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
-                        id="conditional-contact-2">
+                        id="conditional-aur">
 
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="input-width-20">
+                          <label class="nhsuk-label" for="aur-onsite">
                             No. of Appliance Use Reviews on your premises or subsequent reviews <br>for users living at the same location within a 24-hour period
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-20" id="aur-onsite" name="aur-onsite" type="text">
                         </div>
 
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="input-width-20">
+                          <label class="nhsuk-label" for="aur-home">
                             No. of Appliance Use Reviews at patient's home
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-20" id="aur-home" name="aur-home" type="text">
                         </div>
 
                       </div>
 
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox"
-                          value="text" aria-controls="conditional-contact-3" aria-expanded="false">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+                        <input class="nhsuk-checkboxes__input" id="nms" name="nms" type="checkbox"
+                          value="nms" aria-controls="conditional-nms" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="nms">
                           New Medicine Services (NMS) 
                         </label>
                       </div>
 
                       <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
-                        id="conditional-contact-3">
+                        id="conditional-nms">
 
                         
 
                         <div class="nhsuk-form-group">
 
-                          <label class="nhsuk-label" for="input-width-20">
+                          <label class="nhsuk-label" for="nms-count">
                             No. of New Medicine Services undertaken
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-20" id="nms-count" name="nms-count" type="text">
                         </div>
 
                         
@@ -161,45 +152,63 @@ FP34C
                       </div>
 
                       <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="contact-4" name="contact" type="checkbox"
-                          value="text" aria-controls="conditional-contact-4" aria-expanded="false">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-4">
+                        <input class="nhsuk-checkboxes__input" id="ssp" name="ssp" type="checkbox"
+                          value="ssp" aria-controls="conditional-ssp" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="ssp">
                           Serious Short Protocol (SSP) provisions 
                         </label>
                       </div>
 
                       <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
-                        id="conditional-contact-4">
+                        id="conditional-ssp">
 
                         <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="input-width-20">
+                          <label class="nhsuk-label" for="ssp-count">
                             No. of supplies made in accordance with Serious Shortage Protocols (SSP)
                           </label>
-                          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+                          <input class="nhsuk-input nhsuk-input--width-20" id="ssp-count" name="ssp-count" type="text">
                         </div>
 
-                        
+                        <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // RADIO CONDITIONALS
+  document.querySelectorAll('.nhsuk-radios__input').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      document.querySelectorAll('.nhsuk-radios__conditional')
+        .forEach(el => el.classList.add('nhsuk-radios__conditional--hidden'))
+
+      const id = this.getAttribute('aria-controls')
+      if (this.checked && id) {
+        const target = document.getElementById(id)
+        if (target) target.classList.remove('nhsuk-radios__conditional--hidden')
+      }
+    })
+  })
+
+  // CHECKBOX CONDITIONALS
+  document.querySelectorAll('.nhsuk-checkboxes__input').forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      const id = this.getAttribute('aria-controls')
+      const target = id && document.getElementById(id)
+      if (!target) return
+
+      if (this.checked) {
+        target.classList.remove('nhsuk-checkboxes__conditional--hidden')
+      } else {
+        target.classList.add('nhsuk-checkboxes__conditional--hidden')
+      }
+    })
+  })
+
+})
+</script>
 
                       </div>
-                      
-                      
-                      
-                      
-                          </div>
-                        
-                      
-                      </div>
-                    </div>
-                  </fieldset>
-
+                   
                 </div>
 
-               
-                
-                </form>
-
-                
-<br>
+               <br>
 
 <form action="Version4Claim" method="post">
 
