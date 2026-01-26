@@ -1430,6 +1430,16 @@ router.post(/AddAnotherMonth/, function (req, res) {
 });
 
 
+router.post(/rsv3vaccineDelete/, function (req, res) {
+
+  const rsv3vaccineDelete = req.session.data['rsv3vaccineDelete']
+  if (rsv3vaccineDelete === "yes") {
+    res.redirect('cya-dec3');
+  } else {
+    res.redirect('cya-dec2');
+  }
+});
+
 
 
 
