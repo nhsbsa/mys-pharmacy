@@ -1,0 +1,276 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}            
+ {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+       <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+  
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C submissions - December 2023</span>
+              
+                  Which activities are you claiming for?
+                   </h1>
+              </header>
+              
+
+
+                <div class="nhsuk-form-group">
+
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+
+                    <div class="nhsuk-hint" id="contact-hint">
+                      Select all options that are relevant to you.
+                    </div>
+
+                    <div class="nhsuk-checkboxes nhsuk-checkboxes--conditional">
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="FP57" name="submitted" type="checkbox"
+                          value="FP57" aria-controls="conditional-FP57" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="FP57">
+                          Sending FP57 forms (Prescription charge refund receipts)
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
+                        id="conditional-FP57">
+
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="FP57-count">
+                            Number of FP57 forms sent
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="FP57-count" name="FP57-count" type="text">
+                        </div>
+
+                        <div class="nhsuk-date-input" id="example">
+                          <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-date-input__label" for="pounds">
+                                Total FP57 amount refunded<br>
+                                Pounds (£)
+                              </label>
+                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-20" id="pounds" name="pounds"
+                                type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                          <div class="nhsuk-date-input__item nhsuk-u-margin-right-2">
+                            <div class="nhsuk-form-group">
+                              <p>.</p>
+                            </div>
+                          </div>
+                          <div class="nhsuk-date-input__item">
+                            <div class="nhsuk-form-group">
+                              <label class="nhsuk-label nhsuk-date-input__label" for="pence">
+                                Pence
+                              </label>
+                              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="pence" name="pence"
+                                type="text" pattern="[0-9]*" inputmode="numeric">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="aur" name="aur" type="checkbox"
+                          value="aur" aria-controls="conditional-aur" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="aur">
+                          Appliance Use Reviews (AUR)
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
+                        id="conditional-aur">
+
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="aur-onsite">
+                            Number of AURs on your premises or subsequent reviews <br>for users living at the same location within a 24-hour period
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="aur-onsite" name="aur-onsite" type="text">
+                        </div>
+
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="aur-home">
+                            Total number of AURs at the patients' homes
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="aur-home" name="aur-home" type="text">
+                        </div>
+
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="nms" name="nms" type="checkbox"
+                          value="nms" aria-controls="conditional-nms" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="nms">
+                          New Medicine Services (NMS) 
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
+                        id="conditional-nms">
+
+                        
+
+                        <div class="nhsuk-form-group">
+
+                          <label class="nhsuk-label" for="nms-count">
+                           Number of NMS intervention consultations
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="nms-count" name="nms-count" type="text">
+                        </div>
+
+                        <div class="nhsuk-form-group">
+
+                          <label class="nhsuk-label" for="nms-count">
+                            Number of NMS follow-up consultations
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="nms-count" name="nms-count" type="text">
+                        </div>
+
+
+                      </div>
+
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="ssp" name="ssp" type="checkbox"
+                          value="ssp" aria-controls="conditional-ssp" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="ssp">
+                          Serious shortage protocols (SSPs) provisions
+                        </label>
+                      </div>
+
+                      <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden"
+                        id="conditional-ssp">
+
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="ssp-count">
+                           Number of supplies made in accordance with SSP provision
+                          </label>
+                          <input class="nhsuk-input nhsuk-input--width-20" id="ssp-count" name="ssp-count" type="text">
+                        </div>
+
+                        <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // RADIO CONDITIONALS
+  document.querySelectorAll('.nhsuk-radios__input').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      document.querySelectorAll('.nhsuk-radios__conditional')
+        .forEach(el => el.classList.add('nhsuk-radios__conditional--hidden'))
+
+      const id = this.getAttribute('aria-controls')
+      if (this.checked && id) {
+        const target = document.getElementById(id)
+        if (target) target.classList.remove('nhsuk-radios__conditional--hidden')
+      }
+    })
+  })
+
+  // CHECKBOX CONDITIONALS
+  document.querySelectorAll('.nhsuk-checkboxes__input').forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      const id = this.getAttribute('aria-controls')
+      const target = id && document.getElementById(id)
+      if (!target) return
+
+      if (this.checked) {
+        target.classList.remove('nhsuk-checkboxes__conditional--hidden')
+      } else {
+        target.classList.add('nhsuk-checkboxes__conditional--hidden')
+      }
+    })
+  })
+
+})
+</script>
+
+                      </div>
+                   
+                </div>
+
+               <br>
+
+<form action="Version4Claim" method="post">
+
+  <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Are you sure you have selected all the activities you want to claim for?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-hint" id="contact-hint"></div>
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="Version4Claim" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Yes
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="Version4Claim" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            No
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  </div>
+
+  <br>
+
+
+  <button class="nhsuk-button" data-module="nhsuk-button" type="submit">Continue</button>
+
+</form>
+             
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,134 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+FP34C
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+     {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C submissions - December 2023</span>
+                  Declaration
+                 
+                </h1>
+              </header>
+
+              <p>Read the following summary of terms and conditions and, if you agree, complete the details required and tick the agreement box.</p>
+              
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="declaration">
+                 <br>
+                 <p>By submitting this electronic form, and by inserting my name in the signature box and selecting that I agree below:</p>
+                 <br> 
+                 <ul>
+                 <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have reviewed the submission summary and confirm that it is correct and accurate </li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I certify that I am entitled to claim payment in accordance with the relevant provisions of my Terms of Service contained in the NHS (Pharmaceutical Services) Regulations 2013 and the Drug Tariff and that the information I have given on this form is correct and complete and I understand that if it is not, appropriate criminal, civil and disciplinary   sanctions may be imposed
+                  </li>
+
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I consent to the disclosure of information from this form to and by the NHS Prescription Services and the NHS Counter Fraud Authority for the purpose of verification of this claim and the investigation, prevention, detection and   prosecution of fraud or other unlawful activity against or affecting the NHS</li>
+
+                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>
+                      
+                </ul>
+                </div>
+                
+                <br>
+                <br>
+
+
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="input-width-10">
+                    First name
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                </div>
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="input-width-10">
+                    Last name
+                  </label>
+                  <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                </div>
+        
+                <div class="nhsuk-inset-text">
+                  <span class="nhsuk-u-visually-hidden">Information: </span>
+                  <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                    address, please enter it below.</p>
+                </div>
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="email-with-hint-text">
+                    Email address (optional)
+                  </label>
+                
+                  <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+                    aria-describedby="email-with-hint-text-hint">
+                </div>
+        
+        
+                <div class="nhsuk-form-group">
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                    <div class="nhsuk-checkboxes">
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                          value="agree-check" aria-expanded="false">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                          I agree and accept this declaration
+                        </label>
+                      </div>
+                 
+                  <br>
+
+                  <div class="form-group">
+                    <a href="submittedv4" class="nhsuk-button">
+                      Submit
+                    </a>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+{% endblock %}
