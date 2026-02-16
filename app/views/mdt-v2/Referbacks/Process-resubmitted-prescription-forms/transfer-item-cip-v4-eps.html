@@ -15,7 +15,47 @@
 
 {% block content %}
 
-<div style="width: 90vw; margin-left: calc(40% - 40vw); margin-right: calc(50% - 50vw);">
+<!-- MOBILE FIX (does nothing on desktop) -->
+<style>
+  @media (max-width: 768px) {
+
+     .mobile-fix-wrapper {
+      width: 100% !important;
+      margin-left: 16px !important;  
+      margin-right: 0px !important; 
+    }
+
+    .mobile-fix-inner {
+      width: 100% !important;
+      margin-right: 0 !important;
+    }
+
+    .nhsuk-textarea {
+      max-width: 92% !important;
+      box-sizing: border-box;
+    }
+
+     .nhsuk-button {
+      max-width: 92% !important;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+  }
+
+   /* Extra small phones */
+  @media (max-width: 480px) {
+    .nhsuk-textarea {
+      font-size: 16px; /* prevents zoom on iOS */
+    }
+  }
+</style>
+
+<div class="mobile-fix-wrapper"
+     style="width: 90vw; margin-left: calc(40% - 40vw); margin-right: calc(50% - 50vw);">
+
 
   <div class="nhsuk-grid-row" style="width: 100%; margin: 0;">
 
@@ -122,8 +162,6 @@
           </div>
 
   
-  <div class="nhsuk-u-padding-bottom-9"></div>
-  
   <div class="nhsuk-u-padding-bottom-6"></div>
 
       </div> <!-- END inner grid-row -->
@@ -164,7 +202,7 @@
     <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
 
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-        <h1 class="nhsuk-fieldset__heading">Is this ok?</h1>
+        <h2 class="nhsuk-fieldset__heading">Is this ok?</h2>
       </legend>
 
       <div class="nhsuk-radios nhsuk-radios--conditional">
@@ -209,7 +247,7 @@
               <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
 
                 <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
-                  <h1 class="nhsuk-fieldset__heading">Why?</h1>
+                  <h2 class="nhsuk-fieldset__heading">Why?</h2>
                 </legend>
 
                 <div class="nhsuk-hint" id="contact-hint">Select one option</div>
@@ -225,12 +263,12 @@
 
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="returnback-reason">Reason code</label>
-                        <input class="nhsuk-input nhsuk-u-width-one-half" id="returnback-reason" name="returnback-reason" type="text">
+                        <input class="nhsuk-input nhsuk-input--width-10" id="returnback-reason" name="returnback-reason" type="text">
                       </div>
 
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="example">Additional notes</label>
-                        <textarea class="nhsuk-textarea" id="example" name="example" rows="3" style="width: 390px;"></textarea>
+                        <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="notes"></textarea>
                       </div>
 
                     </div>
@@ -245,12 +283,12 @@
 
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="disallowed-reason">Reason code</label>
-                        <input class="nhsuk-input nhsuk-u-width-one-half" id="disallowed-reason" name="disallowed-reason" type="text">
+                        <input class="nhsuk-input nhsuk-input--width-10" id="disallowed-reason" name="disallowed-reason" type="text">
                       </div>
 
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="example">Additional notes</label>
-                        <textarea class="nhsuk-textarea" id="example" name="example" rows="3" style="width: 390px;"></textarea>
+                        <textarea class="nhsuk-textarea" id="example" name="example" rows="3" aria-describedby="notes"></textarea>
                       </div>
 
                     </div>
