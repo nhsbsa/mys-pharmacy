@@ -1,0 +1,177 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Coronavirus (COVID-19) Vaccination Service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+<br>
+<br>
+
+<div class="nhsBSA-sidebar-container">
+
+  <div class="nhsBSA-sidebar-wrapper">
+    <div class="nhsBSA-sidebar-content">
+      <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper" id="maincontent">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Coronavirus (COVID-19) Vaccination Service</span>
+                  Declaration
+                </h1>
+              </header>
+
+              <!-- <div class="nhsuk-grid-column-one-third">
+                <h2 class="heading-small" style="margin-top:20px;"></h2>
+              </div> -->
+              <div class="nhsuk-grid-column-one-third">
+                <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+              </div>
+              <div class="nhsuk-grid-column-two-thirds">
+                <div class="declaration">
+
+                  <p>I declare that I have accessed COVID-19 vaccination stock and that:</p>
+                  <br>
+                  <ol>
+                    <li style="margin-left:40px; padding-bottom:10px;">I have only used COVID-19 vaccination stock to
+                      vaccinate those patients eligible for a NHS COVID-19 vaccination and who fall into the groups
+                      included in the national COVID-19 vaccination programme, as set out on the <a target="_blank"
+                        href="https://www.gov.uk/government/groups/joint-committee-on-vaccination-and-immunisation">Joint
+                        Committee on
+                        Vaccination and Immunisation webpage</a>.
+                    </li>
+
+                    <li style="margin-left:40px; padding-bottom:10px;">The item of service fee(s) is only claimed for
+                      patients vaccinated as set out in the COVID-19 vaccination programme 2020/21 Enhanced Service
+                      Specification.</li>
+
+                    <li style="margin-left:40px; padding-bottom:10px;">My declaration may be subject to my review of the
+                      data provided by the Commissioner (NHSE or NHSBSA acting on NHSE behalf) to me and I agree that I
+                      shall review and report on this data to the Commissioner (NHSE or NHSBSA acting on NHSE behalf) if
+                      required within their specified timescales. I understand that payment will be made based on the
+                      data available to the Commissioner (NHSE or NHSBSA acting on NHSE behalf). I agree that I shall
+                      refund any item of service fee paid to me by the Commissioner (NHSE) where false or multiple
+                      claims have been made in respect of any patient.</li>
+
+                    <li style="margin-left:40px; padding-bottom:10px;">COVID-19 vaccinations supplied to me have not
+                      been used to vaccinate private patients and have not been passed to any third party in exchange
+                      for payment.</li>
+
+
+                    <p>I agree that the pharmacy will provide any and all evidence to support claims if required as part
+                      of the pre and post payment verification processes, including evidence of vaccination uptake
+                      rates, details of what vaccine was used and on what date, to NHS England/Improvement (NHSEI) (and
+                      NHSBSA or NHSCFA acting on behalf of NHSEI) as part of the verification processes, investigation,
+                      or measurement exercise as required.</p>
+
+                    <p>I agree that NHSEI may require an appropriate portion of claims to be repaid (without prejudice)
+                      if use of the vaccines was outside the terms of this guidance or it is considered by NHSEI that
+                      there were inaccuracies or inconsistencies in the claim.</p>
+
+                    <p>I declare that the information given on this form is accurate and complete. I understand that if
+                      I withhold information or provide false or misleading information, disciplinary action may be
+                      taken against me and I may be liable to prosecution and or civil proceedings.</p>
+
+                    <!--
+                                       <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+                  </ol>
+                </div>
+                <fieldset>
+                  <legend class="visually-hidden">New Submission</legend>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      First name
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="first-name" name="first-name" type="text">
+                  </div>
+
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="input-width-10">
+                      Surname
+                    </label>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="last-name" name="last-name" type="text">
+                  </div>
+                  <div class="nhsuk-inset-text">
+                    <span class="nhsuk-u-visually-hidden">Information: </span>
+                    <p>A confirmation email will be sent to XXXXXX. If you would like a copy sent to another email
+                      address, please enter it below.</p>
+                  </div>
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="email-with-hint-text">
+                      Email address (optional)
+                    </label>
+                    <!-- <div class="nhsuk-hint" id="email-with-hint-text-hint">
+                      <span id="emailHint" class="panel panel-border-narrow">
+                        A confirmation email will be sent to <contractor email address>
+                          <br>
+                          If you would like a copy sent to another email address, enter it below.
+                      </span>
+                    </div> -->
+                    <input class="nhsuk-input nhsuk-input--width-20" id="email" name="email" type="text"
+                      aria-describedby="email-with-hint-text-hint">
+                  </div>
+
+
+                  <div class="nhsuk-form-group">
+                    <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                      <div class="nhsuk-checkboxes">
+                        <div class="nhsuk-checkboxes__item">
+                          <input class="nhsuk-checkboxes__input" id="agree-check" name="agree-check" type="checkbox"
+                            value="agree-check" aria-expanded="false">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="agree-check">
+                            I agree and accept this declaration
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <div class="form-group">
+                    <a href="confirmation-V2" class="nhsuk-button">
+                      Submit
+                    </a>
+                  </div>
+
+                </fieldset>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
