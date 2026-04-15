@@ -1440,6 +1440,16 @@ router.post(/rsv3vaccineDelete/, function (req, res) {
   }
 });
 
+router.post(/covidv3dereg/, function (req, res) {
+
+  const covidv3dereg = req.session.data['covidv3dereg']
+  if (covidv3dereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('covid-dashboard-v3-continue');
+  }
+});
+
 
 
 
