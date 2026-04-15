@@ -1446,7 +1446,7 @@ router.post(/covidv3dereg/, function (req, res) {
   if (covidv3dereg === "yes") {
     res.redirect('de-registration-declaration');
   } else {
-    res.redirect('covid-dashboard-v3-continue');
+    res.redirect('covid-dashboard-V3-continue');
   }
 });
 
