@@ -119,6 +119,29 @@ Discharge medicines service
                     </div>
                   </div>
                 </fieldset>
+
+                 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.nhsuk-radios__input').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      document
+        .querySelectorAll('.nhsuk-radios__conditional')
+        .forEach(function (el) {
+          el.classList.add('nhsuk-radios__conditional--hidden')
+        })
+
+      if (this.checked && this.getAttribute('aria-controls')) {
+        const target = document.getElementById(
+          this.getAttribute('aria-controls')
+        )
+        if (target) {
+          target.classList.remove('nhsuk-radios__conditional--hidden')
+        }
+      }
+    })
+  })
+})
+</script>
               </div>
               
               
