@@ -1,8 +1,8 @@
-
 {% extends "prototype-kit-template.njk" %}
 
 {% block head %}
-  <link href="/css/main.css" rel="stylesheet">
+  {{ super() }}
+  <link href="/assets/sass/main.css" rel="stylesheet">
 {% endblock %}
 
 {% block pageTitle %}{{ serviceName }}{% endblock %}
@@ -45,7 +45,7 @@
               <!--a href="dispenser-selecter-auto" class="nhsuk-button nhsuk-u-padding-bottom-1 nhsuk-u-padding-top-1 nhsuk-u-margin-bottom-1">Change dispenser</a-->
 
               <li class="nhsuk-secondary-navigation__item">
-                <a class="nhsuk-button nhsuk-u-padding-bottom-1 nhsuk-u-padding-top-1 nhsuk-u-margin-bottom-1" href="dispenser-selecter-auto">Change dispenser</a>
+                <a class="nhsuk-button nhsuk-button--small nhsuk-u-margin-bottom-1" href="dispenser-selecter-auto">Change dispenser</a>
               </li>
 
               <!--li class="nhsuk-secondary-navigation__item">

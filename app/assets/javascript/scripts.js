@@ -1,4 +1,4 @@
-import '/accessible-autocomplete.min.js';
+import 'accessible-autocomplete';
 
 document.addEventListener('DOMContentLoaded', function () {
     const selectElement = document.querySelector('#council');
