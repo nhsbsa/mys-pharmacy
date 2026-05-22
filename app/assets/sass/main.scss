@@ -1,3 +1,4 @@
+$nhsuk-suppressed-warnings: ("mq") !default;
 // Import NHS.UK frontend library
 @import 'nhsuk-frontend/dist/nhsuk';
 
@@ -446,7 +447,7 @@
   height: 30px;
   padding: 4px 20px 4px 4px;
   background-color: #005EB8;
-  background-image: url(/app/assets/images/done-tick.png);
+ background-image: url("/assets/images/done-tick.png");
   background-repeat: no-repeat;
   background-position: center;
 }
