@@ -1,0 +1,185 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+<div class="nhsuk-notification-banner nhsuk-notification-banner--success" data-module="nhsuk-notification-banner" role="alert" aria-labelledby="nhsuk-notification-banner-title">
+  <div class="nhsuk-notification-banner__header">
+    <h2 class="nhsuk-notification-banner__title" id="nhsuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="nhsuk-notification-banner__content">
+    <h3 class="nhsuk-notification-banner__heading">
+      Information updated
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
+                  Check your answers
+                </h1>
+              </header>
+
+     <h2 class="nhsuk-heading-s">July 2026 submission</h2>
+             
+                <dl class="nhsuk-summary-list">
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Service
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+      Pharmacy First Hay Fever
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="services-edit-july">Change<span class="nhsuk-u-visually-hidden"> service</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Date of consultation
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        20 July 2026
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="date-of-consultation-pharmacy-first-edit-july">Change<span class="nhsuk-u-visually-hidden"> consultation date</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Patient NHS number
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        123 456 7890
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="patient-details-edit-july">Change<span class="nhsuk-u-visually-hidden"> patient NHS number</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Patient first name
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Bob
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="patient-details-edit-july">Change<span class="nhsuk-u-visually-hidden"> patient first name</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Patient last name
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Smith
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="patient-details-edit-july">Change<span class="nhsuk-u-visually-hidden"> patient last name</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Patient date of birth
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        11 April 1964
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="patient-details-edit-july">Change<span class="nhsuk-u-visually-hidden"> patient date of birth</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Patient address
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        23 Water Bridge Road<br>Manchester<br>M1 7AO
+      </dd>
+      <dd class="nhsuk-summary-list__actions">
+        <a class="nhsuk-link" href="patient-address-edit-july">Change<span class="nhsuk-u-visually-hidden"> patient address</span></a>
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Prescriber's GPhC number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      8762361
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="gphc-number-edit-july">Change<span class="nhsuk-u-visually-hidden"> GPhC number</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Outcome
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Advice given only</li>
+        <li>Routine onward referral</li>
+      </ul>
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="outcome-edit-july">Change<span class="nhsuk-u-visually-hidden"> outcome</span></a>
+    </dd>
+  </div>
+</dl>
+
+               
+  <a href="summary-july" class="nhsuk-button">Continue</a>
+
+           
+              
+              </form>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

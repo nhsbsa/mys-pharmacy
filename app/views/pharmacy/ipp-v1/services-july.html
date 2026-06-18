@@ -1,0 +1,170 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
+                  Select one option
+                </h1>
+              </header>
+
+
+              <form action="JulyServices" method="post">
+
+                
+                <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+      <h1 class="nhsuk-fieldset__heading">
+        Select one option
+      </h1>
+    </legend>
+    <div class="nhsuk-radios nhsuk-radios--small" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter">
+          Pharmacy First Acute Otitis Media
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-2" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-2">
+          Pharmacy First Impetigo
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-3" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-3">
+          Pharmacy Infected insect bite
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-4" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-4">
+          Pharmacy First Shingles
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-5" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-5">
+          Pharmacy First Sinusitis
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-6" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-6">
+          Pharmacy First Sore Throat
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-7" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-7">
+          Pharmacy First UTI
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-8" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-8">
+          Pharmacy First New 1
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-9" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-9">
+          Pharmacy First New 2
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-10" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-10">
+          Pharmacy First New 3
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-11" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-11">
+          Pharmacy First New 4
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-12" name="JulyServices" type="radio" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-12">
+          Pharmacy First New 5
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-13" name="JulyServices" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-13">
+          Contraception ongoing
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-14" name="JulyServices" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-14">
+          Contraception initiation
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="filter-15" name="JulyServices" type="radio" value="no">
+        <label class="nhsuk-label nhsuk-radios__label" for="filter-15">
+          Contraception emergency
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+           
+
+               <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+  </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

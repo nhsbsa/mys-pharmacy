@@ -1,0 +1,242 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
+                  Patient's address
+                </h1>
+              </header>
+
+
+             
+
+                <form id="postcode-lookup-form" class="form">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="patient-postcode">
+                      Postcode
+                    </label>
+                    <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    For example, NE1 1DE
+  </div>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="patient-postcode" name="patientPostcode" type="text" autocomplete="postal-code">
+                    <p id="clear-postcode-row" class="nhsuk-body nhsuk-u-display-none">
+                      <a class="nhsuk-link" href="#" id="clear-postcode-link">Clear postcode</a>
+                    </p>
+                  </div>
+               
+  
+                <div class="nhsuk-form-group nhsuk-u-display-none" id="address-results-group">
+                
+                  <label class="nhsuk-label" for="patient-address-select">
+                    Select address
+                  </label>
+                  <select class="nhsuk-select" id="patient-address-select" name="patientAddress">
+                    <option value="">Select an address</option>
+                  </select>
+                </div>
+   
+               
+
+                 <button class="nhsuk-button" id="find-address-btn" type="button">
+                    Find address
+                  </button>
+
+                  <p id="address-results-hint" class="nhsuk-hint nhsuk-u-display-none"></p>
+
+                </form>
+
+               <p class="nhsuk-body">
+                  <a class="nhsuk-link" href="patient-address-manual">Enter address manually</a>
+                </p>
+                
+
+                <script>
+
+const postcodeLookup = {
+  'NE1 1DE': [
+    '1 Test Road, Newcastle, NE1 1DE',
+    '2 Test Road, Newcastle, NE1 1DE',
+    '3 Test Road, Newcastle, NE1 1DE'
+  ],
+  'SW1A 1AA': [
+    '10 Downing Street, London, SW1A 1AA'
+  ],
+  'LS1 1AB': [
+    '5 Market Street, Leeds, LS1 1AB',
+    '7 Market Street, Leeds, LS1 1AB'
+  ]
+};
+
+function normalisePostcode(value) {
+  return (value || '').trim().toUpperCase().replace(/\s+/g, ' ');
+}
+
+function showAddressResults() {
+  const postcodeInput = document.getElementById('patient-postcode');
+  const resultsGroup = document.getElementById('address-results-group');
+  const resultsSelect = document.getElementById('patient-address-select');
+  const resultsHint = document.getElementById('address-results-hint');
+  const findAddressButton = document.getElementById('find-address-btn');
+
+  if (!postcodeInput || !resultsGroup || !resultsSelect || !resultsHint) {
+    return;
+  }
+
+  const postcode = normalisePostcode(postcodeInput.value);
+  const addresses = postcodeLookup[postcode] || [];
+  const clearPostcodeRow = document.getElementById('clear-postcode-row');
+
+  resultsSelect.innerHTML = '<option value="">Select an address</option>';
+
+  if (addresses.length > 0) {
+    addresses.forEach((address) => {
+      const option = document.createElement('option');
+      option.value = address;
+      option.textContent = address;
+      resultsSelect.appendChild(option);
+    });
+
+    resultsGroup.classList.remove('nhsuk-u-display-none');
+    resultsHint.classList.add('nhsuk-u-display-none');
+    if (clearPostcodeRow) {
+      clearPostcodeRow.classList.remove('nhsuk-u-display-none');
+    }
+    if (findAddressButton) {
+      findAddressButton.textContent = 'Continue';
+    }
+  } else {
+    resultsGroup.classList.add('nhsuk-u-display-none');
+    resultsHint.textContent = 'No addresses found for that postcode. Try another postcode or enter the address manually.';
+    resultsHint.classList.remove('nhsuk-u-display-none');
+    if (clearPostcodeRow) {
+      clearPostcodeRow.classList.remove('nhsuk-u-display-none');
+    }
+    if (findAddressButton) {
+      findAddressButton.textContent = 'Find address';
+    }
+  }
+}
+
+function resetPostcodeLookup() {
+  const postcodeInput = document.getElementById('patient-postcode');
+  const resultsGroup = document.getElementById('address-results-group');
+  const resultsSelect = document.getElementById('patient-address-select');
+  const resultsHint = document.getElementById('address-results-hint');
+  const findAddressButton = document.getElementById('find-address-btn');
+  const clearPostcodeRow = document.getElementById('clear-postcode-row');
+
+  if (!postcodeInput || !resultsGroup || !resultsSelect || !resultsHint || !findAddressButton || !clearPostcodeRow) {
+    return;
+  }
+
+  postcodeInput.value = '';
+  resultsGroup.classList.add('nhsuk-u-display-none');
+  resultsSelect.innerHTML = '<option value="">Select an address</option>';
+  resultsHint.classList.add('nhsuk-u-display-none');
+  findAddressButton.textContent = 'Find address';
+  clearPostcodeRow.classList.add('nhsuk-u-display-none');
+  postcodeInput.focus();
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  const findAddressButton = document.getElementById('find-address-btn');
+  const postcodeInput = document.getElementById('patient-postcode');
+  const clearPostcodeLink = document.getElementById('clear-postcode-link');
+
+  if (findAddressButton) {
+    findAddressButton.addEventListener('click', function () {
+      if (findAddressButton.textContent.trim() === 'Continue') {
+        window.location.href = 'gphc-number';
+        return;
+      }
+
+      showAddressResults();
+    });
+  }
+
+  if (clearPostcodeLink) {
+    clearPostcodeLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      resetPostcodeLookup();
+    });
+  }
+
+  if (postcodeInput) {
+    postcodeInput.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        showAddressResults();
+      }
+    });
+
+    postcodeInput.addEventListener('input', function () {
+      const resultsGroup = document.getElementById('address-results-group');
+      const resultsHint = document.getElementById('address-results-hint');
+      const resultsSelect = document.getElementById('patient-address-select');
+      if (resultsGroup && !resultsGroup.classList.contains('nhsuk-u-display-none')) {
+        resultsGroup.classList.add('nhsuk-u-display-none');
+      }
+      if (resultsHint && !resultsHint.classList.contains('nhsuk-u-display-none')) {
+        resultsHint.classList.add('nhsuk-u-display-none');
+      }
+      if (resultsSelect) {
+        resultsSelect.innerHTML = '<option value="">Select an address</option>';
+      }
+      if (findAddressButton) {
+        findAddressButton.textContent = 'Find address';
+      }
+    });
+  }
+});
+
+
+                </script>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

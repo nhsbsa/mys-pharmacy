@@ -668,9 +668,89 @@ router.post(/notstartdereg/, function (req, res) {
   if (notstartdereg === "yes") {
     res.redirect('de-registration-declaration');
   } else {
-    res.redirect('../not-live');
+    res.redirect('date-of-consultation-contraception');
   }
 });
+
+//Independent Pharmacy Prescribing (IPP)//
+
+router.post(/selectaservice/, function (req, res) {
+
+  const selectaservice = req.session.data['selectaservice']
+
+  if (selectaservice === "yes") {
+    res.redirect('date-of-consultation-pharmacy-first');
+  } else {
+    res.redirect('date-of-consultation-contraception');
+  }
+});
+
+router.post(/JulyServices/, function (req, res) {
+
+  const JulyServices = req.session.data['JulyServices']
+
+  if (JulyServices === "yes") {
+    res.redirect('date-of-consultation-pharmacy-first-july');
+  } else {
+    res.redirect('date-of-consultation-contraception-july');
+  }
+});
+
+router.post(/IPPcyaeditservice/, function (req, res) {
+
+  const IPPcyaeditservice = req.session.data['IPPcyaeditservice']
+
+  if (IPPcyaeditservice === "yes") {
+    res.redirect('date-of-consultation-pharmacy-first-edit');
+  } else {
+    res.redirect('date-of-consultation-contraception-edit');
+  }
+});
+
+router.post(/EditServiceJuly/, function (req, res) {
+
+  const EditServiceJuly = req.session.data['EditServiceJuly']
+
+  if (EditServiceJuly === "yes") {
+    res.redirect('date-of-consultation-pharmacy-first-edit-july');
+  } else {
+    res.redirect('date-of-consultation-contraception-edit-july');
+  }
+});
+
+router.post(/deleterecorddate/, function (req, res) {
+
+  const deleterecorddate = req.session.data['deleterecorddate']
+
+  if (deleterecorddate === "yes") {
+    res.redirect('confirmation-delete');
+  } else {
+    res.redirect('date-of-consultation-contraception-edit');
+  }
+});
+
+router.post(/summarydeletion/, function (req, res) {
+
+  const summarydeletion = req.session.data['summarydeletion']
+
+  if (summarydeletion === "yes") {
+    res.redirect('summary-updated');
+  } else {
+    res.redirect('summary');
+  }
+});
+
+router.post(/deletetionJuly/, function (req, res) {
+
+  const deletetionJuly = req.session.data['deletetionJuly']
+
+  if (deletetionJuly === "yes") {
+    res.redirect('summary-updated-july');
+  } else {
+    res.redirect('summary-july');
+  }
+});
+
 
 
 
