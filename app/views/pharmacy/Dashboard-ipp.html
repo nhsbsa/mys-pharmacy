@@ -1,0 +1,50 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Discharge medicines service
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+
+              {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  Independent Pharmacy Prescribing (IPP)
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom"></span>
+                </h1>
+              </header>
+
+              <h3><a href="ipp-v1/months" class="nhsuk-link">Version 1 - June 2026</a></h3>
+              <ul style="list-style: disc; margin-left: 30px;">
+                <li>First version of prototype based on <a href="https://nhsbsauk.sharepoint.com/:x:/t/IndependentPharmacyPrescriptionsProject/IQA40Dyg35H5T6MX0XD-bti4ARZZS9vjL3gCbcCIBduG4ss?e=yRNZ7d" target="_blank">Requirements</a></li>
+                <li>Wireframes on <a href="https://miro.com/app/board/uXjVHN1_ZdM=/?share_link_id=34250008742" target="_blank">Miro</a></li>
+              </ul>
+
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
+                  Patient's address
+                </h1>
+              </header>
+
+
+             
+
+               <label class="nhsuk-label" for="select-1">
+        Postcode
+      </label>
+      <p>M1 7AO &nbsp; <a href="patient-address-july-edit">Change</a></p>
+      
+
+      <label class="nhsuk-label" for="select-1">
+        Your address
+      </label>
+      <div class="nhsuk-form-group">
+        
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="0">Select your address</option>
+          <option value="1">20 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="2">21 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="3">22 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="4"selected>23 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="5" >24 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="6">25 Water Bridge Road, Manchester, M1 7AO</option>
+          <option value="7">26 Water Bridge Road, Manchester, M1 7AO</option>
+        </select>
+      </div>
+     
+   
+               
+
+                 <a href="cya-updated-july" class="nhsuk-button" id="find-address-btn" type="button">
+                    Update
+                  </a>
+
+                  <p id="address-results-hint" class="nhsuk-hint nhsuk-u-display-none"></p>
+
+                </form>
+
+               <p class="nhsuk-body">
+                  <a class="nhsuk-link" href="patient-address-manual-july-edit">My address is not listed</a>
+                </p>
+                
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

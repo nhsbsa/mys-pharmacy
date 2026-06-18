@@ -1,0 +1,81 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <!-- {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }} -->
+
+
+              <div class="nhsuk-grid-column-two-thirds">
+
+               <div class="nhsuk-panel">
+  <h1 class="nhsuk-panel__title">
+    Claim submitted
+  </h1>
+  <div class="nhsuk-panel__body">
+    You have submitted a claim for [Month Year]
+  </div>
+</div>
+
+
+                <br>
+
+                <h2>What happens next</h2>
+
+                <p class="nhsuk-body">We will send you an email to confirm your submission. Keep the email for your records.</p>
+
+                <p class="nhsuk-body">The submission summary tells you which payments will be made in your NHSBSA payment. You can view that summary or submit new claims in <strong>Your monthly submissions</strong>.</p>
+
+               
+                <br>
+
+
+                <p class="nhsuk-body"><a href="months-complete" class="nhsuk-link">Back to Your monthly submissions</a></p>
+
+                <p class="nhsuk-body"><a href="../summary-new" class="nhsuk-link">Back to MYS dashboard</a></p>
+
+
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

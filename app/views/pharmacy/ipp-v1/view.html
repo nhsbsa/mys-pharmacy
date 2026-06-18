@@ -1,0 +1,399 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Independent Pharmacy Prescribing (IPP)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
+                  Submission summary for June 2026
+                </h1>
+              </header>
+
+
+
+<div class="nhsuk-tabs" data-module="nhsuk-tabs">
+  <h2 class="nhsuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="nhsuk-tabs__list">
+    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
+      <a class="nhsuk-tabs__tab" href="#paid">
+        Paid (12)
+      </a>
+    </li>
+    <li class="nhsuk-tabs__list-item">
+      <a class="nhsuk-tabs__tab" href="#not-paid">
+        Not paid (2)
+      </a>
+    </li>
+  </ul>
+  <div class="nhsuk-tabs__panel" id="paid">
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">
+        Paid (12)
+      </caption>
+      <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th scope="col" class="nhsuk-table__header" style="width: 30%;"> 
+            Service
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Date of consultation
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Patient name
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            NHS number
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First UTI
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            15 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Karen Francis
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            123 456 7890
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="patient-view-june">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Hay Fever
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            15 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Bob Smith
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            222 333 4444
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Minor Burns
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            14 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Charlie Johnson
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            333 444 5555
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Earache
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            13 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Denise Clarke
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            444 555 6666
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Skin Rash
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            12 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Ethan Wright
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            555 666 7777
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Eye Infection
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            11 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Fiona Hughes
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            666 777 8888
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View </a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Cold Sore
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            10 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            George King
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            777 888 9999
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Cold Sore
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            10 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Robinson Smith
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            237 938 1993
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Headache
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            9 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Hannah Lee
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            888 999 0000
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Nausea
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            8 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Ian Turner
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            999 000 1111
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <nav class="nhsuk-pagination nhsuk-pagination--numbered" role="navigation" aria-label="Pagination">
+  <ul class="nhsuk-pagination__list">
+    <li class="nhsuk-pagination__item nhsuk-pagination__item--current">
+      <a class="nhsuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+        1
+      </a>
+    </li>
+    <li class="nhsuk-pagination__item">
+      <a class="nhsuk-pagination__link" href="#" aria-label="Page 2">
+        2
+      </a>
+    </li>
+  </ul>
+  <a href="#" class="nhsuk-pagination__next" rel="next">
+    <span class="nhsuk-pagination__title">
+      Next<span class="nhsuk-u-visually-hidden"> page</span>
+    </span>
+    <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+      <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
+    </svg>
+  </a>
+</nav>
+  </div>
+
+  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="not-paid">
+    <table class="nhsuk-table">
+      <caption class="nhsuk-table__caption">
+        Not paid (2)
+      </caption>
+        <thead class="nhsuk-table__head">
+        <tr class="nhsuk-table__row">
+          <th scope="col" class="nhsuk-table__header" style="width: 30%;"> 
+            Service
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Date of consultation
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Patient name
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            NHS number
+          </th>
+          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody class="nhsuk-table__body">
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Acute Otitis Media
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            15 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            David Francis
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            123 456 7890
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">
+            Pharmacy First Impetigo
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            14 June 2026
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            Paul Farmer
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            234 567 8901
+          </td>
+          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
+            <a href="">View</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.nhsuk-tabs').forEach(function (tabs) {
+    const tabLinks = tabs.querySelectorAll('.nhsuk-tabs__tab');
+    const panels = tabs.querySelectorAll('.nhsuk-tabs__panel');
+
+    tabLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+
+        // update selected tab
+        tabLinks.forEach(l => l.parentElement.classList.remove('nhsuk-tabs__list-item--selected'));
+        link.parentElement.classList.add('nhsuk-tabs__list-item--selected');
+
+        // show/hide panels
+        panels.forEach(p => {
+          if (p.id === targetId) {
+            p.classList.remove('nhsuk-tabs__panel--hidden');
+          } else {
+            p.classList.add('nhsuk-tabs__panel--hidden');
+          }
+        });
+
+        // focus first focusable element in panel for accessibility
+        const activePanel = tabs.querySelector('#' + targetId);
+        if (activePanel) {
+          const focusEl = activePanel.querySelector('a, button, input, [tabindex]:not([tabindex="-1"])');
+          if (focusEl) focusEl.focus();
+        }
+      });
+    });
+  });
+});
+</script>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
