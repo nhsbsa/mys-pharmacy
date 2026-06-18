@@ -45,13 +45,14 @@ Independent Pharmacy Prescribing (IPP)
 
   <br>
        
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="prescription-autocomplete">
-            Enter the item from DM+d data list
-          </label>
-          <div id="prescription-items-container" class="nhsuk-u-width-two-thirds">
+      <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="prescription-autocomplete-0">
+    Enter the item from DM+d data list
+  </label>
+  <div id="prescription-items-container" class="nhsuk-u-width-two-thirds">
             <div class="prescription-item-row">
               <div id="prescription-autocomplete-container" class="prescription-autocomplete-container nhsuk-u-width-full"></div>
+              
  <button
   id="add-item-button"
   class="nhsuk-button nhsuk-button--small"
@@ -111,6 +112,7 @@ Independent Pharmacy Prescribing (IPP)
 
           </style>
           <script>
+            
 document.addEventListener('DOMContentLoaded', function () {
   const addButton = document.getElementById('add-item-button');
   const summaryContainer = document.getElementById('prescription-summary-container');
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const pagination = document.getElementById('prescription-pagination');
   const autocompleteContainer = document.getElementById('prescription-autocomplete-container');
 
+  
   function updateSummaryVisibility() {
     summaryContainer.style.display = summaryList.children.length ? 'block' : 'none';
     pagination.style.display = summaryList.children.length >= 10 ? 'block' : 'none';
@@ -208,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     Save and continue
                   </a>
 
-  </form>
 
             </div>
 
