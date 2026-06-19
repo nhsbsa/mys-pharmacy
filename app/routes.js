@@ -725,7 +725,7 @@ router.post(/deleterecorddate/, function (req, res) {
   if (deleterecorddate === "yes") {
     res.redirect('confirmation-delete');
   } else {
-    res.redirect('date-of-consultation-contraception-edit');
+    res.redirect('date-of-consultation-pharmacy-first-edit');
   }
 });
 
