@@ -145,13 +145,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function clearAutocompleteValue() {
-    const input = autocompleteContainer && autocompleteContainer.querySelector('input');
+  const input = autocompleteContainer.querySelector('input');
 
-    if (input) {
-      input.value = '';
-      input.focus();
-    }
+  if (input) {
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.focus();
   }
+}
 
   addButton.addEventListener('click', function () {
     const itemValue = getAutocompleteValue();
@@ -203,10 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="nhsuk-u-padding-bottom-5"></div>
 
               <a href="cya" class="nhsuk-button">I have finished adding items</a>
-
-               <a href="summary-continue" class="nhsuk-button nhsuk-button--secondary" id="save-for-later" type="button">
-                    Save and continue
-                  </a>
 
   </form>
 
