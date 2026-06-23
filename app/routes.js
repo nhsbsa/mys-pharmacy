@@ -725,7 +725,18 @@ router.post(/deleterecorddate/, function (req, res) {
   if (deleterecorddate === "yes") {
     res.redirect('confirmation-delete');
   } else {
-    res.redirect('date-of-consultation-pharmacy-first-edit');
+    res.redirect('cya-june-error-update');
+  }
+});
+
+router.post(/julychangethedate/, function (req, res) {
+
+  const julychangethedate = req.session.data['julychangethedate']
+
+  if (julychangethedate === "yes") {
+    res.redirect('confirmation-delete');
+  } else {
+    res.redirect('cya-july-error-update');
   }
 });
 
