@@ -44,16 +44,34 @@ Independent Pharmacy Prescribing (IPP)
 
              
               <div class="nhsuk-form-group">
-  <h1 class="nhsuk-label-wrapper">
+   <h2 class="nhsuk-label-wrapper">
     <label class="nhsuk-label" for="nhs-number">
       NHS number
     </label>
-  </h1>
+  </h2>
   <div class="nhsuk-hint" id="nhs-number-hint">
     This is a 10 digit number (like <span class="nhsuk-u-nowrap">999 123 4567</span>)
   </div>
   <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--code" id="nhs-number" name="nhs-number" type="text" spellcheck="false" value="123 456 7890" aria-describedby="nhs-number-hint" inputmode="numeric">
 </div>
+
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      If you do not know the patient's NHS number
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>If necessary, enter one of the following numbers:</p>
+    <ul>
+      <li>1111111111 - UK resident not registered with a GP</li>
+      <li>2222222222 - non-UK resident</li>
+      <li>3333333333 - patient does not give consent to data sharing</li>
+      <li>4444444444 - NHS number cannot be found</li>
+    </ul>
+  </div>
+</details>
 
 
             <div class="nhsuk-form-group">
@@ -70,12 +88,14 @@ Independent Pharmacy Prescribing (IPP)
   <input class="nhsuk-input nhsuk-input--width-20" id="last-name" name="last-name" type="text" value="Francis">
 </div>
 
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="appointment-date-hint">
-    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l nhsuk-label">
-  Date of birth
+<<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="dob-date-hint">
+   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l nhsuk-label">
+  <h3 class="nhsuk-fieldset__heading">
+       Date of birth
+      </h3>
 </legend>
-    <div class="nhsuk-hint" id="appointment-date-hint">
+    <div class="nhsuk-hint" id="dob-date-hint">
       For example, 18 5 2026
     </div>
     <div class="nhsuk-date-input" id="appointment-date">
