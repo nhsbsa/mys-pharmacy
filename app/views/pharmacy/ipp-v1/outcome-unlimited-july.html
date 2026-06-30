@@ -37,17 +37,17 @@ Independent Pharmacy Prescribing (IPP)
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Independent Pharmacy Prescribing (IPP)</span>
-                  Prescription issued
+                  Add prescription items
                 </h1>
               </header>
 
-  <p class="nhsuk-body">Add all the items issued under this prescription.</p>
+  <p class="nhsuk-body">Add every item listed on the prescription.</p>
 
   <br>
        
       <div class="nhsuk-form-group">
   <label class="nhsuk-label" for="prescription-autocomplete-0">
-    Enter the item from DM+d data list
+    Enter each item using the NHS dictionary of medicines and services (dm+d)
   </label>
   <div id="prescription-items-container" class="nhsuk-u-width-two-thirds">
             <div class="prescription-item-row">
@@ -65,7 +65,7 @@ Independent Pharmacy Prescribing (IPP)
 
 <br>
   <div id="prescription-summary-container" style="display:none; margin-top:20px;">
-    <h2 class="nhsuk-heading-m">Items list</h2>
+    <h2 class="nhsuk-heading-m">Prescription items</h2>
     <dl class="nhsuk-summary-list" id="prescription-items-summary-list"></dl>
     <nav class="nhsuk-pagination nhsuk-pagination--numbered" id="prescription-pagination" role="navigation" aria-label="Pagination" style="display:none;">
       <ul class="nhsuk-pagination__list">
@@ -112,7 +112,6 @@ Independent Pharmacy Prescribing (IPP)
 
           </style>
           <script>
-            
 document.addEventListener('DOMContentLoaded', function () {
   const addButton = document.getElementById('add-item-button');
   const summaryContainer = document.getElementById('prescription-summary-container');
@@ -120,7 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const pagination = document.getElementById('prescription-pagination');
   const autocompleteContainer = document.getElementById('prescription-autocomplete-container');
 
-  
   function updateSummaryVisibility() {
     summaryContainer.style.display = summaryList.children.length ? 'block' : 'none';
     pagination.style.display = summaryList.children.length >= 10 ? 'block' : 'none';
@@ -148,13 +146,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function clearAutocompleteValue() {
-    const input = autocompleteContainer && autocompleteContainer.querySelector('input');
+  const input = autocompleteContainer.querySelector('input');
 
-    if (input) {
-      input.value = '';
-      input.focus();
-    }
+  if (input) {
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.focus();
   }
+}
 
   addButton.addEventListener('click', function () {
     const itemValue = getAutocompleteValue();
@@ -205,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <div class="nhsuk-u-padding-bottom-5"></div>
 
-              <a href="cya-july" class="nhsuk-button">I have finished adding items</a>
+              <a href="cya-july" class="nhsuk-button">Finish adding items</a>
 
 
 
