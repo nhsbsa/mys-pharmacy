@@ -70,31 +70,6 @@ Prescribing Consultation Claim (PCC)
                 </div>
    
                
-                      <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
-      <div class="nhsuk-checkboxes__item">
-        <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
-          No fixed abode
-        </label>
-      </div>
-</div>
-<br>
-
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      If the patient does not have a fixed abode
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>If necessary, enter this dummy postcode in the post and tick No fixed abode:</p>
-    <ul>
-      <li>M12 9RT</li>
-    </ul>
-  </div>
-</details>
-
 
                  <a href="patient-address-edit-july" class="nhsuk-button" id="find-address-btn" type="button">
                     Find address
@@ -125,22 +100,4 @@ Prescribing Consultation Claim (PCC)
 </div>
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const findAddressButton = document.getElementById('find-address-btn');
-  const noFixedAbodeCheckbox = document.getElementById('contact');
-
-  if (findAddressButton && noFixedAbodeCheckbox) {
-    findAddressButton.addEventListener('click', function (event) {
-      event.preventDefault();
-
-      if (noFixedAbodeCheckbox.checked) {
-        window.location.href = 'cya-updated-july';
-      } else {
-        window.location.href = 'patient-address-edit-july';
-      }
-    });
-  }
-});
-</script>
 {% endblock %}
