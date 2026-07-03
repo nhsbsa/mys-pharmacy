@@ -1,0 +1,152 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+        Select the outcome of the consultation
+      </h1>
+    </header>
+
+    <form id="outcome-form" action="cya" method="post">
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+            Select the outcome for this consultation
+          </legend>
+          <div class="nhsuk-hint" id="contact-hint">
+            Select all options that are relevant to you
+          </div>
+          <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="contact" name="outcome" type="checkbox" value="advice-given">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                Consultation only
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="contact-2" name="outcome" type="checkbox" value="prescription-issued">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+                Prescription issued
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="contact-3" name="outcome" type="checkbox" value="routine-referral">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+                Routine onward referral
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="contact-4" name="outcome" type="checkbox" value="urgent-referral">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-4">
+                Urgent onward referral
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<style>
+  .outcome {
+  filter: contrast(100%);
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const consultationCheckbox = document.getElementById('contact');
+    const prescriptionCheckbox = document.getElementById('contact-2');
+    const routineCheckbox = document.getElementById('contact-3');
+    const urgentCheckbox = document.getElementById('contact-4');
+    const form = document.getElementById('outcome-form');
+
+    function updateCheckboxStates() {
+      if (consultationCheckbox.checked) {
+        prescriptionCheckbox.disabled = true;
+        prescriptionCheckbox.checked = false;
+      } else {
+        prescriptionCheckbox.disabled = false;
+      }
+
+      if (prescriptionCheckbox.checked) {
+        consultationCheckbox.disabled = true;
+        consultationCheckbox.checked = false;
+      } else {
+        consultationCheckbox.disabled = false;
+      }
+
+      if (routineCheckbox.checked) {
+        urgentCheckbox.disabled = true;
+        urgentCheckbox.checked = false;
+      } else {
+        urgentCheckbox.disabled = false;
+      }
+
+      if (urgentCheckbox.checked) {
+        routineCheckbox.disabled = true;
+        routineCheckbox.checked = false;
+      } else {
+        routineCheckbox.disabled = false;
+      }
+    }
+
+    [consultationCheckbox, prescriptionCheckbox, routineCheckbox, urgentCheckbox].forEach(function (checkbox) {
+      checkbox.addEventListener('change', updateCheckboxStates);
+    });
+
+    updateCheckboxStates();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const checked = Array.from(document.querySelectorAll('input[name="outcome"]:checked')).map(function (cb) {
+        return cb.value;
+      });
+
+      if (checked.length === 0) {
+        return;
+      }
+
+      const hasPrescription = checked.includes('prescription-issued');
+
+      if (hasPrescription) {
+        this.action = 'outcome-unlimited';
+      } else {
+        this.action = 'cya';
+      }
+
+      this.submit();
+    });
+  });
+</script>
+
+{% endblock %}

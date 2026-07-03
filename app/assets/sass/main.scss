@@ -200,6 +200,19 @@ $nhsuk-suppressed-warnings: ("mq") !default;
   }
 }
 
+// Darken disabled input contrast for checkboxes, radios, and inputs
+input.nhsuk-checkboxes__input:disabled + .nhsuk-checkboxes__label,
+input.nhsuk-radios__input:disabled + .nhsuk-radios__label,
+input.nhsuk-input:disabled {
+  opacity: 70%;
+}
+
+input.nhsuk-checkboxes__input:disabled,
+input.nhsuk-radios__input:disabled,
+input.nhsuk-input:disabled {
+  cursor: not-allowed;
+}
+
 @media (min-width: 40.0625em) {
   .nhsBSA-sidebar-container .nhsBSA-sidebar-wrapper .nhsBSA-sidebar-content .nhsuk-main-wrapper {
     padding-bottom: 32px;
