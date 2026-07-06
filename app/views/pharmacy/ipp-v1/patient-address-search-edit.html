@@ -30,7 +30,7 @@ Prescribing Consultation Claim (PCC)
 <br>
 <br>
 
-           <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-row">
             <div class="nhsuk-grid-column-full">
 
 
@@ -42,9 +42,23 @@ Prescribing Consultation Claim (PCC)
               </header>
 
 
-             
+             <!--POstcode bar
 
-             
+                <form id="postcode-lookup-form" class="form">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="patient-postcode">
+                      Postcode
+                    </label>
+                    <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    For example, NE1 1DE
+  </div>
+                    <input class="nhsuk-input nhsuk-input--width-10" id="patient-postcode" name="patientPostcode" type="text" autocomplete="postal-code">
+                    <p id="clear-postcode-row" class="nhsuk-body nhsuk-u-display-none">
+                      <a class="nhsuk-link" href="#" id="clear-postcode-link">Clear postcode</a>
+                    </p>
+                  </div>
+               -->
+  
 <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
     <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -71,7 +85,7 @@ Prescribing Consultation Claim (PCC)
           <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text" style="width: 50%;" autocomplete="postal-code">
          
             <p class="nhsuk-body"> <br>
-                  <a class="nhsuk-link" href="patient-address-manual-july">Enter address manually</a>
+                  <a class="nhsuk-link" href="patient-address-manual">Enter address manually</a>
                 </p>
         </div>
       </div>
@@ -100,6 +114,11 @@ Prescribing Consultation Claim (PCC)
                     Update
                   </button>
 
+                  <p id="address-results-hint" class="nhsuk-hint nhsuk-u-display-none"></p>
+
+                </form>
+
+
 
             </div>
 
@@ -114,7 +133,6 @@ Prescribing Consultation Claim (PCC)
   </div>
 
 </div>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -159,11 +177,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const val = selected.value;
         let target = '';
         if (val === 'yes') {
-          target = 'patient-address-edit-july';
+          target = 'patient-address-edit';
         } else if (val === 'No') {
-          target = 'cya-updated-july';
+          target = 'cya-updated';
         } else if (val === 'maybe') {
-          target = 'patient-address-manual-populated-july-edit';
+          target = 'patient-address-manual-populated-edit';
         } else {
           // fallback to current form action
           target = document.querySelector('form') ? document.querySelector('form').action : '';
@@ -177,7 +195,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-
-
 
 {% endblock %}
