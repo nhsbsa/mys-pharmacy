@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+{% block content %}
+
+{{ backLink({
+  href: "javascript:history.back()",
+  text: "Back"
+}) }}
+
+<h1>
+  <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+    Prescribing Consultation Claim
+  </span>
+  Add prescription items
+</h1>
+
+<p>Add every item listed on the prescription.</p>
+
+<form method="post" action="/pharmacy/ipp-v1/outcome-unlimited-nojava">
+
+  <div class="nhsuk-form-group">
+
+    <label class="nhsuk-label" for="item">
+      Enter each item using the NHS dictionary of medicines and services (dm+d)
+    </label>
+
+    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="item" name="item" type="text">
+
+ <a href="outcome-unlimited-result" class="nhsuk-button nhsuk-button--small" data-module="nhsuk-button" type="submit">
+    Search
+ </a>
+
+  </div>
+
+</form>
+
+
+
+
+{% endblock %}
