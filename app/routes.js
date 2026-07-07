@@ -763,7 +763,40 @@ router.post(/deletetionJuly/, function (req, res) {
 });
 
 
+// Display page
+router.get('/pharmacy/ipp-v1/outcome-unlimited-nojava', function (req, res) {
+  res.render('pharmacy/ipp-v1/outcome-unlimited-nojava')
+})
 
+// Add prescription item
+router.post('/pharmacy/ipp-v1/outcome-unlimited-nojava', function (req, res) {
+
+  const item = req.body.item
+
+  if (!req.session.data.prescriptionItems) {
+    req.session.data.prescriptionItems = []
+  }
+
+  if (item && item.trim() !== '') {
+    req.session.data.prescriptionItems.push(item.trim())
+  }
+
+  res.redirect('/pharmacy/ipp-v1/outcome-unlimited-nojava')
+
+})
+
+// Remove prescription item
+router.get('/pharmacy/ipp-v1/remove-prescription-item/:index', function (req, res) {
+
+  const index = parseInt(req.params.index, 10)
+
+  if (req.session.data.prescriptionItems) {
+    req.session.data.prescriptionItems.splice(index, 1)
+  }
+
+  res.redirect('/pharmacy/ipp-v1/outcome-unlimited-nojava')
+
+})
 
 // HEE REG/DE-REG //
 
