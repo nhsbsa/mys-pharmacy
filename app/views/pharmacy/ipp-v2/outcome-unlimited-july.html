@@ -1,0 +1,224 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Add prescription items
+                </h1>
+              </header>
+
+  <p class="nhsuk-body">Add every item listed on the prescription.</p>
+
+  <br>
+       
+      <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="prescription-autocomplete-0">
+    Enter each item using the NHS dictionary of medicines and services (dm+d)
+  </label>
+  <div id="prescription-items-container" class="nhsuk-u-width-two-thirds">
+            <div class="prescription-item-row">
+              <div id="prescription-autocomplete-container" class="prescription-autocomplete-container nhsuk-u-width-full"></div>
+              
+ <button
+  id="add-item-button"
+  class="nhsuk-button nhsuk-button--small"
+  type="button">
+  Add
+</button>
+   
+            </div>
+</div>
+
+<br>
+  <div id="prescription-summary-container" style="display:none; margin-top:20px;">
+    <h2 class="nhsuk-heading-m">Prescription items</h2>
+    <dl class="nhsuk-summary-list" id="prescription-items-summary-list"></dl>
+    <nav class="nhsuk-pagination nhsuk-pagination--numbered" id="prescription-pagination" role="navigation" aria-label="Pagination" style="display:none;">
+      <ul class="nhsuk-pagination__list">
+        <li class="nhsuk-pagination__item nhsuk-pagination__item--current">
+          <a class="nhsuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="nhsuk-pagination__item">
+          <a class="nhsuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="nhsuk-pagination__next" rel="next">
+        <span class="nhsuk-pagination__title">
+          Next<span class="nhsuk-u-visually-hidden"> page</span>
+        </span>
+        <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
+          <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
+        </svg>
+      </a>
+    </nav>
+</div>
+  </div>
+
+          <style>
+          .prescription-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prescription-autocomplete-container {
+  flex: 1;
+  position: relative;
+}
+
+.prescription-item-row .nhsuk-button {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+
+          </style>
+          <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const addButton = document.getElementById('add-item-button');
+  const summaryContainer = document.getElementById('prescription-summary-container');
+  const summaryList = document.getElementById('prescription-items-summary-list');
+  const pagination = document.getElementById('prescription-pagination');
+  const autocompleteContainer = document.getElementById('prescription-autocomplete-container');
+
+  function updateSummaryVisibility() {
+    summaryContainer.style.display = summaryList.children.length ? 'block' : 'none';
+    pagination.style.display = summaryList.children.length >= 10 ? 'block' : 'none';
+  }
+
+  function renumberRows() {
+    Array.from(summaryList.querySelectorAll('[data-item-row]')).forEach(function (row, index) {
+      const itemKey = row.querySelector('[data-item-key]');
+      const itemValue = row.querySelector('[data-item-value]');
+
+      if (itemKey) {
+        itemKey.textContent = 'Item ' + (index + 1);
+      }
+
+      if (itemValue) {
+        itemValue.textContent = itemValue.dataset.itemValue;
+      }
+    });
+  }
+
+  function getAutocompleteValue() {
+    const input = autocompleteContainer && autocompleteContainer.querySelector('input');
+
+    return input ? input.value.trim() : '';
+  }
+
+  function clearAutocompleteValue() {
+  const input = autocompleteContainer.querySelector('input');
+
+  if (input) {
+    input.value = '';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.focus();
+  }
+}
+
+  addButton.addEventListener('click', function () {
+    const itemValue = getAutocompleteValue();
+
+    if (!itemValue) {
+      return;
+    }
+
+    const row = document.createElement('div');
+    row.className = 'nhsuk-summary-list__row';
+    row.setAttribute('data-item-row', 'true');
+    row.innerHTML = '<dt class="nhsuk-summary-list__key" data-item-key></dt><dd class="nhsuk-summary-list__value" data-item-value></dd><dd class="nhsuk-summary-list__actions"><a class="nhsuk-link" href="#" data-remove-item>Remove<span class="nhsuk-u-visually-hidden"> item</span></a></dd>';
+
+    const itemKey = row.querySelector('[data-item-key]');
+    const itemValueCell = row.querySelector('[data-item-value]');
+
+    itemKey.textContent = 'Item ' + (summaryList.children.length + 1);
+    itemValueCell.dataset.itemValue = itemValue;
+    itemValueCell.textContent = itemValue;
+
+    summaryList.appendChild(row);
+    updateSummaryVisibility();
+    clearAutocompleteValue();
+  });
+
+  summaryList.addEventListener('click', function (event) {
+    const removeButton = event.target.closest('[data-remove-item]');
+
+    if (!removeButton) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const row = removeButton.closest('[data-item-row]');
+
+    if (row) {
+      row.remove();
+      renumberRows();
+      updateSummaryVisibility();
+    }
+  });
+
+  updateSummaryVisibility();
+});
+</script>
+
+
+  <div class="nhsuk-u-padding-bottom-5"></div>
+
+              <a href="cya-july" class="nhsuk-button">Finish adding items</a>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

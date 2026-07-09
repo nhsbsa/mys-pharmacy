@@ -1,0 +1,183 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+           <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Patient's postcode
+                </h1>
+              </header>
+
+
+             
+
+             
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    </legend>
+    <div class="nhsuk-hint" id="contact-hint">
+      Select 1 option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact" name="patientaddress" type="radio"  data-aria-controls="conditional-contact" value="yes">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact">
+          I have an address for the patient
+        </label>
+        
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="email">
+            Enter patient's postcode
+          </label>
+          <div class="nhsuk-hint" id="example-with-hint-text-hint">
+    For example, NE1 1DE
+  </div>
+          <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text" style="width: 50%;" autocomplete="postal-code">
+         
+            <p class="nhsuk-body"> <br>
+                  <a class="nhsuk-link" href="patient-address-manual-july">Enter address manually</a>
+                </p>
+        </div>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-2" name="patientaddress" type="radio"  data-aria-controls="conditional-contact-2" value="No">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+          No fixed abode
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-3" name="patientaddress" type="radio"  data-aria-controls="conditional-contact-3" value="maybe">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+          Postcode unknown
+        </label>
+      
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+    
+
+
+                 <button class="nhsuk-button" id="find-address-btn" type="button">
+                    Update
+                  </button>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const radios = document.querySelectorAll('.nhsuk-radios__input');
+
+    function updateConditionalSections() {
+        // Hide all conditional sections
+        document.querySelectorAll('.nhsuk-radios__conditional').forEach(function (section) {
+            section.classList.add('nhsuk-radios__conditional--hidden');
+        });
+
+        // Show the selected radio's conditional section
+        const selected = document.querySelector('.nhsuk-radios__input:checked');
+
+        if (selected) {
+            const targetId = selected.getAttribute('data-aria-controls');
+            if (targetId) {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.classList.remove('nhsuk-radios__conditional--hidden');
+                }
+            }
+        }
+    }
+
+    radios.forEach(function (radio) {
+        radio.addEventListener('change', updateConditionalSections);
+    });
+
+    // Initialise on page load
+    updateConditionalSections();
+    
+    // Redirect logic for Continue button
+    const continueBtn = document.getElementById('find-address-btn');
+    if (continueBtn) {
+      continueBtn.addEventListener('click', function () {
+        const selected = document.querySelector('.nhsuk-radios__input:checked');
+        if (!selected) {
+          alert('Please select an option');
+          return;
+        }
+        const val = selected.value;
+        let target = '';
+        if (val === 'yes') {
+          target = 'patient-address-edit-july';
+        } else if (val === 'No') {
+          target = 'cya-updated-july';
+        } else if (val === 'maybe') {
+          target = 'patient-address-manual-populated-july-edit';
+        } else {
+          // fallback to current form action
+          target = document.querySelector('form') ? document.querySelector('form').action : '';
+        }
+
+        if (target) {
+          // If the target looks like a relative path, navigate to it
+          window.location.href = target;
+        }
+      });
+    }
+});
+</script>
+
+
+
+{% endblock %}

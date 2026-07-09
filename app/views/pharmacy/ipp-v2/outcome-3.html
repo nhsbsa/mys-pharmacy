@@ -1,0 +1,205 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+        Select the outcome of the consultation
+      </h1>
+    </header>
+
+    <form id="outcome-form" action="cya" method="post">
+
+      <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    </legend>
+    <div class="nhsuk-hint" id="contact-hint">
+      Select relevant option
+    </div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="outcome-consultation" name="patientaddress" type="radio" data-aria-controls="conditional-consultation" value="consultation-only">
+        <label class="nhsuk-label nhsuk-radios__label" for="outcome-consultation">
+         Consultation only
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-consultation">
+         <div class="nhsuk-radios nhsuk-radios--inline" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="consultation-routine" name="consultation-choice" type="radio" value="routine-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="consultation-routine">
+          Routine onward referral
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="consultation-urgent" name="consultation-choice" type="radio" value="urgent-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="consultation-urgent">
+          Urgent onward referral
+        </label>
+      </div>
+    </div>
+      </div>
+
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="outcome-prescription" name="patientaddress" type="radio" data-aria-controls="conditional-prescription" value="prescription-issued">
+        <label class="nhsuk-label nhsuk-radios__label" for="outcome-prescription">
+          Prescription issued
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-prescription">
+         <div class="nhsuk-radios nhsuk-radios--inline" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="prescription-routine" name="prescription-choice" type="radio" value="routine-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="prescription-routine">
+          Routine onward referral
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="prescription-urgent" name="prescription-choice" type="radio" value="urgent-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="prescription-urgent">
+          Urgent onward referral
+        </label>
+      </div>
+    </div>
+      </div>
+
+       <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="outcome-routine" name="patientaddress" type="radio" data-aria-controls="conditional-routine" value="routine-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="outcome-routine">
+        Routine onward referral
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-routine">
+         <div class="nhsuk-radios nhsuk-radios--inline" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="routine-consultation" name="routine-choice" type="radio" value="consultation-only">
+        <label class="nhsuk-label nhsuk-radios__label" for="routine-consultation">
+          Consultation only
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="routine-prescription" name="routine-choice" type="radio" value="prescription-issued">
+        <label class="nhsuk-label nhsuk-radios__label" for="routine-prescription">
+           Prescription issued
+        </label>
+      </div>
+    </div>
+      </div>
+
+        <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="outcome-urgent" name="patientaddress" type="radio" data-aria-controls="conditional-urgent" value="urgent-onward-referral">
+        <label class="nhsuk-label nhsuk-radios__label" for="outcome-urgent">
+        Urgent onward referral
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-urgent">
+         <div class="nhsuk-radios nhsuk-radios--inline" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="urgent-consultation" name="urgent-choice" type="radio" value="consultation-only">
+        <label class="nhsuk-label nhsuk-radios__label" for="urgent-consultation">
+          Consultation only
+        </label>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="urgent-prescription" name="urgent-choice" type="radio" value="prescription-issued">
+        <label class="nhsuk-label nhsuk-radios__label" for="urgent-prescription">
+           Prescription issued
+        </label>
+      </div>
+    </div>
+      </div>
+
+  </fieldset>
+</div>
+
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const radios = document.querySelectorAll('.nhsuk-radios__input[name="patientaddress"]');
+
+    function updateConditionalSections() {
+        document.querySelectorAll('.nhsuk-radios__conditional').forEach(function (section) {
+            section.classList.add('nhsuk-radios__conditional--hidden');
+            section.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.checked = false;
+            });
+        });
+
+        const selected = document.querySelector('.nhsuk-radios__input[name="patientaddress"]:checked');
+
+        if (selected) {
+            const targetId = selected.getAttribute('data-aria-controls');
+            if (targetId) {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.classList.remove('nhsuk-radios__conditional--hidden');
+                }
+            }
+        }
+    }
+
+    radios.forEach(function (radio) {
+        radio.addEventListener('change', updateConditionalSections);
+    });
+
+    updateConditionalSections();
+
+    document.getElementById('outcome-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const topSelection = document.querySelector('input[name="patientaddress"]:checked');
+        let subSelection;
+
+        if (topSelection) {
+            const targetId = topSelection.getAttribute('data-aria-controls');
+            if (targetId) {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    subSelection = target.querySelector('input[type="radio"]:checked');
+                }
+            }
+        }
+
+        if (!topSelection) {
+            return;
+        }
+
+        const isPrescription = topSelection.value === 'prescription-issued' || (subSelection && subSelection.value === 'prescription-issued');
+
+        this.action = isPrescription ? 'outcome-unlimited' : 'cya';
+        this.submit();
+    });
+});
+</script>
+
+{% endblock %}
