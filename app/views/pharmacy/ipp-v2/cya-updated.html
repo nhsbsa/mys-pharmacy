@@ -1,0 +1,196 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+<div class="nhsuk-notification-banner nhsuk-notification-banner--success" data-module="nhsuk-notification-banner" role="alert" aria-labelledby="nhsuk-notification-banner-title">
+  <div class="nhsuk-notification-banner__header">
+    <h2 class="nhsuk-notification-banner__title" id="nhsuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="nhsuk-notification-banner__content">
+    <h3 class="nhsuk-notification-banner__heading">
+      Information updated
+    </h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Check your answers
+                </h1>
+              </header>
+
+      <h2 class="nhsuk-heading-s">June 2026 submission</h2>
+             
+               <dl class="nhsuk-summary-list">
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Service
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+     Contraception initiation
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="services-edit">Change<span class="nhsuk-u-visually-hidden"> service</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Date of consultation
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      15 June 2026
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="date-of-consultation-contraception-edit">Change<span class="nhsuk-u-visually-hidden"> consultation date</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Patient's NHS number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      123 456 7890
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="patient-details-edit">Change<span class="nhsuk-u-visually-hidden"> patient NHS number</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Patient's first name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Karen
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="patient-details-edit">Change<span class="nhsuk-u-visually-hidden"> patient first name</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Patient's last name
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      Francis
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="patient-details-edit">Change<span class="nhsuk-u-visually-hidden"> patient last name</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Patient's date of birth
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      15 March 1984
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="patient-details-edit">Change<span class="nhsuk-u-visually-hidden"> patient date of birth</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Patient's address
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      5 Grey Street<br>Newcastle upon Tyne<br>NE1 OLD
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="patient-address-edit">Change<span class="nhsuk-u-visually-hidden"> patient address</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Prescriber's GPhC number
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      1234567
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="gphc-number-edit">Change<span class="nhsuk-u-visually-hidden"> GPhC number</span></a>
+    </dd>
+  </div>
+  <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Consultation outcome
+    </dt>
+     <dd class="nhsuk-summary-list__value">
+      <ul>
+        <li>Prescription issued</li>
+        <li>Routine onward referral</li>
+      </ul>
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="outcome-edit">Change<span class="nhsuk-u-visually-hidden"> outcome</span></a>
+    </dd>
+  </div>
+   <div class="nhsuk-summary-list__row">
+    <dt class="nhsuk-summary-list__key">
+      Prescription items
+    </dt>
+    <dd class="nhsuk-summary-list__value">
+      11
+    </dd>
+    <dd class="nhsuk-summary-list__actions">
+      <a class="nhsuk-link" href="outcome-unlimited-edit">View<span class="nhsuk-u-visually-hidden"> outcome</span></a>
+    </dd>
+  </div>
+</dl>
+
+               
+  <a href="summary" class="nhsuk-button">Continue</a>
+
+           
+              
+              </form>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

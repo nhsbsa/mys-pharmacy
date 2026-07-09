@@ -1,0 +1,144 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Patient details
+                </h1>
+              </header>
+
+ <div class="nhsuk-form-group">
+  <h2 class="nhsuk-label-wrapper">
+    <label class="nhsuk-label" for="nhs-number">
+      NHS number
+    </label>
+  </h2>
+  <div class="nhsuk-hint" id="nhs-number-hint">
+    This is a 10 digit number (like <span class="nhsuk-u-nowrap">999 123 4567</span>)
+  </div>
+  <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--code" id="nhs-number" name="nhs-number" type="number" spellcheck="false" value="" aria-describedby="nhs-number-hint" inputmode="numeric">
+</div>
+
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      If you do not know the patient's NHS number
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>If necessary, enter one of the following numbers:</p>
+    <ul>
+      <li>1111111111 - UK resident not registered with a GP</li>
+      <li>2222222222 - non-UK resident</li>
+      <li>3333333333 - patient does not give consent to data sharing</li>
+      <li>4444444444 - NHS number cannot be found</li>
+    </ul>
+  </div>
+</details>
+
+
+            <div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="first-name">
+    First name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="first-name" name="first-name" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <label class="nhsuk-label" for="last-name">
+    Last name
+  </label>
+  <input class="nhsuk-input nhsuk-input--width-20" id="last-name" name="last-name" type="text">
+</div>
+
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" role="group" aria-describedby="dob-date-hint">
+   <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l nhsuk-label">
+  <h3 class="nhsuk-fieldset__heading">
+       Date of birth
+      </h3>
+</legend>
+    <div class="nhsuk-hint" id="dob-date-hint">
+      For example, 18 5 2026
+    </div>
+    <div class="nhsuk-date-input" id="dob-date">
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-day">
+            Day
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-of-birth-day" name="dateOfBirth[day]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-month">
+            Month
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="date-of-birth-month" name="dateOfBirth[month]" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="nhsuk-date-input__item">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label nhsuk-date-input__label" for="date-of-birth-year">
+            Year
+          </label>
+          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="date-of-birth-year" name="dateOfBirth[year]" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+              <a href="patient-address-july" class="nhsuk-button">Continue</a>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

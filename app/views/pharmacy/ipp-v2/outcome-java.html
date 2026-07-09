@@ -1,0 +1,147 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Outcome
+                </h1>
+              </header>
+
+          <div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+    <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+      Select the outcome for this consultation
+    </legend>
+    <div class="nhsuk-hint" id="contact-hint">
+      Select all options that are relevant to you
+    </div>
+    <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="advice">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+          Consultation only
+        </label>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="prescription" data-aria-controls="conditional-contact-2">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+          Prescription issued
+        </label>
+        
+      </div>
+      <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="prescription-autocomplete">
+            Enter each item using the NHS dictionary of medicines and services (dm+d)
+          </label>
+          <div id="prescription-items-container" class="nhsuk-u-width-two-thirds">
+            <div class="prescription-item-row">
+              <div id="prescription-autocomplete-container" class="prescription-autocomplete-container nhsuk-u-width-full"></div>
+            </div>
+          </div>
+          <br>
+          <p class="nhsuk-body">
+            <a class="nhsuk-link" href="#" id="add-another-item-link">Add another item</a>
+          </p>
+
+        </div>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="routine-referral">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+          Routine onward referral
+        </label>
+      </div>
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="contact-4" name="contact" type="checkbox" value="urgent-referral">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-4">
+          Urgent onward referral
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const checkboxes = document.querySelectorAll('.nhsuk-checkboxes__input[data-aria-controls]');
+
+    checkboxes.forEach(function (checkbox) {
+      const targetId = checkbox.getAttribute('data-aria-controls');
+      const target = targetId ? document.getElementById(targetId) : null;
+
+      if (!target) {
+        return;
+      }
+
+      const updateVisibility = function () {
+        target.classList.toggle('nhsuk-checkboxes__conditional--hidden', !checkbox.checked);
+      };
+
+      checkbox.addEventListener('change', updateVisibility);
+      updateVisibility();
+    });
+  });
+
+  
+</script>
+
+
+           
+
+              <a href="cya" class="nhsuk-button">Continue</a>
+
+  </form>
+
+  <div class="nhsuk-u-padding-bottom-9"></div>
+<p class="nhsuk-body"><a href="outcome-unlimited">Another solution for unlimited submissions</a></p>
+  
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
