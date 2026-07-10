@@ -30,35 +30,59 @@ Prescribing Consultation Claim (PCC)
     <form id="outcome-form" action="cya" method="post">
 
       <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
-          <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
-            Select the outcome for this consultation
+        <fieldset class="nhsuk-fieldset" aria-describedby="outcome-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            What was the outcome of the consultation?
           </legend>
-          <div class="nhsuk-hint" id="contact-hint">
-            Select all options that are relevant to you
+          <div class="nhsuk-hint" id="outcome-hint">
+            Select 1 option
           </div>
-          <div class="nhsuk-checkboxes" data-module="nhsuk-checkboxes">
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="contact" name="outcome" type="checkbox" value="advice-given">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-consultation" name="consultation-outcome" type="radio" value="consultation-only">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-consultation">
                 Consultation only
               </label>
             </div>
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="contact-2" name="outcome" type="checkbox" value="prescription-issued">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-prescription" name="consultation-outcome" type="radio" value="prescription-issued">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-prescription">
                 Prescription issued
               </label>
             </div>
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="contact-3" name="outcome" type="checkbox" value="routine-referral">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="nhsuk-u-padding-bottom-4"></div>
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="referral-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            Was the patient referred during the consultation?
+          </legend>
+          <div class="nhsuk-hint" id="referral-hint">
+            Select 1 option
+          </div>
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-no-referral" name="referral-outcome" type="radio" value="no-referral-made">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-no-referral">
+                No referral made
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-routine" name="referral-outcome" type="radio" value="routine-onward-referral">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-routine">
                 Routine onward referral
               </label>
             </div>
-            <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="contact-4" name="outcome" type="checkbox" value="urgent-referral">
-              <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-4">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-urgent" name="referral-outcome" type="radio" value="urgent-onward-referral">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-urgent">
                 Urgent onward referral
               </label>
             </div>
@@ -76,28 +100,25 @@ Prescribing Consultation Claim (PCC)
 </div>
 
 <script>
-  document.getElementById('outcome-form').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const checked = Array.from(
-      document.querySelectorAll('input[name="outcome"]:checked')
-    ).map(cb => cb.value);
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('outcome-form');
 
-    if (checked.length === 0) {
-      // No selection — stay on page or handle validation here
-      return;
-    }
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    const hasPrescription = checked.includes('prescription-issued');
+        const outcomeSelection = document.querySelector('input[name="consultation-outcome"]:checked');
 
-    if (hasPrescription) {
-      this.action = 'outcome-unlimited-july';
-    } else {
-      this.action = 'cya-july';
-    }
+        if (!outcomeSelection) {
+            return;
+        }
 
-    this.submit();
-  });
+        const isPrescription = outcomeSelection.value === 'prescription-issued';
+
+        this.action = isPrescription ? 'outcome-unlimited-search-july' : 'cya-july';
+        this.submit();
+    });
+});
 </script>
 
 {% endblock %}

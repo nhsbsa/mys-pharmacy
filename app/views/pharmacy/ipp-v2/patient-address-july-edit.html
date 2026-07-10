@@ -37,7 +37,7 @@ Prescribing Consultation Claim (PCC)
               <header>
                 <h1>
                   <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
-                  Patient's postcode
+                  Enter the patient's postcode
                 </h1>
               </header>
 
@@ -56,7 +56,7 @@ Prescribing Consultation Claim (PCC)
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="contact" name="patientaddress" type="radio"  data-aria-controls="conditional-contact" value="yes">
         <label class="nhsuk-label nhsuk-radios__label" for="contact">
-          I have an address for the patient
+          I have the patient's postcode
         </label>
         
       </div>
@@ -69,25 +69,22 @@ Prescribing Consultation Claim (PCC)
     For example, NE1 1DE
   </div>
           <input class="nhsuk-input nhsuk-input--width-10" id="email" name="email" type="text" style="width: 50%;" autocomplete="postal-code">
-         
-            <p class="nhsuk-body"> <br>
-                  <a class="nhsuk-link" href="patient-address-manual-july">Enter address manually</a>
-                </p>
+        
         </div>
-      </div>
-      <div class="nhsuk-radios__item">
-        <input class="nhsuk-radios__input" id="contact-2" name="patientaddress" type="radio"  data-aria-controls="conditional-contact-2" value="No">
-        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
-          No fixed abode
-        </label>
       </div>
       <div class="nhsuk-radios__item">
         <input class="nhsuk-radios__input" id="contact-3" name="patientaddress" type="radio"  data-aria-controls="conditional-contact-3" value="maybe">
         <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
-          Postcode unknown
+          I don't know the patient's postcode
         </label>
-      
       </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="contact-2" name="patientaddress" type="radio"  data-aria-controls="conditional-contact-2" value="No">
+        <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+          The patient has no fixed address
+        </label>
+      </div>
+      
     </div>
   </fieldset>
 </div>
