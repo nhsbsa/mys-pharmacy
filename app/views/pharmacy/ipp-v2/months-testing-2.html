@@ -1,0 +1,312 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+   
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+             
+
+              <header>
+                <h1>
+                  <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+                  Your monthly submissions
+                </h1>
+              </header>
+
+
+
+           
+           <table class="nhsuk-table-responsive" role="table">
+  <caption class="nhsuk-table__caption">
+    Months available to claim
+     <p class="nhsuk-body">You can start a new claim or continue a claim you have already started.</p>
+
+  </caption>
+  <thead class="nhsuk-table__head" role="rowgroup">
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Month
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Number of patients
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Declaration deadline
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>July 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>Nothing recorded
+      </td> 
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>
+        <strong class="nhsuk-tag nhsuk-tag--red">
+         Pharmacy First 13 July 2026
+        </strong>
+         <strong class="nhsuk-tag nhsuk-tag--blue">
+         Contraception 13 July 2026
+        </strong>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="services-july">Start submission</a>
+        </a>
+      </td>
+    </tr>
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>June 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>Nothing recorded
+      </td> <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>
+        <strong class="nhsuk-tag nhsuk-tag--red">
+         Pharmacy First 13 July 2026
+        </strong>
+         <strong class="nhsuk-tag nhsuk-tag--blue">
+         Contraception 13 July 2026
+        </strong>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="services">Start submission</a>
+        </a>
+      </td>
+    </tr>
+   <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>May 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>27
+      </td> <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>
+        <strong class="nhsuk-tag nhsuk-tag--red">
+         Pharmacy First 13 July 2026
+        </strong>
+         <strong class="nhsuk-tag nhsuk-tag--blue">
+         Contraception 13 July 2026
+        </strong>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="summary-continue">Continue</a>
+        </a>
+      </td>
+    </tr>
+     <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>April 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>12
+      </td> <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>
+        <strong class="nhsuk-tag nhsuk-tag--red">
+         Pharmacy First 13 July 2026
+        </strong>
+         <strong class="nhsuk-tag nhsuk-tag--blue">
+         Contraception 13 July 2026
+        </strong>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">Continue</a>
+        </a>
+      </td>
+      </tr>
+       <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>March 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>14
+      </td>
+        <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>
+        <strong class="nhsuk-tag nhsuk-tag--red">
+         Pharmacy First 13 July 2026
+        </strong>
+         <strong class="nhsuk-tag nhsuk-tag--blue">
+         Contraception 13 July 2026
+        </strong>
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">Continue</a>
+        </a>
+      </td>
+      </tr>
+  </tbody>
+</table>
+
+
+              <br>
+
+              <table class="nhsuk-table-responsive" role="table">
+  <caption class="nhsuk-table__caption">
+    Previous months claimed
+    <p class="nhsuk-body">View your previous claims.</p>
+ </caption>
+  
+  <thead class="nhsuk-table__head" role="rowgroup">
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Month
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Number of patients
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Submitted for payment
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+       Invalid submissions
+      </th>
+      <th scope="col" class="nhsuk-table__header nhsuk-u-width-one-quarter" role="columnheader">
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>February 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>15
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Submitted for payment </span>13
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Invalid submissions </span>2
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="view-feb">View</a>
+        </a>
+      </td>
+    </tr>
+   <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>January 2026
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>25
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Submitted for payment </span>23
+      </td><td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Invalid submissions </span>2
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">View</a>
+        </a>
+      </td>
+    </tr>
+     <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>December 2025
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>12
+      </td>
+       <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Submitted for payment </span>12
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Invalid submissions </span>0
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">View</a>
+        </a>
+      </td>
+      </tr>
+       <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>November 2025
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>14
+      </td>
+       <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Submitted for payment </span>13
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Invalid submissions </span>1
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">View</a>
+        </a>
+      </td>
+      </tr>
+       <tr class="nhsuk-table__row" role="row">
+      <th scope="row" class="nhsuk-table__header" role="rowheader">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Month</span>October 2025
+      </th>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Number of patients </span>22
+      </td>
+       <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Submitted for payment </span>18
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true"> Invalid submissions </span>4
+      </td>
+      <td class="nhsuk-table__cell" role="cell">
+        <span class="nhsuk-table-responsive__heading" aria-hidden="true">Action </span><a href="">View</a>
+        </a>
+      </td>
+      </tr>
+      
+  </tbody>
+</table>
+
+             
+              <br>
+              <br>
+              <h2 class="nhsuk-heading-s">Missed a submission?</h2>
+              <p>Contact the helpdesk on 0300 330 1368 or via email at <a href="">mys@nhsbsa.nhs.uk</a> for help.</p>
+
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

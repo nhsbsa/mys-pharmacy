@@ -45,7 +45,7 @@ Prescribing Consultation Claim (PCC)
               <form action="IPPcyaeditservice" method="post">
 
                 
-                <div class="nhsuk-form-group">
+           <div class="nhsuk-form-group">
   <fieldset class="nhsuk-fieldset">
     <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
      <div class="nhsuk-hint" id="example-hints-hint">
@@ -55,115 +55,136 @@ Prescribing Consultation Claim (PCC)
     <div class="nhsuk-hint" id="example-hints-hint">
       Select one option
     </div>
-    <div class="nhsuk-radios nhsuk-radios--small" data-module="nhsuk-radios">
-     <div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter">
-    Pharmacy First Acute Otitis Media
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-2" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-2">
-    Pharmacy First Impetigo
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-3" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-3">
-    Pharmacy First Infected insect bite
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-8" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-8">
-    Pharmacy First New 1
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-9" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-9">
-    Pharmacy First New 2
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-10" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-10">
-    Pharmacy First New 3
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-11" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-11">
-    Pharmacy First New 4
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-12" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-12">
-    Pharmacy First New 5
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-4" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-4">
-    Pharmacy First Shingles
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-5" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-5">
-    Pharmacy First Sinusitis
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-6" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-6">
-    Pharmacy First Sore Throat
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-7" name="IPPcyaeditservice" type="radio" value="yes">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-7">
-    Pharmacy First UTI
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-15" name="IPPcyaeditservice" type="radio" value="no">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-15">
-    Contraception emergency
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-14" name="IPPcyaeditservice" type="radio" value="no">
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-14">
-    Contraception initiation
-  </label>
-</div>
-
-<div class="nhsuk-radios__item">
-  <input class="nhsuk-radios__input" id="filter-13" name="IPPcyaeditservice" type="radio" value="no" checked>
-  <label class="nhsuk-label nhsuk-radios__label" for="filter-13">
-    Contraception ongoing
-  </label>
-</div>
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="service-contraception" name="IPPcyaeditservice" type="radio" value="no" data-aria-controls="conditional-contraception" aria-controls="conditional-contraception" aria-expanded="false" checked>
+        <label class="nhsuk-label nhsuk-radios__label" for="service-contraception">
+          Contraception
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contraception">
+        <fieldset class="nhsuk-fieldset" aria-describedby="contraception-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+            Contraception options
+          </legend>
+          <div class="nhsuk-hint" id="contraception-hint">
+            Select one contraception service
+          </div>
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contraception-emergency" name="serviceType" type="radio" value="contraception-emergency">
+              <label class="nhsuk-label nhsuk-radios__label" for="contraception-emergency">
+                Contraception emergency
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contraception-initiation" name="serviceType" type="radio" value="contraception-initiation">
+              <label class="nhsuk-label nhsuk-radios__label" for="contraception-initiation">
+                Contraception initiation
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contraception-ongoing" name="serviceType" type="radio" value="contraception-ongoing" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="contraception-ongoing">
+                Contraception ongoing
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="service-pharmacy-first" name="IPPcyaeditservice" type="radio" value="yes" data-aria-controls="conditional-pharmacy-first" aria-controls="conditional-pharmacy-first" aria-expanded="false">
+        <label class="nhsuk-label nhsuk-radios__label" for="service-pharmacy-first">
+          Pharmacy First
+        </label>
+      </div>
+      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-pharmacy-first">
+        <fieldset class="nhsuk-fieldset" aria-describedby="pharmacy-first-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-u-visually-hidden">
+            Pharmacy First options
+          </legend>
+          <div class="nhsuk-hint" id="pharmacy-first-hint">
+            Select one pharmacy first service
+          </div>
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-acute-otitis-media" name="serviceType" type="radio" value="pharmacy-first-acute-otitis-media">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-acute-otitis-media">
+                Pharmacy First Acute Otitis Media
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-impetigo" name="serviceType" type="radio" value="pharmacy-first-impetigo">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-impetigo">
+                Pharmacy First Impetigo
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-infected-insect-bite" name="serviceType" type="radio" value="pharmacy-first-infected-insect-bite">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-infected-insect-bite">
+                Pharmacy First Infected insect bite
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-new-1" name="serviceType" type="radio" value="pharmacy-first-new-1">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-new-1">
+                Pharmacy First New 1
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-new-2" name="serviceType" type="radio" value="pharmacy-first-new-2">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-new-2">
+                Pharmacy First New 2
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-new-3" name="serviceType" type="radio" value="pharmacy-first-new-3">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-new-3">
+                Pharmacy First New 3
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-new-4" name="serviceType" type="radio" value="pharmacy-first-new-4">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-new-4">
+                Pharmacy First New 4
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-new-5" name="serviceType" type="radio" value="pharmacy-first-new-5">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-new-5">
+                Pharmacy First New 5
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-shingles" name="serviceType" type="radio" value="pharmacy-first-shingles">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-shingles">
+                Pharmacy First Shingles
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-sinusitis" name="serviceType" type="radio" value="pharmacy-first-sinusitis">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-sinusitis">
+                Pharmacy First Sinusitis
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-sore-throat" name="serviceType" type="radio" value="pharmacy-first-sore-throat">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-sore-throat">
+                Pharmacy First Sore Throat
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="pf-uti" name="serviceType" type="radio" value="pharmacy-first-uti">
+              <label class="nhsuk-label nhsuk-radios__label" for="pf-uti">
+                Pharmacy First UTI
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
     </div>
   </fieldset>
 </div>
-
            
 
                <button class="nhsuk-button" type="submit">
@@ -184,4 +205,40 @@ Prescribing Consultation Claim (PCC)
   </div>
 
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const controlledRadios = document.querySelectorAll('.nhsuk-radios__input[data-aria-controls]');
+
+    function updateConditionalSections() {
+        document.querySelectorAll('.nhsuk-radios__conditional').forEach(function (section) {
+            section.classList.add('nhsuk-radios__conditional--hidden');
+            section.setAttribute('aria-hidden', 'true');
+        });
+
+        controlledRadios.forEach(function (radio) {
+            radio.setAttribute('aria-expanded', radio.checked ? 'true' : 'false');
+        });
+
+        const selected = document.querySelector('.nhsuk-radios__input[data-aria-controls]:checked');
+        if (selected) {
+            const targetId = selected.getAttribute('data-aria-controls');
+            if (targetId) {
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.classList.remove('nhsuk-radios__conditional--hidden');
+                    target.removeAttribute('aria-hidden');
+                }
+            }
+        }
+    }
+
+    controlledRadios.forEach(function (radio) {
+        radio.addEventListener('change', updateConditionalSections);
+    });
+
+    updateConditionalSections();
+});
+</script>
 {% endblock %}
