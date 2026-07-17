@@ -745,7 +745,7 @@ router.post(/summarydeletion/, function (req, res) {
   const summarydeletion = req.session.data['summarydeletion']
 
   if (summarydeletion === "yes") {
-    res.redirect('summary-updated');
+    res.redirect('confirmation-summary');
   } else {
     res.redirect('summary');
   }
@@ -756,7 +756,7 @@ router.post(/deletetionJuly/, function (req, res) {
   const deletetionJuly = req.session.data['deletetionJuly']
 
   if (deletetionJuly === "yes") {
-    res.redirect('summary-updated-july');
+    res.redirect('confirmation-summary-july');
   } else {
     res.redirect('summary-july');
   }
