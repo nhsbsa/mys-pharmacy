@@ -16,29 +16,25 @@ FP34C
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+                         {{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsBSA-sidebar-container">
 
-    <div class="nhsBSA-sidebar-wrapper">
-        <div class="nhsBSA-sidebar-content">
-            <div class="nhsuk-width-container">
-                <div class="nhsuk-main-wrapper" id="maincontent">
                     <div class="nhsuk-grid-row">
                         <div class="nhsuk-grid-column-full">
 
-                            {{ backLink({
-  href: 'javascript:history.back()',
-  text: 'Back'
-}) }}
+   
 
                             <header>
                                 <h1>
-                                    Old Pharmacy Dashboard
-                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">FP34C</span>
+                                    FP34C - Dashboard
+                                    <span class="nhsuk-caption-xl nhsuk-caption--bottom">Items warning messages dashboard- <a href="Dashboard-items-warning">View warnings</a></span>
                                 </h1>
                             </header>
                             <hr>
@@ -51,89 +47,38 @@ FP34C
 
                             <h2 class="nhsuk-heading-l">Version 2</h2>
 
-                            <p>04 Jan 2023. Updated version of the old pharmacy prototype. Added functionality to address ticket BP275-5184. Users can now edit submissions themselves rather than having to call MYS admin. And a warning message lets the user know they have a window to edit their claim in order to recieve payment on time. <br><br><a href="V2">Version 2</a></p>
+                            <p>04 Jan 2023</p> 
+                            <p>Updated version of the old pharmacy prototype. Added functionality to address ticket BP275-5184. Users can now edit submissions themselves rather than having to call MYS admin. And a warning message lets the user know they have a window to edit their claim in order to recieve payment on time. <br><br><a href="V2">Version 2</a></p>
 
                             <h2 class="nhsuk-heading-l">Version 3</h2>
 
-                            <p>7 Oct 2023. New version, changed layouts and options. User journey stays the same. <br><br><a href="V3">Version 3</a></p>
+                            <p>7 Oct 2023</p> 
+                            <p> New version, changed layouts and options. User journey stays the same. <br><br><a href="V3">Version 3</a></p>
 
                             <h2 class="nhsuk-heading-l">Version 4</h2>
 
-                            <p>30 Apr 2024. New content. User journey stays the same. <br><br><a href="V4/V4">Version 4</a></p>
+                            <p>30 Apr 2024</p> 
+                            <p> New content. User journey stays the same. <br><br><a href="V4/V4">Version 4</a></p>
 
                             <h2 class="nhsuk-heading-l">Version 5</h2>
 
-                            <p>22 May 2024. Added 'Edit' button after user submitted. <br><br><a href="V5/V4">Version 5</a></p>
+                            <p>22 May 2024</p> 
+                            <p> Added 'Edit' button after user submitted. <br><br><a href="V5/V4">Version 5</a></p>
 
                              <h2 class="nhsuk-heading-l">Version 6</h2>
 
-                            <p>27 Jan 2026. Content has updated <br><br><a href="V6/V4">Version 6</a></p>
+                            <p>27 Jan 2026</p> 
+                            <p>Content has updated <br><br><a href="V6/V4">Version 6</a></p>
+
+                             <h2 class="nhsuk-heading-l">Version 7 - Early payment timeline</h2>
+
+                            <p>24 July 2026</p> 
+                            <p>Remove inputs fields for EPS forms and items and content updated. <br><br><a href="V7-early-payment-timeline/v4">Version 7</a></p>
+                            <p><a href="../summary-early-payment-timeline">View MYS dashboard with EPS</a></p>
 
                             <br>
 
-                         <h2 class="nhsuk-heading-l">FP34C Items Warning Messages</h2>
 
-                           
-
-                            <p>DMS Changes 09 August 2022 <br><br><a href="paper-warning">FP34C Items Warning Messages</a></p>
-                            <br>
-
-                           <p>---- Updated in 2024------</p>
-
-                            <br>
-
-                            <p>24 May 2024 <br>Error 1 -paper<br><a href="paperv4-error">Enter the number of exempt forms you are sending</a></p>
-
-                            <p>28 May 2024 <br>Error 2 -paper<br><a href="paperv4-error-2">Are the numbers of exempt and old rate forms correct? <b>('Continue' for next error page)</b></a>
-                                <br>
-                                <a href="paperv4-error-2-continue">Correct the number of exempt or old rate forms</a>
-                            </p>
-                            
-                            <p>7 June 2024 <br>Error 2 -paper<br><a href=" paperv4-warning">Discussed in UCD for this error </a>
-                            <br>
-                            <a href="paperv4-warning-2">Other style</a>
-                            <br>
-                            <a href="paperv4-error-2-suggest">Other style 2</a>
-                        </p>
-
-                            <p>4 June 2024 <br>Error 3 -paper<br><a href="paperv4-error-continue">The total number of items you have input is significantly different to your previous month's submission.</a></p>
-
-                            <p>4 June 2024 <br>Error 4 -paper<br><a href="paperv4-error-continue-2">The second set of figures you entered were different to your first set.</a></p>
-
-
-                           
-                            <br>
-                           <p>----- Waiting to be confirmed with Brian</p> 
-
-                            <p>4 June 2024 <br>Error 5 -paper<br><a href="paperv4-error-continue-3">Values must not be higher than 9999999.</a></p>
-
-                            <br>
-
-                            <p>4 June 2024 <br>Error 6 -paper<br><a href="paperv4-error-continue-4">The total number of items you have input is significantly different, Please fill in all exempt, paid and old rate items fields</a></p>
-
-                              <br>
-
-                            <p>4 June 2024 <br>Error 7 -eps<br><a href="epsv4-error-continue-5">The total number of items you have input is significantly different, Please fill in all exempt, paid and old rate items fields</a></p>
-
-                            <br>
-
-                            <p>4 June 2024 <br>Error 8 -eps<br><a href="epsv4-error-continue-6">Any of the exempt, paid and old rate values must not be higher than 9999999</a></p>
-
-                            <br>
-
-                            <p>4 June 2024 <br>Error 9 -eps<br><a href="epsv4-error-continue-7">The number of paid forms sent must be 0 or more</a></p>
-
-                            <br>
-
-                            <p>4 June 2024 <br>Error 10 -eps<br><a href="epsv4-error-continue-8">Any of the exempt, paid and old rate values must not be higher than 9999999</a></p>
-
-
-                            <br>
-                          
-
-                           
-                           
-                        
                         
                         </div>
 
