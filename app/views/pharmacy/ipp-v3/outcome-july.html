@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+Prescribing Consultation Claim (PCC)
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<br>
+<br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+
+    <header>
+      <h1>
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Prescribing Consultation Claim</span>
+        Select the outcome of the consultation
+      </h1>
+    </header>
+
+    <form id="outcome-form" action="cya" method="post">
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="outcome-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            What was the outcome of the consultation?
+          </legend>
+          <div class="nhsuk-hint" id="outcome-hint">
+            Select 1 option
+          </div>
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-consultation" name="consultation-outcome" type="radio" value="consultation-only">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-consultation">
+                Consultation only
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-prescription" name="consultation-outcome" type="radio" value="prescription-issued">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-prescription">
+                Prescription issued
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="nhsuk-u-padding-bottom-4"></div>
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="referral-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            Was the patient referred during the consultation?
+          </legend>
+          <div class="nhsuk-hint" id="referral-hint">
+            Select 1 option
+          </div>
+          <div class="nhsuk-radios" data-module="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-no-referral" name="referral-outcome" type="radio" value="no-referral-made">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-no-referral">
+                No referral made
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-routine" name="referral-outcome" type="radio" value="routine-onward-referral">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-routine">
+                Routine onward referral
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="outcome-urgent" name="referral-outcome" type="radio" value="urgent-onward-referral">
+              <label class="nhsuk-label nhsuk-radios__label" for="outcome-urgent">
+                Urgent onward referral
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('outcome-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const outcomeSelection = document.querySelector('input[name="consultation-outcome"]:checked');
+
+        if (!outcomeSelection) {
+            return;
+        }
+
+        const isPrescription = outcomeSelection.value === 'prescription-issued';
+
+        this.action = isPrescription ? 'outcome-unlimited-search-july' : 'cya-july';
+        this.submit();
+    });
+});
+</script>
+
+{% endblock %}
