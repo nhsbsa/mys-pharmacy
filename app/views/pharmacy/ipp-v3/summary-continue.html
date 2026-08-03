@@ -49,23 +49,39 @@ Prescribing Consultation Claim (PCC)
   <span class="nhsuk-action-link__text">Add a new consultation</span>
 </a>
 
-<div class="nhsuk-tabs" data-module="nhsuk-tabs">
-  <h2 class="nhsuk-tabs__title">
-    Contents
-  </h2>
-  <ul class="nhsuk-tabs__list">
-    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-      <a class="nhsuk-tabs__tab" href="#Claims submitted">
-        Claims submitted (20)
-      </a>
-    </li>
-    <li class="nhsuk-tabs__list-item">
-      <a class="nhsuk-tabs__tab" href="#not-Claims submitted">
-        Invalid submissions (7)
-      </a>
-    </li>
-  </ul>
-  <div class="nhsuk-tabs__panel" id="Claims submitted">
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--non clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Claims submitted:</span> 20
+          </span>
+        </h2>
+        <p class="nhsuk-body">Claims submitted</p>
+
+      </div>
+    </div>
+  </li>
+
+
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">invalid submissions:</span> 7
+          </span>
+        </h2>
+        <a href="summary-continue-invalid" class="nhsuk-card__link">Invalid submissions</a>
+
+      </div>
+    </div>
+  </li>
+</ul>
+
+
     <table class="nhsuk-table">
       <caption class="nhsuk-table__caption">
         Claims submitted (20)
@@ -481,7 +497,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                
                <a href="months-save" class="nhsuk-button nhsuk-button--secondary" id="save-for-later" type="button">
-                    Save and continue later
+                    View all submissions
                   </a>
 
 

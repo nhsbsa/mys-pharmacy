@@ -38,10 +38,9 @@ Prescribing Consultation Claim (PCC)
     </h2>
   </div>
   <div class="nhsuk-notification-banner__content">
-    <h3 class="nhsuk-notification-banner__heading">
-      Patient deleted
+   <h3 class="nhsuk-notification-banner__heading">
+      Consulation updated
     </h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 </div>
 
@@ -65,26 +64,44 @@ Prescribing Consultation Claim (PCC)
   <span class="nhsuk-action-link__text">Add a new consultation</span>
 </a>
 
-<div class="nhsuk-tabs" data-module="nhsuk-tabs">
-  <h2 class="nhsuk-tabs__title">
-    Contents
-  </h2>
-  <ul class="nhsuk-tabs__list">
-    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-      <a class="nhsuk-tabs__tab" href="#Claims submitted">
-        Claims submitted (11)
-      </a>
-    </li>
-    <li class="nhsuk-tabs__list-item">
-      <a class="nhsuk-tabs__tab" href="#not-Claims submitted">
-        Invalid submissions (14)
-      </a>
-    </li>
-  </ul>
-  <div class="nhsuk-tabs__panel" id="Claims submitted">
-    <table class="nhsuk-table">
+
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--non clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Claims submitted:</span> 12
+          </span>
+        </h2>
+        <p class="nhsuk-body">Claims submitted</p>
+
+      </div>
+    </div>
+  </li>
+
+
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">invalid submissions:</span> 2
+          </span>
+        </h2>
+        <a href="summary-invalid" class="nhsuk-card__link">Invalid submissions</a>
+
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+
+
+ <table class="nhsuk-table">
       <caption class="nhsuk-table__caption">
-        Claims submitted (11)
+        Claims submitted (12)
       </caption>
       <thead class="nhsuk-table__head">
         <tr class="nhsuk-table__row">
@@ -108,16 +125,16 @@ Prescribing Consultation Claim (PCC)
       <tbody class="nhsuk-table__body">
         <tr class="nhsuk-table__row">
           <td class="nhsuk-table__cell">
-            Contraception ongoing
+            Pharmacy First Sore Throat
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             15 June 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Adam Smith
+            Karen Francis
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            123 456 7890
+            111 111 1111
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             <a href="cya">Edit</a> | <a href="delete-summary">Delete</a>
@@ -137,7 +154,7 @@ Prescribing Consultation Claim (PCC)
             222 333 4444
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
+            <a href="cya-june-error">Edit</a> | <a href="">Delete</a>
           </td>
         </tr>
         <tr class="nhsuk-table__row">
@@ -162,7 +179,7 @@ Prescribing Consultation Claim (PCC)
             Pharmacy First Earache
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            13 June 2026
+            13 June  2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             Denise Clarke
@@ -301,268 +318,6 @@ Prescribing Consultation Claim (PCC)
     </svg>
   </a>
 </nav>
-  </div>
-
-  <div class="nhsuk-tabs__panel nhsuk-tabs__panel--hidden" id="not-Claims submitted">
-    <h3 class="nhsuk-heading-s">Invalid submissions (14)</h3>
-    <table class="nhsuk-table">
-        <legend class="nhsuk-fieldset__legend">
-    You will not be Claims submitted for these patients because you have claimed too late. 
-  </legend>
-      </caption>
-        <thead class="nhsuk-table__head">
-        <tr class="nhsuk-table__row">
-          <th scope="col" class="nhsuk-table__header" style="width: 30%;"> 
-            Service
-          </th>
-          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
-            Consultation date
-          </th>
-          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
-            Patient name
-          </th>
-          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
-            NHS number
-          </th>
-          <th scope="col" class="nhsuk-table__header nhsuk-table__header--numeric">
-            Action
-          </th>
-        </tr>
-      </thead>
-      <tbody class="nhsuk-table__body">
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Acute Otitis Media
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            15 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            David Francis
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            123 456 7890
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Impetigo
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            14 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Paul Farmer
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            234 567 8901
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Infected insect bite
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            13 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Rita Patel
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            345 678 9012
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Shingles
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            12 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Sarah Green
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            456 789 0123
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Sinusitis
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            11 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            James Brown
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            567 890 1234
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First Sore Throat
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            10 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Emma Wilson
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            678 901 2345
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First UTI
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            9 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Laura Evans
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            789 012 3456
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First New 1
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            8 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Michael Scott
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            890 123 4567
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First New 2
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            7 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Olivia King
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            901 234 5678
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-        <tr class="nhsuk-table__row">
-          <td class="nhsuk-table__cell">
-            Pharmacy First New 3
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            6 June 2026
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Tom Bennett
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            012 345 6789
-          </td>
-          <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            <a href="">Edit</a> | <a href="">Delete</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <nav class="nhsuk-pagination nhsuk-pagination--numbered" role="navigation" aria-label="Pagination">
-  <ul class="nhsuk-pagination__list">
-    <li class="nhsuk-pagination__item nhsuk-pagination__item--current">
-      <a class="nhsuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-        1
-      </a>
-    </li>
-    <li class="nhsuk-pagination__item">
-      <a class="nhsuk-pagination__link" href="#" aria-label="Page 2">
-        2
-      </a>
-    </li>
-  </ul>
-  <a href="#" class="nhsuk-pagination__next" rel="next">
-    <span class="nhsuk-pagination__title">
-      Next<span class="nhsuk-u-visually-hidden"> page</span>
-    </span>
-    <svg class="nhsuk-icon nhsuk-icon--arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true">
-      <path d="m14.7 6.3 5 5c.2.2.3.4.3.7 0 .3-.1.5-.3.7l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3H5a1 1 0 0 1 0-2h11.6l-3.3-3.3a1 1 0 1 1 1.4-1.4Z" />
-    </svg>
-  </a>
-</nav>
-  </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.nhsuk-tabs').forEach(function (tabs) {
-    const tabLinks = tabs.querySelectorAll('.nhsuk-tabs__tab');
-    const panels = tabs.querySelectorAll('.nhsuk-tabs__panel');
-
-    tabLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').slice(1);
-
-        // update selected tab
-        tabLinks.forEach(l => l.parentElement.classList.remove('nhsuk-tabs__list-item--selected'));
-        link.parentElement.classList.add('nhsuk-tabs__list-item--selected');
-
-        // show/hide panels
-        panels.forEach(p => {
-          if (p.id === targetId) {
-            p.classList.remove('nhsuk-tabs__panel--hidden');
-          } else {
-            p.classList.add('nhsuk-tabs__panel--hidden');
-          }
-        });
-
-        // focus first focusable element in panel for accessibility
-        const activePanel = tabs.querySelector('#' + targetId);
-        if (activePanel) {
-          const focusEl = activePanel.querySelector('a, button, input, [tabindex]:not([tabindex="-1"])');
-          if (focusEl) focusEl.focus();
-        }
-      });
-    });
-  });
-});
-</script>
 
                  <a href="declaration" class="nhsuk-button" id="find-address-btn" type="button">
                     Continue
@@ -570,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                
                <a href="months-save" class="nhsuk-button nhsuk-button--secondary" id="save-for-later" type="button">
-                    Save and continue later
+                    View all submissions
                   </a>
 
 
