@@ -42,24 +42,40 @@ Prescribing Consultation Claim (PCC)
               </header>
 
 
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--non clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">Claims submitted:</span> 13
+          </span>
+        </h2>
+        <p class="nhsuk-body">Claims submitted</p>
 
-<div class="nhsuk-tabs" data-module="nhsuk-tabs">
-  <h2 class="nhsuk-tabs__title">
-    Contents
-  </h2>
-  <ul class="nhsuk-tabs__list">
-    <li class="nhsuk-tabs__list-item nhsuk-tabs__list-item--selected">
-      <a class="nhsuk-tabs__tab" href="#Claims submitted">
-        Claims submitted (13)
-      </a>
-    </li>
-    <li class="nhsuk-tabs__list-item">
-      <a class="nhsuk-tabs__tab" href="#not-Claims submitted">
-        Invalid submissions (2)
-      </a>
-    </li>
-  </ul>
-  <div class="nhsuk-tabs__panel" id="Claims submitted">
+      </div>
+    </div>
+  </li>
+
+
+  <li class="nhsuk-grid-column-one-quarter nhsuk-card-group__item">
+    <div class="nhsuk-card nhsuk-card--clickable">
+      <div class="nhsuk-card__content">
+        <h2 class="nhsuk-card__heading nhsuk-u-font-size-64 nhsuk-u-margin-bottom-1">
+          <span role="text">
+            <span class="nhsuk-u-visually-hidden">invalid submissions:</span> 2
+          </span>
+        </h2>
+        <a href="" class="nhsuk-card__link">Invalid submissions</a>
+
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+
+
     <table class="nhsuk-table">
       <caption class="nhsuk-table__caption">
         Claims submitted (13)
@@ -92,7 +108,7 @@ Prescribing Consultation Claim (PCC)
             15 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Jamie Hughes
+            Julian Hughes
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             123 456 7890
@@ -109,7 +125,7 @@ Prescribing Consultation Claim (PCC)
             15 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Bob Smith
+            Sarah Smith
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             222 333 4444
@@ -127,7 +143,7 @@ Prescribing Consultation Claim (PCC)
             14 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Charlie Johnson
+            Emma Johnson
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             333 444 5555
@@ -161,7 +177,7 @@ Prescribing Consultation Claim (PCC)
             12 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Ethan Wright
+            Olivia Wright
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             555 666 7777
@@ -195,7 +211,7 @@ Prescribing Consultation Claim (PCC)
             10 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            George King
+            Lucy King
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             777 888 9999
@@ -212,7 +228,7 @@ Prescribing Consultation Claim (PCC)
             10 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Robinson Smith
+            Sophie Smith
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             237 938 1993
@@ -246,7 +262,7 @@ Prescribing Consultation Claim (PCC)
             8 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            Ian Turner
+            Iris Turner
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             999 000 1111
@@ -316,7 +332,7 @@ Prescribing Consultation Claim (PCC)
             15 February 2026
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
-            David Francis
+            Diana Francis
           </td>
           <td class="nhsuk-table__cell nhsuk-table__cell--numeric">
             123 456 7890
@@ -348,41 +364,6 @@ Prescribing Consultation Claim (PCC)
   </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.nhsuk-tabs').forEach(function (tabs) {
-    const tabLinks = tabs.querySelectorAll('.nhsuk-tabs__tab');
-    const panels = tabs.querySelectorAll('.nhsuk-tabs__panel');
-
-    tabLinks.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').slice(1);
-
-        // update selected tab
-        tabLinks.forEach(l => l.parentElement.classList.remove('nhsuk-tabs__list-item--selected'));
-        link.parentElement.classList.add('nhsuk-tabs__list-item--selected');
-
-        // show/hide panels
-        panels.forEach(p => {
-          if (p.id === targetId) {
-            p.classList.remove('nhsuk-tabs__panel--hidden');
-          } else {
-            p.classList.add('nhsuk-tabs__panel--hidden');
-          }
-        });
-
-        // focus first focusable element in panel for accessibility
-        const activePanel = tabs.querySelector('#' + targetId);
-        if (activePanel) {
-          const focusEl = activePanel.querySelector('a, button, input, [tabindex]:not([tabindex="-1"])');
-          if (focusEl) focusEl.focus();
-        }
-      });
-    });
-  });
-});
-</script>
 
 
             </div>
@@ -399,3 +380,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </div>
 {% endblock %}
+
