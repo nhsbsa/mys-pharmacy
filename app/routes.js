@@ -672,7 +672,7 @@ router.post(/notstartdereg/, function (req, res) {
   }
 });
 
-//Independent Pharmacy Prescribing (IPP)//
+//Prescribing Consultation Claim (PCC))//
 
 router.post(/selectaservice/, function (req, res) {
 
@@ -745,7 +745,7 @@ router.post(/summarydeletion/, function (req, res) {
   const summarydeletion = req.session.data['summarydeletion']
 
   if (summarydeletion === "yes") {
-    res.redirect('confirmation-summary');
+    res.redirect('summary-updated-delete');
   } else {
     res.redirect('summary');
   }
@@ -756,7 +756,7 @@ router.post(/deletetionJuly/, function (req, res) {
   const deletetionJuly = req.session.data['deletetionJuly']
 
   if (deletetionJuly === "yes") {
-    res.redirect('confirmation-summary-july');
+    res.redirect('summary-updated-july-delete');
   } else {
     res.redirect('summary-july');
   }
