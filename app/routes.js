@@ -834,11 +834,11 @@ router.post(/Version4Claim/, function (req, res) {
     res.redirect('advanced-servicesv4-no');
   }
 });
-router.post(/Version5juneClaim/, function (req, res) {
+router.post(/Claimversion5/, function (req, res) {
 
-  const Version5juneClaim= req.session.data['Version5juneClaim']
+  const Claimversion5= req.session.data['Claimversion5']
 
-  if (Version5juneClaim === "yes") {
+  if (Claimversion5 === "yes") {
     res.redirect('Summaryv5');
   } else {
     res.redirect('advanced-servicesv4-no');
