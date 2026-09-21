@@ -845,6 +845,17 @@ router.post(/Claimversion5/, function (req, res) {
   }
 });
 
+router.post(/Claimv6verionsnew/, function (req, res) {
+
+  const Claimv6verionsnew= req.session.data['Claimv6verionsnew']
+
+  if (Claimv6verionsnew === "yes") {
+    res.redirect('Summaryv6');
+  } else {
+    res.redirect('advanced-servicesv4-no');
+  }
+});
+
 // HVV//
 
 router.post(/HVVConfirmapi/, function (req, res) {
