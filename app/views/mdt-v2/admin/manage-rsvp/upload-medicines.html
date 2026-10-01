@@ -1,0 +1,79 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+RSV and pertussis vaccines
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+
+       
+
+        
+        
+        <!-- Change the page title here -->
+        <header>
+             <h1 class="nhsuk-caption--bottom">
+             Upload medicines
+            </h1>
+        </header>
+
+<br>   
+
+       <p>Create medicine records by uploading a CSV file</p>
+
+
+  <h2 class="nhsuk-heading-m">Database contains 0 medicines</h2>
+<div class="nhsuk-form-group nhsuk-file-upload" data-module="nhsuk-file-upload">
+  <h1 class="nhsuk-label-wrapper">
+    <label class="nhsuk-label nhsuk-label--l" for="file-hint">
+      Upload a file
+    </label>
+  </h1>
+  <input class="nhsuk-file-upload__input" id="file-hint" name="file-hint" type="file">
+</div>
+
+
+
+
+
+ 
+       <a class="nhsuk-button" data-module="nhsuk-button" type="submit" href="confirmation-upload">
+  Upload a CSV file of medicines
+       </a>
+
+    
+
+    </div>
+</div>
+
+{% endblock %}
