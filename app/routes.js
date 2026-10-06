@@ -1594,6 +1594,17 @@ router.post(/covidv3dereg/, function (req, res) {
     res.redirect('covid-dashboard-V3-continue');
   }
 });
+//upload medicine delete medicine
+router.post(/covidv3dereg/, function (req, res) {
+
+  const covidv3dereg = req.session.data['covidv3dereg']
+  if (covidv3dereg === "yes") {
+    res.redirect('de-registration-declaration');
+  } else {
+    res.redirect('covid-dashboard-V3-continue');
+  }
+});
+
 
 
 

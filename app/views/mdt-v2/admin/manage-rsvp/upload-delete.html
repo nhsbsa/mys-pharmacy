@@ -1,0 +1,114 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+RSV and pertussis vaccines
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{{ backLink({
+  href: 'javascript:history.back()',
+  text: 'Back'
+}) }}
+
+<!-- Feedback and Notification block starts here -->
+
+<!-- Feedback and Notification block ends here -->
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+
+
+       
+
+        
+        
+        <!-- Change the page title here -->
+        <header>
+             <h1 class="nhsuk-caption--bottom">
+          Upload VMP and AMP data to the MYS medicines table
+
+            </h1>
+        </header>
+
+<br>   
+
+       <p>Use this function to upload VMP and AMP information from the Common Drug Reference (CDR) database to the MYS medicines table.</p>
+<p>The MYS medicines table is used to look up items and price medicines for Pharmacy First urgent medicines claims.</p>
+<div class="nhsuk-form-group">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        Do you want to?
+      </h1>
+    </legend>
+    
+    <div class="nhsuk-radios" data-module="nhsuk-radios">
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints" name="exampleHints" type="radio" value="mobile" aria-describedby="example-hints-item-hint">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints">
+          Delete all medicines from the table
+        </label>
+        <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-item-hint">
+          you must do this first if uploading new data. 
+        </div>
+      </div>
+      <div class="nhsuk-radios__item">
+        <input class="nhsuk-radios__input" id="example-hints-2" name="exampleHints" type="radio" value="landline" aria-describedby="example-hints-2-item-hint">
+        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+          Upload VMP and AMP data from the CDR database
+        </label>
+        
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<p>You can either:<p>
+
+<ul>
+  <li>
+    delete all medicines from the table, you must do this first if uploading new data
+  </li>
+  <li>upload VMP and AMP data from the CDR database</li>
+</ul>
+
+
+<div class="nhsuk-button-group">
+  <button class="nhsuk-button nhsuk-button--warning" data-module="nhsuk-button" type="submit">
+  Delete all medicines
+</button>
+
+
+  <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+Upload file
+  </button>
+
+</div>
+
+    <br><br>
+      
+
+    
+
+    </div>
+</div>
+
+{% endblock %}
