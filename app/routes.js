@@ -1597,11 +1597,11 @@ router.post(/covidv3dereg/, function (req, res) {
 //upload medicine delete medicine
 router.post(/deleteorupload/, function (req, res) {
 
-  const deleteorupload = req.session.data['covidv3dereg']
+  const deleteorupload = req.session.data['deleteorupload ']
   if (deleteorupload  === "yes") {
-    res.redirect('de-registration-declaration');
+    res.redirect('delete-confirmation');
   } else {
-    res.redirect('covid-dashboard-V3-continue');
+    res.redirect('upload-medicines');
   }
 });
 
