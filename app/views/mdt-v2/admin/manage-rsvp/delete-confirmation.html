@@ -41,13 +41,19 @@ RSV and pertussis vaccines
         
         
         <!-- Change the page title here -->
-        <header>
-              <div class="nhsuk-grid-column-full">
-
-    <h3>
-All medicines were deleted
-    </h3>
     
+
+   <div class="nhsuk-notification-banner nhsuk-notification-banner--success" data-module="nhsuk-notification-banner" role="alert" aria-labelledby="nhsuk-notification-banner-title">
+  <div class="nhsuk-notification-banner__header">
+   
+  </div>
+  <div class="nhsuk-notification-banner__content">
+    <h3 class="nhsuk-notification-banner__heading">
+    All medicines were deleted
+    </h3>
+  </div>
+</div>
+
   </div>
 </div>
 
@@ -63,7 +69,7 @@ All medicines were deleted
 
 
   <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-Upload VMP and AMP data
+Upload another file
   </button>
 
 </div>
@@ -75,5 +81,10 @@ Upload VMP and AMP data
 
     </div>
 </div>
+<style>
+  .nhsuk-notification-banner {
+    margin-left: 0px;
+  }
+</style>
 
 {% endblock %}
